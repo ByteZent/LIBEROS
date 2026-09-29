@@ -25,7 +25,7 @@ draft: true
 | Doctrine: definition and levels *(named exam topic)* | | ☐ |
 | General model theory, Stachowiak: mapping, reduction, pragmatism *(named exam topic)* | | ☐ |
 | Mission command (*Auftragstaktik*) | [[OODA Loop#Mission command and implicit guidance]] | ☐ needs its own note |
-| Attrition vs manoeuvre | [[OODA Loop#Manoeuvre warfare]] · [[Center of Gravity]] | ☐ needs its own note |
+| Attrition vs manoeuvre | [[OODA Loop#Manoeuvre warfare]] | ☐ needs its own note |
 | CLM model | | ☐ |
 
 ## Weekly themes
@@ -33,7 +33,7 @@ draft: true
 | Session | Theme | Notes |
 |---|---|---|
 | 01 · 22.09.2026 | CLM, model theory, sensemaking, OODA | [[OODA Loop]] |
-| 02 · 29.09.2026 | Doctrine, attrition vs manoeuvre, self-similarity | [[John Boyd]] · [[Center of Gravity]] |
+| 02 · 29.09.2026 | Doctrine, attrition vs manoeuvre, self-similarity | [[John Boyd]] |
 
 ## Glossary (for the German exam)
 

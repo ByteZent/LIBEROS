@@ -27,13 +27,7 @@ It is built note by note while I study Public Policy and Military Strategy. Each
 
 ## Start here
 
-- [[Strategic Theory MOC|Map: Strategic Theory]]: entry point into the theory of war and strategy
-- [[Carl von Clausewitz]] → [[Center of Gravity]] → [[Ends-Ways-Means]]
 - [[John Boyd]] → [[OODA Loop]]: why orientation, not speed, wins
-- [[Policy Cycle]]: how public policy is made, and why the model is both useful and wrong
-- [[Public Goods]] → why defence is a public good and alliances invite free-riding
-- [[Rule of Law]]: the legal limits of every policy instrument
-- Maps: [[Public Policy MOC|Public Policy]] · [[Economics MOC|Economics]] · [[Law and Rule of Law MOC|Law & Rule of Law]]
 - [[Methodology]] · [[Note Standards]] · [[Learning System]]
 
 ## Graph

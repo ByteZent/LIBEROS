@@ -33,7 +33,7 @@ Weekly, each capture becomes either a new note from a template, an addition to a
 
 ## 3. Connect
 
-Each new note gets **at least two meaningful links** and is added to a [[Strategic Theory MOC|Map of Content]]. A Course Map (template: `T - Course Map`) links each course to the concepts it produced, without copying study notes.
+Each new note gets **at least two meaningful links** and is added to a Map of Content (`09-Learning/91-Maps-of-Content`). A Course Map (template: `T - Course Map`) links each course to the concepts it produced, without copying study notes.
 
 ## 4. Question
 
@@ -51,7 +51,7 @@ Set `review:` in the frontmatter. The **Learning Dashboard** (`_dashboards/Learn
 
 Public policy draws on several disciplines. Each one enters the vault the same way:
 
-1. **Before the semester:** create a **Course Map** (`T - Course Map`) from the syllabus. List the learning objectives, give the course a short code (e.g. `PP-ECON-1`), and link it to the matching discipline map ([[Economics MOC]], [[Law and Rule of Law MOC]], [[Public Policy MOC]]). The map's *To add* list is your preparation plan.
+1. **Before the semester:** create a **Course Map** (`T - Course Map`) from the syllabus. List the learning objectives, give the course a short code (e.g. `PP-ECON-1`), and link it to the matching discipline map in `09-Learning/91-Maps-of-Content` (create one per discipline, e.g. *Economics MOC*). A map's *To add* list is your preparation plan.
 2. **During the semester:** lectures and readings go in the study vault. After each week, distil the 1–3 ideas that matter into vault notes (concept, model, norm, judgment) with `courses: [PP-ECON-1]`. Always ask: *how does this connect to strategy or security?* and write that link down.
 3. **Before the exam:** `make course COURSE=PP-ECON-1` lists every note for the course by maturity. Promote seedlings, answer past exam questions as Open Question notes, and write one synthesis that ties the course together.
 4. **Graded work** (papers, essays): the submitted version stays in your study files or `_private/`. After grading, and within your university's rules on publishing your own work, rework it into a **Synthesis** that links to the vault's notes. That is how coursework becomes lasting knowledge.

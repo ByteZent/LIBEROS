@@ -37,7 +37,7 @@ tags:
 
 - **[[OODA Loop]]:** competition as a contest of adaptation; orientation as the *Schwerpunkt*.
 - **Destruction and creation:** every mental model becomes obsolete, so we must keep breaking and rebuilding our concepts.
-- **Manoeuvre over attrition:** target the opponent's **cohesion** and orientation, generating surprise, ambiguity and confusion. Compare [[Center of Gravity]].
+- **Manoeuvre over attrition:** target the opponent's **cohesion** and orientation, generating surprise, ambiguity and confusion.
 - **Organic command and control:** *Einheit*, *Fingerspitzengefühl*, *Auftragstaktik*, *Schwerpunkt*: shared orientation instead of centralised control.
 - **People, ideas, hardware, in that order:** moral and mental factors matter more than technology.
 

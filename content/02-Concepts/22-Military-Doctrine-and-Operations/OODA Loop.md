@@ -60,7 +60,7 @@ tags:
 
 ### Manoeuvre warfare
 
-Attrition seeks victory by destroying the enemy's physical means. **Manoeuvre** seeks to break the enemy's **cohesion**: through surprise, ambiguity and tempo, it drives his orientation to mismatch reality until his system collapses from within. Boyd's ideas strongly shaped the US Marine Corps' *FMFM 1 Warfighting* (1989). Compare Clausewitz's cohesion-based [[Center of Gravity]].
+Attrition seeks victory by destroying the enemy's physical means. **Manoeuvre** seeks to break the enemy's **cohesion**: through surprise, ambiguity and tempo, it drives his orientation to mismatch reality until his system collapses from within. Boyd's ideas strongly shaped the US Marine Corps' *FMFM 1 Warfighting* (1989). Compare Clausewitz's cohesion-based *centre of gravity*.
 
 ### Mission command and implicit guidance
 
@@ -97,10 +97,7 @@ A classic exam comparison. **Define both separately, then connect them through o
 ## Key Connections
 
 - [[John Boyd]]: author; life and other ideas
-- [[Center of Gravity]]: Boyd's *Schwerpunkt*; cohesion as the real target
-- [[Carl von Clausewitz]]: friction and uncertainty as the environment the loop operates in
-- [[Ends-Ways-Means]]: OODA describes adaptation *within* a strategy, not the choice of ends
-- [[Strategic Theory MOC]]
+- [[osinga2007science|Osinga (2007)]]: the standard study of Boyd's theory
 
 ## Self-Test
 
@@ -127,7 +124,7 @@ A classic exam comparison. **Define both separately, then connect them through o
 
 ## Open Questions
 
-- [ ] Can a *state's* policy process have an OODA loop in any meaningful sense, and what would "getting inside" it mean? (See [[Policy Cycle]].)
+- [ ] Can a *state's* policy process have an OODA loop in any meaningful sense, and what would "getting inside" it mean? 
 - [ ] Do AI-enabled targeting and decision-support systems speed up the whole loop, or only *Observe* and *Act* while *Orient* stays human?
 
 ## Sources
