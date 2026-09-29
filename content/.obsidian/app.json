@@ -1,0 +1,13 @@
+{
+  "newFileLocation": "folder",
+  "newFileFolderPath": "_inbox",
+  "attachmentFolderPath": "assets",
+  "newLinkFormat": "shortest",
+  "useMarkdownLinks": false,
+  "alwaysUpdateLinks": true,
+  "showFrontmatter": true,
+  "propertiesInDocument": "visible",
+  "userIgnoreFilters": ["_templates/"],
+  "readableLineLength": true,
+  "showLineNumber": false
+}

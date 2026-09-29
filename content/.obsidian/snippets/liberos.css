@@ -1,0 +1,18 @@
+/* LIBEROS custom callouts: mirrors quartz/styles/custom.scss */
+.callout[data-callout="bluf"]       { --callout-color: 31, 78, 95;   --callout-icon: lucide-target; }
+.callout[data-callout="assessment"] { --callout-color: 154, 107, 31; --callout-icon: lucide-scale; }
+.callout[data-callout="counter"]    { --callout-color: 181, 83, 60;  --callout-icon: lucide-swords; }
+.callout[data-callout="source"]     { --callout-color: 91, 103, 115; --callout-icon: lucide-quote; }
+
+.theme-dark .callout[data-callout="bluf"]       { --callout-color: 127, 179, 200; }
+.theme-dark .callout[data-callout="assessment"] { --callout-color: 212, 168, 75; }
+.theme-dark .callout[data-callout="counter"]    { --callout-color: 224, 122, 95; }
+.theme-dark .callout[data-callout="source"]     { --callout-color: 154, 167, 179; }
+
+.markdown-rendered h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 1.05em;
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding-bottom: 0.2em;
+}

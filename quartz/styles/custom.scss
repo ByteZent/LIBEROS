@@ -1,0 +1,156 @@
+@use "./base.scss";
+
+// ─── LIBEROS theme ──────────────────────────────────────────────────────────
+// Analyst-desk look: monospace headings, restrained colour, clear hierarchy.
+// The custom callouts below are mirrored in content/.obsidian/snippets/liberos.css
+// so notes look the same in Obsidian and on the published site.
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.01em;
+}
+
+article > h2 {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--secondary);
+  border-bottom: 1px solid var(--lightgray);
+  padding-bottom: 0.3rem;
+  margin-top: 2.2rem;
+}
+
+.page-title a {
+  font-family: var(--headerFont);
+  letter-spacing: 0.12em;
+}
+
+.page-title a::before {
+  content: "◆ ";
+  color: var(--tertiary);
+}
+
+// ─── Custom callouts ────────────────────────────────────────────────────────
+// > [!bluf]        Bottom line up front: the note in 3–5 sentences
+// > [!assessment]  Your own analytic judgement
+// > [!counter]     Strongest counter-argument / critique
+// > [!question]    Open question for the learning process (built-in type, restyled)
+// > [!source]      Direct quotation from a primary source
+
+.callout {
+  &[data-callout="bluf"] {
+    --color: #1f4e5f;
+    --border: #1f4e5f55;
+    --bg: #1f4e5f12;
+    --callout-icon: var(--callout-icon-abstract);
+  }
+
+  &[data-callout="assessment"] {
+    --color: #9a6b1f;
+    --border: #9a6b1f55;
+    --bg: #9a6b1f12;
+    --callout-icon: var(--callout-icon-success);
+  }
+
+  &[data-callout="counter"] {
+    --color: #b5533c;
+    --border: #b5533c55;
+    --bg: #b5533c10;
+    --callout-icon: var(--callout-icon-warning);
+  }
+
+  &[data-callout="source"] {
+    --color: #5b6773;
+    --border: #5b677355;
+    --bg: #5b677310;
+    --callout-icon: var(--callout-icon-quote);
+  }
+}
+
+:root[saved-theme="dark"] .callout {
+  &[data-callout="bluf"] {
+    --color: #7fb3c8;
+    --border: #7fb3c855;
+    --bg: #7fb3c80f;
+  }
+
+  &[data-callout="assessment"] {
+    --color: #d4a84b;
+    --border: #d4a84b55;
+    --bg: #d4a84b0f;
+  }
+
+  &[data-callout="counter"] {
+    --color: #e07a5f;
+    --border: #e07a5f55;
+    --bg: #e07a5f0f;
+  }
+
+  &[data-callout="source"] {
+    --color: #9aa7b3;
+    --border: #9aa7b355;
+    --bg: #9aa7b30f;
+  }
+}
+
+.callout[data-callout="bluf"] .callout-title-inner {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+// ─── Landing page section grid ──────────────────────────────────────────────
+
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0 2rem;
+
+  a.section-card {
+    display: block;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 4px;
+    background: var(--highlight);
+    color: var(--darkgray);
+    font-weight: normal;
+    transition:
+      border-color 0.15s ease,
+      transform 0.15s ease;
+
+    &:hover {
+      border-color: var(--secondary);
+      transform: translateY(-1px);
+    }
+
+    .num {
+      font-family: var(--codeFont);
+      color: var(--tertiary);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+    }
+
+    .name {
+      display: block;
+      font-family: var(--headerFont);
+      color: var(--dark);
+      font-weight: 600;
+      margin: 0.2rem 0 0.35rem;
+    }
+
+    .desc {
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+  }
+}
+
+.hero-kicker {
+  font-family: var(--codeFont);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--tertiary);
+}

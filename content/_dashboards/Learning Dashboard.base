@@ -1,0 +1,70 @@
+filters:
+  and:
+    - '!file.inFolder("_templates")'
+    - '!file.inFolder("_dashboards")'
+    - 'type != "moc"'
+formulas:
+  days_since_update: '(today() - date(modified)).days'
+properties:
+  note.type:
+    displayName: Type
+  note.status:
+    displayName: Maturity
+  note.confidence:
+    displayName: Confidence
+  note.review:
+    displayName: Next review
+views:
+  - type: table
+    name: Due for review
+    filters:
+      and:
+        - 'review'
+        - 'date(review) <= today()'
+    order:
+      - file.name
+      - type
+      - status
+      - review
+    sort:
+      - property: review
+        direction: ASC
+  - type: table
+    name: Seedlings to develop
+    filters:
+      and:
+        - 'status == "seedling"'
+    order:
+      - file.name
+      - type
+      - domain
+      - modified
+    sort:
+      - property: modified
+        direction: ASC
+  - type: table
+    name: Low confidence
+    filters:
+      and:
+        - 'confidence == "low"'
+    order:
+      - file.name
+      - type
+      - domain
+  - type: table
+    name: Inbox to process
+    filters:
+      and:
+        - 'file.inFolder("_inbox")'
+    order:
+      - file.name
+      - file.ctime
+  - type: cards
+    name: All notes by type
+    groupBy:
+      property: note.type
+      direction: ASC
+    order:
+      - file.name
+      - status
+      - domain

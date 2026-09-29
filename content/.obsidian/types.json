@@ -1,0 +1,18 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "tags": "tags",
+    "type": "text",
+    "domain": "text",
+    "status": "text",
+    "confidence": "text",
+    "created": "date",
+    "modified": "date",
+    "review": "date",
+    "as_of": "date",
+    "draft": "checkbox",
+    "author": "text",
+    "year": "number",
+    "course": "text"
+  }
+}

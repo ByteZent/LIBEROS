@@ -1,0 +1,55 @@
+@use "../../styles/variables.scss" as *;
+
+.note-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.25rem 0 1rem;
+  font-family: var(--codeFont);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  .ns-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.18rem 0.55rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 3px;
+    color: var(--darkgray);
+  }
+
+  .ns-key {
+    color: var(--gray);
+    font-size: 0.64rem;
+  }
+
+  .ns-type {
+    border-color: var(--secondary);
+    color: var(--secondary);
+  }
+
+  .ns-status-seedling {
+    border-color: #6b8f3a;
+    color: #6b8f3a;
+  }
+
+  .ns-status-developing {
+    border-color: var(--tertiary);
+    color: var(--tertiary);
+  }
+
+  .ns-status-evergreen {
+    border-color: #2f8f6f;
+    color: #2f8f6f;
+  }
+
+  .ns-confidence-low {
+    color: #b5533c;
+  }
+
+  .ns-confidence-high {
+    color: #2f8f6f;
+  }
+}
