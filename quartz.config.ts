@@ -84,6 +84,7 @@ const config: QuartzConfig = {
         linkCitations: true,
         csl: "apa",
       }),
+      Plugin.SourceFormatting(), // "References" heading + confidence badges; after Citations
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
