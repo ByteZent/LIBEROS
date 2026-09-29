@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="branding/logo-lockup-dark.png">
+    <img src="branding/logo-lockup-light.png" alt="LIBEROS" width="330">
+  </picture>
+</p>
+
 # LIBEROS
 
 A public, structured knowledge base on **strategy, military affairs and public policy**, written in [Obsidian](https://obsidian.md) and published with [Quartz 4](https://quartz.jzhao.xyz).
@@ -36,19 +43,21 @@ LIBEROS/
 
 Everything runs through `make` (`make help` lists all targets):
 
-| Command                                     | What it does                                               |
-| ------------------------------------------- | ---------------------------------------------------------- |
-| `make install`                              | Install dependencies                                       |
-| `make serve`                                | Local preview with live reload → http://localhost:8080     |
-| `make new TYPE=concept TITLE="Escalation"`  | New note from a template in `_inbox/`                      |
-| `make inbox`                                | List unprocessed captures                                  |
-| `make review`                               | Notes whose `review:` date is due                          |
-| `make stats`                                | Note counts by type and maturity                           |
-| `make open`                                 | Open the vault in Obsidian                                 |
-| `make check`                                | Type-check, format check, test build                       |
-| `make publish MSG="Add deterrence notes"`   | Check → commit → push → GitHub Pages deploys automatically |
-| `make update`                               | Update the Quartz engine from upstream                     |
-| `make build` / `make clean` / `make format` | Build to `public/`, remove build output, format code       |
+| Command                                     | What it does                                                                              |
+| ------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `make install`                              | Install dependencies                                                                      |
+| `make serve`                                | Local preview with live reload → http://localhost:8080                                    |
+| `make serve-pwa`                            | Same, with the service worker on (offline / install testing, port 8080 → use `PORT=8090`) |
+| `make new TYPE=concept TITLE="Escalation"`  | New note from a template in `_inbox/`                                                     |
+| `make inbox`                                | List unprocessed captures                                                                 |
+| `make review`                               | Notes whose `review:` date is due                                                         |
+| `make stats`                                | Note counts by type and maturity                                                          |
+| `make open`                                 | Open the vault in Obsidian                                                                |
+| `make check`                                | Type-check, format check, test build                                                      |
+| `make publish MSG="Add deterrence notes"`   | Check → commit → push → GitHub Pages deploys automatically                                |
+| `make update`                               | Update the Quartz engine from upstream                                                    |
+| `make logo`                                 | Re-export favicon / social image / logo PNGs from `branding/`                             |
+| `make build` / `make clean` / `make format` | Build to `public/`, remove build output, format code                                      |
 
 Template types for `make new`: `concept actor thinker key-work case-study assessment framework synthesis source-note open-question course-map`.
 
@@ -66,18 +75,6 @@ In Obsidian: open `LIBEROS/content` as the vault. New notes land in `_inbox/`; i
 | `draft`      | `true` → excluded from the site                                                                        | –                        |
 
 Custom callouts (styled identically in Obsidian and on the site): `[!bluf]`, `[!assessment]`, `[!counter]`, `[!source]`.
-
-## First-time deployment (GitHub Pages)
-
-1. Create an empty GitHub repo (e.g. `liberos`) and push:
-
-   ```bash
-   git remote add origin git@github.com:<you>/liberos.git && git push -u origin main
-   ```
-
-2. Repo → _Settings → Pages → Source: GitHub Actions_.
-3. Set `baseUrl` in `quartz.config.ts` to `<you>.github.io/liberos` (or your custom domain).
-4. If you use a sub-path (`/liberos`), update the footer links in `quartz.layout.ts` accordingly.
 
 ## TODO
 

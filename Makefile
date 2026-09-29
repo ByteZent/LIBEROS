@@ -9,7 +9,7 @@ MSG     ?= Update notes $(TODAY)
 NOTES   := find $(VAULT)/0[1-9]-* -name '*.md' ! -name index.md -print0
 
 .DEFAULT_GOAL := help
-.PHONY: help install serve build clean check format typecheck new review stats inbox open publish update
+.PHONY: help install serve serve-pwa build clean check format typecheck logo new review stats inbox open publish update
 
 help: ## Show this help
 	@awk 'BEGIN {FS = ":.*## "} /^[a-zA-Z_-]+:.*## / {printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
@@ -25,11 +25,14 @@ install: ## Install dependencies (npm ci)
 serve: ## Build and serve locally with live reload (PORT=8080)
 	npx quartz build --serve --port $(PORT)
 
+serve-pwa: ## Like serve, but with the service worker enabled (to test offline/install)
+	LIBEROS_PWA=1 npx quartz build --serve --port $(PORT) --wsPort 3002 --output public-pwa
+
 build: ## Build the static site into ./public
 	npx quartz build
 
 clean: ## Remove build output and cache
-	rm -rf public .quartz-cache
+	rm -rf public public-pwa .quartz-cache
 
 ## ── Quality ─────────────────────────────────────────────────────────────────
 
@@ -42,6 +45,9 @@ format: ## Format code with Prettier
 check: typecheck ## Type-check, verify formatting and do a test build
 	npx prettier --check .
 	npx quartz build
+
+logo: ## Re-export favicon, social image and logo PNGs from branding/*.svg
+	node branding/export.mjs
 
 ## ── Writing & learning ──────────────────────────────────────────────────────
 

@@ -22,16 +22,6 @@ article > h2 {
   margin-top: 2.2rem;
 }
 
-.page-title a {
-  font-family: var(--headerFont);
-  letter-spacing: 0.12em;
-}
-
-.page-title a::before {
-  content: "◆ ";
-  color: var(--tertiary);
-}
-
 // ─── Custom callouts ────────────────────────────────────────────────────────
 // > [!bluf]        Bottom line up front: the note in 3–5 sentences
 // > [!assessment]  Your own analytic judgement

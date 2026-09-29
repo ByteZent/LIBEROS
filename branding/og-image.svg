@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="LIBEROS" width="1200" height="630">
+  <rect width="1200" height="630" fill="#0d1117"/>
+  <g stroke="#222a33" stroke-width="1"><line x1="0" y1="0" x2="0" y2="630"/><line x1="60" y1="0" x2="60" y2="630"/><line x1="120" y1="0" x2="120" y2="630"/><line x1="180" y1="0" x2="180" y2="630"/><line x1="240" y1="0" x2="240" y2="630"/><line x1="300" y1="0" x2="300" y2="630"/><line x1="360" y1="0" x2="360" y2="630"/><line x1="420" y1="0" x2="420" y2="630"/><line x1="480" y1="0" x2="480" y2="630"/><line x1="540" y1="0" x2="540" y2="630"/><line x1="600" y1="0" x2="600" y2="630"/><line x1="660" y1="0" x2="660" y2="630"/><line x1="720" y1="0" x2="720" y2="630"/><line x1="780" y1="0" x2="780" y2="630"/><line x1="840" y1="0" x2="840" y2="630"/><line x1="900" y1="0" x2="900" y2="630"/><line x1="960" y1="0" x2="960" y2="630"/><line x1="1020" y1="0" x2="1020" y2="630"/><line x1="1080" y1="0" x2="1080" y2="630"/><line x1="1140" y1="0" x2="1140" y2="630"/><line x1="1200" y1="0" x2="1200" y2="630"/><line x1="0" y1="0" x2="1200" y2="0"/><line x1="0" y1="60" x2="1200" y2="60"/><line x1="0" y1="120" x2="1200" y2="120"/><line x1="0" y1="180" x2="1200" y2="180"/><line x1="0" y1="240" x2="1200" y2="240"/><line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="360" x2="1200" y2="360"/><line x1="0" y1="420" x2="1200" y2="420"/><line x1="0" y1="480" x2="1200" y2="480"/><line x1="0" y1="540" x2="1200" y2="540"/><line x1="0" y1="600" x2="1200" y2="600"/></g>
+  <g transform="translate(120 175) scale(4.4)">
+  <g stroke="#7fb3c8" stroke-width="2" stroke-linecap="round" opacity="0.5">
+    <line x1="32" y1="1.5" x2="32" y2="5"/><line x1="32" y1="59" x2="32" y2="62.5"/>
+    <line x1="1.5" y1="32" x2="5" y2="32"/><line x1="59" y1="32" x2="62.5" y2="32"/>
+  </g>
+  <path d="M32 8 L56 32 L32 56 L8 32 Z" fill="none" stroke="#7fb3c8" stroke-width="3.0" stroke-linejoin="round"/>
+  <g stroke="#c9d1d9" stroke-width="2.61" stroke-linecap="round">
+    <line x1="27" y1="21" x2="27" y2="38"/>
+    <line x1="27" y1="38" x2="43" y2="38"/>
+    <line x1="27" y1="21" x2="43" y2="38" opacity="0.28"/>
+  </g>
+  <circle cx="27" cy="21" r="3.60" fill="#e8edf2"/>
+  <circle cx="43" cy="38" r="3.60" fill="#e8edf2"/>
+  <circle cx="27" cy="38" r="5.10" fill="#d4a84b"/>
+  </g>
+  <text x="480" y="300" font-family="JetBrains Mono, JetBrainsMonoNL Nerd Font, monospace" font-size="96" font-weight="700" letter-spacing="14" fill="#e8edf2">LIBEROS</text>
+  <text x="484" y="360" font-family="JetBrains Mono, JetBrainsMonoNL Nerd Font, monospace" font-size="21" letter-spacing="2.5" fill="#d4a84b">STRATEGY · MILITARY AFFAIRS · PUBLIC POLICY</text>
+  <text x="484" y="410" font-family="IBM Plex Sans, Helvetica Neue, sans-serif" font-size="26" fill="#8b97a3">A living knowledge base, built as a learning process.</text>
+</svg>

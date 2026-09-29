@@ -96,9 +96,10 @@ const config: QuartzConfig = {
       Plugin.Assets(),
       Plugin.Static(),
       Plugin.Favicon(),
+      Plugin.Pwa(),
       Plugin.NotFoundPage(),
       // Social preview cards; comment out to speed up local builds
-      Plugin.CustomOgImages(),
+      Plugin.CustomOgImages({ colorScheme: "darkMode" }),
     ],
   },
 }

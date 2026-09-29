@@ -4,8 +4,23 @@
     {
       "name": "quartz",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["quartz", "build", "--serve", "--port", "8080"],
+      "runtimeArgs": [
+        "quartz",
+        "build",
+        "--serve",
+        "--port",
+        "8080"
+      ],
       "port": 8080
+    },
+    {
+      "name": "quartz-pwa",
+      "runtimeExecutable": "make",
+      "runtimeArgs": [
+        "serve-pwa",
+        "PORT=8090"
+      ],
+      "port": 8090
     }
   ]
 }

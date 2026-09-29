@@ -1,0 +1,57 @@
+.site-logo {
+  font-size: 1.6rem;
+  margin: 0;
+  font-family: var(--headerFont);
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--dark);
+    letter-spacing: 0.14em;
+  }
+
+  .site-logo-mark {
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    overflow: visible;
+    transition: transform 0.35s ease;
+  }
+
+  a:hover .site-logo-mark {
+    transform: rotate(90deg);
+  }
+
+  .slm-frame {
+    fill: none;
+    stroke: var(--secondary);
+    stroke-width: 3;
+    stroke-linejoin: round;
+  }
+
+  .slm-ticks line {
+    stroke: var(--secondary);
+    stroke-width: 2;
+    stroke-linecap: round;
+    opacity: 0.5;
+  }
+
+  .slm-edges line {
+    stroke: var(--darkgray);
+    stroke-width: 2.6;
+    stroke-linecap: round;
+  }
+
+  .slm-edges .slm-diag {
+    opacity: 0.28;
+  }
+
+  .slm-node {
+    fill: var(--dark);
+  }
+
+  .slm-pivot {
+    fill: var(--tertiary);
+  }
+}

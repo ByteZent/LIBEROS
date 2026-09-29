@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
 public
+public-pwa
 prof
 tsconfig.tsbuildinfo
 .quartz-cache

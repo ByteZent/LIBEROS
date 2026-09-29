@@ -25,7 +25,14 @@ export default (() => {
     const url = new URL(`https://${cfg.baseUrl ?? "example.com"}`)
     const path = url.pathname as FullSlug
     const baseDir = fileData.slug === "404" ? path : pathToRoot(fileData.slug!)
-    const iconPath = joinSegments(baseDir, "static/icon.png")
+    // Bump ICON_VERSION when the icon changes: browsers cache favicons independently of pages
+    const ICON_VERSION = "2"
+    const iconPath = joinSegments(baseDir, "static/icon.png") + `?v=${ICON_VERSION}`
+    const iconSvgPath = joinSegments(baseDir, "static/icon.svg") + `?v=${ICON_VERSION}`
+    const appleIconPath =
+      joinSegments(baseDir, "static/apple-touch-icon.png") + `?v=${ICON_VERSION}`
+    // PWA (see plugins/emitters/pwa.ts, which also registers the service worker)
+    const usesPwa = ctx.cfg.plugins.emitters.some((e) => e.name === "Pwa")
 
     // Url of current page
     const socialUrl =
@@ -82,7 +89,18 @@ export default (() => {
           </>
         )}
 
-        <link rel="icon" href={iconPath} />
+        <link rel="icon" href={iconSvgPath} type="image/svg+xml" />
+        <link rel="icon" href={iconPath} type="image/png" sizes="512x512" />
+        <link rel="apple-touch-icon" href={appleIconPath} />
+        {usesPwa && (
+          <>
+            <link rel="manifest" href={joinSegments(baseDir, "manifest.webmanifest")} />
+            <meta name="theme-color" content={cfg.theme.colors.darkMode.light} />
+            <meta name="mobile-web-app-capable" content="yes" />
+            <meta name="apple-mobile-web-app-title" content={cfg.pageTitle} />
+            <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+          </>
+        )}
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
 

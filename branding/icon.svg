@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="LIBEROS">
+  <rect width="64" height="64" rx="14" fill="#0d1117"/>
+  <g transform="translate(3.2 3.2) scale(0.9)">
+  <path d="M32 8 L56 32 L32 56 L8 32 Z" fill="none" stroke="#7fb3c8" stroke-width="4" stroke-linejoin="round"/>
+  <g stroke="#c9d1d9" stroke-width="3.4" stroke-linecap="round">
+    <line x1="27" y1="21" x2="27" y2="38"/>
+    <line x1="27" y1="38" x2="43" y2="38"/>
+  </g>
+  <circle cx="27" cy="21" r="4.4" fill="#e8edf2"/>
+  <circle cx="43" cy="38" r="4.4" fill="#e8edf2"/>
+  <circle cx="27" cy="38" r="6.4" fill="#d4a84b"/>
+  </g>
+</svg>
