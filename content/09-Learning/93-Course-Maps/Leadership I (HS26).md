@@ -23,7 +23,7 @@ draft: true
 | Boyd and the OODA loop *(named exam topic)* | [[OODA Loop]] · [[John Boyd]] | ☑ developing |
 | OODA vs Sensemaking: define separately, connect via orientation | [[OODA Loop#OODA vs Sensemaking]] | ☐ needs its own *Sensemaking* note |
 | Doctrine: definition and levels *(named exam topic)* | | ☐ |
-| General model theory, Stachowiak: mapping, reduction, pragmatism *(named exam topic)* | | ☐ |
+| General model theory, Stachowiak: mapping, reduction, pragmatism *(named exam topic)* | [[General Model Theory]] | ☑ developing (in `_inbox`) |
 | Mission command (*Auftragstaktik*) | [[OODA Loop#Mission command and implicit guidance]] | ☐ needs its own note |
 | Attrition vs manoeuvre | [[OODA Loop#Manoeuvre warfare]] | ☐ needs its own note |
 | CLM model | | ☐ |
@@ -46,6 +46,9 @@ draft: true
 | Cohesion | Zusammenhalt / Kohäsion |
 | Attrition vs manoeuvre | Abnützung vs. Manöver |
 | Self-similarity | Selbstähnlichkeit |
+| General model theory | Allgemeine Modelltheorie |
+| Mapping / reduction / pragmatic feature | Abbildungs- / Verkürzungs- / pragmatisches Merkmal |
+| Preterite / abundant attributes | Präterierte / abundante Attribute |
 
 ## Exam preparation
 

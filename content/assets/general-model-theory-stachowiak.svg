@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-labelledby="t d">
+  <title id="t">Stachowiak's three features of a model</title>
+  <desc id="d">Example: terrain as the original and a 1:50,000 military map as the model. Mapping: roads, rivers and bridges, relief and forest cover in the terrain are represented on the map as road symbols, blue lines, contour lines and green areas. Reduction: attributes such as the colour of buildings and today's weather are left out (preterite attributes), while the map adds attributes the terrain does not have, such as a coordinate grid, place names and a legend (abundant attributes). Pragmatism: the map replaces the terrain for someone (a platoon commander), for a time (until the terrain changes) and for a purpose (route planning). After Herbert Stachowiak, Allgemeine Modelltheorie (1973).</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#c9d1d9"/>
+    </marker>
+    <marker id="arr-ig" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#d4a84b"/>
+    </marker>
+    <style>
+      .panel { fill: #0d1117; }
+      .box { fill: #161d26; stroke: #3a4654; stroke-width: 1.5; }
+      .model { fill: #1a2330; stroke: #d4a84b; stroke-width: 2; }
+      .band { fill: #161d26; stroke: #d4a84b; stroke-width: 1.5; stroke-dasharray: 7 5; }
+      .h { font: 700 17px "JetBrains Mono", Menlo, monospace; letter-spacing: 2px; fill: #e8edf2; }
+      .sub { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .item { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .pill { fill: #0d1117; stroke: #5b6773; stroke-width: 1; }
+      .pill-pret { fill: #0d1117; stroke: #3a4654; stroke-width: 1; stroke-dasharray: 3 3; }
+      .item-pret { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #5b6773; text-decoration: line-through; }
+      .pill-abun { fill: #0d1117; stroke: #7fb3c8; stroke-width: 1.2; stroke-dasharray: 5 3; }
+      .item-abun { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #7fb3c8; }
+      .pill-prag { fill: #0d1117; stroke: #d4a84b; stroke-width: 1.2; }
+      .ff { stroke: #c9d1d9; stroke-width: 2; fill: none; }
+      .cut { stroke: #5b6773; stroke-width: 1.5; fill: none; stroke-dasharray: 4 4; }
+      .x { stroke: #b3616a; stroke-width: 2.2; }
+      .ig { stroke: #d4a84b; stroke-width: 2; fill: none; stroke-dasharray: 7 5; }
+      .lbl { font: 600 11.5px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.2px; }
+      .q { font: 600 11px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #d4a84b; }
+      .src { font: italic 11px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #5b6773; }
+    </style>
+  </defs>
+
+  <rect class="panel" width="1000" height="560" rx="14"/>
+
+  <!-- ORIGINAL -->
+  <rect class="box" x="30" y="70" width="300" height="340" rx="10"/>
+  <text class="h" x="180" y="102" text-anchor="middle">ORIGINAL</text>
+  <text class="sub" x="180" y="122" text-anchor="middle">the terrain</text>
+
+  <rect class="pill" x="50" y="141" width="260" height="28" rx="14"/>
+  <text class="item" x="180" y="160" text-anchor="middle">Road network</text>
+  <rect class="pill" x="50" y="181" width="260" height="28" rx="14"/>
+  <text class="item" x="180" y="200" text-anchor="middle">Rivers and bridges</text>
+  <rect class="pill" x="50" y="221" width="260" height="28" rx="14"/>
+  <text class="item" x="180" y="240" text-anchor="middle">Relief and elevation</text>
+  <rect class="pill" x="50" y="261" width="260" height="28" rx="14"/>
+  <text class="item" x="180" y="280" text-anchor="middle">Forest cover</text>
+  <rect class="pill-pret" x="50" y="301" width="260" height="28" rx="14"/>
+  <text class="item-pret" x="180" y="320" text-anchor="middle">Colour of the buildings</text>
+  <rect class="pill-pret" x="50" y="341" width="260" height="28" rx="14"/>
+  <text class="item-pret" x="180" y="360" text-anchor="middle">Today's weather</text>
+  <text class="sub" x="180" y="394" text-anchor="middle">… and countless more. May itself be a model.</text>
+
+  <!-- MODEL -->
+  <rect class="model" x="670" y="70" width="300" height="340" rx="12"/>
+  <text class="h" x="820" y="102" text-anchor="middle" fill="#d4a84b">MODEL</text>
+  <text class="sub" x="820" y="122" text-anchor="middle">a 1:50 000 map</text>
+
+  <rect class="pill" x="690" y="141" width="260" height="28" rx="14"/>
+  <text class="item" x="820" y="160" text-anchor="middle">Road symbols</text>
+  <rect class="pill" x="690" y="181" width="260" height="28" rx="14"/>
+  <text class="item" x="820" y="200" text-anchor="middle">Blue lines, bridge symbols</text>
+  <rect class="pill" x="690" y="221" width="260" height="28" rx="14"/>
+  <text class="item" x="820" y="240" text-anchor="middle">Contour lines</text>
+  <rect class="pill" x="690" y="261" width="260" height="28" rx="14"/>
+  <text class="item" x="820" y="280" text-anchor="middle">Green areas</text>
+  <rect class="pill-abun" x="690" y="301" width="260" height="28" rx="14"/>
+  <text class="item-abun" x="820" y="320" text-anchor="middle">+ Coordinate grid</text>
+  <rect class="pill-abun" x="690" y="341" width="260" height="28" rx="14"/>
+  <text class="item-abun" x="820" y="360" text-anchor="middle">+ Place names, legend, scale</text>
+  <text class="sub" x="820" y="394" text-anchor="middle">stands in for the original</text>
+
+  <!-- 1 MAPPING -->
+  <text class="lbl" x="500" y="116" text-anchor="middle" fill="#e8edf2">① MAPPING</text>
+  <text class="sub" x="500" y="134" text-anchor="middle">always a model of something</text>
+  <path class="ff" d="M312 155 H666" marker-end="url(#arr)"/>
+  <path class="ff" d="M312 195 H666" marker-end="url(#arr)"/>
+  <path class="ff" d="M312 235 H666" marker-end="url(#arr)"/>
+  <path class="ff" d="M312 275 H666" marker-end="url(#arr)"/>
+
+  <!-- 2 REDUCTION -->
+  <path class="cut" d="M312 315 H384"/>
+  <path class="cut" d="M312 355 H384"/>
+  <line class="x" x1="388" y1="309" x2="400" y2="321"/><line class="x" x1="400" y1="309" x2="388" y2="321"/>
+  <line class="x" x1="388" y1="349" x2="400" y2="361"/><line class="x" x1="400" y1="349" x2="388" y2="361"/>
+  <text class="lbl" x="530" y="318" text-anchor="middle" fill="#e8edf2">② REDUCTION</text>
+  <text class="sub" x="530" y="338" text-anchor="middle">← left out: preterite attributes</text>
+  <text class="sub" x="530" y="356" text-anchor="middle" fill="#7fb3c8">added: abundant attributes →</text>
+
+  <!-- 3 PRAGMATISM -->
+  <path class="ig" d="M820 432 V414" marker-end="url(#arr-ig)"/>
+  <rect class="band" x="30" y="432" width="940" height="92" rx="10"/>
+  <text class="lbl" x="50" y="470" fill="#d4a84b">③ PRAGMATISM</text>
+  <text class="sub" x="50" y="490">replaces the original only</text>
+  <text class="sub" x="50" y="506">within these limits</text>
+
+  <rect class="pill-prag" x="250" y="450" width="230" height="56" rx="12"/>
+  <text class="q" x="365" y="472" text-anchor="middle">FOR WHOM?</text>
+  <text class="item" x="365" y="493" text-anchor="middle">a platoon commander</text>
+  <rect class="pill-prag" x="495" y="450" width="230" height="56" rx="12"/>
+  <text class="q" x="610" y="472" text-anchor="middle">WHEN?</text>
+  <text class="item" x="610" y="493" text-anchor="middle">until the terrain changes</text>
+  <rect class="pill-prag" x="740" y="450" width="210" height="56" rx="12"/>
+  <text class="q" x="845" y="472" text-anchor="middle">WHAT FOR?</text>
+  <text class="item" x="845" y="493" text-anchor="middle">route planning</text>
+
+  <!-- source -->
+  <text class="src" x="970" y="546" text-anchor="end">After Herbert Stachowiak, “Allgemeine Modelltheorie” (1973). Example and drawing for LIBEROS.</text>
+  <text class="lbl" x="30" y="44" fill="#8b97a3">THREE FEATURES OF EVERY MODEL</text>
+</svg>
