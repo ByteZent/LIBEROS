@@ -25,6 +25,7 @@ import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
 import NoteStatus from "./NoteStatus"
 import SiteLogo from "./SiteLogo"
+import ImageZoom from "./ImageZoom"
 
 export {
   ArticleTitle,
@@ -54,4 +55,5 @@ export {
   ConditionalRender,
   NoteStatus,
   SiteLogo,
+  ImageZoom,
 }

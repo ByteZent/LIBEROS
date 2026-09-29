@@ -6,6 +6,8 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [
+    // click an image to view it full screen
+    Component.ImageZoom(),
     // "Recently updated" feed, only on the landing page
     Component.ConditionalRender({
       component: Component.RecentNotes({

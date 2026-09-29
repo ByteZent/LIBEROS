@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-labelledby="t d">
+  <title id="t">Double shift: an ambiguous price effect</title>
+  <desc id="d">Two panels in which both demand and supply shift right. In both, equilibrium quantity rises. Left: demand shifts more than supply, so the price rises. Right: supply shifts more than demand, so the price falls. When both curves move, one variable's direction is certain and the other's depends on the relative size of the shifts.</desc>
+  <defs>
+    <marker id="ax" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5b6773"/></marker>
+    <marker id="aw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#c9d1d9"/></marker>
+    <marker id="ad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7fb3c8"/></marker>
+    <marker id="as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8fc59b"/></marker>
+    <marker id="ae" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#d4a84b"/></marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#c97b84"/></marker>
+    <style>
+      .panel { fill: #0d1117; }
+      .box { fill: #161d26; stroke: #3a4654; stroke-width: 1.5; }
+      .axis { stroke: #5b6773; stroke-width: 1.5; fill: none; }
+      .guide { stroke: #5b6773; stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
+      .d { stroke: #7fb3c8; stroke-width: 2.6; fill: none; stroke-linecap: round; }
+      .s { stroke: #8fc59b; stroke-width: 2.6; fill: none; stroke-linecap: round; }
+      .old { stroke-dasharray: 7 6; opacity: .55; }
+      .h { font: 700 15px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.5px; fill: #e8edf2; }
+      .lbl { font: 600 11.5px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.2px; }
+      .ax { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .cv { font: italic 700 14px "IBM Plex Serif", Georgia, serif; }
+      .tk { font: italic 13px "IBM Plex Serif", Georgia, serif; fill: #c9d1d9; }
+      .item { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .sub { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .res { font: 700 13px "JetBrains Mono", Menlo, monospace; fill: #d4a84b; }
+      .src { font: italic 11px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #5b6773; }
+    </style>
+  </defs>
+  <rect class="panel" width="1000" height="560" rx="14"/>
+  <rect class="box" x="30" y="30" width="455" height="440" rx="10"/>
+  <text class="h" x="50" y="62">DEMAND SHIFTS MORE</text>
+  <text class="sub" x="50" y="82">big demand shift, small supply shift</text>
+  <text class="res" x="465" y="62" text-anchor="end">Q↑  P↑</text>
+  <path class="axis" d="M100 420 V108" marker-end="url(#ax)"/>
+  <path class="axis" d="M100 420 H432" marker-end="url(#ax)"/>
+  <text class="ax" x="92" y="100">Price P</text>
+  <text class="ax" x="432" y="442" text-anchor="end">Quantity Q</text>
+  <path class="d old" d="M119.2 164.4 L420.0 390.0"/>
+  <text class="cv" x="426.0" y="402.0" fill="#7fb3c8" opacity=".6">D₀</text>
+  <path class="s old" d="M100.0 390.0 L420.0 150.0"/>
+  <text class="cv" x="426.0" y="154.0" fill="#8fc59b" opacity=".6">S₀</text>
+  <path class="d" d="M161.3 124.0 L420.0 318.0"/>
+  <text class="cv" x="426.0" y="314.0" fill="#7fb3c8">D₁</text>
+  <path class="s" d="M112.8 404.4 L420.0 174.0"/>
+  <text class="cv" x="426.0" y="178.0" fill="#8fc59b">S₁</text>
+  <path class="guide" d="M100 270.0 H260.0 V420"/>
+  <circle cx="260.0" cy="270.0" r="4" fill="#5b6773"/>
+  <text class="tk" x="92" y="274.0" text-anchor="end">P₀</text>
+  <text class="tk" x="260.0" y="438" text-anchor="middle">Q₀</text>
+  <path class="guide" d="M100 246.0 H324.0 V420"/>
+  <circle cx="324.0" cy="246.0" r="5" fill="#d4a84b"/>
+  <text class="tk" x="92" y="250.0" text-anchor="end">P₁</text>
+  <text class="tk" x="324.0" y="438" text-anchor="middle">Q₁</text>
+  <rect class="box" x="515" y="30" width="455" height="440" rx="10"/>
+  <text class="h" x="535" y="62">SUPPLY SHIFTS MORE</text>
+  <text class="sub" x="535" y="82">small demand shift, big supply shift</text>
+  <text class="res" x="950" y="62" text-anchor="end">Q↑  P↓</text>
+  <path class="axis" d="M585 420 V108" marker-end="url(#ax)"/>
+  <path class="axis" d="M585 420 H917" marker-end="url(#ax)"/>
+  <text class="ax" x="577" y="100">Price P</text>
+  <text class="ax" x="917" y="442" text-anchor="end">Quantity Q</text>
+  <path class="d old" d="M604.2 164.4 L905.0 390.0"/>
+  <text class="cv" x="911.0" y="402.0" fill="#7fb3c8" opacity=".6">D₀</text>
+  <path class="s old" d="M585.0 390.0 L905.0 150.0"/>
+  <text class="cv" x="911.0" y="154.0" fill="#8fc59b" opacity=".6">S₀</text>
+  <path class="d" d="M604.2 140.4 L905.0 366.0"/>
+  <text class="cv" x="911.0" y="362.0" fill="#7fb3c8">D₁</text>
+  <path class="s" d="M661.8 404.4 L905.0 222.0"/>
+  <text class="cv" x="911.0" y="226.0" fill="#8fc59b">S₁</text>
+  <path class="guide" d="M585 270.0 H745.0 V420"/>
+  <circle cx="745.0" cy="270.0" r="4" fill="#5b6773"/>
+  <text class="tk" x="577" y="274.0" text-anchor="end">P₀</text>
+  <text class="tk" x="745.0" y="438" text-anchor="middle">Q₀</text>
+  <path class="guide" d="M585 294.0 H809.0 V420"/>
+  <circle cx="809.0" cy="294.0" r="5" fill="#d4a84b"/>
+  <text class="tk" x="577" y="298.0" text-anchor="end">P₁</text>
+  <text class="tk" x="809.0" y="438" text-anchor="middle">Q₁</text>
+  <text class="item" x="30" y="506"><tspan fill="#d4a84b" font-weight="700">Both curves shift right:</tspan> quantity rises for sure, but the price can go either way.</text>
+  <text class="item" x="30" y="526">Its direction depends on which shift is larger, which the basic model alone cannot tell you.</text>
+  <text class="src" x="970" y="548" text-anchor="end">After Mankiw, Principles of Economics, ch. 4. Drawn for LIBEROS.</text>
+</svg>

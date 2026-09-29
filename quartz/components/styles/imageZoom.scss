@@ -1,0 +1,96 @@
+article img.zoomable {
+  cursor: zoom-in;
+
+  &:focus-visible {
+    outline: 2px solid var(--secondary);
+    outline-offset: 2px;
+  }
+}
+
+html.image-zoom-open {
+  overflow: hidden;
+}
+
+.image-zoom {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  overflow: auto;
+  background: rgba(5, 8, 12, 0.96);
+  cursor: zoom-out;
+  animation: image-zoom-in 0.15s ease-out;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: contain;
+    margin: 0;
+    border-radius: 0;
+    cursor: zoom-in;
+  }
+
+  &.zoomed {
+    display: block;
+    padding: 0;
+
+    & > img {
+      display: block;
+      height: auto;
+      margin: auto;
+      cursor: zoom-out;
+    }
+  }
+}
+
+.image-zoom-close {
+  position: fixed;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  background: rgba(13, 17, 23, 0.8);
+  color: #e8edf2;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    border-color: var(--secondary);
+  }
+}
+
+.image-zoom-caption {
+  position: fixed;
+  bottom: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: min(90vw, 48rem);
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  background: rgba(13, 17, 23, 0.8);
+  color: #c9d1d9;
+  font-size: 0.85rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+@keyframes image-zoom-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image-zoom {
+    animation: none;
+  }
+}
