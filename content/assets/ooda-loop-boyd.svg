@@ -53,7 +53,7 @@
 
   <!-- ORIENT -->
   <rect class="orient" x="265" y="94" width="300" height="290" rx="12"/>
-  <text class="h" x="415" y="126" text-anchor="middle" fill="#d4a84b">ORIENT</text>
+  <text class="h" x="415" y="126" text-anchor="middle" style="fill:#d4a84b">ORIENT</text>
   <line class="web" x1="415" y1="163" x2="415" y2="253"/>
   <line class="web" x1="344" y1="206" x2="415" y2="253"/>
   <line class="web" x1="488" y1="206" x2="415" y2="253"/>

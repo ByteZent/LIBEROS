@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 630" width="1000" height="630" role="img" aria-labelledby="t d">
+  <title id="t">The simple circular-flow diagram</title>
+  <desc id="d">Households and firms interact in two markets. In the market for goods and services, firms sell goods and services that households buy; households' spending becomes firms' revenue. In the market for factors of production, households sell labour, land and capital that firms hire; firms' factor payments become households' income as wages, rent and profit. Real flows of goods and factors run in one direction, money flows in the opposite direction. The basic model leaves out government, foreign trade, the financial sector and saving.</desc>
+  <defs>
+    <marker id="ax" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5b6773"/></marker>
+    <marker id="aw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#c9d1d9"/></marker>
+    <marker id="ad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7fb3c8"/></marker>
+    <marker id="as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8fc59b"/></marker>
+    <marker id="ae" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#d4a84b"/></marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#c97b84"/></marker>
+    <style>
+      .panel { fill: #0d1117; }
+      .box { fill: #161d26; stroke: #3a4654; stroke-width: 1.5; }
+      .axis { stroke: #5b6773; stroke-width: 1.5; fill: none; }
+      .guide { stroke: #5b6773; stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
+      .d { stroke: #7fb3c8; stroke-width: 2.6; fill: none; stroke-linecap: round; }
+      .s { stroke: #8fc59b; stroke-width: 2.6; fill: none; stroke-linecap: round; }
+      .old { stroke-dasharray: 7 6; opacity: .55; }
+      .h { font: 700 15px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.5px; fill: #e8edf2; }
+      .lbl { font: 600 11.5px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.2px; }
+      .ax { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .cv { font: italic 700 14px "IBM Plex Serif", Georgia, serif; }
+      .tk { font: italic 13px "IBM Plex Serif", Georgia, serif; fill: #c9d1d9; }
+      .item { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .sub { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .res { font: 700 13px "JetBrains Mono", Menlo, monospace; fill: #d4a84b; }
+      .src { font: italic 11px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #5b6773; }
+    </style>
+  </defs>
+  <rect class="panel" width="1000" height="630" rx="14"/>
+  <path d="M400 122 Q340 235 202 266" stroke="#7fb3c8" stroke-width="2.4" fill="none" marker-end="url(#ad)"/>
+  <path d="M200 354 Q340 385 398 496" stroke="#7fb3c8" stroke-width="2.4" fill="none" marker-end="url(#ad)"/>
+  <path d="M602 496 Q660 385 798 354" stroke="#7fb3c8" stroke-width="2.4" fill="none" marker-end="url(#ad)"/>
+  <path d="M800 266 Q660 235 602 124" stroke="#7fb3c8" stroke-width="2.4" fill="none" marker-end="url(#ad)"/>
+  <path d="M110 266 Q150 90 376 72" stroke="#d4a84b" stroke-width="2" fill="none" stroke-dasharray="7 5" marker-end="url(#ae)"/>
+  <path d="M624 72 Q850 90 890 264" stroke="#d4a84b" stroke-width="2" fill="none" stroke-dasharray="7 5" marker-end="url(#ae)"/>
+  <path d="M890 356 Q850 530 626 548" stroke="#d4a84b" stroke-width="2" fill="none" stroke-dasharray="7 5" marker-end="url(#ae)"/>
+  <path d="M374 548 Q150 530 110 356" stroke="#d4a84b" stroke-width="2" fill="none" stroke-dasharray="7 5" marker-end="url(#ae)"/>
+  <rect class="box" x="378" y="36" width="244" height="88" rx="10"/>
+  <text class="h" x="500.0" y="62" text-anchor="middle">MARKETS FOR</text>
+  <text class="h" x="500.0" y="82" text-anchor="middle">GOODS &amp; SERVICES</text>
+  <text class="sub" x="500.0" y="112" text-anchor="middle">firms sell · households buy</text>
+  <rect class="box" x="378" y="496" width="244" height="88" rx="10"/>
+  <text class="h" x="500.0" y="522" text-anchor="middle">MARKETS FOR</text>
+  <text class="h" x="500.0" y="542" text-anchor="middle">FACTORS OF PRODUCTION</text>
+  <text class="sub" x="500.0" y="572" text-anchor="middle">households sell · firms buy</text>
+  <rect fill="#1a2330" stroke="#d4a84b" stroke-width="2" x="30" y="266" width="220" height="88" rx="10"/>
+  <text class="h" x="140.0" y="296" text-anchor="middle">HOUSEHOLDS</text>
+  <text class="sub" x="140.0" y="342" text-anchor="middle">own the factors, consume</text>
+  <rect fill="#1a2330" stroke="#d4a84b" stroke-width="2" x="750" y="266" width="220" height="88" rx="10"/>
+  <text class="h" x="860.0" y="296" text-anchor="middle">FIRMS</text>
+  <text class="sub" x="860.0" y="342" text-anchor="middle">hire factors, produce</text>
+  <text class="item" x="335" y="222" text-anchor="start" style="fill:#7fb3c8">Goods and services</text>
+  <text class="item" x="335" y="239" text-anchor="start" style="fill:#7fb3c8">bought</text>
+  <text class="item" x="665" y="222" text-anchor="end" style="fill:#7fb3c8">Goods and services</text>
+  <text class="item" x="665" y="239" text-anchor="end" style="fill:#7fb3c8">sold</text>
+  <text class="item" x="335" y="400" text-anchor="start" style="fill:#7fb3c8">Labour, land,</text>
+  <text class="item" x="335" y="417" text-anchor="start" style="fill:#7fb3c8">capital</text>
+  <text class="item" x="665" y="400" text-anchor="end" style="fill:#7fb3c8">Factors of</text>
+  <text class="item" x="665" y="417" text-anchor="end" style="fill:#7fb3c8">production</text>
+  <text class="item" x="180" y="122" text-anchor="end" style="fill:#d4a84b">Spending</text>
+  <text class="item" x="820" y="122" text-anchor="start" style="fill:#d4a84b">Revenue</text>
+  <text class="item" x="185" y="494" text-anchor="end" style="fill:#d4a84b">Income:</text>
+  <text class="item" x="185" y="511" text-anchor="end" style="fill:#d4a84b">wages, rent, profit</text>
+  <text class="item" x="815" y="494" text-anchor="start" style="fill:#d4a84b">Factor payments:</text>
+  <text class="item" x="815" y="511" text-anchor="start" style="fill:#d4a84b">wages, rent, profit</text>
+  <line x1="430" y1="296" x2="470" y2="296" stroke="#7fb3c8" stroke-width="2.4"/>
+  <text class="sub" x="480" y="300">real flow: goods, factors</text>
+  <line x1="430" y1="322" x2="470" y2="322" stroke="#d4a84b" stroke-width="2" stroke-dasharray="7 5"/>
+  <text class="sub" x="480" y="326">money flow: payments</text>
+  <text class="sub" x="30" y="614">Closed basic model: no government, no foreign trade, no financial sector, no saving.</text>
+  <text class="src" x="970" y="614" text-anchor="end">After Mankiw, Principles of Economics, ch. 2. Drawn for LIBEROS.</text>
+</svg>

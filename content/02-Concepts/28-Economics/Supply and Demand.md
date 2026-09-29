@@ -214,6 +214,9 @@ Whether such an intervention is *justified* is a **normative** question. The mod
 
 - [[General Model Theory]]: supply and demand is a textbook model in Stachowiak's sense. *Mapping:* real markets. *Reduction:* price-taking, identical goods, ceteris paribus. *Pragmatism:* built for predicting the direction of price and quantity changes in competitive markets, not for monopolies or fairness questions.
 
+- [[Production Possibilities Frontier]]: rising supply curves and the bowed-out PPF express the same idea: producing more costs more at the margin
+- [[Circular Flow Diagram]]: shows the two markets (goods, factors) in which supply and demand operate
+
 ## Self-Test
 
 > [!question]- 1. Why is a higher price of the good itself not a shift of the demand curve?

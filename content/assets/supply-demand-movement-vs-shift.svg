@@ -42,8 +42,8 @@
   <circle cx="337.5" cy="341.0" r="5" fill="#d4a84b"/>
   <text class="tk" x="82" y="345.0" text-anchor="end">P₂</text>
   <text class="tk" x="337.5" y="458" text-anchor="middle">Q₂</text>
-  <text class="cv" x="180.5" y="201.0" text-anchor="start" fill="#d4a84b">A</text>
-  <text class="cv" x="345.5" y="333.0" text-anchor="start" fill="#d4a84b">B</text>
+  <text class="cv" x="180.5" y="201.0" text-anchor="start" style="fill:#d4a84b">A</text>
+  <text class="cv" x="345.5" y="333.0" text-anchor="start" style="fill:#d4a84b">B</text>
   <path d="M187.3 241.3 L297.8 329.7" stroke="#d4a84b" stroke-width="2" fill="none" marker-end="url(#ae)"/>
   <path class="axis" d="M580 440 V98" marker-end="url(#ax)"/>
   <path class="axis" d="M580 440 H922" marker-end="url(#ax)"/>

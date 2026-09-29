@@ -55,7 +55,7 @@
 
   <!-- MODEL -->
   <rect class="model" x="670" y="70" width="300" height="340" rx="12"/>
-  <text class="h" x="820" y="102" text-anchor="middle" fill="#d4a84b">MODEL</text>
+  <text class="h" x="820" y="102" text-anchor="middle" style="fill:#d4a84b">MODEL</text>
   <text class="sub" x="820" y="122" text-anchor="middle">a 1:50 000 map</text>
 
   <rect class="pill" x="690" y="141" width="260" height="28" rx="14"/>
@@ -87,7 +87,7 @@
   <line class="x" x1="388" y1="349" x2="400" y2="361"/><line class="x" x1="400" y1="349" x2="388" y2="361"/>
   <text class="lbl" x="530" y="318" text-anchor="middle" fill="#e8edf2">② REDUCTION</text>
   <text class="sub" x="530" y="338" text-anchor="middle">← left out: preterite attributes</text>
-  <text class="sub" x="530" y="356" text-anchor="middle" fill="#7fb3c8">added: abundant attributes →</text>
+  <text class="sub" x="530" y="356" text-anchor="middle" style="fill:#7fb3c8">added: abundant attributes →</text>
 
   <!-- 3 PRAGMATISM -->
   <path class="ig" d="M820 432 V414" marker-end="url(#arr-ig)"/>
