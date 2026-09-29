@@ -30,6 +30,20 @@
     color: var(--secondary);
   }
 
+  .ns-course {
+    font-weight: normal;
+    border-style: dashed;
+    border-color: var(--secondary);
+    color: var(--dark);
+    text-transform: none;
+    letter-spacing: 0.02em;
+
+    &:hover {
+      border-style: solid;
+      background: var(--highlight);
+    }
+  }
+
   .ns-status-seedling {
     border-color: #6b8f3a;
     color: #6b8f3a;

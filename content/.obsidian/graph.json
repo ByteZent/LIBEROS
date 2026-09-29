@@ -4,12 +4,75 @@
   "showAttachments": false,
   "showOrphans": true,
   "colorGroups": [
-    { "query": "[type:concept]",    "color": { "a": 1, "rgb": 8369096 } },
-    { "query": "[type:thinker]",    "color": { "a": 1, "rgb": 13936715 } },
-    { "query": "[type:work]",       "color": { "a": 1, "rgb": 13936715 } },
-    { "query": "[type:actor]",      "color": { "a": 1, "rgb": 14711391 } },
-    { "query": "[type:case]",       "color": { "a": 1, "rgb": 7048506 } },
-    { "query": "[type:framework]",  "color": { "a": 1, "rgb": 3100527 } },
-    { "query": "[type:synthesis]",  "color": { "a": 1, "rgb": 16777215 } }
+    {
+      "query": "[type:concept]",
+      "color": {
+        "a": 1,
+        "rgb": 8369096
+      }
+    },
+    {
+      "query": "[type:thinker]",
+      "color": {
+        "a": 1,
+        "rgb": 13936715
+      }
+    },
+    {
+      "query": "[type:work]",
+      "color": {
+        "a": 1,
+        "rgb": 13936715
+      }
+    },
+    {
+      "query": "[type:actor]",
+      "color": {
+        "a": 1,
+        "rgb": 14711391
+      }
+    },
+    {
+      "query": "[type:case]",
+      "color": {
+        "a": 1,
+        "rgb": 7048506
+      }
+    },
+    {
+      "query": "[type:framework]",
+      "color": {
+        "a": 1,
+        "rgb": 3100527
+      }
+    },
+    {
+      "query": "[type:synthesis]",
+      "color": {
+        "a": 1,
+        "rgb": 16777215
+      }
+    },
+    {
+      "query": "[type:model]",
+      "color": {
+        "a": 1,
+        "rgb": 10181046
+      }
+    },
+    {
+      "query": "[type:norm]",
+      "color": {
+        "a": 1,
+        "rgb": 12887667
+      }
+    },
+    {
+      "query": "[type:judgment]",
+      "color": {
+        "a": 1,
+        "rgb": 12887667
+      }
+    }
   ]
 }

@@ -57,6 +57,7 @@ tags:
 
 - [[On War]]: origin (Book VIII)
 - [[Ends-Ways-Means]]: CoG analysis defines the *ways*
+- [[OODA Loop]]: Boyd's manoeuvre theory targets cohesion, close to Clausewitz's original meaning
 - [[Deterrence]]: deterrence by punishment threatens what the adversary values, often its perceived CoG
 
 ## Open Questions

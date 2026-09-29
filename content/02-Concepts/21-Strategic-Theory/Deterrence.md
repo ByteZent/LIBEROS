@@ -47,6 +47,7 @@ The idea is ancient. The formal theory developed in the nuclear age (Brodie, Sch
 
 - [[Center of Gravity]]: punishment strategies target what the adversary values
 - [[Ends-Ways-Means]]: deterrence as a *way* whose *ends* are political
+- [[Public Goods]]: collective deterrence as a public good; alliance free-riding
 
 ## Open Questions
 

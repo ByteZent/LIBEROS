@@ -46,6 +46,8 @@ Security and defence policy runs through the same stages: a threat perception re
 ## Key Connections
 
 - [[Ends-Ways-Means]]: parallel logic in military strategy
+- [[Public Goods]]: market failure as the classic problem definition
+- [[Rule of Law]]: legal basis and proportionality constrain formulation and implementation
 
 ## Open Questions
 

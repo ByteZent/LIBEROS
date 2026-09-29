@@ -2,7 +2,8 @@
 title: "{{title}}"
 aliases: []
 type: source
-domain: 
+domain: []
+courses: []
 status: seedling
 confidence: medium
 created: {{date}}
@@ -11,6 +12,7 @@ review:
 author: 
 year: 
 source_type: book | article | doctrine | report | speech
+citekey:          # Zotero/Better BibTeX key; name this file after it
 url: 
 tags:
   - source
@@ -36,3 +38,4 @@ Reliability, bias, method, and where it sits in the debate.
 
 ## Citation
 
+[@citekey]

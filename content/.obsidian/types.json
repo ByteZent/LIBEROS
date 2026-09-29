@@ -3,7 +3,7 @@
     "aliases": "aliases",
     "tags": "tags",
     "type": "text",
-    "domain": "text",
+    "domain": "multitext",
     "status": "text",
     "confidence": "text",
     "created": "date",
@@ -13,6 +13,14 @@
     "draft": "checkbox",
     "author": "text",
     "year": "number",
-    "course": "text"
+    "course": "text",
+    "courses": "multitext",
+    "originators": "multitext",
+    "jurisdiction": "text",
+    "citation": "text",
+    "court": "text",
+    "decided": "date",
+    "in_force": "date",
+    "citekey": "text"
   }
 }

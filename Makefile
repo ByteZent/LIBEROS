@@ -9,13 +9,13 @@ MSG     ?= Update notes $(TODAY)
 NOTES   := find $(VAULT)/0[1-9]-* -name '*.md' ! -name index.md -print0
 
 .DEFAULT_GOAL := help
-.PHONY: help install serve serve-pwa build clean check format typecheck logo new review stats inbox open publish update
+.PHONY: help install serve serve-pwa build clean check format typecheck logo sources bib-merge new course review stats inbox open publish update
 
 help: ## Show this help
 	@awk 'BEGIN {FS = ":.*## "} /^[a-zA-Z_-]+:.*## / {printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 	@echo
 	@echo "  make new TYPE=concept TITLE=\"Escalation Dominance\""
-	@echo "  types: concept actor thinker key-work case-study assessment framework synthesis source-note open-question course-map"
+	@echo "  types: concept model actor thinker key-work case-study judgment legal-norm assessment framework synthesis source-note open-question course-map"
 
 ## ── Setup & site ────────────────────────────────────────────────────────────
 
@@ -42,12 +42,22 @@ typecheck: ## Type-check Quartz config and components
 format: ## Format code with Prettier
 	npx prettier --write .
 
-check: typecheck ## Type-check, verify formatting and do a test build
+check: typecheck ## Type-check, verify formatting, check sources and do a test build
 	npx prettier --check .
+	node scripts/bib.mjs check
 	npx quartz build
 
 logo: ## Re-export favicon, social image and logo PNGs from branding/*.svg
 	node branding/export.mjs
+
+## ── Sources ─────────────────────────────────────────────────────────────────
+
+sources: ## Check bibliography: duplicates, [@citekeys] not in library.bib, source notes
+	@node scripts/bib.mjs check
+
+STUDY_BIBS ?= $(wildcard /Users/flugel/spaces/eth/PARA\ BELLUM/04_Subjects/*/*/zusammenfassung-*/references.bib)
+bib-merge: ## Merge the study vault's course .bib files into bibliography/import/ (for Zotero import)
+	@node scripts/bib.mjs merge bibliography/import/courses.bib "/Users/flugel/spaces/eth/PARA BELLUM/04_Subjects/"*/*/zusammenfassung-*/references.bib
 
 ## ── Writing & learning ──────────────────────────────────────────────────────
 
@@ -59,6 +69,9 @@ new: ## Create a note from a template in _inbox (TYPE=… TITLE="…")
 	 test ! -e "$$out" || { echo "exists: $$out"; exit 1; }; \
 	 sed -e 's/{{title}}/$(TITLE)/g' -e 's/{{date}}/$(TODAY)/g' "$(VAULT)/_templates/$$tpl" > "$$out"; \
 	 echo "created $$out"
+
+course: ## Exam prep: all notes for a course by maturity (COURSE=PP-ECON-1; omit to list codes)
+	@node scripts/course.mjs $(COURSE)
 
 review: ## List notes whose review date is due (today or earlier)
 	@grep -rl --include='*.md' '^review: [0-9]' $(VAULT) | grep -v '/_templates/' | while read -r f; do \

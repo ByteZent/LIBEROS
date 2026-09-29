@@ -8,7 +8,9 @@ tsconfig.tsbuildinfo
 .replit
 replit.nix
 
-# Obsidian: commit the vault config, not per-device UI state
+# Obsidian: commit the vault config, not per-device UI state.
+# The vault is content/. A root-level .obsidian means the repo root was opened by mistake.
+/.obsidian/
 content/.obsidian/workspace*.json
 content/.obsidian/cache
 content/.obsidian/plugins/*/data.json
@@ -20,3 +22,6 @@ content/_private/*
 !content/_private/README.md
 content/_inbox/*
 !content/_inbox/README.md
+
+# Private bibliography imports (course material) — never pushed
+bibliography/import/

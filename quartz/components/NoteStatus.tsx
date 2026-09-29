@@ -1,9 +1,14 @@
 import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { classNames } from "../util/lang"
+import { FullSlug, resolveRelative, slugTag } from "../util/path"
+import { COURSE_TAG_PREFIX } from "../plugins/transformers/courseTags"
 import style from "./styles/noteStatus.scss"
 
-// Renders the LIBEROS note metadata (type / maturity / confidence / domain) as a status strip.
+// Renders the LIBEROS note metadata (type / maturity / confidence / domain / course) as a status strip.
 // All fields are optional; the strip is omitted when a note declares none of them.
+
+// COURSE badges link to the course page (/tags/course/<code>, see plugins/transformers/courseTags.ts)
+// and take their label from that page's title (content/tags/course/<code>.md); otherwise the raw code.
 
 const TYPE_LABELS: Record<string, string> = {
   concept: "Concept",
@@ -17,6 +22,9 @@ const TYPE_LABELS: Record<string, string> = {
   source: "Source Note",
   moc: "Map of Content",
   question: "Open Question",
+  model: "Model",
+  norm: "Legal Norm",
+  judgment: "Judgment",
   meta: "Meta",
 }
 
@@ -32,15 +40,23 @@ function asString(value: unknown): string | undefined {
 }
 
 export default (() => {
-  function NoteStatus({ fileData, displayClass }: QuartzComponentProps) {
+  function NoteStatus({ fileData, allFiles, displayClass }: QuartzComponentProps) {
     const fm: Record<string, unknown> = fileData.frontmatter ?? {}
     const type = asString(fm.type)
     const status = asString(fm.status)
     const confidence = asString(fm.confidence)
-    const domain = asString(fm.domain)
+    // domain may be a single value or a list (a note can belong to several disciplines)
+    const domain = (Array.isArray(fm.domain) ? fm.domain : [fm.domain])
+      .map(asString)
+      .filter((d): d is string => d !== undefined)
+      .join(" · ")
+    // course codes keep their original case (e.g. L1-HS26)
+    const courses = (Array.isArray(fm.courses) ? fm.courses : [fm.courses]).filter(
+      (c): c is string => typeof c === "string" && c.trim() !== "",
+    )
     const review = fm.review instanceof Date ? fm.review.toISOString().slice(0, 10) : fm.review
 
-    if (!type && !status && !confidence && !domain) return null
+    if (!type && !status && !confidence && !domain && courses.length === 0) return null
 
     return (
       <div class={classNames(displayClass, "note-status")}>
@@ -68,6 +84,20 @@ export default (() => {
             {domain}
           </span>
         )}
+        {courses.map((code) => {
+          const slug = `tags/${slugTag(COURSE_TAG_PREFIX + code.trim())}` as FullSlug
+          const label = allFiles.find((f) => f.slug === slug)?.frontmatter?.title ?? code.trim()
+          return (
+            <a
+              class="ns-item ns-course internal"
+              href={resolveRelative(fileData.slug!, slug)}
+              title={`All notes for ${code.trim()}`}
+            >
+              <span class="ns-key">COURSE</span>
+              {label}
+            </a>
+          )
+        })}
         {typeof review === "string" && review !== "" && (
           <span class="ns-item ns-review">
             <span class="ns-key">NEXT REVIEW</span>

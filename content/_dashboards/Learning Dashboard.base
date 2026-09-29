@@ -68,3 +68,26 @@ views:
       - file.name
       - status
       - domain
+  - type: table
+    name: By course
+    filters:
+      and:
+        - '!courses.isEmpty()'
+    groupBy:
+      property: note.courses
+      direction: ASC
+    order:
+      - file.name
+      - type
+      - status
+      - confidence
+      - review
+  - type: table
+    name: By discipline
+    groupBy:
+      property: note.domain
+      direction: ASC
+    order:
+      - file.name
+      - type
+      - status

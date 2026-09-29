@@ -65,6 +65,7 @@ const config: QuartzConfig = {
   plugins: {
     transformers: [
       Plugin.FrontMatter(),
+      Plugin.CourseTags(), // courses: [L1-HS26] → tag course/L1-HS26 → searchable course page
       Plugin.CreatedModifiedDate({
         priority: ["frontmatter", "git", "filesystem"],
       }),
@@ -77,6 +78,12 @@ const config: QuartzConfig = {
       }),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
+      // [@citekey] citations, rendered from the Zotero-exported bibliography
+      Plugin.Citations({
+        bibliographyFile: "./bibliography/library.bib",
+        linkCitations: true,
+        csl: "apa",
+      }),
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),

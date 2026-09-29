@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="1000" height="500" role="img" aria-labelledby="t d">
+  <title id="t">Boyd's OODA loop</title>
+  <desc id="d">Observe, Orient, Decide, Act connected by feed-forward arrows. Orient contains cultural traditions, genetic heritage, previous experience, new information, and analyses and synthesis. Feedback runs from Decide and Act back to Observe; implicit guidance and control runs from Orient to Observe and to Act. After John Boyd, The Essence of Winning and Losing (1995).</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#c9d1d9"/>
+    </marker>
+    <marker id="arr-fb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#7fb3c8"/>
+    </marker>
+    <marker id="arr-ig" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#d4a84b"/>
+    </marker>
+    <style>
+      .panel { fill: #0d1117; }
+      .box { fill: #161d26; stroke: #3a4654; stroke-width: 1.5; }
+      .orient { fill: #1a2330; stroke: #d4a84b; stroke-width: 2; }
+      .h { font: 700 17px "JetBrains Mono", Menlo, monospace; letter-spacing: 2px; fill: #e8edf2; }
+      .sub { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .item { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .pill { fill: #0d1117; stroke: #5b6773; stroke-width: 1; }
+      .pill-core { fill: #0d1117; stroke: #d4a84b; stroke-width: 1.5; }
+      .web { stroke: #5b6773; stroke-width: 1; }
+      .ff { stroke: #c9d1d9; stroke-width: 2.2; fill: none; }
+      .fb { stroke: #7fb3c8; stroke-width: 2; fill: none; }
+      .ig { stroke: #d4a84b; stroke-width: 2; fill: none; stroke-dasharray: 7 5; }
+      .lbl { font: 600 11.5px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.2px; }
+      .src { font: italic 11px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #5b6773; }
+    </style>
+  </defs>
+
+  <rect class="panel" width="1000" height="500" rx="14"/>
+
+  <!-- implicit guidance & control (top lane) -->
+  <path class="ig" d="M415 92 V52 H120 V118" marker-end="url(#arr-ig)"/>
+  <path class="ig" d="M415 52 H895 V183" marker-end="url(#arr-ig)"/>
+  <text class="lbl" x="560" y="42" fill="#d4a84b">IMPLICIT GUIDANCE &amp; CONTROL</text>
+
+  <!-- feedback (bottom lane) -->
+  <path class="fb" d="M690 277 V428 H120 V352" marker-end="url(#arr-fb)"/>
+  <path class="fb" d="M895 277 V428 H690"/>
+  <text class="lbl" x="250" y="452" fill="#7fb3c8">FEEDBACK · UNFOLDING INTERACTION WITH ENVIRONMENT</text>
+
+  <!-- OBSERVE -->
+  <rect class="box" x="30" y="120" width="180" height="230" rx="10"/>
+  <text class="h" x="120" y="152" text-anchor="middle">OBSERVE</text>
+  <text class="item" x="46" y="190">Outside information</text>
+  <text class="item" x="46" y="216">Unfolding</text>
+  <text class="item" x="46" y="232">circumstances</text>
+  <text class="item" x="46" y="258">Unfolding interaction</text>
+  <text class="item" x="46" y="274">with environment</text>
+  <text class="sub" x="120" y="330" text-anchor="middle">what reaches us</text>
+
+  <!-- ORIENT -->
+  <rect class="orient" x="265" y="94" width="300" height="290" rx="12"/>
+  <text class="h" x="415" y="126" text-anchor="middle" fill="#d4a84b">ORIENT</text>
+  <line class="web" x1="415" y1="163" x2="415" y2="253"/>
+  <line class="web" x1="344" y1="206" x2="415" y2="253"/>
+  <line class="web" x1="488" y1="206" x2="415" y2="253"/>
+  <line class="web" x1="415" y1="253" x2="415" y2="323"/>
+  <line class="web" x1="344" y1="206" x2="488" y2="206"/>
+  <line class="web" x1="415" y1="163" x2="344" y2="206"/>
+  <line class="web" x1="415" y1="163" x2="488" y2="206"/>
+  <rect class="pill" x="340" y="148" width="150" height="30" rx="15"/>
+  <text class="item" x="415" y="167" text-anchor="middle">Cultural traditions</text>
+  <rect class="pill" x="278" y="191" width="132" height="30" rx="15"/>
+  <text class="item" x="344" y="210" text-anchor="middle">Genetic heritage</text>
+  <rect class="pill" x="420" y="191" width="136" height="30" rx="15"/>
+  <text class="item" x="488" y="210" text-anchor="middle">Previous experience</text>
+  <rect class="pill-core" x="330" y="238" width="170" height="30" rx="15"/>
+  <text class="item" x="415" y="257" text-anchor="middle">Analyses &amp; synthesis</text>
+  <rect class="pill" x="345" y="308" width="140" height="30" rx="15"/>
+  <text class="item" x="415" y="327" text-anchor="middle">New information</text>
+  <text class="sub" x="415" y="368" text-anchor="middle">how we make sense of it: the Schwerpunkt</text>
+
+  <!-- DECIDE -->
+  <rect class="box" x="620" y="185" width="140" height="92" rx="10"/>
+  <text class="h" x="690" y="222" text-anchor="middle">DECIDE</text>
+  <text class="sub" x="690" y="248" text-anchor="middle">(hypothesis)</text>
+
+  <!-- ACT -->
+  <rect class="box" x="825" y="185" width="140" height="92" rx="10"/>
+  <text class="h" x="895" y="222" text-anchor="middle">ACT</text>
+  <text class="sub" x="895" y="248" text-anchor="middle">(test)</text>
+
+  <!-- feed-forward (solid) -->
+  <path class="ff" d="M212 235 H262" marker-end="url(#arr)"/>
+  <path class="ff" d="M567 231 H617" marker-end="url(#arr)"/>
+  <path class="ff" d="M762 231 H822" marker-end="url(#arr)"/>
+
+  <!-- legend / source -->
+  <text class="src" x="970" y="484" text-anchor="end">After John Boyd, “The Essence of Winning and Losing” (1995). Redrawn for LIBEROS.</text>
+</svg>

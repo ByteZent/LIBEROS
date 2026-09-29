@@ -16,11 +16,13 @@ tags:
 ## Foundations
 
 - [[Carl von Clausewitz]] → [[On War]]
-- *To add:* Sun Tzu · Jomini · Mahan · Corbett · Liddell Hart · Schelling · Boyd
+- [[John Boyd]] → [[OODA Loop]]
+- *To add:* Sun Tzu · Jomini · Mahan · Corbett · Liddell Hart · Schelling
 
 ## Nature of War & Strategy
 
 - [[Center of Gravity]]
+- [[OODA Loop]]: adaptation, tempo and orientation
 - *To add:* Friction · Paradoxical Trinity · Culminating Point · Levels of War · Grand Strategy
 
 ## Coercion
@@ -36,6 +38,8 @@ tags:
 ## Bridges to Policy
 
 - [[Policy Cycle]]: how strategic choices pass through the policy process
+- [[Public Goods]]: the economics of defence and alliances
+- [[Public Policy MOC|Map: Public Policy]] · [[Economics MOC|Map: Economics]] · [[Law and Rule of Law MOC|Map: Law & Rule of Law]]
 
 ## Reading Path
 

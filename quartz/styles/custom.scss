@@ -1,4 +1,5 @@
 @use "./base.scss";
+@use "./variables.scss" as *;
 
 // ─── LIBEROS theme ──────────────────────────────────────────────────────────
 // Analyst-desk look: monospace headings, restrained colour, clear hierarchy.
@@ -143,4 +144,39 @@ article > h2 {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--tertiary);
+}
+
+// ─── Tags ───────────────────────────────────────────────────────────────────
+
+// List pages (folders, tags, courses): Quartz squeezes tags into a narrow right-hand column.
+// Put them on their own row under the title instead, left-aligned and full width.
+li.section-li > .section {
+  grid-template-columns: fit-content(8em) 1fr;
+  row-gap: 0.15rem;
+
+  & > .tags {
+    grid-column: 2;
+    justify-content: flex-start;
+    margin: 0;
+    gap: 0.3rem;
+
+    // Quartz hides list tags on phones; with the full-width row they fit, so show them
+    @media all and ($mobile) {
+      display: flex;
+    }
+
+    a.internal.tag-link {
+      font-size: 0.8rem;
+      padding: 0.1rem 0.4rem;
+    }
+  }
+}
+
+.popover li.section-li > .section > .tags {
+  display: none;
+}
+
+// course/<code> tags are generated from `courses:` and already shown as the COURSE badge
+.tags > li:has(> a.tag-link[href*="tags/course/"]) {
+  display: none;
 }

@@ -15,13 +15,13 @@ It is built note by note while I study Public Policy and Military Strategy. Each
 
 <div class="section-grid">
   <a class="section-card internal" href="./01-Actors/"><span class="num">01</span><span class="name">Actors</span><span class="desc">States, alliances, armed forces, agencies, non-state actors, leaders.</span></a>
-  <a class="section-card internal" href="./02-Concepts/"><span class="num">02</span><span class="name">Concepts</span><span class="desc">Strategic theory, doctrine, public policy, IR, security policy, intelligence, technology.</span></a>
+  <a class="section-card internal" href="./02-Concepts/"><span class="num">02</span><span class="name">Concepts</span><span class="desc">Strategic theory, doctrine, public policy, economics, law, IR, security, intelligence, technology.</span></a>
   <a class="section-card internal" href="./03-Thinkers-and-Works/"><span class="num">03</span><span class="name">Thinkers &amp; Works</span><span class="desc">The strategists, scholars and texts behind the ideas.</span></a>
-  <a class="section-card internal" href="./04-Case-Studies/"><span class="num">04</span><span class="name">Case Studies</span><span class="desc">Wars, campaigns, crises and policy decisions, analysed.</span></a>
+  <a class="section-card internal" href="./04-Case-Studies/"><span class="num">04</span><span class="name">Case Studies</span><span class="desc">Wars, campaigns, crises, policy decisions and court cases, analysed.</span></a>
   <a class="section-card internal" href="./05-Assessments/"><span class="num">05</span><span class="name">Assessments</span><span class="desc">Structured judgements on current developments, with confidence levels.</span></a>
   <a class="section-card internal" href="./06-Frameworks-and-Methods/"><span class="num">06</span><span class="name">Frameworks &amp; Methods</span><span class="desc">Analytical tools for strategy, policy analysis and research.</span></a>
   <a class="section-card internal" href="./07-Syntheses/"><span class="num">07</span><span class="name">Syntheses</span><span class="desc">Essays and comparisons built from the network of notes.</span></a>
-  <a class="section-card internal" href="./08-Library/"><span class="num">08</span><span class="name">Library</span><span class="desc">Books, articles, doctrine and official documents, reading lists.</span></a>
+  <a class="section-card internal" href="./08-Library/"><span class="num">08</span><span class="name">Library</span><span class="desc">Books, articles, doctrine, legal sources, reading lists.</span></a>
   <a class="section-card internal" href="./09-Learning/"><span class="num">09</span><span class="name">Learning</span><span class="desc">Maps of content, open questions, course maps.</span></a>
 </div>
 
@@ -29,7 +29,11 @@ It is built note by note while I study Public Policy and Military Strategy. Each
 
 - [[Strategic Theory MOC|Map: Strategic Theory]]: entry point into the theory of war and strategy
 - [[Carl von Clausewitz]] → [[Center of Gravity]] → [[Ends-Ways-Means]]
+- [[John Boyd]] → [[OODA Loop]]: why orientation, not speed, wins
 - [[Policy Cycle]]: how public policy is made, and why the model is both useful and wrong
+- [[Public Goods]] → why defence is a public good and alliances invite free-riding
+- [[Rule of Law]]: the legal limits of every policy instrument
+- Maps: [[Public Policy MOC|Public Policy]] · [[Economics MOC|Economics]] · [[Law and Rule of Law MOC|Law & Rule of Law]]
 - [[Methodology]] · [[Note Standards]] · [[Learning System]]
 
 ## Graph

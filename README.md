@@ -50,7 +50,10 @@ Everything runs through `make` (`make help` lists all targets):
 | `make serve-pwa`                            | Same, with the service worker on (offline / install testing, port 8080 → use `PORT=8090`) |
 | `make new TYPE=concept TITLE="Escalation"`  | New note from a template in `_inbox/`                                                     |
 | `make inbox`                                | List unprocessed captures                                                                 |
+| `make course COURSE=PP-ECON-1`              | Exam prep: every note tagged with that course, by maturity                                |
 | `make review`                               | Notes whose `review:` date is due                                                         |
+| `make sources`                              | Check the bibliography: duplicates, unknown `[@citekeys]`                                 |
+| `make bib-merge`                            | Merge all course `.bib` files from the study vault for Zotero import                      |
 | `make stats`                                | Note counts by type and maturity                                                          |
 | `make open`                                 | Open the vault in Obsidian                                                                |
 | `make check`                                | Type-check, format check, test build                                                      |
@@ -59,20 +62,21 @@ Everything runs through `make` (`make help` lists all targets):
 | `make logo`                                 | Re-export favicon / social image / logo PNGs from `branding/`                             |
 | `make build` / `make clean` / `make format` | Build to `public/`, remove build output, format code                                      |
 
-Template types for `make new`: `concept actor thinker key-work case-study assessment framework synthesis source-note open-question course-map`.
+Template types for `make new`: `concept model actor thinker key-work case-study judgment legal-norm assessment framework synthesis source-note open-question course-map`.
 
 In Obsidian: open `LIBEROS/content` as the vault. New notes land in `_inbox/`; insert a template via _Templates: Insert template_. The **Learning Dashboard** (`_dashboards/Learning Dashboard.base`) shows review queues, seedlings, low-confidence notes and the inbox.
 
 ## Frontmatter
 
-| Field        | Values                                                                                                 | Rendered                 |
-| ------------ | ------------------------------------------------------------------------------------------------------ | ------------------------ |
-| `type`       | concept · actor · thinker · work · case · assessment · framework · synthesis · source · question · moc | status strip             |
-| `status`     | seedling · developing · evergreen                                                                      | status strip             |
-| `confidence` | low · medium · high                                                                                    | status strip             |
-| `domain`     | strategy · military · policy · ir · security · intelligence · technology                               | status strip             |
-| `review`     | `YYYY-MM-DD`                                                                                           | status strip + dashboard |
-| `draft`      | `true` → excluded from the site                                                                        | –                        |
+| Field        | Values                                                                                                                           | Rendered                 |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| `type`       | concept · model · actor · thinker · work · case · judgment · norm · assessment · framework · synthesis · source · question · moc | status strip             |
+| `status`     | seedling · developing · evergreen                                                                                                | status strip             |
+| `confidence` | low · medium · high                                                                                                              | status strip             |
+| `domain`     | one or more of: strategy · military · policy · economics · law · ir · security · intelligence · technology                       | status strip             |
+| `courses`    | course codes, e.g. `[PP-ECON-1]`, used by `make course` and the dashboard                                                        | –                        |
+| `review`     | `YYYY-MM-DD`                                                                                                                     | status strip + dashboard |
+| `draft`      | `true` → excluded from the site                                                                                                  | –                        |
 
 Custom callouts (styled identically in Obsidian and on the site): `[!bluf]`, `[!assessment]`, `[!counter]`, `[!source]`.
 

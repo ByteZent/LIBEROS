@@ -13,3 +13,4 @@ Source notes: books, articles, doctrine and official documents, reading lists.
 - **Articles & Papers**
 - **Doctrine & Official Documents**: Field manuals, joint publications, white papers, strategies, laws.
 - **Reading Lists**: Curated paths through the literature.
+- **Legal Sources**: Constitutions, statutes, treaties and conventions.

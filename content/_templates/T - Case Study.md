@@ -2,7 +2,8 @@
 title: "{{title}}"
 aliases: []
 type: case
-domain: 
+domain: []
+courses: []
 status: seedling
 confidence: medium
 created: {{date}}
