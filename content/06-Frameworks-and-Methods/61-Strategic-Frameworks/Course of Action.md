@@ -82,7 +82,17 @@ The staff briefs the comparison and a recommendation. The commander chooses, mod
 
 ### Swiss equivalent
 
-The Swiss command process (*Führungsrhythmus / Aktionsplanung*, FSO 17) follows the same logic under different names: after the problem is understood and the situation assessed (*Beurteilung der Lage*), the staff develops **variants** (*Varianten*), tests and compares them, and the commander takes a **decision** (*Entschluss*) that becomes the basis for the order [@schweizerarmee2017fso].
+The Swiss command process in *FSO 17* follows the same logic under different names [@schweizerarmee2017fso]. It has five command activities: problem recognition, assessment of the situation (*Beurteilung der Lage*), decision (*Entschlussfassung*), plan development and issuing orders. Immediate measures and time planning run alongside them. During the assessment, the staff develops **variants** (*Varianten*), checks them and sets them against each other. The commander's **decision** (*Entschluss*) states how they intend to accomplish the mission.
+
+The Swiss checks for a variant match the US screen almost one to one:
+
+| FSO 17 | Question | US equivalent |
+|---|---|---|
+| *Angemessenheit* | Does it accomplish the mission? | suitable / adequate |
+| *Exklusivität* | Does it differ from the other variants? | distinguishable |
+| *Machbarkeit* | Are the means sufficient? | feasible |
+| *Tragbarkeit* | Are the risks bearable? | acceptable |
+| *Vollständigkeit* | Does it say when, who, what, where, how? | complete |
 
 ## Worked Example
 
@@ -151,6 +161,6 @@ Note how the COAs map onto [[Attrition vs Manoeuvre Warfare|attrition and manoeu
 
 - [@usarmy2024planning]: FM 5-0, the MDMP and the COA screening criteria. [High confidence: primary doctrine]
 - [@jcs2020joint]: JP 5-0, the Joint Planning Process. [High confidence: primary doctrine]
-- [@schweizerarmee2017fso]: the Swiss command process with variants and decision. [Medium confidence]
+- [@schweizerarmee2017fso]: the Swiss command activities and variant criteria, checked against a public copy of FSO 17 (early 2014–2017 edition). [Medium–high confidence: primary]
 - [@klein1998sources]: recognition-primed decision making. [High confidence]
 - The worked example is invented for illustration. [Medium confidence]
