@@ -22,10 +22,10 @@ draft: true
 |---|---|---|
 | Boyd and the OODA loop *(named exam topic)* | [[OODA Loop]] · [[John Boyd]] | ☑ developing |
 | OODA vs Sensemaking: define separately, connect via orientation | [[OODA Loop#OODA vs Sensemaking]] | ☐ needs its own *Sensemaking* note |
-| Doctrine: definition and levels *(named exam topic)* | | ☐ |
+| Doctrine: definition and levels *(named exam topic)* | [[Doctrine (Swiss Armed Forces)]] · [[PMESII]] | ☑ seedling |
 | General model theory, Stachowiak: mapping, reduction, pragmatism *(named exam topic)* | [[General Model Theory]] | ☑ developing (in `_inbox`) |
 | Mission command (*Auftragstaktik*) | [[OODA Loop#Mission command and implicit guidance]] | ☐ needs its own note |
-| Attrition vs manoeuvre | [[OODA Loop#Manoeuvre warfare]] | ☐ needs its own note |
+| Attrition vs manoeuvre | [[Attrition vs Manoeuvre Warfare]] · [[VRIO]] (CRIO) | ☑ seedling |
 | CLM model | | ☐ |
 
 ## Weekly themes
@@ -33,7 +33,7 @@ draft: true
 | Session | Theme | Notes |
 |---|---|---|
 | 01 · 22.09.2026 | CLM, model theory, sensemaking, OODA | [[OODA Loop]] |
-| 02 · 29.09.2026 | Doctrine, attrition vs manoeuvre, self-similarity | [[John Boyd]] |
+| 02 · 29.09.2026 | Doctrine, attrition vs manoeuvre, self-similarity | [[John Boyd]] · [[Doctrine (Swiss Armed Forces)]] · [[Attrition vs Manoeuvre Warfare]] · [[VRIO]] · [[PMESII]] |
 
 ## Glossary (for the German exam)
 
@@ -54,6 +54,7 @@ draft: true
 
 - [x] OODA note with self-test ([[OODA Loop#Self-Test]])
 - [ ] Sensemaking note (Weick), then rehearse the comparison
-- [ ] Doctrine note, then Model theory note
+- [x] Doctrine note
+- [ ] Model theory note
 - [ ] Answer each self-test question **aloud in German** without looking
 - [ ] One synthesis: *"Why manoeuvre warfare is an argument about orientation"*: Boyd + Clausewitz's cohesion + doctrine

@@ -98,6 +98,9 @@ A classic exam comparison. **Define both separately, then connect them through o
 
 - [[John Boyd]]: author; life and other ideas
 - [[osinga2007science|Osinga (2007)]]: the standard study of Boyd's theory
+- [[Attrition vs Manoeuvre Warfare]]: manoeuvre as an attack on the enemy's orientation
+- [[Course of Action]]: the formal, deliberate version of *Decide*
+- [[Cognitive Warfare]]: an attack aimed directly at the opponent's *Orient*
 
 ## Self-Test
 

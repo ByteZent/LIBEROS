@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" width="1000" height="400" role="img" aria-labelledby="t d">
+  <title id="t">The VRIO questions and their results</title>
+  <desc id="d">Four questions asked in order about a resource or capability. Valuable? If no: competitive disadvantage. If yes, rare? If no: competitive parity. If yes, costly to imitate? If no: temporary competitive advantage. If yes, organised to exploit it? If no: unexploited competitive advantage. If yes: sustained competitive advantage. After Barney (1991, 1995); the military version CRIO replaces value with combat value.</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#c9d1d9"/>
+    </marker>
+    <marker id="arr-ig" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#d4a84b"/>
+    </marker>
+    <marker id="arr-bl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#7fb3c8"/>
+    </marker>
+    <style>
+      .panel { fill: #0d1117; }
+      .box { fill: #161d26; stroke: #3a4654; stroke-width: 1.5; }
+      .res { fill: #161d26; stroke: #7fb3c8; stroke-width: 1.5; stroke-dasharray: 7 5; }
+      .best { fill: #1a2330; stroke: #d4a84b; stroke-width: 2; }
+      .h { font: 700 26px "JetBrains Mono", Menlo, monospace; fill: #e8edf2; }
+      .h-ig { font: 700 15px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #d4a84b; }
+      .q { font: italic 13px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .item { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .sub { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .lbl { font: 12px "JetBrains Mono", Menlo, monospace; fill: #8b97a3; }
+      .lbl-bl { font: 12px "JetBrains Mono", Menlo, monospace; fill: #7fb3c8; }
+      .ff { stroke: #c9d1d9; stroke-width: 2; fill: none; }
+      .ff-ig { stroke: #d4a84b; stroke-width: 2; fill: none; }
+      .ff-bl { stroke: #7fb3c8; stroke-width: 1.5; fill: none; stroke-dasharray: 4 4; }
+    </style>
+  </defs>
+
+  <rect class="panel" x="0" y="0" width="1000" height="400" rx="10"/>
+
+  <!-- Question boxes -->
+  <rect class="box" x="30" y="40" width="160" height="100" rx="8"/>
+  <text class="h" x="110" y="84" text-anchor="middle">V</text>
+  <text class="q" x="110" y="112" text-anchor="middle">Valuable?</text>
+
+  <rect class="box" x="230" y="40" width="160" height="100" rx="8"/>
+  <text class="h" x="310" y="84" text-anchor="middle">R</text>
+  <text class="q" x="310" y="112" text-anchor="middle">Rare?</text>
+
+  <rect class="box" x="430" y="40" width="160" height="100" rx="8"/>
+  <text class="h" x="510" y="84" text-anchor="middle">I</text>
+  <text class="q" x="510" y="112" text-anchor="middle">Costly to imitate?</text>
+
+  <rect class="box" x="630" y="40" width="160" height="100" rx="8"/>
+  <text class="h" x="710" y="84" text-anchor="middle">O</text>
+  <text class="q" x="710" y="112" text-anchor="middle">Organised to use it?</text>
+
+  <!-- yes arrows -->
+  <path class="ff" d="M190 90 L226 90" marker-end="url(#arr)"/>
+  <text class="lbl" x="208" y="80" text-anchor="middle">yes</text>
+  <path class="ff" d="M390 90 L426 90" marker-end="url(#arr)"/>
+  <text class="lbl" x="408" y="80" text-anchor="middle">yes</text>
+  <path class="ff" d="M590 90 L626 90" marker-end="url(#arr)"/>
+  <text class="lbl" x="608" y="80" text-anchor="middle">yes</text>
+  <path class="ff-ig" d="M790 90 L826 90" marker-end="url(#arr-ig)"/>
+  <text class="lbl" x="808" y="80" text-anchor="middle">yes</text>
+
+  <!-- Sustained -->
+  <rect class="best" x="830" y="40" width="140" height="100" rx="8"/>
+  <text class="h-ig" x="900" y="76" text-anchor="middle">SUSTAINED</text>
+  <text class="item" x="900" y="100" text-anchor="middle">competitive</text>
+  <text class="item" x="900" y="118" text-anchor="middle">advantage</text>
+
+  <!-- no arrows -->
+  <path class="ff-bl" d="M110 140 L110 206" marker-end="url(#arr-bl)"/>
+  <text class="lbl-bl" x="120" y="178">no</text>
+  <path class="ff-bl" d="M310 140 L310 206" marker-end="url(#arr-bl)"/>
+  <text class="lbl-bl" x="320" y="178">no</text>
+  <path class="ff-bl" d="M510 140 L510 206" marker-end="url(#arr-bl)"/>
+  <text class="lbl-bl" x="520" y="178">no</text>
+  <path class="ff-bl" d="M710 140 L710 206" marker-end="url(#arr-bl)"/>
+  <text class="lbl-bl" x="720" y="178">no</text>
+
+  <!-- Results -->
+  <rect class="res" x="30" y="210" width="160" height="80" rx="8"/>
+  <text class="item" x="110" y="244" text-anchor="middle">competitive</text>
+  <text class="item" x="110" y="264" text-anchor="middle">disadvantage</text>
+
+  <rect class="res" x="230" y="210" width="160" height="80" rx="8"/>
+  <text class="item" x="310" y="244" text-anchor="middle">competitive</text>
+  <text class="item" x="310" y="264" text-anchor="middle">parity</text>
+
+  <rect class="res" x="430" y="210" width="160" height="80" rx="8"/>
+  <text class="item" x="510" y="244" text-anchor="middle">temporary</text>
+  <text class="item" x="510" y="264" text-anchor="middle">advantage</text>
+
+  <rect class="res" x="630" y="210" width="160" height="80" rx="8"/>
+  <text class="item" x="710" y="244" text-anchor="middle">unexploited</text>
+  <text class="item" x="710" y="264" text-anchor="middle">advantage</text>
+
+  <text class="sub" x="30" y="332">Ask in order; the first "no" gives the result. Military version (CRIO): C = combat value.</text>
+  <text class="sub" x="30" y="372">After Barney (1991, 1995); CRIO after Hofstetter, Borioli and Flemming (2024).</text>
+</svg>

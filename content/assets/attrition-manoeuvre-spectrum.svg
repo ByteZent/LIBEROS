@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="1000" height="500" role="img" aria-labelledby="t d">
+  <title id="t">The spectrum of guerrilla, attrition and manoeuvre warfare</title>
+  <desc id="d">A spectrum of three strategic options. If the enemy is perceived as stronger, the preferred strategy is guerrilla warfare, which is dynamic and uses mission command. If the enemy is perceived as equal, the preferred strategy is attrition, which is static and uses detailed command. If the enemy is perceived as weaker, the preferred strategy is manoeuvre, which is dynamic and uses mission command. Shifts between them: from guerrilla to attrition is intensifying; from attrition to manoeuvre is unfreezing; from manoeuvre back to attrition is freezing; from attrition back to guerrilla is hiding. Armed forces try to move as far right as possible; innovation is the precondition for unfreezing. After Hofstetter, Borioli and Flemming (2024).</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#c9d1d9"/>
+    </marker>
+    <marker id="arr-ig" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#d4a84b"/>
+    </marker>
+    <marker id="arr-bl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#7fb3c8"/>
+    </marker>
+    <style>
+      .panel { fill: #0d1117; }
+      .box { fill: #161d26; stroke: #3a4654; stroke-width: 1.5; }
+      .static { fill: #161d26; stroke: #7fb3c8; stroke-width: 2; }
+      .best { fill: #1a2330; stroke: #d4a84b; stroke-width: 2; }
+      .h { font: 700 17px "JetBrains Mono", Menlo, monospace; letter-spacing: 2px; fill: #e8edf2; }
+      .h-ig { font: 700 17px "JetBrains Mono", Menlo, monospace; letter-spacing: 2px; fill: #d4a84b; }
+      .h-bl { font: 700 17px "JetBrains Mono", Menlo, monospace; letter-spacing: 2px; fill: #7fb3c8; }
+      .q { font: italic 13px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .item { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .sub { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .lbl { font: 12px "JetBrains Mono", Menlo, monospace; fill: #8b97a3; }
+      .lbl-ig { font: 700 12px "JetBrains Mono", Menlo, monospace; fill: #d4a84b; }
+      .lbl-bl { font: 700 12px "JetBrains Mono", Menlo, monospace; fill: #7fb3c8; }
+      .core { font: 700 14px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #c9d1d9; }
+      .ff { stroke: #c9d1d9; stroke-width: 2; fill: none; }
+      .ff-ig { stroke: #d4a84b; stroke-width: 2; fill: none; }
+      .ff-bl { stroke: #7fb3c8; stroke-width: 2; fill: none; stroke-dasharray: 6 4; }
+    </style>
+  </defs>
+
+  <rect class="panel" x="0" y="0" width="1000" height="500" rx="10"/>
+
+  <text class="core" x="500" y="36" text-anchor="middle">PERCEIVED FORCE RATIO  →  PREFERRED STRATEGY</text>
+
+  <!-- Row labels -->
+  <text class="lbl" x="40" y="94">enemy seen as</text>
+  <text class="lbl" x="40" y="178">strategy</text>
+  <text class="lbl" x="40" y="236">warfare</text>
+  <text class="lbl" x="40" y="258">command</text>
+
+  <!-- Guerrilla -->
+  <text class="q" x="270" y="94" text-anchor="middle">… stronger</text>
+  <rect class="box" x="160" y="140" width="220" height="136" rx="8"/>
+  <text class="h" x="270" y="180" text-anchor="middle">GUERRILLA</text>
+  <text class="item" x="270" y="236" text-anchor="middle">dynamic</text>
+  <text class="item" x="270" y="258" text-anchor="middle">mission command</text>
+
+  <!-- Attrition -->
+  <text class="q" x="530" y="94" text-anchor="middle">… equal</text>
+  <rect class="static" x="420" y="140" width="220" height="136" rx="8"/>
+  <text class="h-bl" x="530" y="180" text-anchor="middle">ATTRITION</text>
+  <text class="sub" x="530" y="202" text-anchor="middle">strength against strength</text>
+  <text class="item" x="530" y="236" text-anchor="middle">static</text>
+  <text class="item" x="530" y="258" text-anchor="middle">detailed command</text>
+
+  <!-- Manoeuvre -->
+  <text class="q" x="790" y="94" text-anchor="middle">… weaker</text>
+  <rect class="best" x="680" y="140" width="220" height="136" rx="8"/>
+  <text class="h-ig" x="790" y="180" text-anchor="middle">MANOEUVRE</text>
+  <text class="sub" x="790" y="202" text-anchor="middle">strength against weakness</text>
+  <text class="item" x="790" y="236" text-anchor="middle">dynamic</text>
+  <text class="item" x="790" y="258" text-anchor="middle">mission command</text>
+
+  <!-- Shifts, above: moving right -->
+  <path class="ff" d="M300 140 C 330 116, 470 116, 500 138" marker-end="url(#arr)"/>
+  <text class="lbl" x="400" y="106" text-anchor="middle">intensifying</text>
+  <path class="ff-ig" d="M560 140 C 590 116, 730 116, 760 138" marker-end="url(#arr-ig)"/>
+  <text class="lbl-ig" x="660" y="106" text-anchor="middle">unfreezing</text>
+
+  <!-- Shifts, below: moving left -->
+  <path class="ff" d="M500 276 C 470 312, 330 312, 300 278" marker-end="url(#arr)"/>
+  <text class="lbl" x="400" y="322" text-anchor="middle">hiding</text>
+  <path class="ff-bl" d="M760 276 C 730 312, 590 312, 560 278" marker-end="url(#arr-bl)"/>
+  <text class="lbl-bl" x="660" y="322" text-anchor="middle">freezing</text>
+
+  <!-- Thesis II arrow -->
+  <path class="ff-ig" d="M160 370 L900 370" marker-end="url(#arr-ig)"/>
+  <text class="item" x="530" y="396" text-anchor="middle">Armed forces try to move as far right as they can, to exploit a competitive advantage.</text>
+  <text class="item" x="530" y="416" text-anchor="middle">Innovation that is rare, hard to imitate and organisationally supported is what unfreezes attrition.</text>
+
+  <text class="sub" x="40" y="470">After Hofstetter, Borioli and Flemming, "Manoeuvre Is Dead – But It Can Be Revived" (TMAF, 2024): Theses I–III.</text>
+</svg>

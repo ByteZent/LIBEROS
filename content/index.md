@@ -27,9 +27,9 @@ It is built note by note while I study Public Policy and Military Strategy. Each
 
 ## Start here
 
-- [[John Boyd]] → [[OODA Loop]]: why orientation, not speed, wins
-- [[Methodology]] · [[Note Standards]] · [[Learning System]]
-
+- [[Menschenbilder in Psychology|5 Menschenbilder]]
+- [[OODA Loop|OODA Loop nach Boyd]]
+- [[Doctrine (Swiss Armed Forces)| Doctrin - Swiss Armed Forces]]
 ## Graph
 
 The notes form a graph. Open the **global graph** (icon in the right-hand panel) to see how actors, concepts, cases and sources connect, or use the local graph on any note.
