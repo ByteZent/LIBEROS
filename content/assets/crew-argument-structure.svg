@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="1000" height="480" role="img" aria-labelledby="t d">
+  <title id="t">The CREW structure of an argument</title>
+  <desc id="d">The core of an argument reads: claim, because reason, based on evidence. Evidence (what do you base that on?) supports a reason (why do you believe that?), which supports the claim (what do you want me to believe?). A warrant (how does that reason support that claim?) is the general principle that connects the reason to the claim. Acknowledgment and response (but what about...?) answers objections to the claim. After Booth, Colomb, Williams et al., The Craft of Research (4th ed., 2016), and Toulmin, The Uses of Argument (1958).</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#c9d1d9"/>
+    </marker>
+    <marker id="arr-ig" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#d4a84b"/>
+    </marker>
+    <marker id="arr-bl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#7fb3c8"/>
+    </marker>
+    <style>
+      .panel { fill: #0d1117; }
+      .box { fill: #161d26; stroke: #3a4654; stroke-width: 1.5; }
+      .claim { fill: #1a2330; stroke: #d4a84b; stroke-width: 2; }
+      .warrant { fill: #161d26; stroke: #d4a84b; stroke-width: 1.5; stroke-dasharray: 7 5; }
+      .ack { fill: #161d26; stroke: #7fb3c8; stroke-width: 1.5; stroke-dasharray: 7 5; }
+      .h { font: 700 17px "JetBrains Mono", Menlo, monospace; letter-spacing: 2px; fill: #e8edf2; }
+      .h-ig { font: 700 17px "JetBrains Mono", Menlo, monospace; letter-spacing: 2px; fill: #d4a84b; }
+      .h-bl { font: 700 17px "JetBrains Mono", Menlo, monospace; letter-spacing: 2px; fill: #7fb3c8; }
+      .q { font: italic 13px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .item { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .sub { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .lbl { font: 12px "JetBrains Mono", Menlo, monospace; fill: #8b97a3; }
+      .core { font: 700 14px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #c9d1d9; }
+      .ff { stroke: #c9d1d9; stroke-width: 2; fill: none; }
+      .ff-ig { stroke: #d4a84b; stroke-width: 1.5; fill: none; stroke-dasharray: 4 4; }
+      .ff-bl { stroke: #7fb3c8; stroke-width: 1.5; fill: none; stroke-dasharray: 4 4; }
+    </style>
+  </defs>
+
+  <rect class="panel" x="0" y="0" width="1000" height="480" rx="10"/>
+
+  <text class="core" x="500" y="36" text-anchor="middle">CLAIM  because  REASON  based on  EVIDENCE</text>
+
+  <!-- Warrant -->
+  <rect class="warrant" x="370" y="62" width="590" height="84" rx="8"/>
+  <text class="h-ig" x="392" y="90">WARRANT</text>
+  <text class="q" x="392" y="112">How does that reason support that claim?</text>
+  <text class="item" x="392" y="132">A general principle: whenever X is true, Y generally follows.</text>
+  <path class="ff-ig" d="M665 146 L665 240" marker-end="url(#arr-ig)"/>
+
+  <!-- Evidence -->
+  <rect class="box" x="40" y="186" width="260" height="120" rx="8"/>
+  <text class="h" x="60" y="216">EVIDENCE</text>
+  <text class="q" x="60" y="240">What do you base that on?</text>
+  <text class="item" x="60" y="264">Facts, data, sources:</text>
+  <text class="item" x="60" y="283">found and reported, not made up</text>
+
+  <!-- Reason -->
+  <rect class="box" x="370" y="186" width="260" height="120" rx="8"/>
+  <text class="h" x="390" y="216">REASON</text>
+  <text class="q" x="390" y="240">Why do you believe that?</text>
+  <text class="item" x="390" y="264">Your own statement of why</text>
+  <text class="item" x="390" y="283">the claim should be accepted</text>
+
+  <!-- Claim -->
+  <rect class="claim" x="700" y="186" width="260" height="120" rx="8"/>
+  <text class="h-ig" x="720" y="216">CLAIM</text>
+  <text class="q" x="720" y="240">What do you want me to believe?</text>
+  <text class="item" x="720" y="264">Your answer to the question,</text>
+  <text class="item" x="720" y="283">specific and contestable</text>
+
+  <!-- Support arrows -->
+  <path class="ff" d="M300 246 L366 246" marker-end="url(#arr)"/>
+  <text class="lbl" x="335" y="236" text-anchor="middle">supports</text>
+  <path class="ff" d="M630 246 L696 246" marker-end="url(#arr)"/>
+
+  <!-- Acknowledgment & response -->
+  <rect class="ack" x="370" y="350" width="590" height="84" rx="8"/>
+  <text class="h-bl" x="392" y="378">ACKNOWLEDGMENT &amp; RESPONSE</text>
+  <text class="q" x="392" y="400">But what about ...?</text>
+  <text class="item" x="392" y="420">Objections, alternative explanations, limits, and your answer to them.</text>
+  <path class="ff-bl" d="M830 350 L830 310" marker-end="url(#arr-bl)"/>
+
+  <text class="sub" x="40" y="380">Italic: the question a critical reader</text>
+  <text class="sub" x="40" y="398">asks at each point.</text>
+  <text class="sub" x="40" y="462">After Booth, Colomb, Williams et al., The Craft of Research (4th ed., 2016); Toulmin, The Uses of Argument (1958).</text>
+</svg>
