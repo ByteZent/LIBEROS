@@ -8,7 +8,7 @@ aliases:
   - Legal case analysis
 type: framework
 domain: ["law"]
-courses: ["privLawI-HS26"]
+courses: ["PrivLawI-HS26"]
 status: seedling
 confidence: medium
 created: 2026-09-30
@@ -26,7 +26,14 @@ draft: false
 
 > [!bluf]
 > A legal case is solved by asking one question: **"Who wants what from whom, and on what legal basis?"** (*Wer will was von wem woraus?*).
-> Answer it in five steps. (1) Place the case in **private or public law**. (2) Find the **area of law** and the **claim basis** (*Anspruchsgrundlage*). (3) Check that the contract or statutory claim **exists and is valid**. (4) Work out the **content**: what the parties owe each other and whether it was performed. (5) Draw the **legal consequence** (*Rechtsfolge*).
+> 
+> Answer it in five steps:
+> - (1) Place the case in **private or public law**.
+> - (2) Find the **area of law** and the **claim basis** (*Anspruchsgrundlage*).
+> - (3) Check that the contract or statutory claim **exists and is valid**.
+> - (4) Work out the **content**: what the parties owe each other and whether it was performed.
+> - (5) Draw the **legal consequence** (*Rechtsfolge*).
+> 
 > Every step is written in the **opinion style** (*Gutachtenstil*): hypothesis → rule → subsumption → conclusion.
 
 ## Purpose
