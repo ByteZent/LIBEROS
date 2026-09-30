@@ -12,3 +12,4 @@ Analytical tools: how to think about a problem, not what to think.
 - **Strategic Frameworks**: Ends-ways-means, net assessment, centre-of-gravity analysis, etc.
 - **Policy Analysis Methods**: Stakeholder mapping, cost-benefit, evaluation designs.
 - **Research Methods**: Case-study method, process tracing, structured analytic techniques.
+- **Legal Methods**: Case solving, claim analysis, methods of legal interpretation.
