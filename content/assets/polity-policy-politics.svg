@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width="1000" height="450" role="img" aria-labelledby="t d">
+  <title id="t">Polity, policy, politics: three facets of one political phenomenon</title>
+  <desc id="d">Three boxes side by side. Polity is the form: structures, institutions and rules of the game, for example constitution, parliament, courts, federalism. Policy is the content: programmes and substance in a policy field, for example defence policy, health policy, sanctions. Politics is the process: will formation, decision-making and enforcement, for example debates, demonstrations, legislation, negotiations. Below, one example read three ways: a debate in the Bundeshaus takes place in parliament (polity), is about a bill (policy) and is a debate (politics).</desc>
+  <defs>
+    <style>
+      .panel { fill: #0d1117; }
+      .th { fill: #1a2330; stroke: #d4a84b; stroke-width: 1.5; }
+      .em { fill: #161d26; stroke: #7fb3c8; stroke-width: 1.5; }
+      .h { font: 700 15px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #e8edf2; }
+      .big { font: 700 22px "JetBrains Mono", Menlo, monospace; letter-spacing: 2px; fill: #d4a84b; }
+      .key { font: 700 14px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .q { font: italic 13px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .sub { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .ex { font: 13px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .lbl { font: 12px "JetBrains Mono", Menlo, monospace; fill: #7fb3c8; }
+      text { text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect class="panel" x="0" y="0" width="1000" height="450" rx="10"/>
+  <text class="h" x="500" y="42">ONE POLITICAL PHENOMENON, THREE FACETS</text>
+
+  <!-- Polity -->
+  <rect class="th" x="40" y="70" width="290" height="230" rx="8"/>
+  <text class="big" x="185" y="110">POLITY</text>
+  <text class="key" x="185" y="138">Form: the rules of the game</text>
+  <text class="q" x="185" y="166">In which structures does it happen?</text>
+  <text class="sub" x="185" y="200">constitution · parliament · government</text>
+  <text class="sub" x="185" y="220">courts · electoral system</text>
+  <text class="sub" x="185" y="240">democracy · separation of powers</text>
+  <text class="sub" x="185" y="260">federalism</text>
+
+  <!-- Policy -->
+  <rect class="th" x="355" y="70" width="290" height="230" rx="8"/>
+  <text class="big" x="500" y="110">POLICY</text>
+  <text class="key" x="500" y="138">Content: programmes and substance</text>
+  <text class="q" x="500" y="166">What is decided?</text>
+  <text class="sub" x="500" y="200">defence policy · environmental policy</text>
+  <text class="sub" x="500" y="220">education policy · health policy</text>
+  <text class="sub" x="500" y="240">subsidies · bans · sanctions</text>
+  <text class="sub" x="500" y="260">content of treaties</text>
+
+  <!-- Politics -->
+  <rect class="th" x="670" y="70" width="290" height="230" rx="8"/>
+  <text class="big" x="815" y="110">POLITICS</text>
+  <text class="key" x="815" y="138">Process: conflict and decision</text>
+  <text class="q" x="815" y="166">How does it come about?</text>
+  <text class="sub" x="815" y="200">public debate · demonstrations</text>
+  <text class="sub" x="815" y="220">legislation · coalition building</text>
+  <text class="sub" x="815" y="240">negotiation · enforcement</text>
+  <text class="sub" x="815" y="260">crises and war between states</text>
+
+  <!-- Example strip -->
+  <rect class="em" x="40" y="325" width="920" height="95" rx="8"/>
+  <text class="lbl" x="500" y="350">EXAMPLE: A DEBATE IN THE BUNDESHAUS</text>
+  <text class="ex" x="185" y="380">takes place in parliament,</text>
+  <text class="ex" x="185" y="400">under its rules</text>
+  <text class="ex" x="500" y="380">is about a concrete bill,</text>
+  <text class="ex" x="500" y="400">for example the army budget</text>
+  <text class="ex" x="815" y="380">is a debate: parties argue</text>
+  <text class="ex" x="815" y="400">and look for a majority</text>
+</svg>

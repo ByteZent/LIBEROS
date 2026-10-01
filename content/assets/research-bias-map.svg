@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 490" width="1000" height="490" role="img" aria-labelledby="t d">
+  <title id="t">Where bias enters a study</title>
+  <desc id="d">Five stages of a study, each with the question a reader should ask and the typical biases. Design: could something else explain the result? Confounding, reverse causality, no comparison group, regression to the mean. Selection: who is missing, and why? Selection on outcome, survivorship, non-response, attrition. Measurement: does the number mean what the paper says? Social desirability, recall error, observer expectancy, invalid indicator. Analysis: was the test fixed before the data? P-hacking, HARKing, dropped cases, subgroup hunting. Reporting: which results never got printed? Publication bias, spin, citation bias, funding interest. Below all five: the reader's own confirmation bias.</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#c9d1d9"/>
+    </marker>
+    <style>
+      .panel { fill: #0d1117; }
+      .box { fill: #161d26; stroke: #3a4654; stroke-width: 1.5; }
+      .reader { fill: #1a2330; stroke: #d4a84b; stroke-width: 1.5; stroke-dasharray: 7 5; }
+      .core { font: 700 14px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #c9d1d9; }
+      .h { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #7fb3c8; }
+      .h-ig { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #d4a84b; }
+      .q { font: italic 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .item { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .sub { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .div { stroke: #3a4654; stroke-width: 1; }
+      .ff { stroke: #c9d1d9; stroke-width: 2; fill: none; }
+    </style>
+  </defs>
+
+  <rect class="panel" x="0" y="0" width="1000" height="490" rx="10"/>
+  <text class="core" x="500" y="44" text-anchor="middle">WHERE BIAS ENTERS A STUDY</text>
+
+  <!-- Design -->
+  <rect class="box" x="40" y="74" width="168" height="230" rx="8"/>
+  <text class="h" x="52" y="102">DESIGN</text>
+  <text class="q" x="52" y="126">Could something else</text>
+  <text class="q" x="52" y="143">explain the result?</text>
+  <path class="div" d="M52 158 L196 158"/>
+  <text class="item" x="52" y="184">Confounding</text>
+  <text class="item" x="52" y="210">Reverse causality</text>
+  <text class="item" x="52" y="236">No comparison group</text>
+  <text class="item" x="52" y="262">Regression to the mean</text>
+
+  <!-- Selection -->
+  <rect class="box" x="230" y="74" width="168" height="230" rx="8"/>
+  <text class="h" x="242" y="102">SELECTION</text>
+  <text class="q" x="242" y="126">Who is missing,</text>
+  <text class="q" x="242" y="143">and why?</text>
+  <path class="div" d="M242 158 L386 158"/>
+  <text class="item" x="242" y="184">Selection on outcome</text>
+  <text class="item" x="242" y="210">Survivorship</text>
+  <text class="item" x="242" y="236">Non-response</text>
+  <text class="item" x="242" y="262">Attrition</text>
+
+  <!-- Measurement -->
+  <rect class="box" x="420" y="74" width="168" height="230" rx="8"/>
+  <text class="h" x="432" y="102">MEASUREMENT</text>
+  <text class="q" x="432" y="126">Does the number mean</text>
+  <text class="q" x="432" y="143">what the paper says?</text>
+  <path class="div" d="M432 158 L576 158"/>
+  <text class="item" x="432" y="184">Invalid indicator</text>
+  <text class="item" x="432" y="210">Social desirability</text>
+  <text class="item" x="432" y="236">Recall error</text>
+  <text class="item" x="432" y="262">Observer expectancy</text>
+
+  <!-- Analysis -->
+  <rect class="box" x="610" y="74" width="168" height="230" rx="8"/>
+  <text class="h" x="622" y="102">ANALYSIS</text>
+  <text class="q" x="622" y="126">Was the test fixed</text>
+  <text class="q" x="622" y="143">before the data?</text>
+  <path class="div" d="M622 158 L766 158"/>
+  <text class="item" x="622" y="184">P-hacking</text>
+  <text class="item" x="622" y="210">HARKing</text>
+  <text class="item" x="622" y="236">Dropped cases</text>
+  <text class="item" x="622" y="262">Subgroup hunting</text>
+
+  <!-- Reporting -->
+  <rect class="box" x="800" y="74" width="168" height="230" rx="8"/>
+  <text class="h" x="812" y="102">REPORTING</text>
+  <text class="q" x="812" y="126">Which results never</text>
+  <text class="q" x="812" y="143">got printed?</text>
+  <path class="div" d="M812 158 L956 158"/>
+  <text class="item" x="812" y="184">Publication bias</text>
+  <text class="item" x="812" y="210">Spin</text>
+  <text class="item" x="812" y="236">Citation bias</text>
+  <text class="item" x="812" y="262">Funding interest</text>
+
+  <!-- Flow arrows -->
+  <path class="ff" d="M210 189 L226 189" marker-end="url(#arr)"/>
+  <path class="ff" d="M400 189 L416 189" marker-end="url(#arr)"/>
+  <path class="ff" d="M590 189 L606 189" marker-end="url(#arr)"/>
+  <path class="ff" d="M780 189 L796 189" marker-end="url(#arr)"/>
+
+  <!-- Reader -->
+  <rect class="reader" x="40" y="332" width="928" height="76" rx="8"/>
+  <text class="h-ig" x="60" y="360">THE READER</text>
+  <text class="q" x="60" y="384">Would I check this paper as hard if I liked its conclusion?</text>
+  <text class="item" x="560" y="384">Confirmation bias · trust in a known name or journal</text>
+
+  <text class="sub" x="40" y="444">Italic: the question to ask at each stage. For every bias found, ask next: in which direction does it push the result?</text>
+  <text class="sub" x="40" y="464">Stages follow the research process; bias types after Sackett (1979) and Shadish, Cook &amp; Campbell (2002).</text>
+</svg>

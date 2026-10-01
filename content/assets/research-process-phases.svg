@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" width="1000" height="900" role="img" aria-labelledby="t d">
+  <title id="t">The phases of the empirical research process</title>
+  <desc id="d">Ten steps in two phases. Conceptual phase: research question (Forschungsfrage), theory building (Theoriebildung), hypothesis formation (Hypothesenbildung), concept definition (Konzeptdefinition). Then two decisions taken together: operationalisation (Operationalisierung) and type of study (Untersuchungsform). Empirical phase: selection of units (Auswahl der Untersuchungseinheiten), data collection (Datenerhebung), data entry and preparation (Datenerfassung), data analysis (Datenanalyse), publication (Publikation). A dashed arrow leads from data analysis back to theory building: results feed back into theory. After Schnell, Hill and Esser, Methoden der empirischen Sozialforschung.</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#c9d1d9"/>
+    </marker>
+    <marker id="arr-bl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#7fb3c8"/>
+    </marker>
+    <style>
+      .panel { fill: #0d1117; }
+      .th { fill: #1a2330; stroke: #d4a84b; stroke-width: 1.5; }
+      .em { fill: #161d26; stroke: #7fb3c8; stroke-width: 1.5; }
+      .h { font: 700 15px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #e8edf2; }
+      .q { font: italic 13px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .qc { font: italic 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .sub { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .ph-ig { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 2px; fill: #d4a84b; }
+      .ph-bl { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 2px; fill: #7fb3c8; }
+      .lbl { font: 12px "JetBrains Mono", Menlo, monospace; fill: #7fb3c8; }
+      .ff { stroke: #c9d1d9; stroke-width: 2; fill: none; }
+      .ln { stroke: #c9d1d9; stroke-width: 2; fill: none; }
+      .fb { stroke: #7fb3c8; stroke-width: 1.5; fill: none; stroke-dasharray: 5 5; }
+    </style>
+  </defs>
+
+  <rect class="panel" x="0" y="0" width="1000" height="900" rx="10"/>
+
+  <!-- Phase labels -->
+  <text class="ph-ig" x="100" y="84">CONCEPTUAL PHASE</text>
+  <text class="sub" x="100" y="104">What do I want to know,</text>
+  <text class="sub" x="100" y="121">and what do I expect to find?</text>
+
+  <text class="ph-bl" x="100" y="510">EMPIRICAL PHASE</text>
+  <text class="sub" x="100" y="530">How do I find out,</text>
+  <text class="sub" x="100" y="547">and what did I find?</text>
+
+  <!-- Conceptual phase -->
+  <rect class="th" x="350" y="60" width="300" height="50" rx="8"/>
+  <text class="h" x="500" y="90" text-anchor="middle">FORSCHUNGSFRAGE</text>
+  <text class="q" x="670" y="90">What do I want to know?</text>
+  <path class="ff" d="M500 110 L500 128" marker-end="url(#arr)"/>
+
+  <rect class="th" x="350" y="132" width="300" height="50" rx="8"/>
+  <text class="h" x="500" y="162" text-anchor="middle">THEORIEBILDUNG</text>
+  <text class="q" x="670" y="162">Why should it be so? The mechanism.</text>
+  <path class="ff" d="M500 182 L500 200" marker-end="url(#arr)"/>
+
+  <rect class="th" x="350" y="204" width="300" height="50" rx="8"/>
+  <text class="h" x="500" y="234" text-anchor="middle">HYPOTHESENBILDUNG</text>
+  <text class="q" x="670" y="234">What exactly do I expect to observe?</text>
+  <path class="ff" d="M500 254 L500 272" marker-end="url(#arr)"/>
+
+  <rect class="th" x="350" y="276" width="300" height="50" rx="8"/>
+  <text class="h" x="500" y="306" text-anchor="middle">KONZEPTDEFINITION</text>
+  <text class="q" x="670" y="306">What do my terms mean?</text>
+
+  <!-- Split -->
+  <path class="ln" d="M500 326 L500 350 M250 350 L750 350"/>
+  <path class="ff" d="M250 350 L250 370" marker-end="url(#arr)"/>
+  <path class="ff" d="M750 350 L750 370" marker-end="url(#arr)"/>
+
+  <rect class="em" x="110" y="374" width="280" height="64" rx="8"/>
+  <text class="h" x="250" y="401" text-anchor="middle">OPERATIONALISIERUNG</text>
+  <text class="qc" x="250" y="423" text-anchor="middle">How do I measure each concept?</text>
+
+  <rect class="em" x="610" y="374" width="280" height="64" rx="8"/>
+  <text class="h" x="750" y="401" text-anchor="middle">UNTERSUCHUNGSFORM</text>
+  <text class="qc" x="750" y="423" text-anchor="middle">Which comparison tests the hypothesis?</text>
+
+  <text class="sub" x="500" y="402" text-anchor="middle">decided together,</text>
+  <text class="sub" x="500" y="419" text-anchor="middle">each limits the other</text>
+
+  <!-- Merge -->
+  <path class="ln" d="M250 438 L250 462 L750 462 L750 438"/>
+  <path class="ff" d="M500 462 L500 482" marker-end="url(#arr)"/>
+
+  <!-- Empirical phase -->
+  <rect class="em" x="350" y="486" width="300" height="50" rx="8"/>
+  <text class="h" x="500" y="516" text-anchor="middle">AUSWAHL DER EINHEITEN</text>
+  <text class="q" x="670" y="516">Who or what do I study?</text>
+  <path class="ff" d="M500 536 L500 554" marker-end="url(#arr)"/>
+
+  <rect class="em" x="350" y="558" width="300" height="50" rx="8"/>
+  <text class="h" x="500" y="588" text-anchor="middle">DATENERHEBUNG</text>
+  <text class="q" x="670" y="588">Ask, observe or analyse documents</text>
+  <path class="ff" d="M500 608 L500 626" marker-end="url(#arr)"/>
+
+  <rect class="em" x="350" y="630" width="300" height="50" rx="8"/>
+  <text class="h" x="500" y="660" text-anchor="middle">DATENERFASSUNG</text>
+  <text class="q" x="670" y="660">Code, enter and clean the data</text>
+  <path class="ff" d="M500 680 L500 698" marker-end="url(#arr)"/>
+
+  <rect class="em" x="350" y="702" width="300" height="50" rx="8"/>
+  <text class="h" x="500" y="732" text-anchor="middle">DATENANALYSE</text>
+  <text class="q" x="670" y="732">Does the hypothesis survive the test?</text>
+  <path class="ff" d="M500 752 L500 770" marker-end="url(#arr)"/>
+
+  <rect class="em" x="350" y="774" width="300" height="50" rx="8"/>
+  <text class="h" x="500" y="804" text-anchor="middle">PUBLIKATION</text>
+  <text class="q" x="670" y="804">Report so that others can check it</text>
+
+  <!-- Feedback loop -->
+  <path class="fb" d="M350 727 L60 727 L60 157 L344 157" marker-end="url(#arr-bl)"/>
+  <text class="lbl" x="46" y="442" text-anchor="middle" transform="rotate(-90 46 442)">results feed back into theory</text>
+
+  <text class="sub" x="40" y="872">After Schnell, Hill &amp; Esser, Methoden der empirischen Sozialforschung (11th ed., 2018). Italic: the question each step answers.</text>
+</svg>
