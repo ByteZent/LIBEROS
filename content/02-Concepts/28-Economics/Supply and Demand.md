@@ -24,8 +24,8 @@ tags:
 draft: false
 ---
 
-> [!bluf]
-> The model of supply and demand is an economic model that explains how the **price and the traded quantity of a good** are determined in a market. A **market is a group of buyers and sellers** of a particular good or service.
+> [!bluf]-
+> The model of supply and demand is an economic model that explains how the **price and the traded quantity of a good** are determined in a market. A **market is a group of potential buyers and sellers** of a particular good or service.
 >
 > It shows how much sellers are willing to sell and how much buyers are willing to buy at each price. Where the two meet is the **equilibrium**: the price at which the quantity supplied equals the quantity demanded. If the price is too high, a surplus pushes it down; if it is too low, a shortage pushes it up.
 >
@@ -46,7 +46,7 @@ The model also shows how the curves **shift** when the market is disrupted by fa
 - **Prices adjust freely** and the market ends up in equilibrium.
 
 > [!tip] Test
-> Relax the first assumption (a single seller sets the price) and the supply curve disappears: that is monopoly, a different model. Relax "prices adjust freely" (a legal price cap) and a lasting shortage appears.
+> Relax the first assumption (a single seller sets the price) and the supply curve disappears: **that is monopoly**, a different model. Relax "prices adjust freely" (a legal price cap) and a lasting shortage appears.
 
 ## Demand
 
@@ -61,14 +61,22 @@ Convention: the **price** is on the vertical axis and the **quantity** on the ho
 
 | Determinant | Logic | Shifts **right** when … |
 |---|---|---|
-| **Income** | Normal good: more income, more demand. Inferior good (bus rides, cheap noodles): more income, *less* demand. | income rises (normal good) |
-| **Price of substitutes** | Goods used *instead of* each other (butter vs margarine). A dearer substitute makes this good more attractive. | the substitute's price rises |
-| **Price of complements** | Goods used *together* (cars and petrol). A dearer complement makes this good less useful. | the complement's price falls |
+| **Income** | **Normal good**: more income, more demand. **Inferior good** (bus rides, cheap noodles): more income, *less* demand. | income rises (normal good) |
+| **Price of substitutes (Verwandte Güter)** | Goods used *instead of* each other (*butter vs margarine*). A dearer substitute makes this good more attractive. | the substitute's price rises |
+| **Price of complements (Ergänzende Güter)** | Goods used *together* (*cars and petrol*). A dearer complement makes this good less useful. | the complement's price falls |
 | **Tastes / preferences** | Fashion, information, habits | the good becomes more popular |
 | **Expectations** | Expected future prices or income | buyers expect higher prices later, so they buy now |
-| **Number of buyers** | Market demand is the sum of individual demand | the number of buyers rises |
+| **Number of buyers (Bevölkerungsgrösse)** | Market demand is the **sum of** individual demand | the number of buyers rises |
 
 "Normal", "inferior", "substitute" and "complement" describe **how buyers react**, not the quality of a good.
+
+
+### Demand: Quantity Function
+
+$$
+  Q_D = f(p_{EIS}, p_{Sub}, saison)\\
+  Q_D \Rightarrow \text{Quantity Demand}
+$$
 
 ## Supply
 
@@ -81,10 +89,11 @@ Convention: the **price** is on the vertical axis and the **quantity** on the ho
 
 | Determinant | Logic | Shifts **right** when … |
 |---|---|---|
-| **Input prices** | Wages, raw materials, energy. Dearer inputs make each unit more costly. | input prices fall |
+ **Input prices** | Wages, raw materials, **energy**. Dearer inputs make each unit more costly. | input prices fall |
 | **Technology** | Better technology lowers the cost per unit | productivity rises |
 | **Expectations** | Expected future prices (sellers may hold back stock to sell later) | sellers expect lower prices later, so they sell now |
-| **Number of sellers** | Market supply is the sum of individual supply | the number of sellers rises |
+| **Number of sellers** | Market supply is the **sum of** individual supply | the number of sellers rises |
+| **Natural and social factors** | Limitations of ressources, restrictions | - |
 
 ## Movement along vs shift of the curve
 
@@ -107,8 +116,8 @@ $$
 
 $P^*$ is the **equilibrium price** (*Gleichgewichtspreis*), $Q^*$ the **equilibrium quantity** (*Gleichgewichtsmenge*).
 
-- **Price above $P^*$:** quantity supplied > quantity demanded. This is a **surplus** (*Angebotsüberschuss*). Sellers cannot sell everything, so they cut prices.
-- **Price below $P^*$:** quantity demanded > quantity supplied. This is a **shortage** (*Nachfrageüberschuss*). Buyers compete for the good and bid the price up.
+- **Price above $P^*$:** quantity supplied > quantity demanded. This is a **surplus** (**Angebotsüberschuss**). Sellers cannot sell everything, so they cut prices.
+- **Price below $P^*$:** quantity demanded > quantity supplied. This is a **shortage** (**Nachfrageüberschuss**). Buyers compete for the good and bid the price up.
 
 In both cases the price moves back toward $P^*$. Economists call this self-correction the **law of supply and demand**.
 
@@ -168,7 +177,7 @@ Check a disequilibrium: at $P = 25$ with the *old* demand, $Q_D = 50$ and $Q_S =
 
 ## Key Points
 
-- A **market** is the group of buyers and sellers of one good; the model assumes they are all **price takers**.
+- A **market** is the group of potential buyers and sellers of one good; the model assumes they are all **price takers**.
 - **Demand slopes down, supply slopes up.** Market curves are **horizontal sums** of individual curves.
 - **Own price → movement along the curve. Anything else → shift of the curve.** Keep the vocabulary strict: *quantity demanded* vs *demand*.
 - **Equilibrium** is where $Q_D = Q_S$. Surpluses and shortages are removed by price changes.
