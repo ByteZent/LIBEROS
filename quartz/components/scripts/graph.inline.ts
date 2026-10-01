@@ -122,6 +122,18 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     }
   }
 
+  // LIBEROS: a tag page (e.g. tags/course/<code>) has no links of its own. On its local graph,
+  // link it to every note carrying the tag and show just those notes and the links among them.
+  if (slug.startsWith("tags/") && depth >= 0) {
+    const pageTag = slug.substring(5)
+    for (const [id, details] of data.entries()) {
+      if ((details.tags ?? []).some((tag) => tag === pageTag || tag.startsWith(pageTag + "/"))) {
+        links.push({ source: id, target: slug })
+      }
+    }
+    depth = 1
+  }
+
   const neighbourhood = new Set<SimpleSlug>()
   const wl: (SimpleSlug | "__SENTINEL")[] = [slug, "__SENTINEL"]
   if (depth >= 0) {
@@ -144,7 +156,8 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   }
 
   const nodes = [...neighbourhood].map((url) => {
-    const text = url.startsWith("tags/") ? "#" + url.substring(5) : (data.get(url)?.title ?? url)
+    const text =
+      data.get(url)?.title ?? (url.startsWith("tags/") ? "#" + url.substring(5) : url)
     return {
       id: url,
       text,

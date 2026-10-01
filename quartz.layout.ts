@@ -100,5 +100,14 @@ export const defaultListPageLayout: PageLayout = {
     }),
     explorer,
   ],
-  right: [],
+  right: [
+    // tag and course pages: graph of the notes carrying the tag (see graph.inline.ts)
+    Component.ConditionalRender({
+      component: Component.Graph({
+        localGraph: { showTags: false },
+        globalGraph: { showTags: false, enableRadial: true },
+      }),
+      condition: (page) => page.fileData.slug?.startsWith("tags/") ?? false,
+    }),
+  ],
 }

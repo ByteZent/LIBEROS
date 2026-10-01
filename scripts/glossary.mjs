@@ -70,7 +70,6 @@ const letter = (s) => {
   const c = s.normalize("NFD").replace(/[^A-Za-z]/g, "")[0]
   return c ? c.toUpperCase() : "#"
 }
-const link = (n) => `[[${n}]]`
 const groups = new Map()
 for (const t of sorted) groups.set(letter(t.de), [...(groups.get(letter(t.de)) ?? []), t])
 
@@ -91,20 +90,24 @@ draft: false
 ---
 
 > [!bluf]
-> Every German term from the notes' glossaries with its English equivalent and a one-line definition, ${sorted.length} terms in alphabetical order. The last column links to the notes that use the term.
+> Every German term from the notes' glossaries with its English equivalent and a one-line definition, ${sorted.length} terms in alphabetical order.
 >
-> **Be able to:** **apply** = core term that carries a concept or model: explain it and use it on a case (${count(3)}) · **define** = technical term: give its definition (${count(2)}) · **translate** = plain vocabulary: know the equivalent (${count(1)}).
+> **Be able to:**
+> - **apply** = core term that carries a concept or model: explain it and use it on a case (${count(3)})
+> - **define** = technical term: give its definition (${count(2)})
+> - **translate** = plain vocabulary: know the equivalent (${count(1)}).
 >
-> This page is **generated** by \`make glossary\`. Do not edit it: change the glossary table in the note and run the command again.
+> This page is **generated** by \`make glossary\`.
+> Do not edit it: change the glossary table in the note and run the command again.
 
 ${[...groups.keys()].map((l) => `[[#${l}]]`).join(" · ")}
 `
 for (const [l, list] of groups) {
-  out += `\n## ${l}\n\n| Deutsch | English | Definition | Be able to | Notes |\n|---|---|---|---|---|\n`
+  out += `\n## ${l}\n\n| Deutsch | English | Definition | Be able to |\n|---|---|---|---|\n`
   for (const t of list) {
     const defs = [...t.defs.keys()]
     const def = defs.length <= 1 ? (defs[0] ?? "") : defs.map((d, i) => `(${i + 1}) ${d}`).join(" ")
-    out += `| ${t.level === 3 ? `**${t.de}**` : t.de} | ${t.en} | ${def} | ${LEVELS[t.level]} | ${t.notes.map(link).join(" · ")} |\n`
+    out += `| ${t.level === 3 ? `**${t.de}**` : t.de} | ${t.en} | ${def} | ${LEVELS[t.level]} |\n`
   }
 }
 fs.writeFileSync(path.join(VAULT, OUT), out)
