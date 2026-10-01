@@ -10,7 +10,7 @@ courses: ["MikroEcon-H26"]
 status: developing
 confidence: high
 created: 2026-09-29
-modified: 2026-09-29
+modified: 2026-10-01
 review: 
 originators:
   - Antoine Augustin Cournot
