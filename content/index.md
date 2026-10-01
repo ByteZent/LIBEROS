@@ -27,6 +27,7 @@ It is built note by note while I study Public Policy and Military Strategy. Each
 
 ## Start here
 
+- [[Glossary (preview)|Glossar]]
 - [[Menschenbilder in Psychology|5 Menschenbilder]]
 - [[OODA Loop|OODA Loop nach Boyd]]
 - [[Doctrine (Swiss Armed Forces)| Doctrin - Swiss Armed Forces]]

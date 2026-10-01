@@ -242,3 +242,59 @@ article > h3.references-heading {
     }
   }
 }
+
+// ─── Explorer (left sidebar) ────────────────────────────────────────────────
+
+// Note titles that wrap ran into their neighbours. Keep the lines of one title tight,
+// put space between titles, and mark the start of each with a dash.
+.explorer-content ul.explorer-ul li {
+  & > a {
+    display: block;
+    position: relative;
+    padding: 0.28rem 0.4rem 0.28rem 0.9rem;
+    font-size: 0.9rem;
+    line-height: 1.25;
+    border-radius: 3px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0.1rem;
+      top: 0.84rem; // middle of the first line
+      width: 0.35rem;
+      height: 1px;
+      background: var(--gray);
+    }
+
+    &:hover {
+      opacity: 1;
+      background: var(--highlight);
+    }
+
+    &.active {
+      background: var(--highlight);
+      font-weight: $semiBoldWeight;
+
+      &::before {
+        height: 2px;
+        background: var(--tertiary);
+      }
+    }
+  }
+}
+
+// folder names: same tight wrapping, a little air above each folder
+.folder-container {
+  margin-top: 0.2rem;
+  align-items: flex-start;
+
+  & > .folder-icon {
+    margin-top: 0.4rem;
+  }
+
+  & div > a,
+  & div > button span {
+    line-height: 1.25;
+    padding: 0.2rem 0;
+  }
+}

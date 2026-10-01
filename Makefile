@@ -9,7 +9,7 @@ MSG     ?= Update notes $(TODAY)
 NOTES   := find $(VAULT)/0[1-9]-* -name '*.md' ! -name index.md -print0
 
 .DEFAULT_GOAL := help
-.PHONY: help install serve serve-pwa build clean check format typecheck logo sources bib-merge new course review stats inbox open publish update
+.PHONY: help install serve serve-pwa build clean check format typecheck logo sources bib-merge new course glossary review stats inbox open publish update
 
 help: ## Show this help
 	@awk 'BEGIN {FS = ":.*## "} /^[a-zA-Z_-]+:.*## / {printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
@@ -72,6 +72,9 @@ new: ## Create a note from a template in _inbox (TYPE=… TITLE="…")
 
 course: ## Exam prep: all notes for a course by maturity (COURSE=PP-ECON-1; omit to list codes)
 	@node scripts/course.mjs $(COURSE)
+
+glossary: ## Build the central glossary from the notes' Glossary tables (INBOX=1: preview incl. _inbox; CHECK=1: list gaps)
+	@node scripts/glossary.mjs $(if $(INBOX),--inbox) $(if $(CHECK),--check)
 
 review: ## List notes whose review date is due (today or earlier)
 	@grep -rl --include='*.md' '^review: [0-9]' $(VAULT) | grep -v '/_templates/' | while read -r f; do \

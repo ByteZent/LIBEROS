@@ -37,18 +37,18 @@ draft: true
 
 ## Glossary (for the German exam)
 
-| English | Deutsch |
-|---|---|
-| Observe / Orient / Decide / Act | Beobachten / Orientieren / Entscheiden / Handeln |
-| Implicit guidance and control | Implizite Steuerung |
-| Mission command | Auftragstaktik |
-| Focus of effort | Schwerpunkt |
-| Cohesion | Zusammenhalt / Kohäsion |
-| Attrition vs manoeuvre | Abnützung vs. Manöver |
-| Self-similarity | Selbstähnlichkeit |
-| General model theory | Allgemeine Modelltheorie |
-| Mapping / reduction / pragmatic feature | Abbildungs- / Verkürzungs- / pragmatisches Merkmal |
-| Preterite / abundant attributes | Präterierte / abundante Attribute |
+| Deutsch | English | Definition | Be able to |
+|---|---|---|---|
+| Beobachten / Orientieren / Entscheiden / Handeln | Observe / Orient / Decide / Act | The four elements of Boyd's loop: take in information, make sense of it, choose, act. | apply |
+| Implizite Steuerung | Implicit guidance and control | Acting directly from orientation, without an explicit decision step, on the basis of training and shared understanding. | apply |
+| Auftragstaktik | Mission command | Command by intent: the superior states the purpose and limits, the subordinate chooses how to achieve it. | apply |
+| Schwerpunkt | Focus of effort | The point where a commander concentrates effort to decide the action. | apply |
+| Zusammenhalt / Kohäsion | Cohesion | The bonds that keep a unit or force acting as one under stress. | define |
+| Abnützung vs. Manöver | Attrition vs manoeuvre | Two styles of warfare: wearing the enemy down by destruction, or breaking his cohesion by movement and tempo. | apply |
+| Selbstähnlichkeit | Self-similarity | The same pattern repeats at every level, from the squad to the army. | define |
+| Allgemeine Modelltheorie | General model theory | Stachowiak's theory that every model maps an original, reduces it, and serves a purpose for someone. | apply |
+| Abbildungs- / Verkürzungs- / pragmatisches Merkmal | Mapping / reduction / pragmatic feature | The three features of a model: it represents something, leaves most of it out, and is made for a user and a purpose. | apply |
+| Präterierte / abundante Attribute | Preterite / abundant attributes | Attributes of the original left out of the model, and attributes of the model that the original does not have. | define |
 
 ## Exam preparation
 

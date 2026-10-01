@@ -9,7 +9,7 @@ aliases:
   - Reflexive control
 type: concept
 domain: ["security", "intelligence", "military", "technology"]
-courses: []
+courses: ["MilPsy-HS26"]
 status: seedling
 confidence: medium
 created: 2026-09-30
