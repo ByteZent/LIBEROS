@@ -6,6 +6,10 @@ import * as Plugin from "./quartz/plugins"
  *
  * See https://quartz.jzhao.xyz/configuration for more information.
  */
+// LIBEROS_PRIVATE=1 (make serve-private) also renders content/_private and drafts.
+// Local only: _private is gitignored, so the deploy build never sees these files.
+const showPrivate = process.env.LIBEROS_PRIVATE === "1"
+
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "LIBEROS",
@@ -19,7 +23,7 @@ const config: QuartzConfig = {
     // Everything that is part of the *learning process* but not publishable stays out of the build
     ignorePatterns: [
       "_inbox",
-      "_private",
+      ...(showPrivate ? [] : ["_private"]),
       "_templates",
       "_dashboards",
       ".obsidian",
@@ -90,7 +94,7 @@ const config: QuartzConfig = {
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
     ],
-    filters: [Plugin.RemoveDrafts()],
+    filters: showPrivate ? [] : [Plugin.RemoveDrafts()],
     emitters: [
       Plugin.AliasRedirects(),
       Plugin.ComponentResources(),

@@ -9,7 +9,7 @@ MSG     ?= Update notes $(TODAY)
 NOTES   := find $(VAULT)/0[1-9]-* -name '*.md' ! -name index.md -print0
 
 .DEFAULT_GOAL := help
-.PHONY: help install serve serve-pwa build clean check format typecheck logo sources bib-merge new course glossary review stats inbox open publish update
+.PHONY: help install serve serve-pwa serve-private build clean check format typecheck logo sources bib-merge new course glossary review stats inbox open publish update
 
 help: ## Show this help
 	@awk 'BEGIN {FS = ":.*## "} /^[a-zA-Z_-]+:.*## / {printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
@@ -28,11 +28,14 @@ serve: ## Build and serve locally with live reload (PORT=8080)
 serve-pwa: ## Like serve, but with the service worker enabled (to test offline/install)
 	LIBEROS_PWA=1 npx quartz build --serve --port $(PORT) --wsPort 3002 --output public-pwa
 
+serve-private: ## Like serve, but also renders _private and drafts (local only, never deployed)
+	LIBEROS_PRIVATE=1 npx quartz build --serve --port $(PORT) --output public-private
+
 build: ## Build the static site into ./public
 	npx quartz build
 
 clean: ## Remove build output and cache
-	rm -rf public public-pwa .quartz-cache
+	rm -rf public public-pwa public-private .quartz-cache
 
 ## ── Quality ─────────────────────────────────────────────────────────────────
 

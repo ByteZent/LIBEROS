@@ -2,6 +2,7 @@
 node_modules
 public
 public-pwa
+public-private
 prof
 tsconfig.tsbuildinfo
 .quartz-cache

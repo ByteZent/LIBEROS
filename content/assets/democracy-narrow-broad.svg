@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460" width="1000" height="460" role="img" aria-labelledby="t d">
+  <title id="t">Narrow and broad definitions of democracy</title>
+  <desc id="d">Three nested boxes. Innermost, the narrow definition: free and fair elections that are regular, general, equal, free, direct and secret, with political competition and changes of power (Schumpeter, Przeworski). Around it, Dahl's broad definition, which adds freedom of speech and press, alternative sources of information and freedom of association. Outermost, further criteria used in broad definitions: rule of law, separation of powers, civilian control of the military, protection of minorities, human rights, gender equality, social and economic justice, strong participation. The broader the definition, the fewer states count as democracies.</desc>
+  <defs>
+    <style>
+      .panel { fill: #0d1117; }
+      .box { fill: #161d26; stroke: #3a4654; stroke-width: 1.5; }
+      .core { font: 700 14px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #c9d1d9; }
+      .h { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #7fb3c8; }
+      .h-ig { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #d4a84b; }
+      .big { font: 600 16px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .lbl { font: 600 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .item { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .sub { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .q { font: italic 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+
+      .outer { fill: #111821; stroke: #3a4654; stroke-width: 1.5; stroke-dasharray: 7 5; }
+      .mid { fill: #161d26; stroke: #7fb3c8; stroke-width: 1.5; }
+      .inner { fill: #1a2330; stroke: #d4a84b; stroke-width: 2; }
+    </style>
+  </defs>
+  <rect class="panel" x="0" y="0" width="1000" height="460" rx="10"/>
+  <text class="core" x="500" y="44" text-anchor="middle">DEMOCRACY: NARROW AND BROAD DEFINITIONS</text>
+
+  <rect class="outer" x="40" y="70" width="920" height="320" rx="10"/>
+  <text class="sub" x="58" y="98">FURTHER CRITERIA IN BROAD DEFINITIONS</text>
+  <text class="item" x="58" y="160">Rule of law</text>
+  <text class="item" x="58" y="212">Separation of powers</text>
+  <text class="item" x="58" y="264">Civilian control</text>
+  <text class="item" x="58" y="281">of the military</text>
+  <text class="item" x="58" y="316">Protection of minorities</text>
+  <text class="item" x="822" y="160">Human rights</text>
+  <text class="item" x="822" y="212">Gender equality</text>
+  <text class="item" x="822" y="264">Social and economic</text>
+  <text class="item" x="822" y="281">justice</text>
+  <text class="item" x="822" y="316">Strong participation</text>
+
+  <rect class="mid" x="215" y="112" width="570" height="258" rx="10"/>
+  <text class="h" x="500" y="140" text-anchor="middle">BROAD · DAHL</text>
+  <text class="item" x="500" y="163" text-anchor="middle">+ freedom of speech and of the press · alternative sources of information</text>
+  <text class="item" x="500" y="181" text-anchor="middle">+ freedom of association (parties, interest groups)</text>
+
+  <rect class="inner" x="290" y="200" width="420" height="150" rx="10"/>
+  <text class="h-ig" x="500" y="227" text-anchor="middle">NARROW</text>
+  <text class="big" x="500" y="254" text-anchor="middle">Free and fair elections</text>
+  <text class="item" x="500" y="276" text-anchor="middle">regular · general · equal · free · direct · secret</text>
+  <text class="item" x="500" y="298" text-anchor="middle">political competition · changes of power</text>
+  <text class="sub" x="500" y="330" text-anchor="middle">Schumpeter · Przeworski · Alvarez et al.</text>
+
+  <text class="q" x="500" y="418" text-anchor="middle">The broader the definition, the fewer states count as democracies.</text>
+  <text class="sub" x="500" y="438" text-anchor="middle">Open: are the outer criteria part of democracy itself, or its consequences?</text>
+</svg>
