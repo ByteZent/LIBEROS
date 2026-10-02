@@ -8,7 +8,8 @@ aliases:
   - Kreislaufdiagramm
 type: model
 domain: ["economics"]
-courses: ["MikroEcon-H26"]
+courses: ["MikroEcon-HS26"]
+qard-deck: MikroEcon-HS26
 status: developing
 confidence: high
 created: 2026-09-29
@@ -106,18 +107,18 @@ These are **not four separate sources of value** but the same circle measured at
 - [[Supply and Demand]]: explains what happens *inside* each of the two markets (prices and quantities)
 - [[General Model Theory]]: a textbook case of **reduction**: two actors, two markets, all other sectors left out on purpose
 
-## Self-Test
+## Self-Test: Circular Flow
 
-> [!question]- 1. Which flows connect households and firms?
+> [!qard]- 1. Which flows connect households and firms?
 > **Real flows:** factors of production from households to firms; goods and services from firms to households. **Money flows** in the opposite direction: households' spending to firms (revenue), firms' factor payments to households (income: wages, rent, profit).
 
-> [!question]- 2. What does the basic model leave out?
+> [!qard]- 2. What does the basic model leave out?
 > Government, foreign trade, the financial system and saving. Including them would add leakages (taxes, saving, imports) and injections (government spending, investment, exports).
 
-> [!question]- 3. Why is "spending = revenue" and "factor payments = income" not four separate sources of value?
+> [!qard]- 3. Why is "spending = revenue" and "factor payments = income" not four separate sources of value?
 > They describe the same circle from different sides. Each money flow is one transaction seen by the payer (spending) and by the receiver (revenue or income).
 
-> [!question]- 4. What is the difference between a real flow and a money flow? Give an example of each.
+> [!qard]- 4. What is the difference between a real flow and a money flow? Give an example of each.
 > A **real flow** is a physical good, service or factor: a worker's labour, a delivered truck. A **money flow** is the payment for it: the wage, the truck's price. They always run in opposite directions.
 
 ## Open Questions

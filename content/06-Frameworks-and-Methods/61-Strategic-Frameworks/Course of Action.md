@@ -13,6 +13,7 @@ aliases:
 type: framework
 domain: ["military", "strategy"]
 courses: ["L1-HS26"]
+qard-deck: L1-HS26
 status: seedling
 confidence: medium
 created: 2026-09-30
@@ -138,18 +139,18 @@ Note how the COAs map onto [[Attrition vs Manoeuvre Warfare|attrition and manoeu
 - [[Doctrine (Swiss Armed Forces)|Doctrine]]: the planning process itself is doctrine (FSO 17, FM 5-0, JP 5-0)
 - [[Attrition vs Manoeuvre Warfare]]: distinct COAs often differ exactly on this axis
 
-## Self-Test
+## Self-Test: COA
 
-> [!question]- 1. What are the COA steps in the MDMP, and what comes before them?
+> [!qard]- 1. What are the COA steps in the MDMP, and what comes before them?
 > Development, analysis (wargame), comparison, approval. Before them: receipt of mission and mission analysis (tasks, constraints, enemy picture, commander's intent and guidance).
 
-> [!question]- 2. Name the five screening criteria and explain *distinguishable*.
+> [!qard]- 2. Name the five screening criteria and explain *distinguishable*.
 > Feasible, acceptable, suitable (joint: adequate), distinguishable, complete. *Distinguishable* means each COA must differ significantly from the others (e.g. in scheme of manoeuvre or main effort), not just in details, so the commander has a real choice.
 
-> [!question]- 3. Why wargame each COA?
+> [!qard]- 3. Why wargame each COA?
 > To test it against a reacting enemy (most likely and most dangerous COA), find decision points, timing and resource needs, and fix weaknesses before comparison and execution.
 
-> [!question]- 4. What is Klein's critique, and when is it most relevant?
+> [!qard]- 4. What is Klein's critique, and when is it most relevant?
 > Experts decide by recognising the situation and simulating one option mentally, not by comparing several. It matters most under time pressure and for experienced commanders; the COA method remains valuable for staffs, novices, novel problems and decisions that must be justified.
 
 ## Open Questions

@@ -12,6 +12,7 @@ status: seedling
 confidence: medium
 created: 2026-09-30
 modified: 2026-09-30
+qard-deck: L1-HS26
 review: 
 tags:
   - framework
@@ -133,9 +134,9 @@ The table shows two things. First, **Evidence 2 is still a gap**: the reason is 
 - [[Construction of a Legal Case]]: the *Gutachtenstil* has the same shape. The **legal rule** works as the warrant, the **facts** are the evidence, **subsumption** shows the reason falls under the rule, and the **conclusion** is the claim
 - [[OODA Loop]] · [[John Boyd]]: the worked example
 
-## Self-Test
+## Self-Test: CREW
 
-> [!question]- 1. Name the four parts of CREW and the reader's question each one answers.
+> [!qard]- 1. Name the four parts of CREW and the reader's question each one answers.
 > - **Claim:** *What do you want me to believe?*
 > - **Reason:** *Why do you believe that?*
 > - **Evidence:** *What do you base that on?*
@@ -143,16 +144,16 @@ The table shows two things. First, **Evidence 2 is still a gap**: the reason is 
 > 
 > Plus **acknowledgment & response:** *But what about …?*
 
-> [!question]- 2. What is the difference between a reason and evidence?
+> [!qard]- 2. What is the difference between a reason and evidence?
 > A **reason** is the writer's own statement of why the claim holds; it is made by the writer. **Evidence** is found in the world (data, documents, cases) and reported to the reader. A reason without evidence is just another claim.
 
-> [!question]- 3. What is a warrant, and why is it the most common weak point?
+> [!qard]- 3. What is a warrant, and why is it the most common weak point?
 > A general principle of the form *whenever X, then Y* that connects the reason to the claim. It is usually left unstated because writers assume the reader shares it. If the reader does not, no amount of evidence will convince them: the warrant itself must be stated and defended.
 
-> [!question]- 4. Find the missing warrant: "Country A will not attack, because it depends on trade with Country B."
+> [!qard]- 4. Find the missing warrant: "Country A will not attack, because it depends on trade with Country B."
 > *Whenever a state depends heavily on trade with another, it will avoid war with it* (economic interdependence). A reader who knows 1914 (heavy trade between Britain and Germany, and war anyway) may reject this warrant, so it would need to be stated, qualified and defended.
 
-> [!question]- 5. Why should a good argument include acknowledgment and response?
+> [!qard]- 5. Why should a good argument include acknowledgment and response?
 > Because a critical reader will think of the objection anyway. Naming the strongest one and answering it (by conceding, rebutting or narrowing the claim) shows the argument has been tested and makes it more credible, not less.
 
 ## Open Questions

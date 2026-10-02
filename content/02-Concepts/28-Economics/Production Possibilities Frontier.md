@@ -8,7 +8,8 @@ aliases:
   - Guns vs butter
 type: model
 domain: ["economics"]
-courses: ["MikroEcon-H26"]
+courses: ["MikroEcon-HS26"]
+qard-deck: MikroEcon-HS26
 status: developing
 confidence: high
 created: 2026-09-29
@@ -103,23 +104,23 @@ Opportunity costs are **reciprocal**: if 1 tank costs 4 tractors, then 1 tractor
 - [[Supply and Demand]]: rising supply curves reflect the same idea as the bowed-out PPF: producing more costs more at the margin
 - [[General Model Theory]]: a strong **reduction** (two goods, fixed resources) made for one purpose: showing scarcity and opportunity cost
 
-## Self-Test
+## Self-Test: PPF
 
-> [!question]- 1. Draw a PPF and explain one point inside, on and outside the curve.
+> [!qard]- 1. Draw a PPF and explain one point inside, on and outside the curve.
 > - **Inside:** attainable but inefficient (idle or misallocated resources).
 > - **On:** efficient; more of one good only by giving up the other. **Outside:** unattainable with current resources and technology.
 
-> [!question]- 2. What does the slope of the PPF measure?
+> [!qard]- 2. What does the slope of the PPF measure?
 > The **opportunity cost**: how many units of the good on the vertical axis must be given up to produce one more unit of the good on the horizontal axis.
 
-> [!question]- 3. Why is the PPF usually bowed outward?
+> [!qard]- 3. Why is the PPF usually bowed outward?
 > Because resources are specialised. Shifting production toward one good first uses the resources best suited to it; later, less suitable resources must be used, so each additional unit costs more of the other good: **increasing opportunity cost**.
 
-> [!question]- 4. What shifts the PPF outward, and what does not?
+> [!qard]- 4. What shifts the PPF outward, and what does not?
 > - **Shifts it:** more resources (labour, capital, land) or better technology.
 > - **Does not:** reducing unemployment (moves the economy from inside onto the curve) or trade (allows consumption outside the curve, but the production frontier stays where it is).
 
-> [!question]- 5. A country raises its defence budget. Under what condition does this *not* reduce civilian output?
+> [!qard]- 5. A country raises its defence budget. Under what condition does this *not* reduce civilian output?
 > If the economy is **inside** its PPF (unemployment, idle capacity). Then defence output can rise by using idle resources. At full employment, it must come at the cost of civilian goods.
 
 ## Open Questions

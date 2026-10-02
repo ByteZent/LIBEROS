@@ -10,6 +10,7 @@ aliases:
 type: concept
 domain: ["security", "intelligence", "military", "technology"]
 courses: ["MilPsy-HS26"]
+qard-deck: MilPsy-HS26
 status: seedling
 confidence: medium
 created: 2026-09-30
@@ -102,21 +103,21 @@ Switzerland had a historic form of cognitive defence long before the term existe
 - [[PMESII]]: acts mainly through the *information* and *social* sub-systems to reach the *political*
 - [[Doctrine (Swiss Armed Forces)|Doctrine]]: the question of whether cognitive defence is a military task at all, or a civil one
 
-## Self-Test
+## Self-Test: CogWar
 
-> [!question]- 1. Define cognitive warfare and say how it differs from information warfare.
+> [!qard]- 1. Define cognitive warfare and say how it differs from information warfare.
 > The deliberate attempt to change *how* a population or its leaders think (attention, trust, biases, identity) for strategic advantage, usually covertly. Information warfare focuses on information and information systems (messages, networks); cognitive warfare targets the receiver's cognitive processes.
 
-> [!question]- 2. What is reflexive control?
+> [!qard]- 2. What is reflexive control?
 > A Soviet/Russian concept: feeding an opponent information designed to make him choose, apparently of his own will, the decision you want. It is a forerunner of cognitive warfare.
 
-> [!question]- 3. Why is doubt often a more effective aim than persuasion?
+> [!qard]- 3. Why is doubt often a more effective aim than persuasion?
 > Persuading people against their existing views is hard. Eroding trust in institutions, media and facts is easier, and a society that cannot agree on what is true cannot decide or act together.
 
-> [!question]- 4. Name three defences against cognitive warfare.
+> [!qard]- 4. Name three defences against cognitive warfare.
 > Media and information literacy; trusted institutions and independent media with transparent, fast communication (incl. prebunking); dedicated civil agencies and platform transparency.
 
-> [!question]- 5. Give the strongest critique of the concept.
+> [!qard]- 5. Give the strongest critique of the concept.
 > Conceptual inflation: calling all influence "warfare" securitises normal debate and can justify restricting free speech, while research suggests the effects of disinformation are often overstated.
 
 ## Open Questions

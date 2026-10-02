@@ -11,6 +11,7 @@ aliases:
 type: concept
 domain: ["military", "strategy"]
 courses: ["L1-HS26"]
+qard-deck: L1-HS26
 status: seedling
 confidence: medium
 created: 2026-09-30
@@ -101,21 +102,21 @@ The Swiss debate between a **mobile** school and a **static** school of defence 
 - [[Doctrine (Swiss Armed Forces)|Doctrine]]: the Swiss mobile and static schools
 - [[Course of Action]]: alternative COAs often differ exactly on this axis
 
-## Self-Test
+## Self-Test: Attrition vs Manoeuvre
 
-> [!question]- 1. Define attrition and manoeuvre in one sentence each.
+> [!qard]- 1. Define attrition and manoeuvre in one sentence each.
 > **Attrition:** victory by destroying the enemy's physical means faster than he can replace them, strength against strength. **Manoeuvre:** victory by breaking the enemy's cohesion and will through tempo, surprise and position, strength against weakness.
 
-> [!question]- 2. Why does manoeuvre go with mission command and attrition with detailed command?
+> [!qard]- 2. Why does manoeuvre go with mission command and attrition with detailed command?
 > Manoeuvre exploits short-lived weaknesses, so subordinates must act on intent without waiting. Attrition is methodical and depends on synchronising mass and fire, which favours central control.
 
-> [!question]- 3. State Thesis I with both corollaries, and explain why it uses *perceived* strength.
+> [!qard]- 3. State Thesis I with both corollaries, and explain why it uses *perceived* strength.
 > Enemy seen as weaker → manoeuvre; equal → attrition; stronger → guerrilla. Guerrilla and manoeuvre are dynamic and use mission command; attrition is static and uses detailed command. Decisions rest on the commander's picture of the balance, which can be wrong, not on the true balance.
 
-> [!question]- 4. What does it take to unfreeze an attritional war, according to Hofstetter et al.?
+> [!qard]- 4. What does it take to unfreeze an attritional war, according to Hofstetter et al.?
 > An innovation that gives a competitive advantage (Corollary II). For the advantage to last, it must be not only valuable and rare but also hard to imitate and organisationally supported (Thesis III, CRIO).
 
-> [!question]- 5. Give the strongest objection to the attrition–manoeuvre dichotomy.
+> [!qard]- 5. Give the strongest objection to the attrition–manoeuvre dichotomy.
 > It is a false choice: both are always present, and outcomes depend on how forces are employed (Biddle's modern system), not on which label a doctrine uses.
 
 ## Open Questions

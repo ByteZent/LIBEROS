@@ -10,6 +10,7 @@ aliases:
 type: framework
 domain: ["strategy", "economics", "military"]
 courses: ["L1-HS26"]
+qard-deck: L1-HS26
 status: seedling
 confidence: medium
 created: 2026-09-30
@@ -128,22 +129,22 @@ The example shows the most useful lesson of VRIO: **the object is rarely the adv
 - [[Doctrine (Swiss Armed Forces)|Doctrine]]: the *organisation* question is largely a question of doctrine
 - [[PMESII]]: an outward-looking analysis that tells VRIO what is *valuable* in a given environment
 
-## Self-Test
+## Self-Test: VRIO
 
-> [!question]- 1. Name the four VRIO questions and the result when the ladder stops at each one.
+> [!qard]- 1. Name the four VRIO questions and the result when the ladder stops at each one.
 > - **Value** no → competitive disadvantage
 > - **Rarity** no → competitive parity
 > - **Imitability** no (easy to copy) → temporary advantage
 > - **Organisation** no → unexploited advantage
 > - All yes → sustained competitive advantage
 
-> [!question]- 2. Why are capabilities usually more durable sources of advantage than resources?
+> [!qard]- 2. Why are capabilities usually more durable sources of advantage than resources?
 > Capabilities are built over time (unique history), rest on relationships and culture (social complexity) and are hard even for the owner to explain (causal ambiguity). All three make them costly to copy. Resources such as equipment can often be bought or rebuilt.
 
-> [!question]- 3. What is CRIO, and what does Thesis III claim?
+> [!qard]- 3. What is CRIO, and what does Thesis III claim?
 > The military version of VRIO by Hofstetter, Borioli and Flemming (2024): *combat value* replaces value. Thesis III: an innovation that adds combat value and is rare gives only a temporary advantage; it lasts only if it is also inimitable and supported by the organisation.
 
-> [!question]- 4. Why is VRIO alone not enough for strategy?
+> [!qard]- 4. Why is VRIO alone not enough for strategy?
 > It looks only inward. It judges what you have, but it cannot say what will be *valuable*; that depends on the environment and the opponent. It needs an outward-looking analysis beside it.
 
 ## Open Questions

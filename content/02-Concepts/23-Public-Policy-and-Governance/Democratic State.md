@@ -9,6 +9,7 @@ aliases:
 type: concept
 domain: ["policy", "ir"]
 courses: ["PolSci-HS26"]
+qard-deck: PolSci-HS26
 status: seedling
 confidence: low
 created: 2026-10-01
@@ -180,40 +181,40 @@ Outside the textbook this arrangement is usually called a **directorial system**
 - [[Sovereign Territorial State]]: democracy answers the question of who holds the *Staatsgewalt*, namely the *Staatsvolk* itself.
 - [[Research Design]]: "democracy" is the textbook example of a concept that must be split into dimensions and indicators before it can be measured.
 
-## Self-Test
+## Self-Test: Democracy
 
-> [!question]- 1. What does democracy mean, and which three dimensions does it have?
+> [!qard]- 1. What does democracy mean, and which three dimensions does it have?
 > Rule by the people. It comes from the people, is exercised by the people or their elected representatives, and is used for the good of the citizens.
 
-> [!question]- 2. Which two features make delegation to representatives democratic?
+> [!qard]- 2. Which two features make delegation to representatives democratic?
 > Power is transferred directly through free and fair elections, and only for a limited time, so that office-holders must face re-election.
 
-> [!question]- 3. Name the six attributes of democratic elections.
+> [!qard]- 3. Name the six attributes of democratic elections.
 > Regular, general, equal, free, direct, secret.
 
-> [!question]- 4. Name Dahl's two dimensions.
+> [!qard]- 4. Name Dahl's two dimensions.
 > **Political competition** (contestation) and **participation** of the citizens (inclusion).
 
-> [!question]- 5. What separates the narrow from the broad definition of democracy?
+> [!qard]- 5. What separates the narrow from the broad definition of democracy?
 > - **Narrow:** democratic elections, political competition and changes of power are enough (Schumpeter, Przeworski).
 > - **Broad:** further conditions are required, for example freedom of speech, press and association (Dahl), the rule of law, separation of powers, protection of minorities.
 > - **Caveat:** the further criteria may be consequences of democracy and not part of it.
 
-> [!question]- 6. Parliamentary or presidential: what is the key difference?
+> [!qard]- 6. Parliamentary or presidential: what is the key difference?
 > Two features: how the government is elected, and whether it depends on parliament's confidence.
 > - **Parliamentary:** the government comes out of parliament and can be brought down by a vote of no confidence.
 > - **Presidential:** the president is elected by the people for a fixed term, cannot be removed by parliament except in extreme cases, and cannot dissolve it.
 
-> [!question]- 7. What is a semi-presidential system?
+> [!qard]- 7. What is a semi-presidential system?
 > A president elected by the people and a prime minister whose cabinet is responsible to parliament share executive power. Example: France.
 
-> [!question]- 8. Why does Switzerland fit neither the parliamentary nor the presidential type?
+> [!qard]- 8. Why does Switzerland fit neither the parliamentary nor the presidential type?
 > Parliament elects the Federal Council (parliamentary), but cannot remove it during the term, and the Federal Council cannot dissolve parliament (presidential).
 
-> [!question]- 9. Why is Switzerland called a consensus democracy?
+> [!qard]- 9. Why is Switzerland called a consensus democracy?
 > Power is shared widely: all large parties sit in government (concordance), the cantons hold strong competences (federalism), and the people can overrule parliament (referendum, initiative).
 
-> [!question]- 10. What does the democratic peace claim, and what does it not claim?
+> [!qard]- 10. What does the democratic peace claim, and what does it not claim?
 > That democracies very rarely go to war against each other. It does not claim that democracies are peaceful in general.
 
 ## Open Questions

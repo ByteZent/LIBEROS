@@ -12,6 +12,7 @@ aliases:
 type: concept
 domain: ["psychology", "military"]
 courses: ["MilPsy-HS26"]
+qard-deck: MilPsy-HS26
 status: seedling
 confidence: medium
 created: 2026-10-01
@@ -101,24 +102,24 @@ draft: false
 - [[Bias in Research]]: the same tendency in the reader of a study.
 - [[Holistic Model of Military Psychology]]: self-reflection, one of the four pillars, includes checking one's own attributions.
 
-## Self-Test
+## Self-Test: Attribution
 
-> [!question]- 1. Fill in the four cells of the attribution scheme.
+> [!qard]- 1. Fill in the four cells of the attribution scheme.
 > Internal and stable: ability. Internal and variable: effort. External and stable: task difficulty. External and variable: luck.
 
-> [!question]- 2. What is self-serving attribution?
+> [!qard]- 2. What is self-serving attribution?
 > Explaining one's success by internal, stable causes and one's failure by external, variable causes.
 
-> [!question]- 3. Define the fundamental attribution error.
+> [!qard]- 3. Define the fundamental attribution error.
 > The general tendency to underestimate situational factors and overestimate dispositional factors when explaining behaviour.
 
-> [!question]- 4. A soldier fails the shooting test. Give one attribution for each cell and the measure that follows.
+> [!qard]- 4. A soldier fails the shooting test. Give one attribution for each cell and the measure that follows.
 > - **Ability:** reassign or train basics.
 > - **Effort:** demand more.
 > - **Task difficulty:** check the test conditions.
 > - **Luck:** repeat the test.
 
-> [!question]- 5. Why does the attribution matter for motivation?
+> [!qard]- 5. Why does the attribution matter for motivation?
 > Failure put down to a stable internal cause leads to expecting failure again. Failure put down to effort leaves room to improve.
 
 ## Sources

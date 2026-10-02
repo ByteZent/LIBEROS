@@ -9,6 +9,7 @@ aliases:
 type: framework
 domain: ["policy"]
 courses: ["PS1-HS26"]
+qard-deck: PS1-HS26
 status: seedling
 confidence: medium
 created: 2026-10-01
@@ -213,34 +214,34 @@ An **invented** abstract, built to contain typical problems:
 - [[Cognitive Warfare]]: uses the reader's biases on purpose. What is a hazard in research is a tool there.
 - [[General Model Theory]]: every study is a reduced model of its subject. Bias is where the reduction leaves out something the conclusion depends on.
 
-## Self-Test
+## Self-Test: Research Bias
 
-> [!question]- 1. What is the difference between random error and bias? Why does a larger sample help with only one of them?
+> [!qard]- 1. What is the difference between random error and bias? Why does a larger sample help with only one of them?
 > - **Random error** scatters in both directions and averages out as cases are added.
 > - **Bias** is systematic: it pushes one way, so adding cases repeats the same error and only narrows the confidence interval around the wrong value.
 
-> [!question]- 2. Name the five stages and the question to ask at each.
+> [!qard]- 2. Name the five stages and the question to ask at each.
 > - **Design:** could something else explain the result?
 > - **Selection:** who is missing, and why?
 > - **Measurement:** does the number mean what the paper says?
 > - **Analysis:** was the test fixed before the data was seen?
 > - **Reporting:** which results never got printed?
 
-> [!question]- 3. A study of 30 states that fought wars finds that all of them had rising military budgets beforehand. What is wrong?
+> [!qard]- 3. A study of 30 states that fought wars finds that all of them had rising military budgets beforehand. What is wrong?
 > **Selection on the outcome.**
 > 
 > Only cases with war were studied. If states that stayed at peace also had rising budgets, the budgets explain nothing. The sample needs cases without war.
 
-> [!question]- 4. What is confounding? Give an example.
+> [!qard]- 4. What is confounding? Give an example.
 > A third factor causes both the supposed cause and the effect. Example: officers who attended a staff course are promoted faster. But they were selected for the course *because* they were already rated highly, and that rating also drives promotion.
 
-> [!question]- 5. Why can publication bias not be seen in a single paper?
+> [!qard]- 5. Why can publication bias not be seen in a single paper?
 > Because it is a property of the literature: it lies in the studies that are *not* there. A single paper can be flawless and still be part of a distorted record. It shows only across studies: in meta-analyses, replications and pre-registered work.
 
-> [!question]- 6. You have found a bias in a paper. Which question comes next, and why?
+> [!qard]- 6. You have found a bias in a paper. Which question comes next, and why?
 > **In which direction does it push the result, and how strongly?** A bias that works against the paper's conclusion means the true effect is probably larger than reported. Only a bias that pushes towards the conclusion, and is large enough, threatens it.
 
-> [!question]- 7. What is the difference between *p*-hacking and HARKing?
+> [!qard]- 7. What is the difference between *p*-hacking and HARKing?
 > - ***P*-hacking** changes the **analysis** until a significant result appears.
 > - **HARKing** changes the **hypothesis** after the result is known and presents it as a prediction. Both make a chance finding look like a test that was passed.
 

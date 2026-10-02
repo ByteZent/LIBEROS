@@ -14,6 +14,7 @@ aliases:
 type: concept
 domain: ["psychology", "military"]
 courses: ["MilPsy-HS26"]
+qard-deck: MilPsy-HS26
 status: seedling
 confidence: medium
 created: 2026-10-01
@@ -88,24 +89,24 @@ draft: false
 - [[Attrition vs Manoeuvre Warfare]]: manoeuvre aims at overloading the enemy's attention with more events than he can process.
 - [[Cognitive Warfare]]: attention is the scarce resource that it fights for.
 
-## Self-Test
+## Self-Test: Attention
 
-> [!question]- 1. What does attention do?
+> [!qard]- 1. What does attention do?
 > It selects the information to be processed at the bottlenecks where things can no longer be done in parallel.
 
-> [!question]- 2. What is inattentional blindness? Give an example.
+> [!qard]- 2. What is inattentional blindness? Give an example.
 > Failing to see a clearly visible object or event because attention is elsewhere. Example: not noticing that the person you are talking to has been swapped behind a passing door.
 
-> [!question]- 3. What did the three-digit experiment show?
+> [!qard]- 3. What did the three-digit experiment show?
 > Doing two thinking tasks in parallel takes much longer. People can mostly follow only one train of thought at a time.
 
-> [!question]- 4. What does automatisation achieve, and how?
+> [!qard]- 4. What does automatisation achieve, and how?
 > Through practice the central cognitive part of a task shrinks, so that it needs little or no thinking effort and attention is free for other things.
 
-> [!question]- 5. What does the Stroop effect show?
+> [!qard]- 5. What does the Stroop effect show?
 > Automated processes (here: reading) are hard to suppress, even when they interfere with the task.
 
-> [!question]- 6. Apply this: why is weapon handling drilled?
+> [!qard]- 6. Apply this: why is weapon handling drilled?
 > So that it runs automatically and the soldier's limited attention stays free for the situation and the enemy.
 
 ## Sources

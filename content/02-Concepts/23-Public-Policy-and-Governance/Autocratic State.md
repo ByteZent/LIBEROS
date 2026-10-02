@@ -12,6 +12,7 @@ aliases:
 type: concept
 domain: ["policy", "ir", "security"]
 courses: ["PolSci-HS26"]
+qard-deck: PolSci-HS26
 status: seedling
 confidence: low
 created: 2026-10-01
@@ -138,27 +139,27 @@ In my own words: in an autocracy the government decides whether it stays. In a d
 - [[Cognitive Warfare]]: autocracies shield their own information space while using the openness of democracies.
 - [[PMESII]]: regime type, pillars of stability and the winning coalition are the core of the political factor when the opponent is an autocracy.
 
-## Self-Test
+## Self-Test: Autocracy
 
-> [!question]- 1. What is the core difference between democracy and autocracy?
+> [!qard]- 1. What is the core difference between democracy and autocracy?
 > Whether the rulers can be removed by the ruled in free and fair elections.
 
-> [!question]- 2. Name the three questions about rule that separate the two.
+> [!qard]- 2. Name the three questions about rule that separate the two.
 > Access to power (open or closed), structure of power (divided or concentrated), limits of power (bound by law and rights or not).
 
-> [!question]- 3. How does a totalitarian regime differ from an authoritarian one?
+> [!qard]- 3. How does a totalitarian regime differ from an authoritarian one?
 > No pluralism at all, a worked-out ideology, active mobilisation of the population and the claim to control all of life. An authoritarian regime tolerates limited pluralism, has no elaborate ideology and prefers a passive population.
 
-> [!question]- 4. Name the three most common kinds of autocracy in the textbook, and the finer four-type scheme.
+> [!qard]- 4. Name the three most common kinds of autocracy in the textbook, and the finer four-type scheme.
 > Textbook: monarchies, military regimes, civilian regimes. Finer scheme: single-party, military, personalist, monarchy.
 
-> [!question]- 5. What are the three pillars of autocratic stability?
+> [!qard]- 5. What are the three pillars of autocratic stability?
 > Legitimation, repression, co-optation.
 
-> [!question]- 6. What is a competitive authoritarian regime?
+> [!qard]- 6. What is a competitive authoritarian regime?
 > A regime with real multi-party elections in which the field is tilted so heavily in favour of the government that it does not lose.
 
-> [!question]- 7. Why can coup-proofing make an army worse at fighting?
+> [!qard]- 7. Why can coup-proofing make an army worse at fighting?
 > Promotion by loyalty, rival services and restricted training and communication protect the ruler from his own officers. They also prevent initiative, cooperation between units and honest reporting, which an army needs in war.
 
 ## Open Questions

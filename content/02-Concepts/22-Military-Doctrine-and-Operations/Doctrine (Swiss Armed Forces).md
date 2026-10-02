@@ -10,6 +10,7 @@ aliases:
 type: concept
 domain: ["military", "strategy", "security"]
 courses: ["L1-HS26"]
+qard-deck: L1-HS26
 status: seedling
 confidence: medium
 created: 2026-09-30
@@ -116,18 +117,18 @@ Swiss doctrinal debate has been shaped by a tension between two schools since th
 - [[PMESII]]: the whole of which military strategy is one part
 - [[VRIO]]: doctrine answers the *organisation* question for new capabilities
 
-## Self-Test
+## Self-Test: Doctrine
 
-> [!question]- 1. Define doctrine in one sentence and say what it is not.
+> [!qard]- 1. Define doctrine in one sentence and say what it is not.
 > The authorised, shared principles for *how* an armed force fulfils its missions, authoritative but requiring judgement. It is not an order (concrete, binding, situational) and not strategy (which chooses ends and means).
 
-> [!question]- 2. Name the levels of Swiss doctrine and their regulations.
+> [!qard]- 2. Name the levels of Swiss doctrine and their regulations.
 > Military-strategic (GMSF 17), operational (OF 17), tactical (TF 17), combat technique (technical and unit regulations). Above them, *Militärdoktrin 17* gives the military-strategic–operational framework. There is no doctrine for overall strategy. FSO 17 sets the command process across levels. GMSF 17, FSO 17, OF 17 and TF 17 together are the *Führungsgrundlagen 17*.
 
-> [!question]- 3. What does "good doctrine shows how, not what" mean, and why does it matter for mission command?
+> [!qard]- 3. What does "good doctrine shows how, not what" mean, and why does it matter for mission command?
 > Doctrine should give leaders proven ways of thinking and acting, not prescriptions. Only then do subordinates keep the freedom of action that mission command needs; detailed prescriptions would turn it into detailed command.
 
-> [!question]- 4. Explain with a Swiss example why doctrine is slow to change.
+> [!qard]- 4. Explain with a Swiss example why doctrine is slow to change.
 > Path dependence: the mobile and static schools, the Réduit and the constant "defence at home" exercise pattern reinforce each other through regulations, training, careers and national narrative. Over time the pattern locks in, and scenarios that do not fit (defence abroad or with partners) are hard to think through.
 
 ## Open Questions

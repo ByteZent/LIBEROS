@@ -9,6 +9,7 @@ domain:
   - generell
 courses:
   - L1-HS26
+qard-deck: L1-HS26
 status: developing
 confidence: high
 created: 2026-09-29
@@ -104,25 +105,25 @@ According to Herbert Stachowiak, a model is characterized by at least three prop
 - [[OODA Loop]]: *Orient* is the building of a mental model; OODA is itself a model that can be analysed with the three features
 - [[John Boyd]]: *Destruction and Creation* parallels pragmatism: models degrade and must be rebuilt
 
-## Self-Test
+## Self-Test: GMT
 
-> [!question]- 1. Name and explain Stachowiak's three features of a model.
+> [!qard]- 1. Name and explain Stachowiak's three features of a model.
 > - **Mapping:** a model is always a model *of something*, an original, which may itself be a model.
 > - **Reduction:** it keeps only the attributes that seem relevant to its creator or user.
 > - **Pragmatism:** it replaces the original only *for someone*, *for a time* and *for a purpose*.
 
-> [!question]- 2. Why is reduction not a weakness of a model?
+> [!qard]- 2. Why is reduction not a weakness of a model?
 > Because it is what makes the model usable. A model that kept every attribute would be as complex as the original and would help no one decide anything. The question is not *whether* to reduce, but whether the right attributes were kept for the purpose.
 
-> [!question]- 3. What are preterite and abundant attributes? Give an example.
+> [!qard]- 3. What are preterite and abundant attributes? Give an example.
 > **Preterite** attributes exist in the original but are left out of the model (the colour of buildings is missing from a military map). **Abundant** attributes exist in the model but not in the original (the coordinate grid on a map). Both show that model and original are not one-to-one.
 
-> [!question]- 4. Apply the three features to the OODA loop.
+> [!qard]- 4. Apply the three features to the OODA loop.
 > - **Mapping:** decision-making in competition, originally air combat.
 > - **Reduction:** four stages and feedback loops, without emotion, politics or organisational friction.
 > - **Pragmatism:** made by Boyd for military officers, to argue for manoeuvre warfare. Using it for a coalition's policy process stretches it beyond its original purpose.
 
-> [!question]- 5. Why does General Model Theory matter for a leader?
+> [!qard]- 5. Why does General Model Theory matter for a leader?
 > Everything a leader acts on (maps, reports, plans, doctrine, their own situation picture) is a model. Knowing that each one is reduced and made for a purpose makes a leader ask what is missing and whether the model still fits the current situation, time and task.
 
 ## Open Questions

@@ -11,6 +11,7 @@ domain:
   - strategy
 courses:
   - L1-HS26
+qard-deck: L1-HS26
 status: developing
 confidence: high
 created: 2026-09-29
@@ -26,7 +27,6 @@ tags:
 
 > [!bluf]
 > The OODA loop (**Observe – Orient – Decide – Act**) is [[John Boyd]]'s model of how people and organisations adapt in competition. Its core is **not speed but orientation**: the mental model through which observations are interpreted, which also shapes what we observe, decide and do. The advantage goes to whoever **adapts faster *relative* to the opponent**: someone who orients better and acts coherently forces the opponent to keep reacting to situations that have already changed, until the opponent's picture of reality falls apart. It is a model of **learning under uncertainty**, not a four-step checklist.
-
 ## Definition
 
 > [!source] Boyd, "Organic Design for Command and Control" (1987)
@@ -102,27 +102,27 @@ A classic exam comparison. **Define both separately, then connect them through o
 - [[Course of Action]]: the formal, deliberate version of *Decide*
 - [[Cognitive Warfare]]: an attack aimed directly at the opponent's *Orient*
 
-## Self-Test
+## Self-Test: OODA
 
-> [!question]- 1. Explain the four elements and the key feedback loops.
+> [!qard]- 1. Explain the four elements and the key feedback loops.
 > - **Observe** gathers information, circumstances and the effects of your own action.
 > - **Orient** interprets them through experience, culture, heritage, and analysis and synthesis.
 >  - **Decide** selects a hypothesis.
 >  - **Act** tests it. Feedback runs from Decide and Act back to Observe. *Implicit guidance and control* runs from Orient directly to Observe and to Act. The loop is continuous and non-linear, not a checklist.
 
-> [!question]- 2. Why is orientation the central element?
+> [!qard]- 2. Why is orientation the central element?
 > It determines what is observed, which options are even visible, and how risks are judged. Boyd calls it the *Schwerpunkt*. With a wrong orientation, a faster loop only produces wrong actions faster.
 
-> [!question]- 3. Why is a fast loop without sound orientation not enough?
+> [!qard]- 3. Why is a fast loop without sound orientation not enough?
 > The advantage is **relative adaptability**, not absolute speed. Tempo pays off only if signals are interpreted correctly and actions fit the purpose and the environment. Otherwise it multiplies errors.
 
-> [!question]- 4. How does manoeuvre warfare use the opponent's OODA loop?
+> [!qard]- 4. How does manoeuvre warfare use the opponent's OODA loop?
 > By surprise, ambiguity and tempo it creates mismatches between the enemy's orientation and reality. He keeps reacting to outdated situations until his cohesion collapses. The target is his *ability to orient*, not his physical mass.
 
-> [!question]- 5. How do OODA and sensemaking differ, and where do they meet?
+> [!qard]- 5. How do OODA and sensemaking differ, and where do they meet?
 > Sensemaking explains how meaning is constructed, often retrospectively and socially. OODA is a competitive cycle of decision and action with feedback. They meet in **Orient**, but neither can be reduced to the other.
 
-> [!question]- 6. When does implicit guidance enable speed, and when is it risky?
+> [!qard]- 6. When does implicit guidance enable speed, and when is it risky?
 > It enables speed when orientation is shared (training, trust, clear intent, known limits). It becomes risky in novel or ambiguous situations, with weak trust or unclear boundaries. Then explicit decision is needed.
 
 ## Open Questions

@@ -8,6 +8,7 @@ aliases:
 type: framework
 domain: ["strategy", "military", "intelligence", "policy"]
 courses: ["L1-HS26"]
+qard-deck: L1-HS26
 status: seedling
 confidence: medium
 created: 2026-09-30
@@ -109,18 +110,18 @@ A common matrix crosses PMESII (rows) with ASCOPE (columns): *which areas, struc
 - [[Cognitive Warfare]]: works through the *information* and *social* sub-systems to reach the *political*
 - [[General Model Theory]]: PMESII is a model, reduced for a purpose; its categories are choices, not facts
 
-## Self-Test
+## Self-Test: PMESII
 
-> [!question]- 1. What do the six letters stand for, and what does -PT add?
+> [!qard]- 1. What do the six letters stand for, and what does -PT add?
 > Political, Military, Economic, Social, Information, Infrastructure. The US Army adds Physical environment and Time.
 
-> [!question]- 2. What is the difference between PMESII and DIME?
+> [!qard]- 2. What is the difference between PMESII and DIME?
 > PMESII describes the **system** you act on (yours, the enemy's or a region's). DIME lists the **instruments of national power** you act with: diplomatic, informational, military, economic.
 
-> [!question]- 3. What is the most common mistake in a PMESII analysis?
+> [!qard]- 3. What is the most common mistake in a PMESII analysis?
 > Filling six separate lists without mapping the links between them. The insight lies in how a change in one sub-system spreads to the others.
 
-> [!question]- 4. Why should you be careful with promises of predictable effects?
+> [!qard]- 4. Why should you be careful with promises of predictable effects?
 > PMESII comes from effects-based thinking, which assumed a society could be modelled precisely. Social and political systems are adaptive and poorly known; the US itself dropped effects-based operations in 2008 for that reason.
 
 ## Open Questions

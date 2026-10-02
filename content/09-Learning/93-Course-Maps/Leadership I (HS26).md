@@ -52,7 +52,7 @@ draft: true
 
 ## Exam preparation
 
-- [x] OODA note with self-test ([[OODA Loop#Self-Test]])
+- [x] OODA note with self-test ([[OODA Loop#Self-Test: OODA]])
 - [ ] Sensemaking note (Weick), then rehearse the comparison
 - [x] Doctrine note
 - [ ] Model theory note

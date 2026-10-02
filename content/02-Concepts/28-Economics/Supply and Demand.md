@@ -6,7 +6,8 @@ aliases:
   - Angebot und Nachfrage
 type: model
 domain: ["economics"]
-courses: ["MikroEcon-H26"]
+courses: ["MikroEcon-HS26"]
+qard-deck: MikroEcon-HS26
 status: developing
 confidence: high
 created: 2026-09-29
@@ -226,25 +227,25 @@ Whether such an intervention is *justified* is a **normative** question. The mod
 - [[Production Possibilities Frontier]]: rising supply curves and the bowed-out PPF express the same idea: producing more costs more at the margin
 - [[Circular Flow Diagram]]: shows the two markets (goods, factors) in which supply and demand operate
 
-## Self-Test
+## Self-Test: S&D
 
-> [!question]- 1. Why is a higher price of the good itself not a shift of the demand curve?
+> [!qard]- 1. Why is a higher price of the good itself not a shift of the demand curve?
 > Because the price is on the axis. A change in the good's own price moves buyers **along** the existing curve and changes the *quantity demanded*. Only factors that are not on the axes (income, prices of related goods, tastes, expectations, number of buyers) shift the curve.
 
-> [!question]- 2. How does a rise in income affect a normal good and an inferior good?
+> [!qard]- 2. How does a rise in income affect a normal good and an inferior good?
 > - **Normal good:** demand shifts right.
 > - **Inferior good:** demand shifts left, because buyers switch to better alternatives they can now afford.
 
-> [!question]- 3. Why does a higher input price shift the supply curve to the left?
+> [!qard]- 3. Why does a higher input price shift the supply curve to the left?
 > It raises the cost of producing each unit. At every price, sellers are willing to supply less (or need a higher price for the same quantity). So the whole curve shifts left (or up).
 
-> [!question]- 4. How does the market remove a shortage?
+> [!qard]- 4. How does the market remove a shortage?
 > At a price below $P^*$, buyers want more than is offered. Buyers compete and bid the price up. The higher price lowers the quantity demanded and raises the quantity supplied until they are equal at $P^*$.
 
-> [!question]- 5. Demand rises and supply falls at the same time. What is certain, what is not?
+> [!qard]- 5. Demand rises and supply falls at the same time. What is certain, what is not?
 > The **price rises for certain** (both shifts push it up). The effect on **quantity is ambiguous**: it depends on which shift is larger.
 
-> [!question]- 6. The price of a good has risen. Can you conclude that demand has increased?
+> [!qard]- 6. The price of a good has risen. Can you conclude that demand has increased?
 > No. A supply decrease also raises the price. Look at the quantity: $P\uparrow, Q\uparrow$ points to higher demand; $P\uparrow, Q\downarrow$ points to lower supply.
 
 ## Open Questions

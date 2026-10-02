@@ -9,6 +9,7 @@ aliases:
 type: framework
 domain: ["law"]
 courses: ["PrivLawI-HS26"]
+qard-deck: PrivLawI-HS26
 status: seedling
 confidence: medium
 created: 2026-09-30
@@ -230,21 +231,21 @@ Finish every claim with a clear **overall result** (*Gesamtergebnis*): "K can de
 
 - [[General Model Theory]]: the scheme is itself a model of legal reasoning, reduced for exam and advisory use
 
-## Self-Test
+## Self-Test: Legal Case
 
-> [!question]- 1. What is the claim question, and why is it the starting point?
+> [!qard]- 1. What is the claim question, and why is it the starting point?
 > *Wer will was von wem woraus?*: who wants what from whom, and on what legal basis. It forces you to name a concrete norm whose conditions can be tested, instead of discussing the facts in general.
 
-> [!question]- 2. Name the four moves of the opinion style.
+> [!qard]- 2. Name the four moves of the opinion style.
 > Hypothesis (*Obersatz*), rule or definition, subsumption, conclusion (*Ergebnis*).
 
-> [!question]- 3. In what order are claim bases checked, and why?
+> [!qard]- 3. In what order are claim bases checked, and why?
 > Contract → quasi-contract → property law → tort → unjust enrichment. Earlier results affect later ones: a valid contract is a legal ground that rules out an unjust enrichment claim, and it gives a right to possess that blocks recovery of the property.
 
-> [!question]- 4. What is the difference between a void contract and one with a defect of consent?
+> [!qard]- 4. What is the difference between a void contract and one with a defect of consent?
 > A **void** contract (Art. 20 OR: impossible, illegal, immoral content) never has effect, and anyone can invoke this. A contract affected by a **defect of consent** (Art. 23 ff. OR) is **unilaterally non-binding**: it stays valid unless the affected party declares within one year that they will not be bound (Art. 31 OR).
 
-> [!question]- 5. The contract turns out to be void, but the buyer already paid. What claim do they have?
+> [!qard]- 5. The contract turns out to be void, but the buyer already paid. What claim do they have?
 > Return of the price under **unjust enrichment** (Art. 62 Abs. 2 OR: performance without valid ground). If a thing was handed over and ownership did not pass, the seller can also recover it as owner (Art. 641 Abs. 2 ZGB).
 
 ## Sources
