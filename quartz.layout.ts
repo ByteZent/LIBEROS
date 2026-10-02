@@ -24,6 +24,7 @@ export const sharedPageComponents: SharedLayout = {
       // TODO: replace with your own links
       About: "/00-Meta/About",
       Methodology: "/00-Meta/Methodology",
+      Changelog: "/changelog",
       RSS: "/index.xml",
     },
   }),

@@ -1,0 +1,81 @@
+@use "../../styles/variables.scss" as *;
+
+.changelog {
+  .cl-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cl-entry {
+    margin: 0;
+    padding: 0.9rem 0;
+    border-top: 1px solid var(--lightgray);
+  }
+
+  .cl-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--codeFont);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: var(--gray);
+  }
+
+  .cl-type,
+  .cl-scope {
+    padding: 0.1rem 0.5rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: var(--darkgray);
+  }
+
+  .cl-scope {
+    border-style: dashed;
+    text-transform: none;
+  }
+
+  .cl-type-note {
+    border-color: #2f8f6f;
+    color: #2f8f6f;
+  }
+
+  .cl-type-edit {
+    border-color: var(--secondary);
+    color: var(--secondary);
+  }
+
+  .cl-type-fix {
+    border-color: #b5533c;
+    color: #b5533c;
+  }
+
+  .cl-type-site {
+    border-color: var(--tertiary);
+    color: var(--tertiary);
+  }
+
+  .cl-subject {
+    margin: 0.35rem 0 0;
+    color: var(--dark);
+    font-weight: 600;
+  }
+
+  .cl-notes {
+    margin: 0.3rem 0 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .cl-key {
+    margin-right: 0.5rem;
+    font-family: var(--codeFont);
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+}

@@ -64,7 +64,7 @@ function collectDecks(allFiles: QuartzPluginData[]): FlashcardDeck[] {
   return [...decks.values()].sort((a, b) => a.title.localeCompare(b.title))
 }
 
-function emitPage(
+export function emitPage(
   ctx: BuildCtx,
   data: Partial<QuartzPluginData> & { slug: FullSlug },
   allFiles: QuartzPluginData[],

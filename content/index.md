@@ -31,6 +31,7 @@ It is built note by note while I study Public Policy and Military Strategy. Each
 - [[/tags/course/| Courses]]
 - [[/flashcards/|Flashcards]]
 - [[Open Questions in the Notes|Open questions]]
+- [[/changelog|Changelog]]
 - [[Menschenbilder in Psychology|5 Menschenbilder]]
 - [[OODA Loop|OODA Loop nach Boyd]]
 - [[Doctrine (Swiss Armed Forces)| Doctrin - Swiss Armed Forces]]
