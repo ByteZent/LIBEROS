@@ -15,7 +15,7 @@ qard-deck: L1-HS26
 status: seedling
 confidence: medium
 created: 2026-09-30
-modified: 2026-09-30
+modified: 2026-10-02
 review: 
 tags:
   - concept
@@ -118,6 +118,12 @@ The Swiss debate between a **mobile** school and a **static** school of defence 
 
 > [!qard]- 5. Give the strongest objection to the attrition–manoeuvre dichotomy.
 > It is a false choice: both are always present, and outcomes depend on how forces are employed (Biddle's modern system), not on which label a doctrine uses.
+
+> [!qard]- 6. Apply: your side perceives the enemy as roughly equal. What does the spectrum model predict, and what could change it?
+> Attrition with detailed command. Only an innovation that creates a perceived advantage allows *unfreezing* into manoeuvre, and the advantage lasts only if it is hard to imitate and the organisation can exploit it.
+
+> [!qard]- 7. Judge: "a force that moves a lot is fighting manoeuvre warfare." True?
+> No. Manoeuvre is defined by its target, the enemy's cohesion and orientation, not by movement. A force can move and still trade losses. A static ambush that paralyses a command is manoeuvre.
 
 ## Open Questions
 

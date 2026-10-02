@@ -11,7 +11,7 @@ qard-deck: MikroEcon-HS26
 status: developing
 confidence: high
 created: 2026-09-29
-modified: 2026-10-01
+modified: 2026-10-02
 review: 
 originators:
   - Antoine Augustin Cournot
@@ -90,11 +90,11 @@ $$
 
 | Determinant | Logic | Shifts **right** when … |
 |---|---|---|
- **Input prices** | Wages, raw materials, **energy**. Dearer inputs make each unit more costly. | input prices fall |
+| **Input prices** | Wages, raw materials, **energy**. Dearer inputs make each unit more costly. | input prices fall |
 | **Technology** | Better technology lowers the cost per unit | productivity rises |
 | **Expectations** | Expected future prices (sellers may hold back stock to sell later) | sellers expect lower prices later, so they sell now |
 | **Number of sellers** | Market supply is the **sum of** individual supply | the number of sellers rises |
-| **Natural and social factors** | Limitations of ressources, restrictions | - |
+| **Natural and social factors** | Limitations of resources, restrictions | - |
 
 ## Movement along vs shift of the curve
 
@@ -247,6 +247,15 @@ Whether such an intervention is *justified* is a **normative** question. The mod
 
 > [!qard]- 6. The price of a good has risen. Can you conclude that demand has increased?
 > No. A supply decrease also raises the price. Look at the quantity: $P\uparrow, Q\uparrow$ points to higher demand; $P\uparrow, Q\downarrow$ points to lower supply.
+
+> [!qard]- 7. Apply: after 2022, demand for artillery ammunition surged while production capacity could not grow quickly. What does the model predict?
+> Demand shifts right against a steep short-run supply curve. The result is mostly higher prices and long delivery times, and little extra quantity at first.
+
+> [!qard]- 8. Apply: a rent ceiling is set below the equilibrium price. What follows, and what rations the flats now?
+> A lasting shortage: quantity demanded exceeds quantity supplied. Queues, waiting lists and black markets ration instead of the price. Whether the ceiling is justified is a normative question.
+
+> [!qard]- 9. Calculate: $Q_D = 100 - 2P$ and $Q_S = 20 + 2P$. Find the equilibrium, and describe the market at $P = 25$.
+> $P^* = 20$, $Q^* = 60$. At $P = 25$: $Q_D = 50$ and $Q_S = 70$, a surplus of 20 units, so the price falls.
 
 ## Open Questions
 

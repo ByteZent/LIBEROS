@@ -13,7 +13,7 @@ qard-deck: PS1-HS26
 status: seedling
 confidence: medium
 created: 2026-10-01
-modified: 2026-10-01
+modified: 2026-10-02
 review: 
 tags:
   - framework
@@ -244,6 +244,12 @@ An **invented** abstract, built to contain typical problems:
 > [!qard]- 7. What is the difference between *p*-hacking and HARKing?
 > - ***P*-hacking** changes the **analysis** until a significant result appears.
 > - **HARKing** changes the **hypothesis** after the result is known and presents it as a prediction. Both make a chance finding look like a test that was passed.
+
+> [!qard]- 8. Apply: a study interviews officers from successful campaigns, who say the population-centric approach decided the outcome. Name two biases and their direction.
+> Selection on the outcome: the failed campaigns are missing. Recall bias and social desirability: winners explain their success afterwards. Both push towards the paper's conclusion, so both threaten it.
+
+> [!qard]- 9. Apply: units picked for retraining because of very poor scores do better afterwards. Does that show the retraining works?
+> No. This is regression to the mean: cases chosen because they were extreme move back towards the average on their own. You need equally poor units without retraining as a comparison group.
 
 ## Open Questions
 

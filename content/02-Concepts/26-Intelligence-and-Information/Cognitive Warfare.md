@@ -14,7 +14,7 @@ qard-deck: MilPsy-HS26
 status: seedling
 confidence: medium
 created: 2026-09-30
-modified: 2026-09-30
+modified: 2026-10-02
 review: 
 tags:
   - concept
@@ -119,6 +119,12 @@ Switzerland had a historic form of cognitive defence long before the term existe
 
 > [!qard]- 5. Give the strongest critique of the concept.
 > Conceptual inflation: calling all influence "warfare" securitises normal debate and can justify restricting free speech, while research suggests the effects of disinformation are often overstated.
+
+> [!qard]- 6. Apply: before a popular vote, anonymous accounts flood social media with contradictory claims about the proposal. What is the aim, and what is the right defence?
+> The aim is doubt, polarisation and exhaustion, not belief: a society without a shared picture cannot decide. The defence is societal: early, transparent communication by trusted authorities (*prebunking*), media literacy, independent media.
+
+> [!qard]- 7. Compare: cognitive warfare, PSYOPS and disinformation.
+> PSYOPS aims at the behaviour of specific audiences in an operation. Disinformation is a *tool*: specific false content spread on purpose. Cognitive warfare aims at the thinking process of whole populations, long-term and often covertly.
 
 ## Open Questions
 

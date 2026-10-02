@@ -12,7 +12,7 @@ qard-deck: L1-HS26
 status: seedling
 confidence: medium
 created: 2026-09-30
-modified: 2026-09-30
+modified: 2026-10-02
 review: 
 tags:
   - framework
@@ -123,6 +123,12 @@ A common matrix crosses PMESII (rows) with ASCOPE (columns): *which areas, struc
 
 > [!qard]- 4. Why should you be careful with promises of predictable effects?
 > PMESII comes from effects-based thinking, which assumed a society could be modelled precisely. Social and political systems are adaptive and poorly known; the US itself dropped effects-based operations in 2008 for that reason.
+
+> [!qard]- 5. Apply: a cyberattack takes down the power grid. Trace the effect through the sub-systems.
+> Infrastructure → Economic (the financial centre stops) → Information and Social (a story of state failure) → Political (pressure on a slow consensus system) → Military (logistics). The links are the analysis, not the six lists.
+
+> [!qard]- 6. Limit: why is a finished PMESII table only a snapshot?
+> The actors in each sub-system react to what you do. They run their own loop. The boundaries between the six categories are conventions too. So effects cannot be predicted mechanically.
 
 ## Open Questions
 

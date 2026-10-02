@@ -17,7 +17,7 @@ qard-deck: L1-HS26
 status: seedling
 confidence: medium
 created: 2026-09-30
-modified: 2026-09-30
+modified: 2026-10-02
 review: 
 tags:
   - framework
@@ -152,6 +152,12 @@ Note how the COAs map onto [[Attrition vs Manoeuvre Warfare|attrition and manoeu
 
 > [!qard]- 4. What is Klein's critique, and when is it most relevant?
 > Experts decide by recognising the situation and simulating one option mentally, not by comparing several. It matters most under time pressure and for experienced commanders; the COA method remains valuable for staffs, novices, novel problems and decisions that must be justified.
+
+> [!qard]- 5. Apply: a staff presents three COAs, its favourite and two that differ from it only in timing. Which criterion fails, and why does it matter?
+> *Distinguishable*. Without real alternatives the comparison is a formality and the commander has nothing to choose from. This is the "favourite plus two strawmen" pitfall.
+
+> [!qard]- 6. Compare: when does a formal COA comparison fit, and when does a recognition-primed decision?
+> Comparison fits a staff with time, a new kind of problem and a decision that must be traceable. A recognition-primed decision fits an experienced leader under time pressure in a familiar situation: take the first workable option and test it in the mind.
 
 ## Open Questions
 

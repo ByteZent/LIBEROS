@@ -13,7 +13,7 @@ qard-deck: L1-HS26
 status: developing
 confidence: high
 created: 2026-09-29
-modified: 2026-09-29
+modified: 2026-10-02
 review:
 tags:
   - concept
@@ -125,6 +125,12 @@ According to Herbert Stachowiak, a model is characterized by at least three prop
 
 > [!qard]- 5. Why does General Model Theory matter for a leader?
 > Everything a leader acts on (maps, reports, plans, doctrine, their own situation picture) is a model. Knowing that each one is reduced and made for a purpose makes a leader ask what is missing and whether the model still fits the current situation, time and task.
+
+> [!qard]- 6. Apply: a unit plans from a doctrine regulation written twenty years ago. Describe the problem in Stachowiak's terms.
+> A failure of the pragmatic feature. Doctrine is a model built for a certain army, era and threat. Used beyond its time range, it no longer stands in for the original.
+
+> [!qard]- 7. Limit: the three features say what a model is. What do they not say?
+> What makes a model *good*. They give no criterion for validity or for how much reduction is too much. A model can only be judged against its purpose.
 
 ## Open Questions
 

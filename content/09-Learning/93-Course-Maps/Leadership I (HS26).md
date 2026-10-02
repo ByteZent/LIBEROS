@@ -34,6 +34,28 @@ draft: true
 |---|---|---|
 | 01 · 22.09.2026 | CLM, model theory, sensemaking, OODA | [[OODA Loop]] |
 | 02 · 29.09.2026 | Doctrine, attrition vs manoeuvre, self-similarity | [[John Boyd]] · [[Doctrine (Swiss Armed Forces)]] · [[Attrition vs Manoeuvre Warfare]] · [[VRIO]] · [[PMESII]] |
+| plan · 06.10.2026 | History and definitions of leadership; Great Man, trait, behavioural, scientific management | |
+| plan · 13.10.2026 | Positive leadership approaches: transformational, charismatic, servant | |
+| plan · 20.10.2026 | Dyadic approaches and followership | |
+| plan · 27.10.2026 | Team: prototypicality and group dynamics | |
+| plan · 03.11.2026 | Personality: military identities and the I/O model | |
+| plan · 10.11.2026 | Organisation: contingency, situational, adaptive and complexity approaches | |
+| plan · 17.11.2026 | Guest lectures (Austria), 14:00–17:00 | |
+| plan · 24.11.2026 | Military professions and the sociology of professions | |
+| plan · 01.12.2026 | Operational reliability: sensemaking | |
+| plan · 08.12.2026 | Behavioural reliability: critique of positive leadership | |
+| plan · 15.12.2026 | Procedural reliability: command and control | |
+
+Rows marked *plan* come from the year plan in the study summary of 30.09.2026 and have no notes yet. The summary dates the first three lectures 15.09., 22.09. and 29.09.: check the two session dates above against it.
+
+## Assessment
+
+| What | When | Form |
+|---|---|---|
+| Leadership exam | open | Form and weighting not known yet: add once the lecturer announces them |
+| TMAF 2027 (voluntary) | 16.11.2026, 23:59 | Abstract under 251 words and letter of intent for the internal application |
+
+**Answer scheme:** concept – mechanism – case – limit. Define the model, explain how it works, apply it to the case and say what it leaves out.
 
 ## Glossary (for the German exam)
 

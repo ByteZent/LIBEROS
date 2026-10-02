@@ -14,7 +14,7 @@ qard-deck: L1-HS26
 status: seedling
 confidence: medium
 created: 2026-09-30
-modified: 2026-09-30
+modified: 2026-10-02
 review: 
 tags:
   - framework
@@ -146,6 +146,12 @@ The example shows the most useful lesson of VRIO: **the object is rarely the adv
 
 > [!qard]- 4. Why is VRIO alone not enough for strategy?
 > It looks only inward. It judges what you have, but it cannot say what will be *valuable*; that depends on the environment and the opponent. It needs an outward-looking analysis beside it.
+
+> [!qard]- 5. Apply: run cheap strike drones through CRIO. Where does the ladder stop, and where can a lasting advantage still sit?
+> Combat value yes, rarity only at the start, inimitability no: parity. What can stay rare and hard to copy is the capability around the drones: the adaptation cycle, training and doctrine.
+
+> [!qard]- 6. Limit: in war an advantage can end without being imitated. How?
+> The enemy can counter it (jamming), deceive it or destroy it. Rarity and imitability come from business competition, where rivals copy. They miss countermeasures.
 
 ## Open Questions
 

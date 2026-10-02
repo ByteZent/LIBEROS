@@ -9,7 +9,7 @@ MSG     ?= Update notes $(TODAY)
 NOTES   := find $(VAULT)/0[1-9]-* -name '*.md' ! -name index.md -print0
 
 .DEFAULT_GOAL := help
-.PHONY: help install serve serve-pwa serve-private build clean check format typecheck logo sources bib-merge new course glossary review stats inbox open publish update
+.PHONY: help install serve serve-pwa serve-private build clean check lint format typecheck logo sources bib-merge new course glossary questions review stats inbox open publish update
 
 help: ## Show this help
 	@awk 'BEGIN {FS = ":.*## "} /^[a-zA-Z_-]+:.*## / {printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
@@ -28,7 +28,7 @@ serve: ## Build and serve locally with live reload (PORT=8080)
 serve-pwa: ## Like serve, but with the service worker enabled (to test offline/install)
 	LIBEROS_PWA=1 npx quartz build --serve --port $(PORT) --wsPort 3002 --output public-pwa
 
-serve-private: ## Like serve, but also renders _private and drafts (local only, never deployed)
+serve-private: ## Like serve, but also renders _private, _inbox and drafts (local only, never deployed)
 	LIBEROS_PRIVATE=1 npx quartz build --serve --port $(PORT) --output public-private
 
 build: ## Build the static site into ./public
@@ -45,7 +45,10 @@ typecheck: ## Type-check Quartz config and components
 format: ## Format code with Prettier
 	npx prettier --write .
 
-check: typecheck ## Type-check, verify formatting, check sources and do a test build
+lint: ## Check notes: cards without qard-deck, Self-Test headings, recall-only self-tests
+	@node scripts/lint.mjs
+
+check: typecheck lint ## Type-check, lint notes, verify formatting, check sources and do a test build
 	npx prettier --check .
 	node scripts/bib.mjs check
 	npx quartz build
@@ -70,7 +73,7 @@ new: ## Create a note from a template in _inbox (TYPE=… TITLE="…")
 	 test -n "$$tpl" || { echo "unknown TYPE '$(TYPE)' (see make help)"; exit 1; }; \
 	 out="$(VAULT)/_inbox/$(TITLE).md"; \
 	 test ! -e "$$out" || { echo "exists: $$out"; exit 1; }; \
-	 sed -e 's/{{title}}/$(TITLE)/g' -e 's/{{date}}/$(TODAY)/g' "$(VAULT)/_templates/$$tpl" > "$$out"; \
+	 sed -e 's/{{title}}/$(TITLE)/g' -e 's/{{date}}/$(TODAY)/g' -e '/^````/d' "$(VAULT)/_templates/$$tpl" > "$$out"; \
 	 echo "created $$out"
 
 course: ## Exam prep: all notes for a course by maturity (COURSE=PP-ECON-1; omit to list codes)
@@ -78,6 +81,9 @@ course: ## Exam prep: all notes for a course by maturity (COURSE=PP-ECON-1; omit
 
 glossary: ## Build the central glossary from the notes' Glossary tables (INBOX=1: preview incl. _inbox; CHECK=1: list gaps)
 	@node scripts/glossary.mjs $(if $(INBOX),--inbox) $(if $(CHECK),--check)
+
+questions: ## Build the open-questions page from the notes' Open Questions sections (INBOX=1: preview incl. _inbox)
+	@node scripts/questions.mjs $(if $(INBOX),--inbox)
 
 review: ## List notes whose review date is due (today or earlier)
 	@grep -rl --include='*.md' '^review: [0-9]' $(VAULT) | grep -v '/_templates/' | while read -r f; do \

@@ -19,12 +19,12 @@ export async function glob(
     })
   ).map(toPosixPath)
 
-  // LIBEROS: _private is gitignored, so globby skips it. For the local private
+  // LIBEROS: _private and _inbox are gitignored, so globby skips them. For the local private
   // preview (LIBEROS_PRIVATE=1, make serve-private) pick those files up explicitly.
   if (process.env.LIBEROS_PRIVATE === "1") {
     const priv = (await globby(pattern, { cwd, ignore: ignorePatterns, gitignore: false }))
       .map(toPosixPath)
-      .filter((fp) => fp.split("/").includes("_private"))
+      .filter((fp) => fp.split("/").some((part) => part === "_private" || part === "_inbox"))
     return [...new Set([...fps, ...priv])] as FilePath[]
   }
 

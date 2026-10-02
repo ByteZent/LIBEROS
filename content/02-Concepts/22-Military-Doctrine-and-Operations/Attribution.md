@@ -16,7 +16,7 @@ qard-deck: MilPsy-HS26
 status: seedling
 confidence: medium
 created: 2026-10-01
-modified: 2026-10-01
+modified: 2026-10-02
 review: 
 tags:
   - concept
@@ -121,6 +121,12 @@ draft: false
 
 > [!qard]- 5. Why does the attribution matter for motivation?
 > Failure put down to a stable internal cause leads to expecting failure again. Failure put down to effort leaves room to improve.
+
+> [!qard]- 6. Apply: a platoon leader does not carry out your instruction. Which error threatens your judgement, and what do you check first?
+> The fundamental attribution error: reading it as a trait (stubborn, disloyal). Check the situation first: was the instruction clear and feasible, and did he know something you did not?
+
+> [!qard]- 7. Compare: self-serving attribution and the fundamental attribution error.
+> Self-serving attribution is about **my own** results: success is mine, failure is circumstance. The fundamental error is about **other people's** behaviour: too much person, too little situation. Both distort an after-action review.
 
 ## Sources
 

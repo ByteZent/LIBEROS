@@ -29,12 +29,25 @@ export const sharedPageComponents: SharedLayout = {
   }),
 }
 
-// Explorer: hide the tag index and the attachments folder from the sidebar tree.
+// Explorer: hide the tag index, the attachments folder and folders without any note
+// (only their index page, or only empty subfolders) from the sidebar tree.
 // NB: filterFn is serialised to the client, so it must be self-contained.
 const explorer = Component.Explorer({
   title: "Knowledge Base",
   folderDefaultState: "collapsed",
-  filterFn: (node) => node.slugSegment !== "tags" && node.slugSegment !== "assets",
+  filterFn: (node) => {
+    if (node.slugSegment === "tags" || node.slugSegment === "assets") return false
+    if (!node.isFolder) return true
+    // the filter runs top-down, so look through the whole subtree for a note
+    // (a loop, not a recursive helper: see the __name() remark at sortFn)
+    const todo = [...node.children]
+    while (todo.length > 0) {
+      const child = todo.pop()!
+      if (!child.isFolder) return true
+      todo.push(...child.children)
+    }
+    return false
+  },
   // Folders keep their numbered order (01-Actors, 02-Concepts, …) even though they display
   // their index title; notes sort alphabetically by title.
   sortFn: (a, b) => {

@@ -6,8 +6,9 @@ import * as Plugin from "./quartz/plugins"
  *
  * See https://quartz.jzhao.xyz/configuration for more information.
  */
-// LIBEROS_PRIVATE=1 (make serve-private) also renders content/_private and drafts.
-// Local only: _private is gitignored, so the deploy build never sees these files.
+// LIBEROS_PRIVATE=1 (make serve-private) also renders content/_private, content/_inbox and drafts,
+// so unpublished notes and their flashcards can be studied locally.
+// Local only: both folders are gitignored, so the deploy build never sees these files.
 const showPrivate = process.env.LIBEROS_PRIVATE === "1"
 
 const config: QuartzConfig = {
@@ -22,8 +23,7 @@ const config: QuartzConfig = {
     baseUrl: "liberos.example.com",
     // Everything that is part of the *learning process* but not publishable stays out of the build
     ignorePatterns: [
-      "_inbox",
-      ...(showPrivate ? [] : ["_private"]),
+      ...(showPrivate ? [] : ["_inbox", "_private"]),
       "_templates",
       "_dashboards",
       ".obsidian",

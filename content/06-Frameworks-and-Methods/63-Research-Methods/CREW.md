@@ -11,7 +11,7 @@ courses: []
 status: seedling
 confidence: medium
 created: 2026-09-30
-modified: 2026-09-30
+modified: 2026-10-02
 qard-deck: L1-HS26
 review: 
 tags:
@@ -155,6 +155,12 @@ The table shows two things. First, **Evidence 2 is still a gap**: the reason is 
 
 > [!qard]- 5. Why should a good argument include acknowledgment and response?
 > Because a critical reader will think of the objection anyway. Naming the strongest one and answering it (by conceding, rebutting or narrowing the claim) shows the argument has been tested and makes it more credible, not less.
+
+> [!qard]- 6. Apply: diagnose this argument. "The reform failed because it did not work. Studies show this."
+> The reason only restates the claim, so it is circular. The evidence is not a report the reader can check. No warrant is stated. Give a separate reason and cite the evidence.
+
+> [!qard]- 7. Explain: the reader rejects your warrant. Why does more evidence not help, and what does?
+> Evidence supports the reason, not the step from reason to claim. State the principle and defend it with backing of its own, or use a warrant that the reader's field accepts.
 
 ## Open Questions
 

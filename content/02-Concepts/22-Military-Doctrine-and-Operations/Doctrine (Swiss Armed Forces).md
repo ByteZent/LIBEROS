@@ -14,7 +14,7 @@ qard-deck: L1-HS26
 status: seedling
 confidence: medium
 created: 2026-09-30
-modified: 2026-09-30
+modified: 2026-10-02
 review: 
 tags:
   - concept
@@ -130,6 +130,12 @@ Swiss doctrinal debate has been shaped by a tension between two schools since th
 
 > [!qard]- 4. Explain with a Swiss example why doctrine is slow to change.
 > Path dependence: the mobile and static schools, the Réduit and the constant "defence at home" exercise pattern reinforce each other through regulations, training, careers and national narrative. Over time the pattern locks in, and scenarios that do not fit (defence abroad or with partners) are hard to think through.
+
+> [!qard]- 5. Compare: doctrine, strategy and an order.
+> Strategy decides which ends to pursue with which means. Doctrine says how the military instrument is usually used. An order is binding and concrete for one situation. Doctrine frames orders. It does not replace them.
+
+> [!qard]- 6. Apply: the army buys a new drone capability. Why does that alone give no lasting advantage?
+> Until doctrine, training and culture absorb it, the organisation cannot exploit it (the O in VRIO/CRIO). Doctrine is where the army settles how a capability is used and with what.
 
 ## Open Questions
 

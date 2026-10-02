@@ -13,7 +13,7 @@ qard-deck: PolSci-HS26
 status: seedling
 confidence: low
 created: 2026-10-01
-modified: 2026-10-01
+modified: 2026-10-02
 review: 
 tags:
   - concept
@@ -216,6 +216,12 @@ Outside the textbook this arrangement is usually called a **directorial system**
 
 > [!qard]- 10. What does the democratic peace claim, and what does it not claim?
 > That democracies very rarely go to war against each other. It does not claim that democracies are peaceful in general.
+
+> [!qard]- 11. Apply: a state holds fair, competitive elections, but its courts are weak and minorities are unprotected. Is it a democracy?
+> Under the narrow definition yes. Under a broad one no, or only a *defective democracy*. The answer depends on the definition, which has to fit the research question and be stated openly.
+
+> [!qard]- 12. Judge: what is lost when rule of law and good governance are made part of the definition of democracy?
+> You can no longer ask whether democracy *causes* them, because cause and effect sit in the same concept. A broader definition also leaves fewer states that count as democracies.
 
 ## Open Questions
 

@@ -15,7 +15,7 @@ qard-deck: L1-HS26
 status: developing
 confidence: high
 created: 2026-09-29
-modified: 2026-09-29
+modified: 2026-10-02
 review: 2026-10-02
 tags:
   - concept
@@ -124,6 +124,12 @@ A classic exam comparison. **Define both separately, then connect them through o
 
 > [!qard]- 6. When does implicit guidance enable speed, and when is it risky?
 > It enables speed when orientation is shared (training, trust, clear intent, known limits). It becomes risky in novel or ambiguous situations, with weak trust or unclear boundaries. Then explicit decision is needed.
+
+> [!qard]- 7. Apply: a staff issues orders faster than the enemy but keeps being surprised. Diagnose it with OODA.
+> The fault is in **Orient**, not in tempo. The shared picture no longer matches reality, so fast decisions are fast errors. Ask what would prove the picture wrong and what is being filtered out.
+
+> [!qard]- 8. Limit: why can "getting inside the enemy's loop" fail against a culturally different adversary?
+> It assumes you can read his orientation. What would disorient you may not disorient him. And above the level of a duel, loops are slow, noisy and politically contested.
 
 ## Open Questions
 

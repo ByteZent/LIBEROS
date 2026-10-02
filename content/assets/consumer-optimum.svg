@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-labelledby="t d">
+  <title id="t">The consumer's optimum: budget constraint and indifference curves</title>
+  <desc id="d">A straight budget constraint from 500 litres of cola to 100 pizzas, with three bowed indifference curves. The middle curve just touches the budget constraint at 50 pizzas and 250 litres: the optimum. A bundle on the highest curve is preferred but not affordable. A bundle where the lowest curve cuts the budget line is affordable but worse.</desc>
+  <defs>
+    <marker id="ax" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5b6773"/></marker>
+    <style>
+      .panel { fill: #0d1117; }
+      .box { fill: #161d26; stroke: #3a4654; stroke-width: 1.5; }
+      .axis { stroke: #5b6773; stroke-width: 1.5; fill: none; }
+      .guide { stroke: #5b6773; stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
+      .d { stroke: #7fb3c8; stroke-width: 2.6; fill: none; stroke-linecap: round; }
+      .s { stroke: #8fc59b; stroke-width: 2.6; fill: none; stroke-linecap: round; }
+      .h { font: 700 15px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.5px; fill: #e8edf2; }
+      .lbl { font: 600 11.5px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.2px; }
+      .ax { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .cv { font: italic 700 14px "IBM Plex Serif", Georgia, serif; }
+      .tk { font: italic 13px "IBM Plex Serif", Georgia, serif; fill: #c9d1d9; }
+      .item { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .src { font: italic 11px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #5b6773; }
+    </style>
+  </defs>
+  <rect class="panel" width="1000" height="560" rx="14"/>
+  <path class="axis" d="M90 470 V58" marker-end="url(#ax)"/>
+  <path class="axis" d="M90 470 H622" marker-end="url(#ax)"/>
+  <text class="ax" x="82" y="50">Cola (litres)</text>
+  <text class="ax" x="622" y="492" text-anchor="end">Pizzas</text>
+  <path d="M151.9 74.8 L158.8 114.4 L165.7 146.8 L172.6 173.8 L179.5 196.6 L186.4 216.2 L193.3 233.2 L200.2 248.0 L207.1 261.1 L214.0 272.7 L220.9 283.1 L227.8 292.4 L234.7 300.9 L241.6 308.6 L248.5 315.6 L255.4 322.1 L262.3 328.0 L269.2 333.5 L276.1 338.5 L283.0 343.2 L289.9 347.6 L296.8 351.7 L303.7 355.5 L310.6 359.1 L317.5 362.4 L324.4 365.6 L331.3 368.6 L338.2 371.4 L345.1 374.1 L352.0 376.6 L358.9 379.0 L365.8 381.3 L372.7 383.4 L379.6 385.5 L386.5 387.5 L393.4 389.3 L400.3 391.1 L407.2 392.9 L414.1 394.5 L421.0 396.1 L427.9 397.6 L434.8 399.0 L441.7 400.4 L448.6 401.8 L455.5 403.0 L462.4 404.3 L469.3 405.5 L476.2 406.6 L483.1 407.7 L490.0 408.8 L496.9 409.9 L503.8 410.9 L510.7 411.8 L517.6 412.8 L524.5 413.7 L531.4 414.6 L538.3 415.4 L545.2 416.2 L552.1 417.0 L559.0 417.8 L565.9 418.6 L572.8 419.3 L579.7 420.0 L586.6 420.7 L593.5 421.4 L600.4 422.1" stroke="#8fc59b" stroke-width="2.4" fill="none" opacity="0.55"/>
+  <text class="cv" x="611.2" y="426.5" fill="#8fc59b">I₁</text>
+  <path d="M200.6 74.8 L207.5 98.0 L214.4 118.6 L221.3 137.1 L228.2 153.7 L235.1 168.8 L242.0 182.5 L248.9 194.9 L255.8 206.4 L262.7 216.9 L269.6 226.7 L276.5 235.7 L283.4 244.0 L290.3 251.8 L297.2 259.1 L304.1 265.9 L311.0 272.2 L317.9 278.2 L324.8 283.9 L331.7 289.2 L338.6 294.2 L345.5 298.9 L352.4 303.4 L359.3 307.7 L366.2 311.8 L373.1 315.6 L380.0 319.3 L386.9 322.8 L393.8 326.1 L400.7 329.3 L407.6 332.4 L414.5 335.3 L421.4 338.1 L428.3 340.8 L435.2 343.4 L442.1 345.9 L449.0 348.3 L455.9 350.6 L462.8 352.8 L469.7 354.9 L476.6 357.0 L483.5 358.9 L490.4 360.9 L497.3 362.7 L504.2 364.5 L511.1 366.2 L518.0 367.9 L524.9 369.5 L531.8 371.1 L538.7 372.6 L545.6 374.1 L552.5 375.5 L559.4 376.9 L566.3 378.2 L573.2 379.6 L580.1 380.8 L587.0 382.1 L593.9 383.3 L600.8 384.4" stroke="#8fc59b" stroke-width="2.4" fill="none" opacity="1"/>
+  <text class="cv" x="611.2" y="389.2" fill="#8fc59b">I₂</text>
+  <path d="M258.1 74.8 L265.0 90.4 L271.9 104.8 L278.8 118.1 L285.7 130.5 L292.6 142.1 L299.5 152.9 L306.4 163.0 L313.3 172.5 L320.2 181.4 L327.1 189.8 L334.0 197.7 L340.9 205.2 L347.8 212.3 L354.7 219.0 L361.6 225.4 L368.5 231.5 L375.4 237.2 L382.3 242.7 L389.2 248.0 L396.1 253.0 L403.0 257.8 L409.9 262.3 L416.8 266.7 L423.7 270.9 L430.6 275.0 L437.5 278.8 L444.4 282.6 L451.3 286.1 L458.2 289.6 L465.1 292.9 L472.0 296.1 L478.9 299.2 L485.8 302.2 L492.7 305.0 L499.6 307.8 L506.5 310.5 L513.4 313.1 L520.3 315.6 L527.2 318.1 L534.1 320.4 L541.0 322.7 L547.9 324.9 L554.8 327.1 L561.7 329.2 L568.6 331.2 L575.5 333.2 L582.4 335.1 L589.3 337.0 L596.2 338.8 L603.1 340.5" stroke="#8fc59b" stroke-width="2.4" fill="none" opacity="0.55"/>
+  <text class="cv" x="611.2" y="345.1" fill="#8fc59b">I₃</text>
+  <path class="d" d="M90.0 90.0 L550.0 470.0"/>
+  <path class="guide" d="M90 280.0 H320.0 V470"/>
+  <circle cx="320.0" cy="280.0" r="5" fill="#d4a84b"/>
+  <text class="lbl" x="332.0" y="270.0" style="fill:#d4a84b">OPTIMUM</text>
+  <circle cx="412.0" cy="263.7" r="4" fill="#c97b84"/>
+  <text class="item" x="422.0" y="255.7" style="fill:#c97b84">preferred, not affordable</text>
+  <circle cx="167.4" cy="154.0" r="4" fill="#8b97a3"/>
+  <text class="item" x="177.4" y="156.0" style="fill:#8b97a3">affordable, but worse</text>
+  <text class="tk" x="82" y="94.0" text-anchor="end">500</text>
+  <text class="tk" x="82" y="284.0" text-anchor="end">250</text>
+  <text class="tk" x="320.0" y="488" text-anchor="middle">50</text>
+  <text class="tk" x="550.0" y="488" text-anchor="middle">100</text>
+  <text class="item" x="458.0" y="441.1" text-anchor="end" style="fill:#7fb3c8">budget constraint</text>
+  <rect class="box" x="660" y="60" width="310" height="440" rx="10"/>
+  <text class="h" x="680" y="92">BEST AFFORDABLE BUNDLE</text>
+  <text class="lbl" x="680" y="122" fill="#7fb3c8">BUDGET CONSTRAINT</text>
+  <text class="item" x="680" y="148">What she can afford: income 1,000,</text>
+  <text class="item" x="680" y="166">pizza 10, cola 2. Slope = relative</text>
+  <text class="item" x="680" y="184">price: 1 pizza costs 5 litres.</text>
+  <text class="lbl" x="680" y="216" fill="#8fc59b">INDIFFERENCE CURVES</text>
+  <text class="item" x="680" y="242">What she wants: bundles on one</text>
+  <text class="item" x="680" y="260">curve are equally good, higher</text>
+  <text class="item" x="680" y="278">curves are better. Slope = marginal</text>
+  <text class="item" x="680" y="296">rate of substitution (MRS).</text>
+  <text class="lbl" x="680" y="328" fill="#d4a84b">OPTIMUM</text>
+  <text class="item" x="680" y="354">The highest curve that still touches</text>
+  <text class="item" x="680" y="372">the budget line. There the two</text>
+  <text class="item" x="680" y="390">slopes are equal:</text>
+  <text class="item" x="680" y="408">MRS = relative price.</text>
+  <text class="src" x="970" y="536" text-anchor="end">After Mankiw, Principles of Economics, ch. 21. Drawn for LIBEROS.</text>
+</svg>

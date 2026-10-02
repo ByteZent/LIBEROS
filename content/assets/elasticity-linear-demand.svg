@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-labelledby="t d">
+  <title id="t">Elasticity and total revenue along a linear demand curve</title>
+  <desc id="d">A straight demand curve from a price of 7 at quantity 0 to a price of 0 at quantity 14. Its slope is constant but its elasticity is not: demand is elastic in the upper half, unit elastic at the midpoint and inelastic in the lower half. Total revenue, price times quantity, is largest at the midpoint.</desc>
+  <defs>
+    <marker id="ax" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5b6773"/></marker>
+    <style>
+      .panel { fill: #0d1117; }
+      .box { fill: #161d26; stroke: #3a4654; stroke-width: 1.5; }
+      .axis { stroke: #5b6773; stroke-width: 1.5; fill: none; }
+      .guide { stroke: #5b6773; stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
+      .d { stroke: #7fb3c8; stroke-width: 2.6; fill: none; stroke-linecap: round; }
+      .s { stroke: #8fc59b; stroke-width: 2.6; fill: none; stroke-linecap: round; }
+      .h { font: 700 15px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.5px; fill: #e8edf2; }
+      .lbl { font: 600 11.5px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.2px; }
+      .ax { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .cv { font: italic 700 14px "IBM Plex Serif", Georgia, serif; }
+      .tk { font: italic 13px "IBM Plex Serif", Georgia, serif; fill: #c9d1d9; }
+      .item { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .src { font: italic 11px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #5b6773; }
+    </style>
+  </defs>
+  <rect class="panel" width="1000" height="560" rx="14"/>
+  <path class="axis" d="M90 470 V58" marker-end="url(#ax)"/>
+  <path class="axis" d="M90 470 H622" marker-end="url(#ax)"/>
+  <text class="ax" x="82" y="50">Price P</text>
+  <text class="ax" x="622" y="510" text-anchor="end">Quantity Q</text>
+  <rect x="90" y="277.5" width="245" height="192.5" fill="#d4a84b" opacity=".10"/>
+  <path d="M90 85 L335 277.5" stroke="#c97b84" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+  <path d="M335 277.5 L580 470" stroke="#7fb3c8" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+  <path class="guide" d="M90 277.5 H335 V470"/>
+  <circle cx="335" cy="277.5" r="5" fill="#d4a84b"/>
+  <text class="tk" x="82" y="419" text-anchor="end">1</text>
+  <text class="tk" x="82" y="364" text-anchor="end">2</text>
+  <text class="tk" x="82" y="309" text-anchor="end">3</text>
+  <text class="tk" x="82" y="254" text-anchor="end">4</text>
+  <text class="tk" x="82" y="199" text-anchor="end">5</text>
+  <text class="tk" x="82" y="144" text-anchor="end">6</text>
+  <text class="tk" x="82" y="89" text-anchor="end">7</text>
+  <text class="tk" x="160" y="488" text-anchor="middle">2</text>
+  <text class="tk" x="230" y="488" text-anchor="middle">4</text>
+  <text class="tk" x="300" y="488" text-anchor="middle">6</text>
+  <text class="tk" x="370" y="488" text-anchor="middle">8</text>
+  <text class="tk" x="440" y="488" text-anchor="middle">10</text>
+  <text class="tk" x="510" y="488" text-anchor="middle">12</text>
+  <text class="tk" x="580" y="488" text-anchor="middle">14</text>
+  <text class="lbl" x="216.0" y="167.0" style="fill:#c97b84">ELASTIC  (&gt; 1)</text>
+  <text class="item" x="216.0" y="185.0">price up: revenue falls</text>
+  <text class="lbl" x="349" y="269.5" style="fill:#d4a84b">UNIT ELASTIC  (= 1)</text>
+  <text class="lbl" x="475.0" y="370.5" style="fill:#7fb3c8">INELASTIC  (&lt; 1)</text>
+  <text class="item" x="475.0" y="388.5">price up: revenue rises</text>
+  <text class="item" x="212.5" y="382.0" text-anchor="middle" style="fill:#d4a84b">largest revenue</text>
+  <text class="item" x="212.5" y="400.0" text-anchor="middle" style="fill:#d4a84b">P × Q = 3.5 × 7</text>
+  <rect class="box" x="660" y="60" width="310" height="440" rx="10"/>
+  <text class="h" x="680" y="92">SAME SLOPE,</text>
+  <text class="h" x="680" y="118">CHANGING ELASTICITY</text>
+  <text class="item" x="680" y="148">Each step of 1 in price changes the</text>
+  <text class="item" x="680" y="166">quantity by 2: the slope is constant.</text>
+  <text class="lbl" x="680" y="198" fill="#c97b84">HIGH PRICE, LOW QUANTITY</text>
+  <text class="item" x="680" y="224">A step is a small % of the price</text>
+  <text class="item" x="680" y="242">and a large % of the quantity.</text>
+  <text class="item" x="680" y="260">Demand is elastic.</text>
+  <text class="lbl" x="680" y="292" fill="#7fb3c8">LOW PRICE, HIGH QUANTITY</text>
+  <text class="item" x="680" y="318">A step is a large % of the price</text>
+  <text class="item" x="680" y="336">and a small % of the quantity.</text>
+  <text class="item" x="680" y="354">Demand is inelastic.</text>
+  <text class="lbl" x="680" y="386" fill="#d4a84b">TOTAL REVENUE</text>
+  <text class="item" x="680" y="412">Rises with the price while demand</text>
+  <text class="item" x="680" y="430">is inelastic, falls once it is elastic.</text>
+  <text class="item" x="680" y="448">It peaks where elasticity is 1.</text>
+  <text class="src" x="970" y="536" text-anchor="end">After Mankiw, Principles of Economics, ch. 5. Drawn for LIBEROS.</text>
+</svg>

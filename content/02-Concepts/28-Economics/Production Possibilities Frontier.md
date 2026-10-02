@@ -13,7 +13,7 @@ qard-deck: MikroEcon-HS26
 status: developing
 confidence: high
 created: 2026-09-29
-modified: 2026-09-29
+modified: 2026-10-02
 review: 
 originators:
   - Paul Samuelson
@@ -122,6 +122,12 @@ Opportunity costs are **reciprocal**: if 1 tank costs 4 tractors, then 1 tractor
 
 > [!qard]- 5. A country raises its defence budget. Under what condition does this *not* reduce civilian output?
 > If the economy is **inside** its PPF (unemployment, idle capacity). Then defence output can rise by using idle resources. At full employment, it must come at the cost of civilian goods.
+
+> [!qard]- 6. Calculate: one tank takes 60 hours, one tractor 15 hours. What is the opportunity cost of a tank, and of a tractor?
+> One tank costs 60/15 = 4 tractors. One tractor costs 1/4 tank. Opportunity costs are reciprocal.
+
+> [!qard]- 7. Judge: "the PPF shows that we should spend more on defence." What is wrong with this?
+> The PPF shows what is possible and what each choice costs. That is a positive statement. Which point on the curve is best is a normative question the model cannot answer.
 
 ## Open Questions
 

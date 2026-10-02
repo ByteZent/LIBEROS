@@ -53,6 +53,15 @@ Disciplines are **not** folders. *Public Goods* is economics, but it explains al
 
 Every note opens with a `[!bluf]` callout. After that, each type follows its template in `_templates/`.
 
+## Self-test and flashcards
+
+Concept, model, framework and legal notes end with `## Self-Test: <short topic>`. Each question is a `> [!qard]- Question` callout with the answer in its body. The same card is used by the Qard plugin in Obsidian and by the site's flashcards (`/flashcards/`).
+
+- `qard-deck:` in the frontmatter names the deck: the course code, normally the first entry of `courses`. The text after "Self-Test:" becomes the topic inside the deck.
+- One fact or one distinction per card. Keep the answer under about 40 words, so I can grade myself honestly.
+- Recall is not enough. Every self-test has at least one card that makes me **use** the idea: apply it to a case, compare it with a neighbouring concept, or name where it fails.
+- `make lint` reports notes with cards but no `qard-deck`, and self-tests that only ask for recall.
+
 ## Sources
 
 - Cite with citekeys: `[@osinga2007science]`, `[@weick1995sensemaking, p. 17]`. Keys come from Zotero (see `bibliography/README.md`). Never type a full reference by hand.
@@ -69,6 +78,7 @@ Every note opens with a `[!bluf]` callout. After that, each type follows its tem
 | `> [!counter]` | Strongest critique / counter-argument |
 | `> [!source]` | Direct quotation from a primary source |
 | `> [!question]` | Open question |
+| `> [!qard]-` | Flashcard: question in the title, answer in the body |
 
 ## Folders
 

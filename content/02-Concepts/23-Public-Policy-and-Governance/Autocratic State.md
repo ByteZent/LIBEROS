@@ -16,7 +16,7 @@ qard-deck: PolSci-HS26
 status: seedling
 confidence: low
 created: 2026-10-01
-modified: 2026-10-01
+modified: 2026-10-02
 review: 
 tags:
   - concept
@@ -161,6 +161,12 @@ In my own words: in an autocracy the government decides whether it stays. In a d
 
 > [!qard]- 7. Why can coup-proofing make an army worse at fighting?
 > Promotion by loyalty, rival services and restricted training and communication protect the ruler from his own officers. They also prevent initiative, cooperation between units and honest reporting, which an army needs in war.
+
+> [!qard]- 8. Apply: sanctions are meant to change an autocrat's behaviour. Whom must they hit, and why?
+> The small winning coalition (generals, party leaders, oligarchs) whose support keeps him in power and whom he pays with private goods. Sanctions that hit the population may not reach him.
+
+> [!qard]- 9. Compare: why is a single-party regime usually more durable than a personalist one?
+> The party settles succession and shares out offices, so elites have a stake in the system. A personalist regime hollows out institutions and depends on one person, so it is unpredictable and often ends violently.
 
 ## Open Questions
 

@@ -13,7 +13,7 @@ qard-deck: PrivLawI-HS26
 status: seedling
 confidence: medium
 created: 2026-09-30
-modified: 2026-09-30
+modified: 2026-10-02
 review: 
 jurisdiction: CH
 citation: ZGB · OR
@@ -247,6 +247,12 @@ Finish every claim with a clear **overall result** (*Gesamtergebnis*): "K can de
 
 > [!qard]- 5. The contract turns out to be void, but the buyer already paid. What claim do they have?
 > Return of the price under **unjust enrichment** (Art. 62 Abs. 2 OR: performance without valid ground). If a thing was handed over and ownership did not pass, the seller can also recover it as owner (Art. 641 Abs. 2 ZGB).
+
+> [!qard]- 6. Apply: K buys a used car. Two weeks later an engine defect is found that existed at the sale, and the seller did not know of it. Which claim basis, and does the seller's ignorance matter?
+> Warranty for defects, Art. 197 OR, with rescission or price reduction under Art. 205 OR. The seller's ignorance is irrelevant, because warranty does not require fault. K must have inspected and given notice in time (Art. 201 OR).
+
+> [!qard]- 7. Compare: opinion style and judgment style.
+> Opinion style: hypothesis, rule, subsumption, conclusion. Use it for every point in doubt. Judgment style: result first, reasons after. Courts use it. In an exam, only for points that are clearly not in dispute.
 
 ## Sources
 

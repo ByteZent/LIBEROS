@@ -13,7 +13,7 @@ qard-deck: MikroEcon-HS26
 status: developing
 confidence: high
 created: 2026-09-29
-modified: 2026-09-29
+modified: 2026-10-02
 review: 
 originators:
   - François Quesnay
@@ -120,6 +120,12 @@ These are **not four separate sources of value** but the same circle measured at
 
 > [!qard]- 4. What is the difference between a real flow and a money flow? Give an example of each.
 > A **real flow** is a physical good, service or factor: a worker's labour, a delivered truck. A **money flow** is the payment for it: the wage, the truck's price. They always run in opposite directions.
+
+> [!qard]- 5. Apply: sanctions cut a country off from its export markets. Trace the effect round the circle.
+> Firms lose revenue, so they pay less for factors. Household income falls, households spend less, and firms' revenue falls again. One actor's spending is always another actor's income.
+
+> [!qard]- 6. Limit: demand for ammunition surges. Can the circular flow tell you how far the price rises?
+> No. It shows who trades with whom and that spending equals income, not prices or quantities. That is the job of supply and demand.
 
 ## Open Questions
 

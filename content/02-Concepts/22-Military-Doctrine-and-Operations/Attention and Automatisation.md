@@ -18,7 +18,7 @@ qard-deck: MilPsy-HS26
 status: seedling
 confidence: medium
 created: 2026-10-01
-modified: 2026-10-01
+modified: 2026-10-02
 review: 
 tags:
   - concept
@@ -108,6 +108,12 @@ draft: false
 
 > [!qard]- 6. Apply this: why is weapon handling drilled?
 > So that it runs automatically and the soldier's limited attention stays free for the situation and the enemy.
+
+> [!qard]- 7. Apply: a vehicle commander has to watch the terrain, operate the radio and keep a log during a move. What does the theory predict, and what do you change?
+> He gets slower at each task and misses things in plain view, because demanding tasks cannot run in parallel. Give him one task and one sector, and hand the radio and the log to someone else.
+
+> [!qard]- 8. Limit: when does a drilled response become a danger?
+> When the situation differs from the one the drill was built for. The automated response still fires and is hard to stop (Stroop). So automate fixed procedures, never judgement, and train recognising the exception.
 
 ## Sources
 
