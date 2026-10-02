@@ -2,6 +2,7 @@ import Content from "./pages/Content"
 import TagContent from "./pages/TagContent"
 import FolderContent from "./pages/FolderContent"
 import NotFound from "./pages/404"
+import FlashcardsContent from "./pages/FlashcardsContent"
 import ArticleTitle from "./ArticleTitle"
 import Darkmode from "./Darkmode"
 import ReaderMode from "./ReaderMode"
@@ -26,12 +27,14 @@ import ConditionalRender from "./ConditionalRender"
 import NoteStatus from "./NoteStatus"
 import SiteLogo from "./SiteLogo"
 import ImageZoom from "./ImageZoom"
+import FlashcardsLink from "./FlashcardsLink"
 
 export {
   ArticleTitle,
   Content,
   TagContent,
   FolderContent,
+  FlashcardsContent,
   Darkmode,
   ReaderMode,
   Head,
@@ -56,4 +59,5 @@ export {
   NoteStatus,
   SiteLogo,
   ImageZoom,
+  FlashcardsLink,
 }

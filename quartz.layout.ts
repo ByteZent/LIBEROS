@@ -85,7 +85,12 @@ export const defaultContentPageLayout: PageLayout = {
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
+  beforeBody: [
+    Component.Breadcrumbs(),
+    Component.ArticleTitle(),
+    Component.ContentMeta(),
+    Component.FlashcardsLink(), // course pages: link to the course's flashcard deck
+  ],
   left: [
     Component.SiteLogo(),
     Component.MobileOnly(Component.Spacer()),

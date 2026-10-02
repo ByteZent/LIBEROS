@@ -2,6 +2,7 @@ import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { classNames } from "../util/lang"
 import { FullSlug, resolveRelative, slugTag } from "../util/path"
 import { COURSE_TAG_PREFIX } from "../plugins/transformers/courseTags"
+import { qardDeckSlug } from "../plugins/transformers/qards"
 import style from "./styles/noteStatus.scss"
 
 // Renders the LIBEROS note metadata (type / maturity / confidence / domain / course) as a status strip.
@@ -9,6 +10,8 @@ import style from "./styles/noteStatus.scss"
 
 // COURSE badges link to the course page (/tags/course/<code>, see plugins/transformers/courseTags.ts)
 // and take their label from that page's title (content/tags/course/<code>.md); otherwise the raw code.
+
+// A note with [!qard] cards gets a FLASHCARDS badge that opens its deck on the note's own topic.
 
 const TYPE_LABELS: Record<string, string> = {
   concept: "Concept",
@@ -56,7 +59,11 @@ export default (() => {
     )
     const review = fm.review instanceof Date ? fm.review.toISOString().slice(0, 10) : fm.review
 
-    if (!type && !status && !confidence && !domain && courses.length === 0) return null
+    const qards = fileData.qards ?? []
+    const topics = [...new Set(qards.map((card) => card.topic))]
+
+    if (!type && !status && !confidence && !domain && courses.length === 0 && qards.length === 0)
+      return null
 
     return (
       <div class={classNames(displayClass, "note-status")}>
@@ -98,6 +105,19 @@ export default (() => {
             </a>
           )
         })}
+        {qards.length > 0 && (
+          <a
+            class="ns-item ns-course"
+            href={
+              resolveRelative(fileData.slug!, qardDeckSlug(fileData.qardDeck!)) +
+              (topics.length === 1 ? `?topic=${encodeURIComponent(topics[0])}` : "")
+            }
+            title="Study this note's flashcards"
+          >
+            <span class="ns-key">FLASHCARDS</span>
+            {qards.length} {qards.length === 1 ? "card" : "cards"}
+          </a>
+        )}
         {typeof review === "string" && review !== "" && (
           <span class="ns-item ns-review">
             <span class="ns-key">NEXT REVIEW</span>

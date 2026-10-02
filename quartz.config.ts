@@ -93,6 +93,7 @@ const config: QuartzConfig = {
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
+      Plugin.Qards(), // collects the [!qard] flashcards; after CrawlLinks and Latex
     ],
     filters: showPrivate ? [] : [Plugin.RemoveDrafts()],
     emitters: [
@@ -101,6 +102,7 @@ const config: QuartzConfig = {
       Plugin.ContentPage(),
       Plugin.FolderPage(),
       Plugin.TagPage(),
+      Plugin.Flashcards(), // /flashcards: one deck per qard-deck, from the cards Qards() collected
       Plugin.ContentIndex({
         enableSiteMap: true,
         enableRSS: true,
