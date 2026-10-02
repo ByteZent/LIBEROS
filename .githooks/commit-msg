@@ -1,0 +1,35 @@
+#!/bin/sh
+# LIBEROS commit message format (enabled by `make hooks`, which points core.hooksPath here):
+#
+#   <type>(<scope>): <subject>
+#
+#   type     note   new notes
+#            edit   changes to existing notes (content, cards, glossary)
+#            fix    corrections: wrong fact, typo, broken link, bug
+#            site   what visitors see: components, layout, styles
+#            tool   scripts, Makefile, templates, lint, hooks
+#            meta   vault documentation, standards, course maps
+#            chore  dependencies, config, housekeeping (hidden in the site's changelog)
+#   scope    optional: a course code or area, e.g. (MikroEcon), (flashcards)
+#   subject  what changed, imperative, at most 72 characters in total, no full stop
+#
+# The site's /changelog page is built from these messages (quartz/plugins/emitters/changelog.tsx).
+subject=$(sed -n '/^#/d;/./{p;q;}' "$1")
+
+case "$subject" in
+  Merge\ * | Revert\ * | fixup!\ * | squash!\ * | Bump\ *) exit 0 ;;
+esac
+
+fail() {
+  echo "commit message rejected: $1" >&2
+  echo "  got:      $subject" >&2
+  echo "  expected: <type>(<scope>): <subject>   e.g.  note(MikroEcon): add Elasticity and Consumer Choice" >&2
+  echo "  types:    note edit fix site tool meta chore   (scope is optional)" >&2
+  exit 1
+}
+
+echo "$subject" | grep -Eq '^(note|edit|fix|site|tool|meta|chore)(\([A-Za-z0-9 ._&/-]+\))?: [^ ].*$' ||
+  fail "first line does not match the format"
+[ "${#subject}" -le 72 ] || fail "first line is ${#subject} characters long (72 at most)"
+case "$subject" in *.) fail "first line ends with a full stop" ;; esac
+exit 0

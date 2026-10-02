@@ -4,12 +4,13 @@ SHELL   := /bin/bash
 VAULT   := content
 PORT    ?= 8080
 TODAY   := $(shell date +%F)
-MSG     ?= Update notes $(TODAY)
+# commit messages follow .githooks/commit-msg: <type>(<scope>): <subject>
+MSG     ?= edit: update notes $(TODAY)
 # knowledge notes only: no section indexes, templates, meta docs or dashboards
 NOTES   := find $(VAULT)/0[1-9]-* -name '*.md' ! -name index.md -print0
 
 .DEFAULT_GOAL := help
-.PHONY: help install serve serve-pwa serve-private build clean check lint format typecheck logo sources bib-merge new course glossary questions review stats inbox open publish update
+.PHONY: help install hooks serve serve-pwa serve-private build clean check lint format typecheck logo sources bib-merge new course glossary questions review stats inbox open publish update
 
 help: ## Show this help
 	@awk 'BEGIN {FS = ":.*## "} /^[a-zA-Z_-]+:.*## / {printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
@@ -19,8 +20,11 @@ help: ## Show this help
 
 ## ── Setup & site ────────────────────────────────────────────────────────────
 
-install: ## Install dependencies (npm ci)
+install: hooks ## Install dependencies (npm ci) and the git hooks
 	npm ci
+
+hooks: ## Enable the commit message check (.githooks/commit-msg) for this clone
+	git config core.hooksPath .githooks
 
 serve: ## Build and serve locally with live reload (PORT=8080)
 	npx quartz build --serve --port $(PORT)
@@ -104,7 +108,7 @@ open: ## Open the vault in Obsidian
 
 ## ── Publishing & maintenance ────────────────────────────────────────────────
 
-publish: check ## Check, commit everything and push to main (MSG="…") → GitHub Pages deploy
+publish: check ## Check, commit everything and push to main (MSG="type: subject") → GitHub Pages deploy
 	git add -A
 	git diff --cached --quiet || git commit -m "$(MSG)"
 	git push origin main
