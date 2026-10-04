@@ -10,7 +10,7 @@ MSG     ?= edit: update notes $(TODAY)
 NOTES   := find $(VAULT)/0[1-9]-* -name '*.md' ! -name index.md -print0
 
 .DEFAULT_GOAL := help
-.PHONY: help install hooks serve serve-pwa serve-private build clean check lint format typecheck logo sources bib-merge new course glossary questions review stats inbox open publish update
+.PHONY: help install hooks serve serve-pwa serve-private build clean check lint format typecheck logo sources bib-merge new course glossary questions bridges review stats inbox open publish update
 
 help: ## Show this help
 	@awk 'BEGIN {FS = ":.*## "} /^[a-zA-Z_-]+:.*## / {printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
@@ -80,14 +80,17 @@ new: ## Create a note from a template in _inbox (TYPE=… TITLE="…")
 	 sed -e 's/{{title}}/$(TITLE)/g' -e 's/{{date}}/$(TODAY)/g' -e '/^````/d' "$(VAULT)/_templates/$$tpl" > "$$out"; \
 	 echo "created $$out"
 
-course: ## Exam prep: all notes for a course by maturity (COURSE=PP-ECON-1; omit to list codes)
-	@node scripts/course.mjs $(COURSE)
+course: ## Exam readiness: days left, open items, objectives, notes (COURSE=L1-HS26; omit: all courses; SYNC=1: update the map's Ready? column)
+	@node scripts/course.mjs $(COURSE) $(if $(SYNC),--sync)
 
 glossary: ## Build the central glossary from the notes' Glossary tables (INBOX=1: preview incl. _inbox; CHECK=1: list gaps)
 	@node scripts/glossary.mjs $(if $(INBOX),--inbox) $(if $(CHECK),--check)
 
 questions: ## Build the open-questions page from the notes' Open Questions sections (INBOX=1: preview incl. _inbox)
 	@node scripts/questions.mjs $(if $(INBOX),--inbox)
+
+bridges: ## Bridge prompts: unlinked note pairs that share tags (INBOX=1: incl. _inbox; N=15)
+	@node scripts/bridges.mjs $(if $(INBOX),--inbox) $(N)
 
 review: ## List notes whose review date is due (today or earlier)
 	@grep -rl --include='*.md' '^review: [0-9]' $(VAULT) | grep -v '/_templates/' | while read -r f; do \
