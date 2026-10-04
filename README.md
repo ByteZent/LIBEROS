@@ -27,7 +27,7 @@ LIBEROS/
 │   ├── 06-Frameworks-and-Methods/
 │   ├── 07-Syntheses/
 │   ├── 08-Library/
-│   ├── 09-Learning/         maps of content, open questions, course maps
+│   ├── 09-Learning/         maps of content, open questions, course maps, ideas
 │   ├── assets/              images & attachments (published)
 │   ├── _inbox/              raw captures        (NOT published, NOT in git)
 │   ├── _private/            private material    (NOT published, NOT in git)
@@ -53,6 +53,8 @@ Everything runs through `make` (`make help` lists all targets):
 | `make course`                               | Exam readiness for every course: days to the next assessment, notes, objectives covered   |
 | `make course COURSE=PP-ECON-1`              | One course: open items before each assessment, objectives, notes (`SYNC=1`: update map)   |
 | `make bridges`                              | Bridge prompts: unlinked notes that share tags (`INBOX=1`, `N=15`)                        |
+| `make idea TITLE="…" TEXT="…"`              | Capture an idea for a paper or page, timestamped, in `09-Learning/94-Ideas`               |
+| `make ideas`                                | The idea board: every idea by stage, with its age                                         |
 | `make review`                               | Notes whose `review:` date is due                                                         |
 | `make sources`                              | Check the bibliography: duplicates, unknown `[@citekeys]`                                 |
 | `make bib-merge`                            | Merge all course `.bib` files from the study vault for Zotero import                      |
@@ -65,7 +67,7 @@ Everything runs through `make` (`make help` lists all targets):
 | `make logo`                                 | Re-export favicon / social image / logo PNGs from `branding/`                             |
 | `make build` / `make clean` / `make format` | Build to `public/`, remove build output, format code                                      |
 
-Template types for `make new`: `concept model actor thinker key-work case-study judgment legal-norm assessment framework synthesis source-note open-question course-map`.
+Template types for `make new`: `concept model actor thinker key-work case-study judgment legal-norm assessment framework synthesis source-note open-question course-map idea`. Ideas are quicker with `make idea`, which files them directly and stamps the time.
 
 In Obsidian: open `LIBEROS/content` as the vault. New notes land in `_inbox/`; insert a template via _Templates: Insert template_. The **Learning Dashboard** (`_dashboards/Learning Dashboard.base`) shows review queues, seedlings, low-confidence notes and the inbox.
 
@@ -87,15 +89,17 @@ The first line is at most 72 characters, says what changed in the imperative ("a
 
 ## Frontmatter
 
-| Field        | Values                                                                                                                           | Rendered                 |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
-| `type`       | concept · model · actor · thinker · work · case · judgment · norm · assessment · framework · synthesis · source · question · moc | status strip             |
-| `status`     | seedling · developing · evergreen                                                                                                | status strip             |
-| `confidence` | low · medium · high                                                                                                              | status strip             |
-| `domain`     | one or more of: strategy · military · policy · economics · law · ir · security · intelligence · technology                       | status strip             |
-| `courses`    | course codes, e.g. `[PP-ECON-1]`, used by `make course` and the dashboard                                                        | –                        |
-| `review`     | `YYYY-MM-DD`                                                                                                                     | status strip + dashboard |
-| `draft`      | `true` → excluded from the site                                                                                                  | –                        |
+| Field        | Values                                                                                                                                  | Rendered                 |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| `type`       | concept · model · actor · thinker · work · case · judgment · norm · assessment · framework · synthesis · source · question · moc · idea | status strip             |
+| `status`     | seedling · developing · evergreen                                                                                                       | status strip             |
+| `confidence` | low · medium · high                                                                                                                     | status strip             |
+| `domain`     | one or more of: strategy · military · policy · economics · law · ir · security · intelligence · technology                              | status strip             |
+| `courses`    | course codes, e.g. `[PP-ECON-1]`, used by `make course` and the dashboard                                                               | –                        |
+| `review`     | `YYYY-MM-DD`                                                                                                                            | status strip + dashboard |
+| `stage`      | ideas only: spark · exploring · outlined · drafting · written · dropped                                                                 | status strip             |
+| `captured`   | ideas only: `YYYY-MM-DDTHH:mm`, when the idea was captured                                                                              | status strip             |
+| `draft`      | `true` → excluded from the site                                                                                                         | –                        |
 
 ## Flashcards
 

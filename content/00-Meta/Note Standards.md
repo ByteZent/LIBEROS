@@ -17,7 +17,7 @@ tags:
 ## Frontmatter
 
 ```yaml
-type: concept | model | actor | thinker | work | case | judgment | norm | assessment | framework | synthesis | source | question | moc
+type: concept | model | actor | thinker | work | case | judgment | norm | assessment | framework | synthesis | source | question | moc | idea
 domain: [economics, policy]   # one or more: strategy · military · policy · economics · law · ir · security · intelligence · technology
 courses: [PP-ECON-1]          # course codes this note serves (see Course Maps); shown as a COURSE badge
 status: seedling | developing | evergreen
@@ -100,6 +100,24 @@ Three comments turn a card into more than text. Obsidian ignores them and shows 
 ### Bridge cards
 
 Every line under `## Key Connections` of the form `- [[Other Note]]: how it relates` becomes a card "How does *this note* relate to *Other Note*?" in the deck `/flashcards/connections`. So the text after the colon has to answer that question on its own. `make bridges` lists the opposite: notes that share tags but do not link to each other yet.
+
+## Ideas
+
+An idea for a paper, an essay or a page is a note of `type: idea` in `09-Learning/94-Ideas` (template `T - Idea`). `make idea TITLE="…" TEXT="…"` captures one from the terminal. It differs from a knowledge note in three fields:
+
+```yaml
+captured: 2026-10-04T11:01   # when the idea came, to the minute. Never changed afterwards
+stage: spark                 # spark → exploring → outlined → drafting → written, or dropped
+output: paper                # what it should become: paper · essay · page · synthesis
+```
+
+- The `[!question]` callout holds the idea as it came. Do not polish it later: sharpen it under *Working question* instead.
+- Every later thought goes into the *Log* with its date and time, so the page shows how the idea developed.
+- `make idea` suggests related notes from the words of the idea. They are guesses: delete what does not fit and say what each remaining note contributes.
+- Unticked items under *Open Questions* appear on the open-questions page like those of any other note.
+- `courses:` ties an idea to a course, for example the paper of a proseminar. `make course` lists it under *ideas*.
+- `make ideas` shows the board: every idea by stage with its age. A spark untouched for two weeks needs a decision: explore it or drop it. A dropped idea stays, with the reason in the log.
+- When the text is written, set `stage: written` and link the synthesis or paper.
 
 ## Sources
 

@@ -39,6 +39,8 @@ Each new note gets **at least two meaningful links** and is added to a Map of Co
 
 When something doesn't fit, it becomes an **Open Question** note in `09-Learning/92-Open-Questions`. Questions drive reading and eventually become syntheses.
 
+Larger than a question is an **idea**: something I might write a paper or a page about. It goes into `09-Learning/94-Ideas` with the time it was captured (`make idea TITLE="…" TEXT="…"`) and moves through stages from spark to written (see [[Note Standards#Ideas]]).
+
 ## 5. Synthesise
 
 Essays, comparisons and assessments in `07-Syntheses` / `05-Assessments` are *built from* notes. If an argument needs a concept that doesn't exist yet, write the concept note first.
@@ -63,4 +65,5 @@ Public policy draws on several disciplines. Each one enters the vault the same w
 - [ ] Work through the *Due for review* queue
 - [ ] Promote one seedling → developing
 - [ ] Add one link between notes that weren't connected before (`make bridges` suggests pairs)
+- [ ] Look at the idea board (`make ideas`): move one idea a stage on, or drop it
 - [ ] Publish (`git push`)
