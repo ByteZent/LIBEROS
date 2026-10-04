@@ -18,6 +18,8 @@ import { FLASHCARDS_SLUG, Qard, qardDeckSlug } from "../transformers/qards"
 //   /flashcards/        all decks
 //   /flashcards/<deck>  one deck to click through, optionally narrowed to a topic
 //   /flashcards/all     every deck mixed and shuffled (interleaved practice)
+//   /flashcards/connections  the bridge cards generated from the notes' Key Connections,
+//                            by course; kept out of the mixed deck
 // A deck named like a course code takes its title from the course page
 // (content/tags/course/<code>.md), as the COURSE badge does.
 
@@ -31,7 +33,8 @@ export interface FlashcardDeck {
   slug: FullSlug
   title: string
   topics: string[]
-  mixed?: boolean // the "all decks" deck: starts shuffled
+  mixed?: boolean // not a course deck: starts shuffled, and is featured on the overview
+  bridges?: boolean // the generated "how does X relate to Y?" deck
   cards: (Qard & { source: FlashcardSource })[]
 }
 
@@ -62,6 +65,37 @@ function collectDecks(allFiles: QuartzPluginData[]): FlashcardDeck[] {
   }
 
   return [...decks.values()].sort((a, b) => a.title.localeCompare(b.title))
+}
+
+const NO_COURSE = "Not tied to a course"
+
+function collectBridges(allFiles: QuartzPluginData[]): FlashcardDeck | undefined {
+  const courseTitle = (code: string) =>
+    allFiles.find((f) => f.slug === `tags/${slugTag(COURSE_TAG_PREFIX + code)}`)?.frontmatter
+      ?.title ?? code
+  const cards = allFiles
+    .filter((f) => f.qardBridges)
+    .sort((a, b) => (a.relativePath ?? "").localeCompare(b.relativePath ?? ""))
+    .flatMap((file) => {
+      const source = { slug: file.slug!, title: file.frontmatter?.title ?? file.slug! }
+      return file.qardBridges!.map((card) => ({
+        ...card,
+        topic: card.topic ? courseTitle(card.topic) : NO_COURSE,
+        source,
+      }))
+    })
+  if (cards.length === 0) return undefined
+  return {
+    name: "connections",
+    slug: joinSegments(FLASHCARDS_SLUG, "connections") as FullSlug,
+    title: "Connections between notes",
+    topics: [...new Set(cards.map((card) => card.topic))].sort(
+      (a, b) => Number(a === NO_COURSE) - Number(b === NO_COURSE) || a.localeCompare(b),
+    ),
+    cards,
+    bridges: true,
+    mixed: true,
+  }
 }
 
 export function emitPage(
@@ -135,6 +169,8 @@ export const Flashcards: QuartzEmitterPlugin = () => {
           mixed: true,
         })
       }
+      const bridges = collectBridges(allFiles)
+      if (bridges) decks.push(bridges)
 
       yield emitPage(
         ctx,

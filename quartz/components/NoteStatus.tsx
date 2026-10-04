@@ -113,9 +113,11 @@ export default (() => {
               (topics.length === 1 ? `?topic=${encodeURIComponent(topics[0])}` : "")
             }
             title="Study this note's flashcards"
+            data-qard-ids={qards.map((card) => card.id).join(" ")}
           >
             <span class="ns-key">FLASHCARDS</span>
             {qards.length} {qards.length === 1 ? "card" : "cards"}
+            <span class="qard-due"></span>
           </a>
         )}
         {typeof review === "string" && review !== "" && (

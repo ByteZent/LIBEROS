@@ -1,5 +1,25 @@
 @use "../../styles/variables.scss" as *;
 
+@mixin control {
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 4px;
+  background: var(--light);
+  color: var(--darkgray);
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    border-color: var(--secondary);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+}
+
 .qard-deck {
   .qard-summary {
     display: flex;
@@ -28,23 +48,7 @@
 
   button,
   select {
-    font: inherit;
-    font-size: 0.85rem;
-    padding: 0.35rem 0.75rem;
-    border: 1px solid var(--lightgray);
-    border-radius: 4px;
-    background: var(--light);
-    color: var(--darkgray);
-    cursor: pointer;
-
-    &:hover:not(:disabled) {
-      border-color: var(--secondary);
-    }
-
-    &:disabled {
-      opacity: 0.4;
-      cursor: default;
-    }
+    @include control;
   }
 
   select {
@@ -99,7 +103,56 @@
     }
   }
 
+  // image card: the copy with hidden labels only exists for the study view
+  .qard-masked {
+    display: none;
+  }
+
+  // calculation card: the steps stay folded under the result
+  .qard-solution {
+    margin-top: 0.75rem;
+
+    summary {
+      font-family: var(--codeFont);
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--secondary);
+      cursor: pointer;
+    }
+  }
+
+  .qard-box {
+    text-transform: none;
+  }
+
+  // written card: the field only exists in the study view
+  .qard-written {
+    display: none;
+  }
+
   &.qard-ready {
+    .qard-card:not(.revealed) {
+      .qard-masked {
+        display: block;
+      }
+
+      .qard-unmasked {
+        display: none;
+      }
+
+      &.qard-calc .qard-front::after {
+        content: "Work it out on paper before you turn the card.";
+        display: block;
+        margin-top: 1rem;
+        font-family: var(--codeFont);
+        font-size: 0.72rem;
+        font-weight: normal;
+        letter-spacing: 0.04em;
+        color: var(--gray);
+      }
+    }
+
     .qard-toolbar {
       display: flex;
       flex-wrap: wrap;
@@ -118,6 +171,47 @@
       margin-left: auto;
     }
 
+    &.qard-writing .qard-card .qard-written,
+    .qard-card.qard-write .qard-written {
+      display: block;
+      margin: 0.75rem 0;
+      cursor: auto;
+
+      textarea {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        margin-top: 0.35rem;
+        padding: 0.5rem 0.65rem;
+        border: 1px solid var(--lightgray);
+        border-radius: 4px;
+        background: var(--light);
+        color: var(--darkgray);
+        font: inherit;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        resize: vertical;
+
+        &:focus {
+          outline: none;
+          border-color: var(--secondary);
+        }
+
+        // turned: my answer stays above the card's answer, no longer editable
+        &:read-only {
+          border-style: dashed;
+          background: transparent;
+        }
+      }
+    }
+
+    // room for the field: the question moves up
+    &.qard-writing .qard-card:not(.revealed) .qard-front,
+    .qard-card.qard-write:not(.revealed) .qard-front {
+      margin: 1.5rem 0 1rem;
+    }
+
+    .qard-write-all[aria-pressed="true"],
     .qard-shuffle[aria-pressed="true"] {
       border-color: var(--secondary);
       background: var(--highlight);
@@ -244,8 +338,27 @@
 
 // overview page: the mixed "all decks" card on its own, centred, above the course decks
 .flashcards {
+  .qard-has-due .qard-due {
+    color: var(--tertiary);
+  }
+
+  .qard-backup {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.75rem;
+    font-family: var(--codeFont);
+    font-size: 0.72rem;
+    color: var(--gray);
+
+    button {
+      @include control;
+    }
+  }
+
   .section-grid.qard-featured {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 0;
 

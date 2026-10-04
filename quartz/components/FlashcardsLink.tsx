@@ -6,7 +6,7 @@ import { qardDeckSlug } from "../plugins/transformers/qards"
 
 // On a course page (/tags/course/<code>): a badge linking to the flashcard deck of that course,
 // i.e. the deck whose `qard-deck` is the course code. Renders nothing on other pages or when the
-// course has no cards. Styled like the NoteStatus strip, which links notes to their cards.
+// course has no cards. flashcards.inline.ts adds how many of them are due. Styled like the NoteStatus strip, which links notes to their cards.
 export default (() => {
   function FlashcardsLink({ fileData, allFiles, displayClass }: QuartzComponentProps) {
     const slug = fileData.slug!
@@ -22,9 +22,11 @@ export default (() => {
           class="ns-item ns-course"
           href={resolveRelative(slug, qardDeckSlug(cards[0].qardDeck!))}
           title="Study this course's flashcards"
+          data-qard-ids={cards.flatMap((f) => f.qards!.map((card) => card.id)).join(" ")}
         >
           <span class="ns-key">FLASHCARDS</span>
           {count} {count === 1 ? "card" : "cards"}
+          <span class="qard-due"></span>
         </a>
       </div>
     )
