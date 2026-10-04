@@ -111,6 +111,7 @@ A classic exam comparison. **Define both separately, then connect them through o
 >  - **Act** tests it. Feedback runs from Decide and Act back to Observe. *Implicit guidance and control* runs from Orient directly to Observe and to Act. The loop is continuous and non-linear, not a checklist.
 
 > [!qard]- 2. Why is orientation the central element?
+> <!-- qard-write -->
 > It determines what is observed, which options are even visible, and how risks are judged. Boyd calls it the *Schwerpunkt*. With a wrong orientation, a faster loop only produces wrong actions faster.
 
 > [!qard]- 3. Why is a fast loop without sound orientation not enough?
@@ -130,6 +131,11 @@ A classic exam comparison. **Define both separately, then connect them through o
 
 > [!qard]- 8. Limit: why can "getting inside the enemy's loop" fail against a culturally different adversary?
 > It assumes you can read his orientation. What would disorient you may not disorient him. And above the level of a duel, loops are slow, noisy and politically contested.
+
+> [!qard]- 9. Diagram: name the two lanes (1) and (2) that make the loop more than a circle.
+> ![[ooda-loop-boyd.svg]]
+> <!-- qard-hide: IMPLICIT GUIDANCE & CONTROL; FEEDBACK · UNFOLDING INTERACTION WITH ENVIRONMENT -->
+> **(1) Implicit guidance and control:** from Orient directly to Observe and to Act, without an explicit decision. **(2) Feedback:** from Decide and Act back to Observe.
 
 ## Open Questions
 

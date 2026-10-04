@@ -256,6 +256,11 @@ Whether such an intervention is *justified* is a **normative** question. The mod
 
 > [!qard]- 9. Calculate: $Q_D = 100 - 2P$ and $Q_S = 20 + 2P$. Find the equilibrium, and describe the market at $P = 25$.
 > $P^* = 20$, $Q^* = 60$. At $P = 25$: $Q_D = 50$ and $Q_S = 70$, a surplus of 20 units, so the price falls.
+> <!-- qard-solution -->
+> 1. Set $Q_D = Q_S$: $100 - 2P = 20 + 2P$, so $4P = 80$ and $P^* = 20$.
+> 2. Insert into either curve: $Q^* = 100 - 2 \cdot 20 = 60$.
+> 3. At $P = 25$: $Q_D = 100 - 50 = 50$ and $Q_S = 20 + 50 = 70$.
+> 4. $Q_S - Q_D = 20 > 0$: sellers offer more than buyers take, a surplus, so the price falls toward 20.
 
 ## Open Questions
 
