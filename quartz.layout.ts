@@ -10,6 +10,8 @@ export const sharedPageComponents: SharedLayout = {
     Component.ImageZoom(),
     // timeline notes: category legend and links between [!event] callouts
     Component.Timeline(),
+    // mind maps: a nested list in a [!mindmap] callout, drawn as a filterable map
+    Component.Mindmap(),
     // "Recently updated" feed, only on the landing page
     Component.ConditionalRender({
       component: Component.RecentNotes({

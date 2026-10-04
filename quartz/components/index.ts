@@ -29,6 +29,7 @@ import NoteStatus from "./NoteStatus"
 import SiteLogo from "./SiteLogo"
 import ImageZoom from "./ImageZoom"
 import Timeline from "./Timeline"
+import Mindmap from "./Mindmap"
 import FlashcardsLink from "./FlashcardsLink"
 
 export {
@@ -63,5 +64,6 @@ export {
   SiteLogo,
   ImageZoom,
   Timeline,
+  Mindmap,
   FlashcardsLink,
 }

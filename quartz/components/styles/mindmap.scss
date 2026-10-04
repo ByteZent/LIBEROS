@@ -1,0 +1,296 @@
+// Mind map: a nested list inside a [!mindmap] callout, drawn by scripts/mindmap.inline.ts.
+// Without the script the callout shows the list as it is.
+
+.callout[data-callout="mindmap"] {
+  --color: var(--secondary);
+  --border: var(--lightgray);
+  --bg: transparent;
+  padding: 0 0.9rem 0.6rem;
+
+  & > .callout-title {
+    padding: 0.7rem 0 0.5rem;
+
+    & > .callout-icon {
+      display: none;
+    }
+  }
+
+  // the script takes over: the map replaces the list unless "List" is on
+  &.mm-ready:not(.mm-as-list) > .callout-content > ul,
+  &.mm-ready:not(.mm-as-list) > .callout-content > ol,
+  &.mm-as-list .mm-viewport {
+    display: none;
+  }
+
+  & > .callout-content {
+    display: block;
+    overflow: visible;
+  }
+}
+
+.mm-tools {
+  margin-bottom: 0.6rem;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 4px;
+  background: var(--highlight);
+
+  .mm-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem 0.35rem;
+    padding: 0.3rem 0;
+
+    & + .mm-row {
+      border-top: 1px dashed var(--lightgray);
+    }
+  }
+
+  .mm-row-name {
+    flex: none;
+    width: 4.4rem;
+    font-family: var(--codeFont);
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+
+  .mm-search {
+    flex: 1 1 9rem;
+    min-width: 7rem;
+    max-width: 18rem;
+    padding: 0.2rem 0.65rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 999px;
+    background: var(--light);
+    color: var(--darkgray);
+    font: inherit;
+    font-size: 0.8rem;
+
+    &:focus {
+      outline: none;
+      border-color: var(--secondary);
+    }
+  }
+
+  .mm-chip {
+    padding: 0.12rem 0.6rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 999px;
+    background: var(--light);
+    color: var(--darkgray);
+    font-family: inherit;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--gray);
+    }
+
+    &[aria-pressed="true"] {
+      border-color: var(--secondary);
+      background: var(--secondary);
+      color: var(--light);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--secondary);
+      outline-offset: 1px;
+    }
+
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  .mm-chip-tag {
+    font-family: var(--codeFont);
+    font-size: 0.7rem;
+  }
+
+  .mm-clear {
+    border-color: #b5533c;
+    background: none;
+    color: #b5533c;
+  }
+
+  .mm-count {
+    margin-left: auto;
+    font-family: var(--codeFont);
+    font-size: 0.7rem;
+    color: var(--gray);
+  }
+
+  &.mm-filtering .mm-count {
+    color: var(--secondary);
+  }
+}
+
+// zoom buttons: on the map, top right
+.mm-zoom {
+  position: absolute;
+  z-index: 2;
+  top: 0.4rem;
+  right: 0.4rem;
+  display: flex;
+  gap: 0.25rem;
+
+  .mm-chip {
+    min-width: 1.7rem;
+    padding: 0.1rem 0.5rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 999px;
+    background: var(--light);
+    color: var(--darkgray);
+    font-family: inherit;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--secondary);
+      color: var(--secondary);
+    }
+  }
+}
+
+.mm-viewport {
+  position: relative;
+  height: 360px; // set by the script to what the map needs
+  overflow: hidden;
+  border: 1px solid var(--lightgray);
+  border-radius: 4px;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+
+  &.mm-dragging {
+    cursor: grabbing;
+  }
+}
+
+.mm-canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+}
+
+.mm-edges {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+
+  path {
+    fill: none;
+    stroke-width: 1.5;
+    opacity: 0.55;
+  }
+}
+
+.mm-node {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  box-sizing: border-box;
+  height: 26px;
+  max-width: 250px;
+  padding: 0 0.55rem;
+  border: 1px solid var(--lightgray);
+  border-left: 3px solid var(--mm-color, var(--secondary));
+  border-radius: 5px;
+  background: var(--light);
+  font-size: 0.8rem;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--darkgray);
+  transition: opacity 0.15s ease;
+
+  &[hidden] {
+    display: none;
+  }
+
+  &.mm-left {
+    border-left: 1px solid var(--lightgray);
+    border-right: 3px solid var(--mm-color, var(--secondary));
+  }
+
+  .mm-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  // links keep their meaning, without the site's link chip
+  a,
+  a.internal {
+    padding: 0;
+    background: none;
+    font-weight: 600;
+    color: var(--secondary);
+  }
+
+  &[data-kind="link"] .mm-label::after {
+    content: " ↗";
+    color: var(--gray);
+  }
+
+  .mm-tag {
+    flex: none;
+    padding: 0 0.3rem;
+    border-radius: 3px;
+    background: var(--highlight);
+    font-family: var(--codeFont);
+    font-size: 0.62rem;
+    line-height: 1.5;
+    color: var(--gray);
+  }
+
+  .mm-toggle {
+    flex: none;
+    min-width: 16px;
+    height: 16px;
+    padding: 0 3px;
+    border: 1px solid var(--mm-color, var(--secondary));
+    border-radius: 8px;
+    background: var(--light);
+    font-family: var(--codeFont);
+    font-size: 0.62rem;
+    line-height: 1;
+    color: var(--mm-color, var(--secondary));
+    cursor: pointer;
+
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  &.mm-left .mm-toggle {
+    order: -1;
+  }
+
+  &.mm-depth-1 {
+    border-color: var(--mm-color, var(--secondary));
+    font-weight: 600;
+    color: var(--dark);
+  }
+
+  &.mm-root {
+    height: 30px;
+    padding: 0 0.8rem;
+    border: 0;
+    border-radius: 15px;
+    background: var(--secondary);
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--light);
+  }
+
+  &.mm-dim {
+    opacity: 0.35;
+  }
+}
