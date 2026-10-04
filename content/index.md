@@ -13,12 +13,11 @@ It is built note by note while I study Public Policy and Military Strategy. Each
 
 ## Start here
 
-- [[Glossary|Glossar]]
-- [[/tags/course/|Courses]]
-- [[/flashcards/|Flashcards]]
-- [[Open Questions in the Notes|Open questions]]
-- [[09-Learning/94-Ideas/|Ideas]]
-- [[/changelog|Changelog]]
+- **Understand the vault:** [[About]] · [[Learning System]] · [[Note Standards]]
+- **Browse by course:** [[09-Learning/93-Course-Maps/|Course maps]] · [[/tags/course/|Notes by course]]
+- **Revise:** [[/flashcards/|Flashcards]] · [[Glossary]]
+- **Think further:** [[Open Questions in the Notes|Open questions]] · [[09-Learning/94-Ideas/|Ideas]]
+- **Follow along:** [[/changelog|Changelog]]
 
 ## Knowledge Base
 
