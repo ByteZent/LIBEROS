@@ -10,13 +10,14 @@ MSG     ?= edit: update notes $(TODAY)
 NOTES   := find $(VAULT)/0[1-9]-* -name '*.md' ! -name index.md -print0
 
 .DEFAULT_GOAL := help
-.PHONY: help install hooks serve serve-pwa serve-private build clean check lint format typecheck logo sources bib-merge new course glossary questions bridges idea ideas review stats inbox open publish update
+.PHONY: help install hooks serve serve-pwa serve-private build booklet booklets clean check lint format typecheck logo sources bib-merge new course glossary questions bridges idea ideas review stats inbox open publish update
 
 help: ## Show this help
 	@awk 'BEGIN {FS = ":.*## "} /^[a-zA-Z_-]+:.*## / {printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 	@echo
 	@echo "  make new TYPE=concept TITLE=\"Escalation Dominance\""
 	@echo "  types: concept model actor thinker key-work case-study judgment legal-norm assessment framework synthesis source open-question course-map idea mind-map"
+	@echo "  make booklet COURSE=MikroEcon-HS26 TEST=1"
 	@echo "  make idea TITLE=\"Working title\" TEXT=\"The idea in a sentence or two\""
 
 ## ── Setup & site ────────────────────────────────────────────────────────────
@@ -36,11 +37,12 @@ serve-pwa: ## Like serve, but with the service worker enabled (to test offline/i
 serve-private: ## Like serve, but also renders _private, _inbox and drafts (local only, never deployed)
 	LIBEROS_PRIVATE=1 npx quartz build --serve --port $(PORT) --output public-private
 
-build: ## Build the static site into ./public
+build: ## Build the static site into ./public, with the booklets
 	npx quartz build
+	node scripts/booklet.mjs --all
 
 clean: ## Remove build output and cache
-	rm -rf public public-pwa public-private .quartz-cache
+	rm -rf public public-pwa public-private booklets .quartz-cache
 
 ## ── Quality ─────────────────────────────────────────────────────────────────
 
@@ -83,6 +85,12 @@ new: ## Create a note from a template in _inbox (TYPE=… TITLE="…")
 
 course: ## Exam readiness: days left, open items, objectives, notes (COURSE=L1-HS26; omit: all courses; SYNC=1: update the map's Ready? column)
 	@node scripts/course.mjs $(COURSE) $(if $(SYNC),--sync)
+
+booklet: ## Printable A5 booklet of a course's notes up to an assessment, from the built site (COURSE=… TEST=1; omit TEST: the next one; or NOTES="A,B" TITLE="…"; SITE=public-private: incl. _inbox)
+	@node scripts/booklet.mjs $(COURSE) $(TEST) $(if $(NOTES),--notes "$(NOTES)") $(if $(TITLE),--title "$(TITLE)") $(if $(SITE),--site $(SITE))
+
+booklets: ## Build the booklets the course maps list (booklets: ["Test 1"]) and link to, into ./public/booklets (needs make build or a running make serve)
+	@node scripts/booklet.mjs --all
 
 glossary: ## Build the central glossary from the notes' Glossary tables (INBOX=1: preview incl. _inbox; CHECK=1: list gaps)
 	@node scripts/glossary.mjs $(if $(INBOX),--inbox) $(if $(CHECK),--check)

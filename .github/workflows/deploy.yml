@@ -30,6 +30,8 @@ jobs:
         run: npm ci
       - name: Build Quartz
         run: npx quartz build
+      - name: Build booklets # the PDFs the course maps link to; uses the runner's Chrome
+        run: node scripts/booklet.mjs --all
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

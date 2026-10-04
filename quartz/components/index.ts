@@ -31,6 +31,7 @@ import ImageZoom from "./ImageZoom"
 import Timeline from "./Timeline"
 import Mindmap from "./Mindmap"
 import FlashcardsLink from "./FlashcardsLink"
+import BookletLinks from "./BookletLinks"
 
 export {
   ArticleTitle,
@@ -66,4 +67,5 @@ export {
   Timeline,
   Mindmap,
   FlashcardsLink,
+  BookletLinks,
 }

@@ -2,6 +2,7 @@
 title: "Microeconomics (HS26)"
 type: moc
 course: MikroEcon-HS26
+booklets: ["Test 1"]
 semester: HS 2026
 created: 2026-10-02
 tags:

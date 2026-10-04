@@ -74,6 +74,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.NoteStatus(),
+    Component.BookletLinks(), // course maps: the printable booklet for each assessment
     Component.TagList(),
   ],
   left: [
