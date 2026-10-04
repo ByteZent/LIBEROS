@@ -4,6 +4,8 @@
 //   - a note has [!qard] cards but no `qard-deck` (it would become a deck of its own, named after the file)
 //   - a `## Self-Test` heading without an identifier (expected: `## Self-Test: <topic>`)
 //   - a `[!question]` callout inside a Self-Test section (expected: `[!qard]`)
+//   - an image card (`<!-- qard-hide: Label; … -->`) without an SVG above the comment, or naming
+//     a label the SVG does not have
 // Warnings everywhere:
 //   - `qard-deck` is not one of the note's `courses`
 //   - a concept, model or framework note without any card
@@ -29,6 +31,30 @@ function* notes(dir) {
   }
 }
 
+// every SVG in the vault by filename, for the image cards
+const svgs = new Map()
+const collectSvgs = (dir) => {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (entry.isDirectory()) collectSvgs(path.join(dir, entry.name))
+    else if (entry.name.endsWith(".svg")) svgs.set(entry.name, path.join(dir, entry.name))
+  }
+}
+collectSvgs(VAULT)
+// the text of an SVG label as it is compared with a qard-hide entry (see transformers/qards.ts)
+const label = (text) =>
+  text
+    .replace(/<[^>]*>/g, "")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase()
+const svgLabels = (file) =>
+  [...fs.readFileSync(file, "utf8").matchAll(/<text\b[^>]*>([\s\S]*?)<\/text>/g)].map((m) =>
+    label(m[1]),
+  )
+
 const asList = (v) => (Array.isArray(v) ? v : v == null || v === "" ? [] : [v]).map(String)
 
 let errors = 0
@@ -49,9 +75,27 @@ for (const file of notes(VAULT)) {
   const cards = []
   let inSelfTest = false
   let fence = false
+  let images = [] // SVGs embedded in the current callout so far
   for (const line of content.split("\n")) {
     if (/^(```|~~~)/.test(line)) fence = !fence
     if (fence) continue
+    if (!line.startsWith(">") || /^> \[!/.test(line)) images = []
+    images.push(...[...line.matchAll(/!\[\[([^\]|]+\.svg)/gi)].map((m) => path.basename(m[1])))
+    const hide = line.match(/<!--\s*qard-hide\s*:(.*?)-->/)
+    if (hide) {
+      const known = images
+        .filter((name) => svgs.has(name))
+        .flatMap((name) => svgLabels(svgs.get(name)))
+      if (known.length === 0)
+        problems.push([published, "`qard-hide` without an SVG above it in the card"])
+      else
+        for (const entry of hide[1]
+          .split(";")
+          .map((e) => e.trim())
+          .filter(Boolean))
+          if (!known.includes(label(entry)))
+            problems.push([published, `\`qard-hide\`: no label "${entry}" in ${images.join(", ")}`])
+    }
     if (/^#{1,6} /.test(line)) {
       inSelfTest = /^## Self-Test/.test(line)
       if (/^## Self-Test\s*:?\s*$/.test(line))

@@ -45,7 +45,7 @@ How it is used in practice: in doctrine, policy or a specific [[case study]].
 
 ## Self-Test: {{title}}
 
-Flashcards for Qard and the site's `/flashcards`. One fact or one distinction per card, answer under 40 words. At least one card must make me *use* the idea (apply, compare, judge), not only recall it. Shorten the identifier after "Self-Test:" to a short topic name.
+Flashcards for Qard and the site's `/flashcards`. One fact or one distinction per card, answer under 40 words. At least one card must make me *use* the idea (apply, compare, judge), not only recall it. Shorten the identifier after "Self-Test:" to a short topic name. Image cards (hidden diagram labels) and calculation cards (worked solution): see [[Note Standards#Card types]].
 
 ````markdown
 > [!qard]- 1. Recall: what is …?
