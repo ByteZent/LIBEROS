@@ -11,6 +11,17 @@ It is built note by note while I study Public Policy and Military Strategy. Each
 > [!bluf] What this is
 > Not a blog and not a set of lecture notes. LIBEROS is a *network of concepts*: atomic notes on ideas, actors, thinkers, cases and frameworks, cross-linked so they can be read non-linearly. Every note carries a **maturity** marker (seedling → developing → evergreen) and a **confidence** rating, so you always know how settled a piece of thinking is.
 
+## Start here
+
+- [[Glossary|Glossar]]
+- [[/tags/course/| Courses]]
+- [[/flashcards/|Flashcards]]
+- [[Open Questions in the Notes|Open questions]]
+- [[/changelog|Changelog]]
+- [[Menschenbilder in Psychology|5 Menschenbilder]]
+- [[OODA Loop|OODA Loop nach Boyd]]
+- [[Doctrine (Swiss Armed Forces)| Doctrin - Swiss Armed Forces]]
+
 ## Knowledge Base
 
 <div class="section-grid">
@@ -25,16 +36,6 @@ It is built note by note while I study Public Policy and Military Strategy. Each
   <a class="section-card internal" href="./09-Learning/"><span class="num">09</span><span class="name">Learning</span><span class="desc">Maps of content, open questions, course maps.</span></a>
 </div>
 
-## Start here
-
-- [[Glossary|Glossar]]
-- [[/tags/course/| Courses]]
-- [[/flashcards/|Flashcards]]
-- [[Open Questions in the Notes|Open questions]]
-- [[/changelog|Changelog]]
-- [[Menschenbilder in Psychology|5 Menschenbilder]]
-- [[OODA Loop|OODA Loop nach Boyd]]
-- [[Doctrine (Swiss Armed Forces)| Doctrin - Swiss Armed Forces]]
 ## Graph
 
 The notes form a graph. Open the **global graph** (icon in the right-hand panel) to see how actors, concepts, cases and sources connect, or use the local graph on any note.
