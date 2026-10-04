@@ -227,6 +227,11 @@
         display: block;
       }
 
+      // turned: the question stays centred above the answer
+      &.revealed .qard-front {
+        text-align: center;
+      }
+
       &:not(.revealed) {
         .qard-back {
           display: none;
@@ -386,6 +391,228 @@
       content: "";
       flex: 1;
       border-top: 1px solid var(--lightgray);
+    }
+  }
+}
+
+// glossary cards: the German term large, the task small below it
+.flashcards .qard-front {
+  .qard-term {
+    margin-bottom: 0.2rem;
+    font-size: 1.3rem;
+  }
+
+  .qard-ask {
+    margin-top: 0;
+    font-size: 0.85rem;
+    color: var(--gray);
+  }
+}
+
+// cloze card: the part to recall
+.flashcards .qard-blank {
+  font-family: var(--codeFont);
+  color: var(--secondary);
+}
+
+// ─── Hard rating, follow-up question, progress by topic ─────────────────────
+
+.flashcards.qard-deck {
+  .qard-hard {
+    border-color: #b08a2e;
+    color: #b08a2e;
+  }
+
+  .qard-followup,
+  .qard-exam-note,
+  .qard-exam-review {
+    display: none;
+  }
+
+  .qard-stats {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+
+    summary {
+      font-family: var(--codeFont);
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--secondary);
+      cursor: pointer;
+    }
+
+    table {
+      width: 100%;
+      margin: 0.6rem 0 0;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 0.25rem 0.5rem;
+      border-bottom: 1px solid var(--lightgray);
+      text-align: right;
+      font-weight: 400;
+    }
+
+    th:first-child {
+      text-align: left;
+    }
+
+    thead th {
+      font-family: var(--codeFont);
+      font-size: 0.7rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    .qard-stats-total th,
+    .qard-stats-total td {
+      font-weight: 600;
+      border-bottom: 0;
+    }
+  }
+}
+
+.flashcards.qard-deck.qard-ready {
+  .qard-nav .qard-hard {
+    display: none;
+  }
+
+  &.qard-revealed .qard-nav .qard-hard {
+    display: block;
+  }
+
+  .qard-card.revealed .qard-followup:not(:empty) {
+    display: block;
+    margin: 1rem 0 0;
+    padding-top: 0.6rem;
+    border-top: 1px dashed var(--lightgray);
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--secondary);
+
+    &::before {
+      content: "Go further: ";
+      font-family: var(--codeFont);
+      font-size: 0.7rem;
+      font-style: normal;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+  }
+
+  // ─── Exam ─────────────────────────────────────────────────────────────────
+
+  .qard-exam-start[aria-pressed="true"] {
+    border-color: #b5533c;
+    color: #b5533c;
+  }
+
+  &.qard-exam {
+    .qard-exam-note {
+      display: block;
+      margin: 0.75rem 0 0;
+      font-size: 0.85rem;
+      color: var(--gray);
+    }
+
+    .qard-middle {
+      visibility: hidden;
+    }
+
+    .qard-card {
+      cursor: auto;
+    }
+
+    .qard-box {
+      display: none;
+    }
+  }
+
+  &.qard-exam-reviewing {
+    .qard-nav,
+    .qard-hint {
+      display: none;
+    }
+
+    .qard-exam-review {
+      display: block;
+    }
+
+    .qard-exam-head {
+      margin: 1rem 0;
+      text-align: center;
+
+      p {
+        margin: 0.2rem 0;
+      }
+
+      .qard-done-title {
+        font-family: var(--headerFont);
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: var(--dark);
+      }
+    }
+
+    .qard-exam-item {
+      margin: 0 0 1rem;
+      padding: 0.9rem 1.1rem;
+      border: 1px solid var(--lightgray);
+      border-radius: 4px;
+      background: var(--highlight);
+
+      .qard-front {
+        margin: 0 0 0.75rem;
+        font-size: 1rem;
+        text-align: left;
+      }
+
+      .qard-back {
+        display: block;
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      .qard-exam-yours,
+      .qard-exam-model {
+        padding-top: 0.6rem;
+        border-top: 1px dashed var(--lightgray);
+
+        p {
+          margin: 0.3rem 0 0.6rem;
+          white-space: pre-wrap;
+        }
+      }
+
+      .qard-exam-empty {
+        font-style: italic;
+        color: var(--gray);
+      }
+
+      .qard-exam-rate {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+
+        button {
+          flex: 1;
+
+          &[aria-pressed="true"] {
+            background: var(--light);
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .qard-exam-close {
+      display: block;
+      margin: 0 auto 1rem;
     }
   }
 }

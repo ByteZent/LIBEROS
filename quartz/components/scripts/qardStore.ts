@@ -1,6 +1,8 @@
 // Review history of the flashcards, kept in this browser's localStorage (see flashcards.inline.ts).
 // A Leitner system: a card you knew when it was due moves up one box and comes back after that
-// box's interval; a card you missed goes back to box 1 and is due the next day.
+// box's interval; a card you missed goes back to box 1 and is due the next day; a card that was
+// hard stays in its box and comes back after half that box's interval.
+// A leech is a card missed on LEECH or more days: a sign that the card or its note needs rewriting.
 // Cards are keyed by the id Plugin.Qards() gives them, so a card keeps its history in every deck
 // it appears in, and loses it when its question is reworded.
 
@@ -17,6 +19,8 @@ export type Progress = Record<string, CardState>
 const KEY = "liberos-qards"
 // days until the next review, by box
 export const INTERVALS = [1, 3, 7, 14, 30, 60, 120]
+export const LEECH = 3
+export type Rating = "known" | "hard" | "missed"
 
 export function day(offset = 0): string {
   const d = new Date()
@@ -45,17 +49,21 @@ export function saveProgress(progress: Progress) {
 export const isNew = (progress: Progress, id: string) => !progress[id]
 export const isDue = (progress: Progress, id: string, today = day()) =>
   !progress[id] || progress[id].due <= today
+export const isLeech = (progress: Progress, id: string) => (progress[id]?.missed ?? 0) >= LEECH
 
 // Only the first answer of the day moves a card up: knowing it again in "Repeat missed" or in a
 // second run does not count. A miss always sends it back.
-export function rateCard(progress: Progress, id: string, known: boolean) {
+export function rateCard(progress: Progress, id: string, rating: Rating) {
   const today = day()
   const state = progress[id] ?? { box: 0, due: today, seen: 0, missed: 0, last: "" }
   const firstToday = state.last !== today
-  if (known) {
+  if (rating === "known") {
     if (state.due > today) return
     state.box = Math.min(state.box + 1, INTERVALS.length)
     state.due = day(INTERVALS[state.box - 1])
+  } else if (rating === "hard") {
+    state.box = Math.max(state.box, 1)
+    state.due = day(Math.max(1, Math.round(INTERVALS[state.box - 1] / 2)))
   } else {
     if (firstToday || state.box > 1) state.missed++
     state.box = 1

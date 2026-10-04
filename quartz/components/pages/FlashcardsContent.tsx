@@ -13,6 +13,14 @@ import style from "../styles/flashcards.scss"
 // Notes and course pages link here through FlashcardsLink and the NoteStatus strip.
 const plural = (n: number, word: string) => `${n} ${word}${n === 1 ? "" : "s"}`
 
+const FEATURED: Record<string, string> = {
+  connections: "How does one note relate to another? Generated from Key Connections.",
+  recall:
+    "One topic, a blank page: write down everything you know, then compare with the note's BLUF.",
+  glossary: "German term on the front, English term and definition on the back.",
+  "glossary-reverse": "English term on the front, German term on the back.",
+}
+
 export default (() => {
   const FlashcardsContent: QuartzComponent = ({ fileData }: QuartzComponentProps) => {
     const slug = fileData.slug!
@@ -40,8 +48,9 @@ export default (() => {
         <div class="popover-hint flashcards">
           <p>
             Every self-test question in the notes is a flashcard. A card you knew comes back after
-            1, 3, 7, 14, 30, 60 and 120 days; a card you missed comes back the next day. The history
-            is kept in this browser only.
+            1, 3, 7, 14, 30, 60 and 120 days; a card you missed comes back the next day; a card that
+            was hard stays where it is and comes back in half the time. A card missed on three days
+            is a leech: rewrite it or its note. The history is kept in this browser only.
           </p>
           {decks.length === 0 ? (
             <p>No flashcards yet.</p>
@@ -52,9 +61,7 @@ export default (() => {
                   {featured.map((d) =>
                     card(
                       d,
-                      d.bridges
-                        ? "How does one note relate to another? Generated from Key Connections."
-                        : "What is due today in every deck, shuffled.",
+                      (d.kind && FEATURED[d.kind]) ?? "What is due today in every deck, shuffled.",
                     ),
                   )}
                 </div>
@@ -86,7 +93,7 @@ export default (() => {
 
     const count = (topic: string) => deck.cards.filter((c) => c.topic === topic).length
     return (
-      <div class="popover-hint flashcards qard-deck">
+      <div class="popover-hint flashcards qard-deck" data-kind={deck.kind ?? "course"}>
         <p class="qard-summary">
           <a class="internal" href={resolveRelative(slug, `${FLASHCARDS_SLUG}/index` as FullSlug)}>
             ← All decks
@@ -102,6 +109,7 @@ export default (() => {
             <select class="qard-mode-select">
               <option value="due">Due today</option>
               <option value="all">All cards</option>
+              <option value="leeches">Leeches</option>
             </select>
           </label>
           <label>
@@ -126,8 +134,20 @@ export default (() => {
           >
             Write answers
           </button>
+          <button
+            type="button"
+            class="qard-exam-start"
+            title="Ten cards against the clock, answers in writing, no answers shown until the end"
+          >
+            Exam
+          </button>
           <span class="qard-progress" aria-live="polite"></span>
         </div>
+
+        <p class="qard-exam-note">
+          Exam: answer every card in writing, in German, as you would on paper. The answers are
+          shown when you hand in or when the time is up.
+        </p>
 
         <div class="qard-stage">
           {deck.cards.map((card) => (
@@ -151,8 +171,10 @@ export default (() => {
                 <textarea rows={4} placeholder="Write your answer, then turn the card."></textarea>
               </label>
               <div class="qard-back" dangerouslySetInnerHTML={{ __html: card.back }} />
+              <p class="qard-followup"></p>
             </article>
           ))}
+          <div class="qard-exam-review"></div>
           <div class="qard-done">
             <p class="qard-done-title">Deck finished</p>
             <p class="qard-score"></p>
@@ -181,7 +203,10 @@ export default (() => {
             <button type="button" class="qard-missed" title="Missed (1)">
               Missed
             </button>
-            <button type="button" class="qard-known" title="Knew it (2)">
+            <button type="button" class="qard-hard" title="Hard (2)">
+              Hard
+            </button>
+            <button type="button" class="qard-known" title="Knew it (3)">
               Knew it
             </button>
           </div>
@@ -190,9 +215,26 @@ export default (() => {
           </button>
         </div>
         <p class="qard-hint">
-          Space or click the card: show the answer · 1: missed · 2: knew it · ← →: previous and next
-          · while writing, Ctrl or ⌘ + Enter turns the card
+          Space or click the card: show the answer · 1: missed · 2: hard · 3: knew it · ← →:
+          previous and next · while writing, Ctrl or ⌘ + Enter turns the card
         </p>
+
+        <details class="qard-stats">
+          <summary>Progress by topic</summary>
+          <table>
+            <thead>
+              <tr>
+                <th>Topic</th>
+                <th title="Never rated">New</th>
+                <th title="Box 1 or 2">Shaky</th>
+                <th title="Box 3 or higher">Solid</th>
+                <th title="Due today, new cards included">Due</th>
+                <th title="Missed on three or more days">Leeches</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </details>
       </div>
     )
   }

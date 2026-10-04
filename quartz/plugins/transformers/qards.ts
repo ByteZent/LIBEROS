@@ -35,8 +35,29 @@ import {
 // Bridge cards are generated, not written: each line of a note's `## Key Connections` section
 // (`- [[Other Note]]: how it relates`) becomes "How does <note> relate to <other note>?" in
 // file.data.qardBridges; Plugin.Flashcards() collects them in a deck of their own.
+//
+// Glossary cards are generated too: each row of a note's `## Glossary` table
+// (| Deutsch | English | Definition | Be able to |) becomes a card with the German term on the
+// front and the English term and definition on the back, in file.data.qardGlossary;
+// Plugin.Flashcards() collects them in the glossary deck. The id depends on the term only, so a
+// term keeps its review history when its note moves.
+// Each row also gives a reverse card (English term on the front) in file.data.qardGlossaryReverse.
+//
+// Blank-page cards: every course note with a `[!bluf]` gives one card that asks for everything
+// about the note in writing and shows the BLUF for comparison (file.data.qardRecall).
+//
+// Cloze cards are written as `> [!cloze] Politics is ==social action== aimed at …`. The front
+// shows the sentence with every highlighted part blanked, the back shows it in full. They go
+// into the note's deck like the qard cards.
 export const FLASHCARDS_SLUG = "flashcards"
 export const BRIDGES_HEADING = "Key Connections"
+export const GLOSSARY_HEADING = /^glossary\b/i
+// what the front of a glossary card asks for, by the row's "Be able to" level
+const GLOSSARY_ASK: Record<string, string> = {
+  translate: "English term?",
+  define: "English term and definition?",
+  apply: "English term, definition, and where does it apply?",
+}
 
 export type QardKind = "text" | "image" | "calc"
 
@@ -198,10 +219,68 @@ export const Qards: QuartzTransformerPlugin = () => ({
         const title = asText(fm.title) ?? file.stem ?? slug
         const cards: Qard[] = []
         const bridges: Qard[] = []
+        const glossary: Qard[] = []
+        const glossaryReverse: Qard[] = []
+        let recall: Qard | undefined
+        const RECALL_TYPES = new Set(["concept", "model", "framework", "norm", "judgment", "case"])
+        const course =
+          asText(fm.course) ?? asText(Array.isArray(fm.courses) ? fm.courses[0] : fm.courses)
         let heading = "General"
         visit(tree, "element", (node: Element) => {
           if (/^h[1-6]$/.test(node.tagName)) {
             heading = toString(node).trim() || heading
+            return
+          }
+
+          // `| Deutsch | English | Definition | Be able to |` under Glossary
+          if (node.tagName === "tr" && GLOSSARY_HEADING.test(heading)) {
+            const cells = node.children.filter(
+              (c): c is Element => c.type === "element" && c.tagName === "td",
+            )
+            if (cells.length < 2) return // the header row
+            const [de, en, definition, level] = cells
+            const term = toString(de).trim()
+            const english = toString(en).trim()
+            if (!term || !english) return
+            const ask = GLOSSARY_ASK[level ? toString(level).trim().toLowerCase() : ""]
+            const para = (children: ElementContent[], className?: string): Element => ({
+              type: "element",
+              tagName: "p",
+              properties: className ? { className: [className] } : {},
+              children,
+            })
+            const strong = (children: ElementContent[]): Element => ({
+              type: "element",
+              tagName: "strong",
+              properties: {},
+              children,
+            })
+            glossaryReverse.push({
+              id: hash(`glossary-reverse\n${term.toLowerCase()}|${english.toLowerCase()}`),
+              kind: "text",
+              topic: course ?? "",
+              front: render([
+                para([strong(en.children)], "qard-term"),
+                para([{ type: "text", value: "German term?" }], "qard-ask"),
+              ]),
+              back: render([
+                para([strong(de.children)]),
+                ...(definition && toString(definition).trim() ? [para(definition.children)] : []),
+              ]),
+            })
+            glossary.push({
+              id: hash(`glossary\n${term.toLowerCase()}|${english.toLowerCase()}`),
+              kind: "text",
+              topic: course ?? "",
+              front: render([
+                para([strong(de.children)], "qard-term"),
+                para([{ type: "text", value: ask ?? GLOSSARY_ASK.define }], "qard-ask"),
+              ]),
+              back: render([
+                para([strong(en.children)]),
+                ...(definition && toString(definition).trim() ? [para(definition.children)] : []),
+              ]),
+            })
             return
           }
 
@@ -241,6 +320,83 @@ export const Qards: QuartzTransformerPlugin = () => ({
                 { type: "text", value: "?" },
               ]),
               back: render([{ type: "element", tagName: "p", properties: {}, children: relation }]),
+            })
+            return
+          }
+
+          // the BLUF is the model answer of the note's blank-page card
+          if (
+            node.tagName === "blockquote" &&
+            node.properties?.dataCallout === "bluf" &&
+            !recall &&
+            course &&
+            RECALL_TYPES.has(asText(fm.type) ?? "")
+          ) {
+            const bluf = node.children.find((c) => hasClass(c, "callout-content")) as
+              | Element
+              | undefined
+            if (bluf && toString(bluf).trim().length > 40) {
+              const p = (text: string, className: string): Element => ({
+                type: "element",
+                tagName: "p",
+                properties: { className: [className] },
+                children: [{ type: "text", value: text }],
+              })
+              recall = {
+                id: hash(`recall\n${title}`),
+                kind: "text",
+                write: true,
+                topic: course,
+                front: render([
+                  p(title, "qard-term"),
+                  p(
+                    "Blank page: write down everything you know. Definition, key points, an example, a limit.",
+                    "qard-ask",
+                  ),
+                ]),
+                back: render(bluf.children),
+              }
+            }
+            return
+          }
+
+          // `> [!cloze] A sentence with ==the parts to recall== highlighted`
+          if (node.tagName === "blockquote" && node.properties?.dataCallout === "cloze") {
+            const clozeTitle = node.children.find((c) => hasClass(c, "callout-title")) as
+              | Element
+              | undefined
+            const sentence = clozeTitle?.children.find((c) =>
+              hasClass(c, "callout-title-inner"),
+            ) as Element | undefined
+            if (!sentence) return
+            let blanks = 0
+            const blank = (nodes: ElementContent[]): ElementContent[] =>
+              nodes.map((child) => {
+                if (child.type !== "element") return child
+                const el: Element = child
+                const classes = el.properties?.className
+                if (Array.isArray(classes) && classes.includes("text-highlight")) {
+                  blanks++
+                  return {
+                    type: "element",
+                    tagName: "span",
+                    properties: { className: ["qard-blank"] },
+                    children: [{ type: "text", value: "[ … ]" }],
+                  }
+                }
+                return { ...el, children: blank(el.children) }
+              })
+            const front = blank(structuredClone(sentence.children))
+            if (blanks === 0) return
+            const more = node.children.find((c) => hasClass(c, "callout-content")) as
+              | Element
+              | undefined
+            cards.push({
+              id: uniqueId(`cloze\n${toString(sentence).trim()}`),
+              kind: "text",
+              topic: fixedTopic ?? heading.replace(/^self[- ]?test\s*:\s*/i, ""),
+              front: render(front),
+              back: render([...sentence.children, ...(more ? more.children : [])]),
             })
             return
           }
@@ -330,6 +486,9 @@ export const Qards: QuartzTransformerPlugin = () => ({
           file.data.qards = cards
         }
         if (bridges.length > 0) file.data.qardBridges = bridges
+        if (glossary.length > 0) file.data.qardGlossary = glossary
+        if (glossaryReverse.length > 0) file.data.qardGlossaryReverse = glossaryReverse
+        if (recall) file.data.qardRecall = [recall]
       },
     ]
   },
@@ -340,5 +499,8 @@ declare module "vfile" {
     qardDeck: string
     qards: Qard[]
     qardBridges: Qard[]
+    qardGlossary: Qard[]
+    qardGlossaryReverse: Qard[]
+    qardRecall: Qard[]
   }
 }

@@ -20,6 +20,11 @@ import { FLASHCARDS_SLUG, Qard, qardDeckSlug } from "../transformers/qards"
 //   /flashcards/all     every deck mixed and shuffled (interleaved practice)
 //   /flashcards/connections  the bridge cards generated from the notes' Key Connections,
 //                            by course; kept out of the mixed deck
+//   /flashcards/glossary     the German terms of the notes' Glossary tables, by course
+//   /flashcards/glossary-reverse  the same terms, English to German
+//   /flashcards/recall       one blank-page card per course note: write everything, compare
+//                            with the BLUF
+//   The generated decks are kept out of the mixed deck.
 // A deck named like a course code takes its title from the course page
 // (content/tags/course/<code>.md), as the COURSE badge does.
 
@@ -35,6 +40,8 @@ export interface FlashcardDeck {
   topics: string[]
   mixed?: boolean // not a course deck: starts shuffled, and is featured on the overview
   bridges?: boolean // the generated "how does X relate to Y?" deck
+  // what a generated deck is made of; a course deck has none
+  kind?: "connections" | "glossary" | "glossary-reverse" | "recall"
   cards: (Qard & { source: FlashcardSource })[]
 }
 
@@ -94,6 +101,50 @@ function collectBridges(allFiles: QuartzPluginData[]): FlashcardDeck | undefined
     ),
     cards,
     bridges: true,
+    kind: "connections",
+    mixed: true,
+  }
+}
+
+type Generated = "qardGlossary" | "qardGlossaryReverse" | "qardRecall"
+
+// A deck of generated cards, grouped by course. One card per id: a term that several notes list
+// is taken from the first note that defines it.
+function collectGenerated(
+  allFiles: QuartzPluginData[],
+  key: Generated,
+  deck: Pick<FlashcardDeck, "name" | "title" | "kind">,
+): FlashcardDeck | undefined {
+  const courseTitle = (code: string) =>
+    allFiles.find((f) => f.slug === `tags/${slugTag(COURSE_TAG_PREFIX + code)}`)?.frontmatter
+      ?.title ?? code
+  const found = new Map<string, FlashcardDeck["cards"][number]>()
+  const files = allFiles
+    .filter((f) => f[key])
+    .sort((a, b) => (a.relativePath ?? "").localeCompare(b.relativePath ?? ""))
+  for (const file of files) {
+    const source = { slug: file.slug!, title: file.frontmatter?.title ?? file.slug! }
+    for (const card of file[key]!) {
+      const known = found.get(card.id)
+      // the back of a glossary card with a definition has a second paragraph
+      const defined = (c: Qard) => c.back.split("<p").length > 2
+      if (known && (defined(known) || !defined(card))) continue
+      found.set(card.id, {
+        ...card,
+        topic: card.topic ? courseTitle(card.topic) : NO_COURSE,
+        source,
+      })
+    }
+  }
+  if (found.size === 0) return undefined
+  const cards = [...found.values()].sort((a, b) => a.topic.localeCompare(b.topic))
+  return {
+    ...deck,
+    slug: joinSegments(FLASHCARDS_SLUG, deck.name) as FullSlug,
+    topics: [...new Set(cards.map((card) => card.topic))].sort(
+      (a, b) => Number(a === NO_COURSE) - Number(b === NO_COURSE) || a.localeCompare(b),
+    ),
+    cards,
     mixed: true,
   }
 }
@@ -171,6 +222,24 @@ export const Flashcards: QuartzEmitterPlugin = () => {
       }
       const bridges = collectBridges(allFiles)
       if (bridges) decks.push(bridges)
+      const generated = [
+        collectGenerated(allFiles, "qardRecall", {
+          name: "recall",
+          title: "Blank page: free recall",
+          kind: "recall",
+        }),
+        collectGenerated(allFiles, "qardGlossary", {
+          name: "glossary",
+          title: "Glossary: German to English",
+          kind: "glossary",
+        }),
+        collectGenerated(allFiles, "qardGlossaryReverse", {
+          name: "glossary-reverse",
+          title: "Glossary: English to German",
+          kind: "glossary-reverse",
+        }),
+      ]
+      for (const deck of generated) if (deck) decks.push(deck)
 
       yield emitPage(
         ctx,
