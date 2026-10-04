@@ -8,6 +8,8 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [
     // click an image to view it full screen
     Component.ImageZoom(),
+    // timeline notes: category legend and links between [!event] callouts
+    Component.Timeline(),
     // "Recently updated" feed, only on the landing page
     Component.ConditionalRender({
       component: Component.RecentNotes({

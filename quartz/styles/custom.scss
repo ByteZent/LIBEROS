@@ -29,6 +29,8 @@ article > h2 {
 // > [!counter]     Strongest counter-argument / critique
 // > [!question]    Open question for the learning process (built-in type, restyled)
 // > [!source]      Direct quotation from a primary source
+// > [!event]       One entry on a timeline   } styled in components/styles/timeline.scss
+// > [!period]      An era heading on a timeline }
 
 .callout {
   &[data-callout="bluf"] {

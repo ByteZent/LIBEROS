@@ -28,6 +28,7 @@ import ConditionalRender from "./ConditionalRender"
 import NoteStatus from "./NoteStatus"
 import SiteLogo from "./SiteLogo"
 import ImageZoom from "./ImageZoom"
+import Timeline from "./Timeline"
 import FlashcardsLink from "./FlashcardsLink"
 
 export {
@@ -61,5 +62,6 @@ export {
   NoteStatus,
   SiteLogo,
   ImageZoom,
+  Timeline,
   FlashcardsLink,
 }

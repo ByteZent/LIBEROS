@@ -1,0 +1,625 @@
+// Timeline (Zeitstrahl). Consecutive [!event], [!process] and [!period] callouts form one line.
+//   > [!event|war key] **1899–1902** Boer War `S1`
+// The date is the bold text at the start of the title and the body holds the notes. The words
+// after the bar are the category (colour and icon of the marker) and `key` for a turning point.
+// The chart, the filters and the self-test are built by scripts/timeline.inline.ts.
+// Mirrored (list view only) in content/.obsidian/snippets/liberos.css.
+
+$categories: (
+  "war": (
+    #b5533c,
+    '<path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6z"/>',
+  ),
+  "political": (
+    #3d7a94,
+    '<path d="M3 21h18"/><path d="M5 21V10"/><path d="M10 21V10"/><path d="M14 21V10"/><path d="M19 21V10"/><path d="m2 10 10-7 10 7z"/>',
+  ),
+  "social": (
+    #4f8a5b,
+    '<circle cx="9" cy="8" r="3.5"/><path d="M2 21v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v1"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7"/><path d="M18.5 14.5A6 6 0 0 1 22 20v1"/>',
+  ),
+  "economy": (
+    #b08a2e,
+    '<path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/>',
+  ),
+  "empire": (
+    #7d5ba6,
+    '<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/>',
+  ),
+  "ideas": (
+    #2f8f8a,
+    '<path d="M12 7v14"/><path d="M3 5h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v14h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3H3z"/>',
+  ),
+  "law": (
+    #6b7785,
+    '<path d="M12 3v18"/><path d="M7 21h10"/><path d="M5 7h14"/><path d="m5 7-3 7a3 3 0 0 0 6 0z"/><path d="m19 7-3 7a3 3 0 0 0 6 0z"/>',
+  ),
+);
+
+@function icon($paths) {
+  @return url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">#{$paths}</svg>');
+}
+
+// ─── The list ───────────────────────────────────────────────────────────────
+
+.callout[data-callout="event"],
+.callout[data-callout="process"],
+.callout[data-callout="period"] {
+  --color: var(--dark);
+  position: relative;
+  margin: 0 0 0 0.6rem;
+  padding: 0 0 1rem 1.6rem;
+  border: 0;
+  border-left: 2px solid var(--lightgray);
+  border-radius: 0;
+  background: none;
+  overflow: visible;
+  scroll-margin-top: 5rem;
+  transition: background-color 0.2s ease;
+
+  // the marker on the line
+  &::before {
+    content: "";
+    position: absolute;
+    left: -7px;
+    top: 0.4rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--tl-color, var(--secondary));
+    border: 2px solid var(--light);
+  }
+
+  & > .callout-title {
+    padding: 0;
+    gap: 0;
+
+    & > .callout-icon {
+      display: none;
+    }
+
+    & .callout-title-inner > p {
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    & strong {
+      display: inline-block;
+      min-width: 6.2rem;
+      font-family: var(--codeFont);
+      font-size: 0.9rem;
+      color: var(--secondary);
+    }
+
+    & code,
+    & .tl-duration {
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: var(--gray);
+    }
+  }
+
+  & > .callout-content {
+    font-size: 0.95rem;
+    color: var(--darkgray);
+
+    & p {
+      margin: 0.35rem 0;
+    }
+
+    & ul {
+      margin: 0.35rem 0;
+      padding-left: 1.1rem;
+    }
+
+    & > :first-child {
+      margin-top: 0.3rem;
+    }
+
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.tl-highlight {
+    background: var(--highlight);
+  }
+
+  &.tl-hidden {
+    display: none;
+  }
+}
+
+// a category: a round badge in its colour with its icon
+@each $name, $def in $categories {
+  .callout[data-callout="event"][data-callout-metadata~="#{$name}"],
+  .callout[data-callout="process"][data-callout-metadata~="#{$name}"],
+  .timeline-tools [data-category="#{$name}"] {
+    --tl-color: #{nth($def, 1)};
+    --tl-icon: #{icon(nth($def, 2))};
+  }
+
+  .callout[data-callout="event"][data-callout-metadata~="#{$name}"] {
+    &::before {
+      left: -12px;
+      top: 0.05rem;
+      width: 18px;
+      height: 18px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -7px;
+      top: calc(0.05rem + 5px);
+      width: 12px;
+      height: 12px;
+      background: #fff;
+      mask: var(--tl-icon) center / contain no-repeat;
+      -webkit-mask: var(--tl-icon) center / contain no-repeat;
+    }
+  }
+}
+
+// a process has no single date: a tall pill on the line instead of a round point
+.callout[data-callout="process"] {
+  &::before {
+    left: -7px;
+    top: 0.1rem;
+    width: 8px;
+    height: 1.9rem;
+    border-radius: 6px;
+  }
+
+  & > .callout-title .tl-title-text {
+    font-style: italic;
+  }
+}
+
+@each $name, $def in $categories {
+  .callout[data-callout="process"][data-callout-metadata~="#{$name}"] {
+    &::before {
+      left: -12px;
+      width: 18px;
+      border-radius: 11px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -7px;
+      top: calc(0.1rem + 6px);
+      width: 12px;
+      height: 12px;
+      background: #fff;
+      mask: var(--tl-icon) center / contain no-repeat;
+      -webkit-mask: var(--tl-icon) center / contain no-repeat;
+    }
+  }
+}
+
+// a turning point: a ring around the marker and a heavier title
+.callout[data-callout="event"][data-callout-metadata~="key"] {
+  &::before {
+    box-shadow: 0 0 0 2px var(--tl-color, var(--secondary));
+  }
+
+  & > .callout-title .callout-title-inner > p {
+    font-weight: 700;
+    font-size: 1.05rem;
+  }
+}
+
+.callout[data-callout="period"] {
+  padding-top: 0.9rem;
+
+  &::before {
+    left: -9px;
+    top: 1.25rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    background: var(--tertiary);
+  }
+
+  & > .callout-title .callout-title-inner > p {
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.9rem;
+    color: var(--tertiary);
+  }
+
+  & > .callout-title strong {
+    color: var(--tertiary);
+  }
+}
+
+// ─── Fields: "Why it matters:", "Debate:", "Source:", "Perspectives:" ───────
+
+.callout .tl-field {
+  & > strong:first-child {
+    margin-right: 0.3rem;
+    font-family: var(--codeFont);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--secondary);
+  }
+
+  &[data-field="debate"] > strong:first-child {
+    color: #b5533c;
+  }
+
+  &[data-field="source"] > strong:first-child {
+    color: var(--gray);
+  }
+
+  &[data-field="perspectives"] > strong:first-child {
+    color: #4f8a5b;
+  }
+}
+
+// ─── Connections between entries ────────────────────────────────────────────
+
+.callout a.timeline-ref {
+  display: inline-block;
+  padding: 0 0.45rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 999px;
+  background: none;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--darkgray);
+
+  &:hover {
+    border-color: var(--secondary);
+    color: var(--secondary);
+  }
+}
+
+.callout .tl-conn {
+  font-size: 0.85rem;
+
+  .tl-type {
+    font-family: var(--codeFont);
+    font-size: 0.72rem;
+    color: var(--tertiary);
+  }
+}
+
+.callout li.tl-conn {
+  list-style: none;
+  margin-left: -1.1rem;
+}
+
+.callout .timeline-backlinks {
+  margin: 0.35rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--gray);
+}
+
+// ─── Toolbar: chart, filters, self-test ─────────────────────────────────────
+
+.timeline-tools {
+  margin: 0.5rem 0 1.2rem;
+
+  button {
+    font-family: inherit;
+    font-size: 0.8rem;
+    color: var(--darkgray);
+    border: 1px solid var(--lightgray);
+    border-radius: 999px;
+    background: none;
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: 2px solid var(--secondary);
+      outline-offset: 1px;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
+  }
+}
+
+.timeline-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.4rem 0;
+
+  .timeline-legend-name {
+    min-width: 4.2rem;
+    font-family: var(--codeFont);
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+
+  button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.15rem 0.6rem;
+
+    &[data-category] {
+      padding-left: 0.3rem;
+
+      &::before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background:
+          var(--tl-icon) center / 10px no-repeat,
+          var(--tl-color);
+      }
+    }
+
+    &[aria-pressed="true"] {
+      border-color: var(--tl-color, var(--secondary));
+      background: var(--highlight);
+      color: var(--dark);
+    }
+  }
+}
+
+.timeline-stats {
+  margin: 0.5rem 0 0;
+  font-size: 0.75rem;
+  color: var(--gray);
+}
+
+.timeline-chart-head {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-bottom: 0.3rem;
+
+  .timeline-chart-title {
+    flex: 1;
+    font-family: var(--codeFont);
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+
+  button {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+    line-height: 1;
+  }
+}
+
+.timeline-chart {
+  display: flex;
+  border: 1px solid var(--lightgray);
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+
+  .tl-lanes {
+    flex: none;
+    border-right: 1px solid var(--lightgray);
+  }
+
+  .tl-lane-label {
+    box-sizing: border-box;
+    padding: 0.35rem 0.5rem 0;
+    border-top: 1px solid var(--lightgray);
+    font-size: 0.7rem;
+    color: var(--tl-color, var(--gray));
+  }
+
+  .tl-scroll {
+    flex: 1;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .tl-canvas {
+    position: relative;
+  }
+
+  .tl-band {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    border-left: 1px dashed var(--lightgray);
+    overflow: hidden;
+
+    &.tl-band-alt {
+      background: var(--highlight);
+    }
+
+    span {
+      position: absolute;
+      left: 4px;
+      right: 2px;
+      bottom: 2px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: 0.62rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--tertiary);
+    }
+  }
+
+  .tl-tick {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 2px 0 0 3px;
+    border-left: 1px solid var(--lightgray);
+    font-family: var(--codeFont);
+    font-size: 0.62rem;
+    color: var(--gray);
+    pointer-events: none;
+  }
+
+  .tl-lane-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-top: 1px solid var(--lightgray);
+  }
+
+  .tl-links {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    path {
+      fill: none;
+      stroke: var(--gray);
+      stroke-width: 1.2;
+      stroke-dasharray: 3 3;
+      opacity: 0.35;
+
+      &.tl-on {
+        stroke: var(--secondary);
+        stroke-dasharray: none;
+        stroke-width: 1.6;
+        opacity: 1;
+      }
+    }
+  }
+
+  a.tl-mark {
+    position: absolute;
+    z-index: 1;
+    height: 14px;
+    box-sizing: border-box;
+    background: none;
+    font-size: 0.7rem;
+    font-weight: 400;
+    line-height: 14px;
+    white-space: nowrap;
+    color: var(--darkgray);
+    transition: opacity 0.15s ease;
+
+    .tl-mark-label {
+      display: inline-block;
+      max-width: 180px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      vertical-align: top;
+    }
+
+    &.tl-point {
+      padding-left: 9px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -5px;
+        top: 2px;
+        width: 10px;
+        height: 10px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        background: var(--tl-color, var(--secondary));
+      }
+    }
+
+    &.tl-span {
+      border-radius: 3px;
+      background: color-mix(in srgb, var(--tl-color, var(--secondary)) 55%, transparent);
+
+      .tl-mark-label {
+        padding: 0 4px;
+        color: var(--dark);
+      }
+
+      &.tl-label-out .tl-mark-label {
+        position: absolute;
+        left: calc(100% + 4px);
+        padding: 0;
+        color: var(--darkgray);
+      }
+    }
+
+    &.tl-process {
+      border: 1px dashed var(--tl-color, var(--secondary));
+      background: color-mix(in srgb, var(--tl-color, var(--secondary)) 30%, transparent);
+      line-height: 12px;
+
+      .tl-mark-label {
+        font-style: italic;
+      }
+    }
+
+    &.tl-key {
+      .tl-mark-label {
+        font-weight: 700;
+        color: var(--dark);
+      }
+
+      &.tl-point::before {
+        box-shadow:
+          0 0 0 2px var(--light),
+          0 0 0 3.5px var(--tl-color, var(--secondary));
+      }
+    }
+
+    &.tl-dim {
+      opacity: 0.15;
+    }
+
+    &:hover .tl-mark-label,
+    &:focus-visible .tl-mark-label {
+      color: var(--secondary);
+    }
+  }
+
+  .tl-canvas.tl-focus a.tl-mark:not(.tl-on) {
+    opacity: 0.25;
+  }
+}
+
+// ─── Self-test: hide the dates or the titles until an entry is clicked ──────
+
+article.tl-test-dates,
+article.tl-test-titles {
+  .timeline-chart-wrap {
+    display: none;
+  }
+
+  .callout[data-callout="event"],
+  .callout[data-callout="process"] {
+    &:not(.tl-revealed) {
+      cursor: pointer;
+
+      & > .callout-content,
+      .tl-duration {
+        display: none;
+      }
+    }
+  }
+}
+
+article.tl-test-dates
+  .callout:is([data-callout="event"], [data-callout="process"]):not(.tl-revealed)
+  > .callout-title
+  strong,
+article.tl-test-titles
+  .callout:is([data-callout="event"], [data-callout="process"]):not(.tl-revealed)
+  > .callout-title
+  .tl-title-text {
+  border-radius: 3px;
+  background: var(--lightgray);
+  color: transparent;
+  user-select: none;
+}

@@ -16,3 +16,111 @@
   border-bottom: 1px solid var(--background-modifier-border);
   padding-bottom: 0.2em;
 }
+
+/* Timeline (Zeitstrahl): consecutive [!event], [!process] and [!period] callouts form one line.
+   List view only: the chart, the filters and the self-test exist on the site.
+   Mirrors quartz/components/styles/timeline.scss */
+:is(.callout[data-callout="event"], .callout[data-callout="process"], .callout[data-callout="period"]) {
+  position: relative;
+  margin: 0 0 0 0.6em;
+  padding: 0 0 1em 1.6em;
+  border: 0;
+  border-left: 2px solid var(--background-modifier-border);
+  border-radius: 0;
+  background: none;
+  overflow: visible;
+  mix-blend-mode: normal;
+}
+:is(.callout[data-callout="event"], .callout[data-callout="process"], .callout[data-callout="period"])::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 0.4em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--tl-color, var(--text-accent));
+  border: 2px solid var(--background-primary);
+}
+:is(.callout[data-callout="event"], .callout[data-callout="process"], .callout[data-callout="period"]) > .callout-title { padding: 0; gap: 0; color: var(--text-normal); }
+:is(.callout[data-callout="event"], .callout[data-callout="process"], .callout[data-callout="period"]) > .callout-title > .callout-icon { display: none; }
+:is(.callout[data-callout="event"], .callout[data-callout="process"], .callout[data-callout="period"]) > .callout-title strong {
+  display: inline-block;
+  min-width: 6.2em;
+  font-family: var(--font-monospace);
+  font-size: 0.9em;
+  color: var(--text-accent);
+}
+:is(.callout[data-callout="event"], .callout[data-callout="process"], .callout[data-callout="period"]) > .callout-title code { font-size: 0.7em; font-weight: normal; color: var(--text-muted); }
+:is(.callout[data-callout="event"], .callout[data-callout="process"], .callout[data-callout="period"]) > .callout-content { padding: 0; font-size: 0.95em; color: var(--text-muted); }
+:is(.callout[data-callout="event"], .callout[data-callout="process"], .callout[data-callout="period"]) > .callout-content > :first-child { margin-top: 0.3em; }
+:is(.callout[data-callout="event"], .callout[data-callout="process"], .callout[data-callout="period"]) > .callout-content > :last-child { margin-bottom: 0; }
+
+/* a process: a tall pill on the line instead of a round point */
+.callout[data-callout="process"]::before {
+  left: -7px;
+  top: 0.1em;
+  width: 8px;
+  height: 1.9em;
+  border-radius: 6px;
+}
+.callout[data-callout="process"]:is([data-callout-metadata~="war"], [data-callout-metadata~="political"], [data-callout-metadata~="social"], [data-callout-metadata~="economy"], [data-callout-metadata~="empire"], [data-callout-metadata~="ideas"], [data-callout-metadata~="law"])::before { left: -12px; width: 18px; border-radius: 11px; }
+.callout[data-callout="process"]:is([data-callout-metadata~="war"], [data-callout-metadata~="political"], [data-callout-metadata~="social"], [data-callout-metadata~="economy"], [data-callout-metadata~="empire"], [data-callout-metadata~="ideas"], [data-callout-metadata~="law"])::after {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: calc(0.1em + 6px);
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  -webkit-mask: var(--tl-icon) center / contain no-repeat;
+  mask: var(--tl-icon) center / contain no-repeat;
+}
+.callout[data-callout="process"] > .callout-title .callout-title-inner { font-style: italic; }
+
+/* a turning point: `key` after the bar */
+.callout[data-callout="event"][data-callout-metadata~="key"]::before { box-shadow: 0 0 0 2px var(--tl-color, var(--text-accent)); }
+.callout[data-callout="event"][data-callout-metadata~="key"] > .callout-title .callout-title-inner { font-weight: 700; font-size: 1.05em; }
+
+.callout[data-callout="period"] { padding-top: 0.9em; }
+.callout[data-callout="period"]::before {
+  left: -9px;
+  top: 1.25em;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background: var(--text-faint);
+}
+.callout[data-callout="period"] > .callout-title .callout-title-inner {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.9em;
+  color: var(--text-faint);
+}
+.callout[data-callout="period"] > .callout-title strong { color: var(--text-faint); }
+
+/* categories: `> [!event|war]`. A round badge in the category colour with its icon */
+.callout[data-callout="event"]:is([data-callout-metadata~="war"], [data-callout-metadata~="political"], [data-callout-metadata~="social"], [data-callout-metadata~="economy"], [data-callout-metadata~="empire"], [data-callout-metadata~="ideas"], [data-callout-metadata~="law"])::before {
+  left: -12px;
+  top: 0.05em;
+  width: 18px;
+  height: 18px;
+}
+.callout[data-callout="event"]:is([data-callout-metadata~="war"], [data-callout-metadata~="political"], [data-callout-metadata~="social"], [data-callout-metadata~="economy"], [data-callout-metadata~="empire"], [data-callout-metadata~="ideas"], [data-callout-metadata~="law"])::after {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: calc(0.05em + 5px);
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  -webkit-mask: var(--tl-icon) center / contain no-repeat;
+  mask: var(--tl-icon) center / contain no-repeat;
+}
+.callout:is([data-callout="event"], [data-callout="process"])[data-callout-metadata~="war"] { --tl-color: #b5533c; --tl-icon: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6z'/%3E%3C/svg%3E"); }
+.callout:is([data-callout="event"], [data-callout="process"])[data-callout-metadata~="political"] { --tl-color: #3d7a94; --tl-icon: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 21h18'/%3E%3Cpath d='M5 21V10'/%3E%3Cpath d='M10 21V10'/%3E%3Cpath d='M14 21V10'/%3E%3Cpath d='M19 21V10'/%3E%3Cpath d='m2 10 10-7 10 7z'/%3E%3C/svg%3E"); }
+.callout:is([data-callout="event"], [data-callout="process"])[data-callout-metadata~="social"] { --tl-color: #4f8a5b; --tl-icon: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='9' cy='8' r='3.5'/%3E%3Cpath d='M2 21v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v1'/%3E%3Cpath d='M16 4.5a3.5 3.5 0 0 1 0 7'/%3E%3Cpath d='M18.5 14.5A6 6 0 0 1 22 20v1'/%3E%3C/svg%3E"); }
+.callout:is([data-callout="event"], [data-callout="process"])[data-callout-metadata~="economy"] { --tl-color: #b08a2e; --tl-icon: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m3 17 6-6 4 4 8-8'/%3E%3Cpath d='M15 7h6v6'/%3E%3C/svg%3E"); }
+.callout:is([data-callout="event"], [data-callout="process"])[data-callout-metadata~="empire"] { --tl-color: #7d5ba6; --tl-icon: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M3 12h18'/%3E%3Cpath d='M12 3a14 14 0 0 1 0 18'/%3E%3Cpath d='M12 3a14 14 0 0 0 0 18'/%3E%3C/svg%3E"); }
+.callout:is([data-callout="event"], [data-callout="process"])[data-callout-metadata~="ideas"] { --tl-color: #2f8f8a; --tl-icon: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 7v14'/%3E%3Cpath d='M3 5h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v14h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3H3z'/%3E%3C/svg%3E"); }
+.callout:is([data-callout="event"], [data-callout="process"])[data-callout-metadata~="law"] { --tl-color: #6b7785; --tl-icon: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3v18'/%3E%3Cpath d='M7 21h10'/%3E%3Cpath d='M5 7h14'/%3E%3Cpath d='m5 7-3 7a3 3 0 0 0 6 0z'/%3E%3Cpath d='m19 7-3 7a3 3 0 0 0 6 0z'/%3E%3C/svg%3E"); }
