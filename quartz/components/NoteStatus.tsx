@@ -29,6 +29,7 @@ const TYPE_LABELS: Record<string, string> = {
   norm: "Legal Norm",
   judgment: "Judgment",
   meta: "Meta",
+  idea: "Idea",
 }
 
 const STATUS_LABELS: Record<string, string> = {
@@ -57,6 +58,15 @@ export default (() => {
     const courses = (Array.isArray(fm.courses) ? fm.courses : [fm.courses]).filter(
       (c): c is string => typeof c === "string" && c.trim() !== "",
     )
+    // ideas (type: idea): how far the idea has come, what it is meant to become, when it was captured
+    const stage = asString(fm.stage)
+    const output = asString(fm.output)
+    const captured =
+      fm.captured instanceof Date
+        ? fm.captured.toISOString().slice(0, 16).replace("T", " ")
+        : typeof fm.captured === "string"
+          ? fm.captured.trim().replace("T", " ")
+          : undefined
     const review = fm.review instanceof Date ? fm.review.toISOString().slice(0, 10) : fm.review
 
     const qards = fileData.qards ?? []
@@ -77,6 +87,24 @@ export default (() => {
           <span class={`ns-item ns-status ns-status-${status}`}>
             <span class="ns-key">MATURITY</span>
             {STATUS_LABELS[status] ?? status}
+          </span>
+        )}
+        {stage && (
+          <span class={`ns-item ns-stage ns-stage-${stage}`}>
+            <span class="ns-key">STAGE</span>
+            {stage}
+          </span>
+        )}
+        {output && (
+          <span class="ns-item">
+            <span class="ns-key">FOR</span>
+            {output}
+          </span>
+        )}
+        {captured && (
+          <span class="ns-item">
+            <span class="ns-key">CAPTURED</span>
+            {captured}
           </span>
         )}
         {confidence && (

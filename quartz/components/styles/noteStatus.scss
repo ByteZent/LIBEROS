@@ -59,6 +59,28 @@
     color: #2f8f6f;
   }
 
+  .ns-stage-spark {
+    border-color: #6b8f3a;
+    color: #6b8f3a;
+  }
+
+  .ns-stage-exploring,
+  .ns-stage-outlined,
+  .ns-stage-drafting {
+    border-color: var(--tertiary);
+    color: var(--tertiary);
+  }
+
+  .ns-stage-written {
+    border-color: #2f8f6f;
+    color: #2f8f6f;
+  }
+
+  .ns-stage-dropped {
+    color: var(--gray);
+    text-decoration: line-through;
+  }
+
   .ns-confidence-low {
     color: #b5533c;
     border-color: #b5533c;
