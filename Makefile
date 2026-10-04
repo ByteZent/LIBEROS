@@ -16,7 +16,7 @@ help: ## Show this help
 	@awk 'BEGIN {FS = ":.*## "} /^[a-zA-Z_-]+:.*## / {printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 	@echo
 	@echo "  make new TYPE=concept TITLE=\"Escalation Dominance\""
-	@echo "  types: concept model actor thinker key-work case-study judgment legal-norm assessment framework synthesis source open-question course-map idea"
+	@echo "  types: concept model actor thinker key-work case-study judgment legal-norm assessment framework synthesis source open-question course-map idea mind-map"
 	@echo "  make idea TITLE=\"Working title\" TEXT=\"The idea in a sentence or two\""
 
 ## ── Setup & site ────────────────────────────────────────────────────────────
