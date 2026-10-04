@@ -137,7 +137,7 @@ if (!code) {
     process.exit(1)
   }
   const rows = codes.map((c) => {
-    const hits = all.filter((n) => n.courses.includes(c))
+    const hits = all.filter((n) => n.courses.includes(c) && n.type !== "idea")
     const map = maps.get(c)
     const { assessments = [], objectives = [] } = map ? parseMap(map) : {}
     const next = assessments
@@ -163,7 +163,9 @@ if (!code) {
 
 // ── one course ───────────────────────────────────────────────────────────────
 
-const hits = all.filter((n) => n.courses.includes(code))
+// an idea for a paper belongs to the course, but it is not a note to learn from
+const hits = all.filter((n) => n.courses.includes(code) && n.type !== "idea")
+const ideas = all.filter((n) => n.courses.includes(code) && n.type === "idea")
 const map = maps.get(code)
 console.log(`${map?.title ?? code} · ${code}`)
 
@@ -238,4 +240,8 @@ for (const status of [...STATUSES, undefined]) {
   console.log(`  ${status ?? "no status"} (${group.length})`)
   for (const n of group)
     console.log(`    ${String(n.type ?? "").padEnd(10)} ${n.file}  (${plural(n.cards, "card")})`)
+}
+if (ideas.length) {
+  console.log(`\n── ideas (${ideas.length})`)
+  for (const n of ideas) console.log(`    ${String(n.stage ?? "spark").padEnd(10)} ${n.file}`)
 }

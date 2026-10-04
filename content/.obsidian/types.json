@@ -21,6 +21,9 @@
     "court": "text",
     "decided": "date",
     "in_force": "date",
-    "citekey": "text"
+    "citekey": "text",
+    "stage": "text",
+    "output": "text",
+    "captured": "datetime"
   }
 }

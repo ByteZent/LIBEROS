@@ -10,13 +10,14 @@ MSG     ?= edit: update notes $(TODAY)
 NOTES   := find $(VAULT)/0[1-9]-* -name '*.md' ! -name index.md -print0
 
 .DEFAULT_GOAL := help
-.PHONY: help install hooks serve serve-pwa serve-private build clean check lint format typecheck logo sources bib-merge new course glossary questions bridges review stats inbox open publish update
+.PHONY: help install hooks serve serve-pwa serve-private build clean check lint format typecheck logo sources bib-merge new course glossary questions bridges idea ideas review stats inbox open publish update
 
 help: ## Show this help
 	@awk 'BEGIN {FS = ":.*## "} /^[a-zA-Z_-]+:.*## / {printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 	@echo
 	@echo "  make new TYPE=concept TITLE=\"Escalation Dominance\""
-	@echo "  types: concept model actor thinker key-work case-study judgment legal-norm assessment framework synthesis source open-question course-map"
+	@echo "  types: concept model actor thinker key-work case-study judgment legal-norm assessment framework synthesis source open-question course-map idea"
+	@echo "  make idea TITLE=\"Working title\" TEXT=\"The idea in a sentence or two\""
 
 ## ── Setup & site ────────────────────────────────────────────────────────────
 
@@ -91,6 +92,12 @@ questions: ## Build the open-questions page from the notes' Open Questions secti
 
 bridges: ## Bridge prompts: unlinked note pairs that share tags (INBOX=1: incl. _inbox; N=15)
 	@node scripts/bridges.mjs $(if $(INBOX),--inbox) $(N)
+
+idea: ## Capture an idea for a paper or page, timestamped, in 09-Learning/94-Ideas (TITLE="…" TEXT="…")
+	@node scripts/ideas.mjs new "$(TITLE)" "$(TEXT)"
+
+ideas: ## The idea board: every idea by stage, with its age
+	@node scripts/ideas.mjs
 
 review: ## List notes whose review date is due (today or earlier)
 	@grep -rl --include='*.md' '^review: [0-9]' $(VAULT) | grep -v '/_templates/' | while read -r f; do \

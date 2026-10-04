@@ -52,6 +52,20 @@ views:
       - type
       - domain
   - type: table
+    name: Ideas
+    filters:
+      and:
+        - 'type == "idea"'
+    order:
+      - file.name
+      - stage
+      - output
+      - courses
+      - captured
+    sort:
+      - property: captured
+        direction: DESC
+  - type: table
     name: Inbox to process
     filters:
       and:
