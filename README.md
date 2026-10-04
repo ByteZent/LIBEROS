@@ -50,7 +50,9 @@ Everything runs through `make` (`make help` lists all targets):
 | `make serve-pwa`                            | Same, with the service worker on (offline / install testing, port 8080 → use `PORT=8090`) |
 | `make new TYPE=concept TITLE="Escalation"`  | New note from a template in `_inbox/`                                                     |
 | `make inbox`                                | List unprocessed captures                                                                 |
-| `make course COURSE=PP-ECON-1`              | Exam prep: every note tagged with that course, by maturity                                |
+| `make course`                               | Exam readiness for every course: days to the next assessment, notes, objectives covered   |
+| `make course COURSE=PP-ECON-1`              | One course: open items before each assessment, objectives, notes (`SYNC=1`: update map)   |
+| `make bridges`                              | Bridge prompts: unlinked notes that share tags (`INBOX=1`, `N=15`)                        |
 | `make review`                               | Notes whose `review:` date is due                                                         |
 | `make sources`                              | Check the bibliography: duplicates, unknown `[@citekeys]`                                 |
 | `make bib-merge`                            | Merge all course `.bib` files from the study vault for Zotero import                      |
@@ -71,17 +73,17 @@ In Obsidian: open `LIBEROS/content` as the vault. New notes land in `_inbox/`; i
 
 Every commit message has the form `<type>(<scope>): <subject>`. The scope is optional. A git hook (`.githooks/commit-msg`, enabled by `make hooks` or `make install`) rejects anything else, and the site's `/changelog` page is built from these messages.
 
-| Type | Use for | Example |
-|---|---|---|
-| `note` | New notes | `note(MikroEcon): add Elasticity and Consumer Choice` |
-| `edit` | Changes to existing notes: content, cards, glossary | `edit(L1): add application cards to OODA Loop` |
-| `fix` | Corrections: wrong fact, typo, broken link, bug | `fix: use ounces in the farmer and rancher example` |
-| `site` | What visitors see: components, layout, styles | `site(flashcards): add missed pile and mixed deck` |
-| `tool` | Scripts, Makefile, templates, lint, hooks | `tool: add note lint to make check` |
-| `meta` | Vault documentation, standards, course maps | `meta: add course maps for HS26` |
-| `chore` | Dependencies, config, housekeeping. Hidden in the changelog | `chore: update Quartz` |
+| Type    | Use for                                                     | Example                                               |
+| ------- | ----------------------------------------------------------- | ----------------------------------------------------- |
+| `note`  | New notes                                                   | `note(MikroEcon): add Elasticity and Consumer Choice` |
+| `edit`  | Changes to existing notes: content, cards, glossary         | `edit(L1): add application cards to OODA Loop`        |
+| `fix`   | Corrections: wrong fact, typo, broken link, bug             | `fix: use ounces in the farmer and rancher example`   |
+| `site`  | What visitors see: components, layout, styles               | `site(flashcards): add missed pile and mixed deck`    |
+| `tool`  | Scripts, Makefile, templates, lint, hooks                   | `tool: add note lint to make check`                   |
+| `meta`  | Vault documentation, standards, course maps                 | `meta: add course maps for HS26`                      |
+| `chore` | Dependencies, config, housekeeping. Hidden in the changelog | `chore: update Quartz`                                |
 
-The first line is at most 72 characters, says what changed in the imperative ("add", not "added") and has no full stop. One kind of change per commit: a commit that adds notes *and* changes the site is two commits. Merge commits, reverts and dependency bumps are exempt.
+The first line is at most 72 characters, says what changed in the imperative ("add", not "added") and has no full stop. One kind of change per commit: a commit that adds notes _and_ changes the site is two commits. Merge commits, reverts and dependency bumps are exempt.
 
 ## Frontmatter
 
@@ -94,6 +96,10 @@ The first line is at most 72 characters, says what changed in the imperative ("a
 | `courses`    | course codes, e.g. `[PP-ECON-1]`, used by `make course` and the dashboard                                                        | –                        |
 | `review`     | `YYYY-MM-DD`                                                                                                                     | status strip + dashboard |
 | `draft`      | `true` → excluded from the site                                                                                                  | –                        |
+
+## Flashcards
+
+Every `> [!qard]- Question` callout is a card on `/flashcards/`. The site schedules each card by how you rated it (spaced repetition, stored in the browser; export and import on the overview page). `<!-- qard-hide: Label; Label -->` under an SVG makes an image card with hidden labels, `<!-- qard-solution -->` a calculation card with a folded worked solution, `<!-- qard-write -->` a card whose answer you write first and then compare (the _Write answers_ button does that for a whole deck), and each `## Key Connections` line becomes a bridge card in `/flashcards/connections`. Details: `content/00-Meta/Note Standards.md`.
 
 Custom callouts (styled identically in Obsidian and on the site): `[!bluf]`, `[!assessment]`, `[!counter]`, `[!source]`.
 

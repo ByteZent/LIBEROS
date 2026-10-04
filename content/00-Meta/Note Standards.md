@@ -62,6 +62,45 @@ Concept, model, framework and legal notes end with `## Self-Test: <short topic>`
 - Recall is not enough. Every self-test has at least one card that makes me **use** the idea: apply it to a case, compare it with a neighbouring concept, or name where it fails.
 - `make lint` reports notes with cards but no `qard-deck`, and self-tests that only ask for recall.
 
+### Spaced repetition
+
+The site schedules every card by how I rated it. A card I knew when it was due moves up one box and comes back after 1, 3, 7, 14, 30, 60 and 120 days. A card I missed goes back to box 1 and comes back the next day. A deck opens on what is due today; *All cards* goes through everything without moving cards up early. The history is kept in the browser, per device: *Export progress* and *Import progress* on `/flashcards/` carry it to another one. Rewording a question resets that card.
+
+### Card types
+
+Three comments turn a card into more than text. Obsidian ignores them and shows the whole callout.
+
+**Image card:** put an SVG diagram in the card and name the labels to hide, separated by `;`. On the site each label becomes (1), (2), … until the card is turned. A label is the exact text of one `<text>` element in the SVG. `make lint` reports a label that the diagram does not have.
+
+```markdown
+> [!qard]- Diagram: name the two lanes (1) and (2).
+> ![[ooda-loop-boyd.svg]]
+> <!-- qard-hide: IMPLICIT GUIDANCE & CONTROL; FEEDBACK · UNFOLDING INTERACTION WITH ENVIRONMENT -->
+> (1) Implicit guidance and control. (2) Feedback.
+```
+
+**Calculation card:** start the question with *Calculate:*, give the result first and the steps after `<!-- qard-solution -->`. The site asks me to work on paper, shows the result when the card is turned and keeps the steps folded under *Worked solution*.
+
+```markdown
+> [!qard]- Calculate: $Q_D = 100 - 2P$ and $Q_S = 20 + 2P$. Find the equilibrium.
+> $P^* = 20$, $Q^* = 60$.
+> <!-- qard-solution -->
+> 1. Set $Q_D = Q_S$: $4P = 80$, so $P^* = 20$.
+> 2. Insert: $Q^* = 100 - 40 = 60$.
+```
+
+**Written card:** `<!-- qard-write -->` anywhere in the card. The site shows a text field under the question; I write the answer, turn the card (Ctrl or ⌘ + Enter) and see my text above the card's answer before I rate myself. Use it for *explain* and *apply* questions, where recognising the answer is easier than producing it. The *Write answers* button on a deck does the same for every card, without the comment. What I write is not stored.
+
+```markdown
+> [!qard]- Why is orientation the central element?
+> <!-- qard-write -->
+> It determines what is observed, which options are visible, and how risks are judged.
+```
+
+### Bridge cards
+
+Every line under `## Key Connections` of the form `- [[Other Note]]: how it relates` becomes a card "How does *this note* relate to *Other Note*?" in the deck `/flashcards/connections`. So the text after the colon has to answer that question on its own. `make bridges` lists the opposite: notes that share tags but do not link to each other yet.
+
 ## Sources
 
 - Cite with citekeys: `[@osinga2007science]`, `[@weick1995sensemaking, p. 17]`. Keys come from Zotero (see `bibliography/README.md`). Never type a full reference by hand.
