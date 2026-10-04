@@ -1,11 +1,11 @@
 ---
 title: Learning
-description: "The learning engine: maps of content, open questions, course maps and ideas."
+description: "The learning engine: maps of content, open questions, course maps, ideas and mind maps."
 type: moc
 created: 2026-09-29
 ---
 
-The learning engine: maps of content, open questions, course maps and ideas.
+The learning engine: maps of content, open questions, course maps, ideas and mind maps.
 
 ## Sections
 
@@ -13,3 +13,4 @@ The learning engine: maps of content, open questions, course maps and ideas.
 - **Open Questions**: Questions I cannot answer yet. Each one is a research thread.
 - **Course Maps**: One note per course, linking to vault concepts (not copying study notes).
 - **Ideas**: Ideas for papers, essays and pages, timestamped, each at a stage from spark to written.
+- **Mind Maps**: One map per topic that collects ideas, notes, pages and links as branches that can be folded and filtered.

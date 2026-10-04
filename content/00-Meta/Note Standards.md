@@ -18,7 +18,7 @@ tags:
 
 ```yaml
 type: concept | model | actor | thinker | work | case | judgment | norm | assessment | framework | synthesis | source | question | moc | idea
-domain: [economics, policy]   # one or more: strategy · military · policy · economics · law · ir · security · intelligence · technology
+domain: [economics, policy]   # one or more: strategy · military · policy · economics · law · ir · security · intelligence · technology · psychology · sociology
 courses: [PP-ECON-1]          # course codes this note serves (see Course Maps); shown as a COURSE badge
 status: seedling | developing | evergreen
 confidence: low | medium | high
@@ -145,6 +145,7 @@ output: paper                # what it should become: paper · essay · page · 
 | `> [!cloze]` | Cloze flashcard: one sentence, the parts to recall `==highlighted==` |
 | `> [!event\|war key]` | One entry on a timeline: category and `key` after the bar, the date in bold starts the title, the body holds the notes and fields. See [[Britain 1780–1939 (Timeline)#How to add to the timeline]] |
 | `> [!process\|economy]` | A development without a single date on a timeline, written like an event with a range |
+| `> [!mindmap] Topic` | A mind map: the nested list inside is drawn as a map. Links of any kind in a node, words in backticks are tags to filter by. Template: `T - Mind Map`, folder `09-Learning/95-Mind-Maps` |
 | `> [!period]` | An era heading on a timeline, written like an event |
 
 ## Folders
