@@ -5,6 +5,8 @@
 // The chart, the filters and the self-test are built by scripts/timeline.inline.ts.
 // Mirrored (list view only) in content/.obsidian/snippets/liberos.css.
 
+@use "sass:list";
+
 $categories: (
   "war": (
     #b5533c,
@@ -135,8 +137,8 @@ $categories: (
   .callout[data-callout="event"][data-callout-metadata~="#{$name}"],
   .callout[data-callout="process"][data-callout-metadata~="#{$name}"],
   .timeline-tools [data-category="#{$name}"] {
-    --tl-color: #{nth($def, 1)};
-    --tl-icon: #{icon(nth($def, 2))};
+    --tl-color: #{list.nth($def, 1)};
+    --tl-icon: #{icon(list.nth($def, 2))};
   }
 
   .callout[data-callout="event"][data-callout-metadata~="#{$name}"] {
