@@ -60,6 +60,12 @@ Concept, model, framework and legal notes end with `## Self-Test: <short topic>`
 - `qard-deck:` in the frontmatter names the deck: the course code, normally the first entry of `courses`. The text after "Self-Test:" becomes the topic inside the deck.
 - One fact or one distinction per card. Keep the answer under about 40 words, so I can grade myself honestly.
 - Recall is not enough. Every self-test has at least one card that makes me **use** the idea: apply it to a case, compare it with a neighbouring concept, or name where it fails.
+- The rows of a note's `## Glossary` table become cards by themselves: German term on the front, English term and definition on the back, in the deck `/flashcards/glossary`, grouped by course. A term keeps its review history when its note moves.
+- The same rows give a second deck in the other direction, `/flashcards/glossary-reverse` (English to German).
+- A definition I must reproduce word for word is a cloze card: `> [!cloze] Politics is ==social action== aimed at …`. The front blanks every highlighted part, the back shows the sentence in full.
+- Every course note with a BLUF gives one blank-page card in `/flashcards/recall`: the title only, everything I know in writing, then the BLUF for comparison.
+- Rating a card: *missed* sends it back to box 1, *hard* keeps it in its box and brings it back in half the time, *knew it* moves it up. A card missed on three days is a **leech** ("Leeches" in the deck's card selection): rewrite the card or the note.
+- **Exam** in a deck: ten cards of the chosen topic against the clock (two minutes each), every answer in writing and in German, nothing shown until the end.
 - `make lint` reports notes with cards but no `qard-deck`, and self-tests that only ask for recall.
 
 ### Spaced repetition
@@ -136,6 +142,7 @@ output: paper                # what it should become: paper · essay · page · 
 | `> [!source]` | Direct quotation from a primary source |
 | `> [!question]` | Open question |
 | `> [!qard]-` | Flashcard: question in the title, answer in the body |
+| `> [!cloze]` | Cloze flashcard: one sentence, the parts to recall `==highlighted==` |
 | `> [!event\|war key]` | One entry on a timeline: category and `key` after the bar, the date in bold starts the title, the body holds the notes and fields. See [[Britain 1780–1939 (Timeline)#How to add to the timeline]] |
 | `> [!process\|economy]` | A development without a single date on a timeline, written like an event with a range |
 | `> [!period]` | An era heading on a timeline, written like an event |

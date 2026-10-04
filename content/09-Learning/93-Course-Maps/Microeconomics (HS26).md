@@ -31,13 +31,13 @@ The course makes decisions under scarcity analysable: how households, firms and 
 
 | Objective | Notes | Ready? |
 |---|---|---|
-| Apply scarcity, opportunity cost and incentives | [[Ten Principles of Economics]] | ☑ seedling (in `_inbox`) |
-| Keep positive and normative statements apart | [[Ten Principles of Economics]] · [[Production Possibilities Frontier]] | ☑ seedling (in `_inbox`) / developing |
+| Apply scarcity, opportunity cost and incentives | [[Ten Principles of Economics]] | ☑ seedling |
+| Keep positive and normative statements apart | [[Ten Principles of Economics]] · [[Production Possibilities Frontier]] | ☑ seedling / developing |
 | Explain the circular flow and the production possibilities frontier | [[Circular Flow Diagram]] · [[Production Possibilities Frontier]] | ☑ developing |
 | Tell absolute from comparative advantage by calculation | [[Comparative Advantage]] | ☑ seedling (in `_inbox`) |
 | Analyse shifts of supply and demand in a diagram | [[Supply and Demand]] | ☑ developing |
 | Explain equilibrium, surpluses and ambiguous double shifts | [[Supply and Demand]] | ☑ developing |
-| Elasticities: compute them, classify demand and supply, link to total revenue | [[Elasticity]] | ☑ seedling (in `_inbox`) |
+| Elasticities: compute them, classify demand and supply, link to total revenue | [[Elasticity]] | ☑ seedling |
 | Consumer decisions: budget constraint, indifference curves, optimum, income and substitution effect | [[Consumer Choice]] | ☑ seedling (in `_inbox`) |
 | Efficiency of markets; market interventions |  | ☐ no note yet |
 | Production and costs; perfect competition |  | ☐ no note yet |

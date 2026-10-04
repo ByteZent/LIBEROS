@@ -30,7 +30,7 @@ The course trains you to recognise private-law problems in professional and ever
 
 | Objective | Notes | Ready? |
 |---|---|---|
-| Place the sources of obligations and the formation of a contract | [[Obligation (OR)]] · [[Formation of a Contract]] | ☑ seedling (in `_inbox`) |
+| Place the sources of obligations and the formation of a contract | [[Obligation (OR)]] · [[Formation of a Contract]] | ☑ seedling / seedling (in `_inbox`) |
 | Check capacity to act, form and limits of content systematically | [[Validity of a Contract]] | ☑ seedling (in `_inbox`) |
 | Tell the defects of consent apart and determine the legal consequences | [[Defects of Consent]] | ☑ seedling (in `_inbox`) |
 | Tell mandate, contract for work and employment contract apart and check defects of a work | [[Contract for Work and Services]] | ☑ seedling (in `_inbox`) |
