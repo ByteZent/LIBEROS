@@ -29,12 +29,12 @@ The course studies the military as an organisation and institution inside societ
 
 | Objective | Notes | Ready? |
 |---|---|---|
-| Define sociological terms precisely and tell them apart | [[Sociology - Levels and Schools]] · [[Values and Norms]] | ☑ seedling (in `_inbox`) |
-| Link micro, meso and macro level through a mechanism | [[Sociology - Levels and Schools]] | ☑ seedling (in `_inbox`) |
-| Explain social change with three approaches and name their limits | [[Social Change]] | ☑ seedling (in `_inbox`) |
+| Define sociological terms precisely and tell them apart | [[Sociology - Levels and Schools]] · [[Values and Norms]] | ☑ seedling |
+| Link micro, meso and macro level through a mechanism | [[Sociology - Levels and Schools]] | ☑ seedling |
+| Explain social change with three approaches and name their limits | [[Social Change]] | ☑ seedling |
 | Use types of society as ideal types, not as exact pictures | [[Social Change]] | ☐ covered only in passing: needs a note on diagnoses of modern society |
-| Check value change and claims about generations critically | [[Value Change (Inglehart)]] · [[Generations and the Military]] | ☑ seedling (in `_inbox`) |
-| Carry every relation over to the military or Swiss society | [[Generations and the Military]] · [[Value Change (Inglehart)]] | ☑ seedling (in `_inbox`) |
+| Check value change and claims about generations critically | [[Value Change (Inglehart)]] · [[Generations and the Military]] | ☑ seedling / seedling (in `_inbox`) |
+| Carry every relation over to the military or Swiss society | [[Generations and the Military]] · [[Value Change (Inglehart)]] | ☑ seedling (in `_inbox`) / seedling |
 | Demographic change; social structure |  | ☐ no note yet |
 | Institutions and organisations |  | ☐ no note yet |
 | Scope and classics of military sociology; power, rule and violence |  | ☐ no note yet |

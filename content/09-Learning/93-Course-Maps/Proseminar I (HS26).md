@@ -31,9 +31,9 @@ The proseminar leads from the critical reading of scientific texts to a small re
 
 | Objective | Notes | Ready? |
 |---|---|---|
-| Formulate research questions, theories and hypotheses precisely | [[Research Design]] | ☑ seedling (in `_inbox`) |
-| Tell induction, deduction and falsification apart | [[Falsificationism]] | ☑ seedling (in `_inbox`) |
-| Reflect on value judgements, theory-ladenness and bias | [[Bias in Research]] · [[Empirical-Analytical vs Hermeneutic Research]] | ☑ seedling / seedling (in `_inbox`) |
+| Formulate research questions, theories and hypotheses precisely | [[Research Design]] | ☑ seedling |
+| Tell induction, deduction and falsification apart | [[Falsificationism]] | ☑ seedling |
+| Reflect on value judgements, theory-ladenness and bias | [[Bias in Research]] · [[Empirical-Analytical vs Hermeneutic Research]] | ☑ seedling |
 | Search, check and process literature systematically |  | ☐ no note yet: literature search and Zotero workflow |
 | Write a traceable scientific argument | [[CREW]] | ☑ seedling |
 | Structure of scientific texts; abstract, introduction, conclusion |  | ☐ no note yet |

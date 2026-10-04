@@ -32,10 +32,10 @@ The course gives the concepts and methods to describe and explain political orde
 
 | Objective | Notes | Ready? |
 |---|---|---|
-| Define politics, state, sovereignty and state activity precisely | [[Polity, Policy, Politics]] · [[Sovereign Territorial State]] · [[Political System Model]] | ☑ seedling / seedling (in `_inbox`) |
-| Tell research questions, theories, hypotheses and concepts apart | [[Research Design]] · [[Empirical-Analytical vs Hermeneutic Research]] · [[Falsificationism]] | ☑ seedling (in `_inbox`) |
-| Judge operationalisation, case selection and research design | [[Research Design]] · [[Bias in Research]] | ☑ seedling (in `_inbox`) / seedling |
-| Check experiments, forecasts and typical fallacies critically | [[Bias in Research]] · [[Falsificationism]] | ☑ seedling / seedling (in `_inbox`) |
+| Define politics, state, sovereignty and state activity precisely | [[Polity, Policy, Politics]] · [[Sovereign Territorial State]] · [[Political System Model]] | ☑ seedling |
+| Tell research questions, theories, hypotheses and concepts apart | [[Research Design]] · [[Empirical-Analytical vs Hermeneutic Research]] · [[Falsificationism]] | ☑ seedling |
+| Judge operationalisation, case selection and research design | [[Research Design]] · [[Bias in Research]] | ☑ seedling |
+| Check experiments, forecasts and typical fallacies critically | [[Bias in Research]] · [[Falsificationism]] | ☑ seedling |
 | Compare and explain political phenomena systematically | [[Democratic State]] · [[Autocratic State]] | ☑ seedling |
 | Elections and direct democracy (ch. 5) |  | ☐ no note yet |
 | Attitudes and political behaviour (ch. 6) |  | ☐ no note yet |

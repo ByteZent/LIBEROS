@@ -35,9 +35,9 @@ The course explains the experience and behaviour of people in training, leadersh
 | Define the subject of military psychology from several perspectives | [[Holistic Model of Military Psychology]] | ☑ seedling (in `_inbox`) |
 | Explain selection, motivation, self-reflection and resilience | [[Holistic Model of Military Psychology]] | ☑ seedling (in `_inbox`) |
 | Tell the psychological schools apart by guiding question and mechanism | [[Menschenbilder in Psychology]] | ☑ seedling |
-| Explain cognition as active information processing | [[Perception]] · [[Attention and Automatisation]] · [[Memory]] | ☑ seedling (in `_inbox`) / seedling |
-| Describe the perceptual process from stimulus to action | [[Perception]] | ☑ seedling (in `_inbox`) |
-| Carry psychological models over to military cases with reasons | [[Attribution]] · [[Cognitive Dissonance]] · [[Heuristics and Anchoring]] · [[Cognitive Warfare]] | ☑ seedling / seedling (in `_inbox`) |
+| Explain cognition as active information processing | [[Perception]] · [[Attention and Automatisation]] · [[Memory]] | ☑ seedling |
+| Describe the perceptual process from stimulus to action | [[Perception]] | ☑ seedling |
+| Carry psychological models over to military cases with reasons | [[Attribution]] · [[Cognitive Dissonance]] · [[Heuristics and Anchoring]] · [[Cognitive Warfare]] | ☑ seedling |
 | Thinking, judging and deciding | [[Heuristics and Anchoring]] | ☐ partly: needs a note on judgement and decision |
 | Cognitive flexibility and adaptive action |  | ☐ no note yet |
 | Emotions and emotion regulation |  | ☐ no note yet |
