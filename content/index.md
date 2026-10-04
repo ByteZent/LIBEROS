@@ -14,13 +14,11 @@ It is built note by note while I study Public Policy and Military Strategy. Each
 ## Start here
 
 - [[Glossary|Glossar]]
-- [[/tags/course/| Courses]]
+- [[/tags/course/|Courses]]
 - [[/flashcards/|Flashcards]]
 - [[Open Questions in the Notes|Open questions]]
+- [[09-Learning/94-Ideas/|Ideas]]
 - [[/changelog|Changelog]]
-- [[Menschenbilder in Psychology|5 Menschenbilder]]
-- [[OODA Loop|OODA Loop nach Boyd]]
-- [[Doctrine (Swiss Armed Forces)| Doctrin - Swiss Armed Forces]]
 
 ## Knowledge Base
 
@@ -33,7 +31,7 @@ It is built note by note while I study Public Policy and Military Strategy. Each
   <a class="section-card internal" href="./06-Frameworks-and-Methods/"><span class="num">06</span><span class="name">Frameworks &amp; Methods</span><span class="desc">Analytical tools for strategy, policy analysis and research.</span></a>
   <a class="section-card internal" href="./07-Syntheses/"><span class="num">07</span><span class="name">Syntheses</span><span class="desc">Essays and comparisons built from the network of notes.</span></a>
   <a class="section-card internal" href="./08-Library/"><span class="num">08</span><span class="name">Library</span><span class="desc">Books, articles, doctrine, legal sources, reading lists.</span></a>
-  <a class="section-card internal" href="./09-Learning/"><span class="num">09</span><span class="name">Learning</span><span class="desc">Maps of content, open questions, course maps.</span></a>
+  <a class="section-card internal" href="./09-Learning/"><span class="num">09</span><span class="name">Learning</span><span class="desc">Maps of content, open questions, course maps, ideas.</span></a>
 </div>
 
 ## Graph
