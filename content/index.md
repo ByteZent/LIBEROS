@@ -15,7 +15,7 @@ It is built note by note while I study Public Policy and Military Strategy. Each
 
 - **Understand the vault:** [[About]] · [[Learning System]] · [[Note Standards]]
 - **Browse by course:** [[09-Learning/93-Course-Maps/|Course maps]] · [[/tags/course/|Notes by course]]
-- **Revise:** [[/flashcards/|Flashcards]] · [[Glossary]]
+- **Revise:** [[/flashcards/|Flashcards]] · [[Glossary]] · [[/flashcards/glossary|Glossary deck]]
 - **Think further:** [[Open Questions in the Notes|Open questions]] · [[09-Learning/94-Ideas/|Ideas]]
 - **Follow along:** [[/changelog|Changelog]]
 

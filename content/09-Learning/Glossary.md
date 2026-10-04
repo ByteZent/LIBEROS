@@ -13,12 +13,14 @@ draft: false
 ---
 
 > [!bluf]
-> Every German term from the notes' glossaries with its English equivalent and a one-line definition, 103 terms in alphabetical order.
+> Every German term from the notes' glossaries with its English equivalent and a one-line definition, 136 terms in alphabetical order.
 >
 > **Be able to:**
-> - **apply** = core term that carries a concept or model: explain it and use it on a case (53)
-> - **define** = technical term: give its definition (42)
-> - **translate** = plain vocabulary: know the equivalent (8).
+> - **apply** = core term that carries a concept or model: explain it and use it on a case (73)
+> - **define** = technical term: give its definition (52)
+> - **translate** = plain vocabulary: know the equivalent (11).
+>
+> Study the terms as flashcards: [[/flashcards/glossary|Glossary deck]].
 >
 > This page is **generated** by `make glossary`.
 > Do not edit it: change the glossary table in the note and run the command again.
@@ -34,6 +36,7 @@ draft: false
 | **allgemein verbindlich** | Generally binding | All members of a certain group have to accept and follow it. | apply |
 | **Allgemeine Modelltheorie** | General model theory | Stachowiak's theory that every model maps an original, reduces it, and serves a purpose for someone. | apply |
 | Anekdotische Evidenz | Anecdotal evidence | A single vivid case used as proof of a general rule. | define |
+| **Anreiz** | Incentive | Something that moves a person to act, such as a reward or a penalty. | apply |
 | Antwortausfall | Non-response | Selected persons do not take part in a survey or skip questions. | define |
 | **Attribution / Ursachenzuschreibung** | Attribution, causal ascription | The explanation a person gives for the cause of behaviour or of a result. | apply |
 | Aufgabenschwierigkeit / Glück | Task difficulty / luck | The two external causes: the lasting difficulty of the task and changeable luck. | define |
@@ -72,8 +75,12 @@ draft: false
 
 | Deutsch | English | Definition | Be able to |
 |---|---|---|---|
+| **Einkommenselastizität der Nachfrage** | Income elasticity of demand | Percentage change in quantity demanded divided by the percentage change in income. | apply |
 | Einparteienregime | Single-party regime | An autocracy in which a party organisation holds power. | define |
+| elastisch / unelastisch | Elastic / inelastic | Elasticity above 1 / below 1. | define |
+| **Elastizität** | Elasticity | How strongly quantity demanded or supplied reacts to a change in one of its determinants, as a ratio of percentage changes. | apply |
 | **eng gefasste / umfassende Demokratiedefinition** | Narrow / broad definition of democracy | Elections, competition and changes of power suffice, or further conditions such as liberties and the rule of law are required. | apply |
+| **Externalität** | Externality | The effect of one person's action on the welfare of an uninvolved third party. | apply |
 
 ## F
 
@@ -90,8 +97,12 @@ draft: false
 
 | Deutsch | English | Definition | Be able to |
 |---|---|---|---|
+| Geldmenge | Money supply | The amount of money in circulation in an economy. | translate |
+| **Gesamterlös (Umsatz)** | Total revenue | Price times quantity sold: what buyers pay and sellers receive. | apply |
+| **Geschäftsführung ohne Auftrag** | Agency without authority | Acting in another person's affairs without being mandated (Art. 419 OR). | apply |
 | Gesetzgebungsverfahren | Legislative procedure | The steps by which a law is drafted, debated and adopted. | translate |
 | **Gewaltenteilung** | Separation of powers | Division of state power among legislature, executive and judiciary, which check each other. | apply |
+| **Grenznutzen / Grenzkosten** | Marginal benefit / marginal cost | The additional benefit and the additional cost of one more unit. | apply |
 
 ## H
 
@@ -121,16 +132,20 @@ draft: false
 | Deutsch | English | Definition | Be able to |
 |---|---|---|---|
 | Kanonenbootdiplomatie | Gunboat diplomacy | Securing interests by showing or threatening naval force. | define |
+| **Knappheit** | Scarcity | Resources are limited in relation to wants. | apply |
 | **Konkordanz** | Concordance | All major parties are included in government and decide by compromise. | apply |
 | Konsumgesellschaft | Consumer society | A society in which mass-produced goods and leisure are available to broad groups and shape identity. | define |
 | Kontrollüberzeugung | Locus of control | The belief about whether outcomes depend on oneself or on outside forces. | define |
+| **Kreuzpreiselastizität der Nachfrage** | Cross-price elasticity of demand | Percentage change in the quantity demanded of one good divided by the percentage change in the price of another. | apply |
 
 ## L
 
 | Deutsch | English | Definition | Be able to |
 |---|---|---|---|
 | Landflucht | Flight from the land | Migration from the countryside to the towns that feeds urbanisation. | define |
+| Lebensstandard | Standard of living | The quantity of goods and services a population can afford. | translate |
 | **Legitimation, Repression, Kooptation** | Legitimation, repression, co-optation | The three pillars of autocratic stability: giving reasons to accept the regime, punishing opposition, buying in elites. | apply |
+| Leistung | Performance | What the debtor owes: an act, an omission or a payment. | translate |
 
 ## M
 
@@ -138,9 +153,12 @@ draft: false
 |---|---|---|---|
 | Machtwechsel | Change of power | The transfer of government from one party or group to another. | translate |
 | Machtwechsel | Change of power, alternation in office | The transfer of government from one party or group to another. | translate |
+| Marktmacht | Market power | The ability of a single actor to influence the market price noticeably. | define |
+| **Marktversagen / Regierungsversagen** | Market failure / government failure | A market fails to allocate resources well, or state intervention makes the outcome worse. | apply |
 | **Mehrheitsdemokratie / Konsensdemokratie** | Majoritarian / consensus democracy | Democracy that concentrates power in the majority, or one that shares it among many parties and levels. | apply |
 | Militärregime | Military regime | An autocracy in which the officer corps governs. | define |
 | Misstrauensvotum | Vote of no confidence | A vote by which the parliamentary majority brings down the government. | define |
+| **Mittelwertmethode** | Midpoint method | Computing a percentage change by dividing the change by the average of the old and the new value. | apply |
 | **Moderne / Modernisierung** | Modernity / modernisation | The bundle of linked changes (industry, cities, mass politics, science, the state) that the course studies in the British case. | apply |
 | Monarchie | Monarchy | An autocracy in which a ruling family holds power and passes it on by descent. | define |
 | **Mutterland der Moderne** | Motherland of modernity | The claim, put as a question by the course, that Britain was the first modern society and a model for others. | apply |
@@ -149,7 +167,10 @@ draft: false
 
 | Deutsch | English | Definition | Be able to |
 |---|---|---|---|
+| **Obligation / Schuldverhältnis** | Obligation | A legal relationship in which one person owes a performance to another. | apply |
+| Obligationenrecht (OR) | Code of Obligations | The Swiss code on contracts, torts and companies. Formally the fifth part of the Civil Code. | define |
 | Ökologischer Fehlschluss | Ecological fallacy | Inferring the behaviour of individuals from data about groups. | define |
+| **Opportunitätskosten** | Opportunity cost | What must be given up to obtain something: the best alternative forgone. | apply |
 
 ## P
 
@@ -163,6 +184,9 @@ draft: false
 | **politischer Wettbewerb / Partizipation** | Political competition / participation | Dahl's two dimensions of democracy: a real choice between rivals, and the taking part of the citizens. | apply |
 | **politisches Handeln** | Political action | Social action aimed at generally binding decisions. | apply |
 | Präterierte / abundante Attribute | Preterite / abundant attributes | Attributes of the original left out of the model, and attributes of the model that the original does not have. | define |
+| **Preiselastizität der Nachfrage** | Price elasticity of demand | Percentage change in quantity demanded divided by the percentage change in the good's own price. | apply |
+| **Preiselastizität des Angebots** | Price elasticity of supply | Percentage change in quantity supplied divided by the percentage change in the good's own price. | apply |
+| Produktivität | Productivity | The value of goods and services produced per hour of work. | define |
 | **Publikationsbias** | Publication bias | Significant results are published more often than null results, so the literature overstates effects. | apply |
 | Putsch / Staatsstreich | Coup | The illegal seizure of power by a small group, usually from within the state. | translate |
 
@@ -186,6 +210,7 @@ draft: false
 |---|---|---|---|
 | **Säkularisierung** | Secularisation | The declining authority of religion in public life and thought, with scientific rationality taking its place. | apply |
 | **Scheinkorrelation** | Spurious correlation | A statistical relation between two variables that is produced by a third and is not causal. | apply |
+| Schuldner / Gläubiger | Debtor / creditor | The person who owes the performance, and the person entitled to it. | define |
 | **Schwerpunkt** | Focus of effort | The point where a commander concentrates effort to decide the action. | apply |
 | Selbstähnlichkeit | Self-similarity | The same pattern repeats at every level, from the squad to the army. | define |
 | **selbstwertschützend** | Self-serving, protecting self-esteem | Attributing success to oneself and failure to circumstances, which protects self-esteem. | apply |
@@ -213,17 +238,25 @@ draft: false
 | Umgekehrte Kausalität | Reverse causality | The supposed effect is in fact the cause. | define |
 | Umsetzung und Durchsetzung | Implementation and enforcement | Putting a decision into practice and securing compliance. | translate |
 | **Unaufmerksamkeitsblindheit** | Inattentional blindness | Failing to see a clearly visible object because attention is elsewhere. | apply |
+| **unerlaubte Handlung** | Tort, unlawful act | Unlawfully causing damage to another, which obliges to compensate (Art. 41 OR). | apply |
+| **ungerechtfertigte Bereicherung** | Unjust enrichment | A gain at another's expense without a valid legal ground, which must be returned (Art. 62 OR). | apply |
+| **unsichtbare Hand** | Invisible hand | Smith's image for how self-interested decisions in markets lead to an outcome that serves society. | apply |
 
 ## V
 
 | Deutsch | English | Definition | Be able to |
 |---|---|---|---|
+| Verfügung | Decree, administrative decision | A binding order by an authority in an individual case. | define |
+| Verhältnismässigkeit | Proportionality | State action must be suitable, necessary and reasonable in relation to its aim. | define |
 | Vernehmlassung | Consultation procedure | The Swiss procedure in which cantons, parties and associations comment on a draft law. | define |
 | Versuchsleitereffekt | Observer / experimenter effect | The researcher's expectations influence the behaviour of participants or the recording of results. | define |
+| **Vertrag** | Contract | An agreement that creates obligations through matching declarations of intent. | apply |
 | **Verzerrung, systematischer Fehler** | Bias, systematic error | An error that pushes results in one direction and does not shrink with more data. | apply |
 | Vetospieler | Veto player | An actor whose agreement is needed to change the status quo. | define |
 | Volksinitiative / Referendum | Popular initiative / referendum | Citizens propose a constitutional change, or call a popular vote on a decision of parliament. | define |
 | **Volkssouveränität** | Popular sovereignty | The principle that state authority comes from the people, who remain its ultimate holder. | apply |
+| vollkommen elastisch | Perfectly elastic | Infinite elasticity: the curve is horizontal. | define |
+| vollkommen unelastisch | Perfectly inelastic | Elasticity of zero: the quantity does not react to the price. | define |
 | Vorschnelle Generalisierung | Hasty generalisation | Drawing a general conclusion from too few cases. | define |
 
 ## W
@@ -238,7 +271,9 @@ draft: false
 | Deutsch | English | Definition | Be able to |
 |---|---|---|---|
 | Zauberformel | Magic formula | The fixed distribution of the seven Swiss Federal Council seats among the four largest parties. | define |
+| **Zielkonflikt** | Trade-off | More of one goal means less of another. | apply |
 | ziviles Regime | Civilian regime | An autocracy ruled by civilians who are neither monarchs nor officers. | define |
 | Zivilgesellschaft | Civil society | Associations and movements that stand between the individual and the state. | define |
+| Zivilgesetzbuch (ZGB) | Civil Code | The Swiss code of private law: persons, family, succession, property. | define |
 | Zufallsfehler | Random error | Unsystematic error that averages out as the number of observations grows. | define |
 | Zusammenhalt / Kohäsion | Cohesion | The bonds that keep a unit or force acting as one under stress. | define |
