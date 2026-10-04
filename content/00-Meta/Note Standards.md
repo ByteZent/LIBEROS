@@ -136,6 +136,9 @@ output: paper                # what it should become: paper · essay · page · 
 | `> [!source]` | Direct quotation from a primary source |
 | `> [!question]` | Open question |
 | `> [!qard]-` | Flashcard: question in the title, answer in the body |
+| `> [!event\|war key]` | One entry on a timeline: category and `key` after the bar, the date in bold starts the title, the body holds the notes and fields. See [[Britain 1780–1939 (Timeline)#How to add to the timeline]] |
+| `> [!process\|economy]` | A development without a single date on a timeline, written like an event with a range |
+| `> [!period]` | An era heading on a timeline, written like an event |
 
 ## Folders
 
