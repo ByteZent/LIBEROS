@@ -149,6 +149,10 @@ The rows *Covers* and *Examples* follow the textbook [@bernauer2025einfuhrung, p
 > [!qard]- 8. Is a failed or illegal attempt to impose a rule still politics?
 > Yes. The definition asks what the action aims at, not whether it succeeds, is legal or is morally defensible. The textbook's examples: failed efforts to abolish the US death penalty, and the attacks of 11 September 2001.
 
+> [!cloze] Politics is ==social action== aimed at decisions and steering mechanisms that are ==generally binding== and regulate how people live together.
+
+> [!cloze] Polity is the ==form==, policy is the ==content==, politics is the ==process==.
+
 ## Open Questions
 
 - [ ] Where does "polity" sit in international politics, where there is no constitution and no central authority?
