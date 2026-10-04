@@ -15,7 +15,7 @@ qard-deck: MilSoc-HS26
 status: seedling
 confidence: medium
 created: 2026-10-01
-modified: 2026-10-02
+modified: 2026-10-04
 review: 
 tags:
   - concept
@@ -48,6 +48,8 @@ draft: false
 
 ### Three dimensions of sociology
 
+![[sociology-three-dimensions.svg]]
+
 | Axis | Values |
 |---|---|
 | **Level of aggregation** (micro to macro) | Social action → role → group → organisation → institution → society |
@@ -57,6 +59,8 @@ draft: false
 A study is located by one value on each axis. Example: *socialisation* in the *group* in the *military* is the question of how a recruit platoon turns civilians into soldiers.
 
 ### Schools
+
+![[sociology-schools.svg]]
 
 | School | Core idea | Image of the human |
 |---|---|---|

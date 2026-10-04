@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 475" width="1000" height="475" role="img" aria-labelledby="t d">
+  <title id="t">Schools of sociology: classical sociology and sociobiology</title>
+  <desc id="d">Two branches. Classical sociology has three schools. Symbolic interactionism: people act on the meaning things have for them; the human is a seeker of meaning. Functionalism: each part has a function for the whole; the human is a role-bearer. Conflict theories: conflict creates and changes structures; the human is an interested party. All three see the human as a cultural being formed by society, with an optimistic tendency: society can be changed for the better. Sociobiology and evolutionary psychology see social behaviour such as sex relations, aggression and dominance as strongly fixed by genes, with a pessimistic tendency: people are as they are. The danger is political use as social Darwinism.</desc>
+  <defs>
+    <marker id="arr-ig" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#d4a84b"/>
+    </marker>
+    <marker id="arr-bl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#7fb3c8"/>
+    </marker>
+    <style>
+      .panel { fill: #0d1117; }
+      .box { fill: #161d26; stroke: #3a4654; stroke-width: 1.5; }
+      .th { fill: #1a2330; stroke: #d4a84b; stroke-width: 1.5; }
+      .em { fill: #161d26; stroke: #7fb3c8; stroke-width: 1.5; }
+      .h { font: 700 15px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #e8edf2; }
+      .big { font: 700 18px "JetBrains Mono", Menlo, monospace; letter-spacing: 2px; fill: #d4a84b; }
+      .big-bl { font: 700 18px "JetBrains Mono", Menlo, monospace; letter-spacing: 2px; fill: #7fb3c8; }
+      .key { font: 700 13.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .q { font: italic 13px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .sub { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .ex { font: 13px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .lbl { font: 12px "JetBrains Mono", Menlo, monospace; fill: #8b97a3; }
+      .lbl-ig { font: 12px "JetBrains Mono", Menlo, monospace; fill: #d4a84b; }
+      .lbl-bl { font: 12px "JetBrains Mono", Menlo, monospace; fill: #7fb3c8; }
+      .ff-ig { stroke: #d4a84b; stroke-width: 2; fill: none; }
+      .ff-bl { stroke: #7fb3c8; stroke-width: 2; fill: none; }
+      text { text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect class="panel" x="0" y="0" width="1000" height="475" rx="10"/>
+  <text class="h" x="500" y="42">SCHOOLS OF SOCIOLOGY: WHAT DRIVES SOCIAL LIFE?</text>
+
+  <text class="big" x="310" y="90">CLASSICAL SOCIOLOGY</text>
+  <text class="big-bl" x="795" y="90">SOCIOBIOLOGY</text>
+
+  <!-- Symbolic interactionism -->
+  <rect class="box" x="30" y="110" width="180" height="145" rx="8"/>
+  <text class="key" x="120" y="138">Symbolic interactionism</text>
+  <text class="lbl-ig" x="120" y="164">MEANING</text>
+  <text class="sub" x="120" y="192">People act on the meaning</text>
+  <text class="sub" x="120" y="210">things have for them</text>
+  <text class="q" x="120" y="238">a seeker of meaning</text>
+
+  <!-- Functionalism -->
+  <rect class="box" x="220" y="110" width="180" height="145" rx="8"/>
+  <text class="key" x="310" y="138">Functionalism</text>
+  <text class="lbl-ig" x="310" y="164">FUNCTION</text>
+  <text class="sub" x="310" y="192">Each part has a function</text>
+  <text class="sub" x="310" y="210">for the whole</text>
+  <text class="q" x="310" y="238">a role-bearer</text>
+
+  <!-- Conflict theories -->
+  <rect class="box" x="410" y="110" width="180" height="145" rx="8"/>
+  <text class="key" x="500" y="138">Conflict theories</text>
+  <text class="lbl-ig" x="500" y="164">CONFLICT</text>
+  <text class="sub" x="500" y="192">Conflict creates and</text>
+  <text class="sub" x="500" y="210">changes structures</text>
+  <text class="q" x="500" y="238">an interested party</text>
+
+  <!-- Sociobiology -->
+  <rect class="box" x="620" y="110" width="350" height="145" rx="8"/>
+  <text class="key" x="795" y="138">Sociobiology · evolutionary psychology</text>
+  <text class="lbl-bl" x="795" y="164">GENES</text>
+  <text class="sub" x="795" y="192">Sex relations, aggression and dominance</text>
+  <text class="sub" x="795" y="210">have a strong genetic base</text>
+  <text class="q" x="795" y="238">largely fixed by nature</text>
+
+  <!-- Image of the human -->
+  <rect class="th" x="30" y="275" width="560" height="65" rx="8"/>
+  <text class="lbl" x="310" y="298">IMAGE OF THE HUMAN</text>
+  <text class="key" x="310" y="323">A cultural being, formed by society</text>
+
+  <rect class="em" x="620" y="275" width="350" height="65" rx="8"/>
+  <text class="lbl" x="795" y="298">IMAGE OF THE HUMAN</text>
+  <text class="key" x="795" y="323">Social behaviour strongly fixed by genes</text>
+
+  <path class="ff-ig" d="M310 340 L310 366" marker-end="url(#arr-ig)"/>
+  <path class="ff-bl" d="M795 340 L795 366" marker-end="url(#arr-bl)"/>
+
+  <!-- Tendency -->
+  <rect class="box" x="30" y="370" width="560" height="80" rx="8"/>
+  <text class="lbl-ig" x="310" y="395">TENDENCY: OPTIMISTIC</text>
+  <text class="ex" x="310" y="420">Society can be changed for the better</text>
+
+  <rect class="box" x="620" y="370" width="350" height="80" rx="8"/>
+  <text class="lbl-bl" x="795" y="395">TENDENCY: PESSIMISTIC</text>
+  <text class="ex" x="795" y="418">People are as they are</text>
+  <text class="sub" x="795" y="438">Danger: political use as social Darwinism</text>
+</svg>

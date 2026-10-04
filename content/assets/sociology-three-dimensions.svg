@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" role="img" aria-labelledby="t d">
+  <title id="t">The three dimensions of sociology: level, basic process, field</title>
+  <desc id="d">A box with three axes. The vertical axis is the level of aggregation, from micro to macro: social action, role, group, organisation, institution, society. The horizontal axis is the field: politics, economy, education, military, family, medicine, youth, science, religion. The depth axis is the basic process: communication, interaction, stratification, values and norms, socialisation, social control, conflict, power and influence, cooperation, exchange. A study is located by one value on each axis. The highlighted example is socialisation in the group in the military: how a recruit platoon turns civilians into soldiers. After Hans Geser, University of Zurich, 2006.</desc>
+  <defs>
+    <style>
+      .panel { fill: #0d1117; }
+      .face { fill: #161d26; stroke: #3a4654; stroke-width: 1.5; }
+      .side { fill: #121820; stroke: #3a4654; stroke-width: 1.5; }
+      .grid { stroke: #2a3440; stroke-width: 1; fill: none; }
+      .tint { fill: #d4a84b; fill-opacity: 0.10; }
+      .cell { fill: #d4a84b; fill-opacity: 0.55; stroke: #d4a84b; stroke-width: 1.5; }
+      .em { fill: #161d26; stroke: #7fb3c8; stroke-width: 1.5; }
+      .h { font: 700 15px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #e8edf2; }
+      .item { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .fld { font: 11px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .hit { fill: #d4a84b; font-weight: 700; }
+      .sub { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .ex { font: 13px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .lbl { font: 12px "JetBrains Mono", Menlo, monospace; fill: #7fb3c8; }
+    </style>
+  </defs>
+
+  <rect class="panel" x="0" y="0" width="1000" height="640" rx="10"/>
+  <text class="h" x="500" y="42" text-anchor="middle">THREE DIMENSIONS OF SOCIOLOGY</text>
+
+  <!-- Top face: basic processes, receding -->
+  <polygon class="side" points="130,290 650,290 850,100 330,100"/>
+  <polygon class="tint" points="210,214 730,214 750,195 230,195"/>
+  <path class="grid" d="M150 271 H670 M170 252 H690 M190 233 H710 M210 214 H730 M230 195 H750 M250 176 H770 M270 157 H790 M290 138 H810 M310 119 H830"/>
+
+  <!-- Right face -->
+  <polygon class="side" points="650,290 850,100 850,280 650,470"/>
+  <polygon class="tint" points="650,380 850,190 850,220 650,410"/>
+  <polygon class="tint" points="730,214 750,195 750,375 730,394"/>
+  <path class="grid" d="M650 320 L850 130 M650 350 L850 160 M650 380 L850 190 M650 410 L850 220 M650 440 L850 250"/>
+  <path class="grid" d="M670 271 V451 M690 252 V432 M710 233 V413 M730 214 V394 M750 195 V375 M770 176 V356 M790 157 V337 M810 138 V318 M830 119 V299"/>
+
+  <!-- Front face: levels by fields -->
+  <rect class="face" x="130" y="290" width="520" height="180"/>
+  <rect class="tint" x="130" y="380" width="520" height="30"/>
+  <rect class="tint" x="303.3" y="290" width="57.8" height="210"/>
+  <path class="grid" d="M130 320 H650 M130 350 H650 M130 380 H650 M130 410 H650 M130 440 H650"/>
+  <path class="grid" d="M187.8 290 V500 M245.6 290 V500 M303.3 290 V500 M361.1 290 V500 M418.9 290 V500 M476.7 290 V500 M534.4 290 V500 M592.2 290 V500"/>
+  <rect x="130" y="470" width="520" height="30" fill="none" stroke="#3a4654" stroke-width="1.5"/>
+
+  <!-- The example cell, shown on all three faces -->
+  <rect class="cell" x="303.3" y="380" width="57.8" height="30"/>
+  <polygon class="cell" points="383.3,214 441.1,214 461.1,195 403.3,195"/>
+  <polygon class="cell" points="730,304 750,285 750,315 730,334"/>
+
+  <!-- Axis 1: level of aggregation -->
+  <text class="lbl" transform="translate(24 470) rotate(-90)">MICRO → LEVEL OF AGGREGATION → MACRO</text>
+  <text class="item" x="120" y="310" text-anchor="end">Society</text>
+  <text class="item" x="120" y="340" text-anchor="end">Institution</text>
+  <text class="item" x="120" y="370" text-anchor="end">Organisation</text>
+  <text class="item hit" x="120" y="400" text-anchor="end">Group</text>
+  <text class="item" x="120" y="430" text-anchor="end">Role</text>
+  <text class="item" x="120" y="460" text-anchor="end">Social action</text>
+
+  <!-- Axis 2: basic process -->
+  <text class="lbl" x="30" y="140">BASIC PROCESS</text>
+  <text class="item" x="128" y="285" text-anchor="end">Communication</text>
+  <text class="item" x="148" y="266" text-anchor="end">Interaction</text>
+  <text class="item" x="168" y="247" text-anchor="end">Stratification</text>
+  <text class="item" x="188" y="228" text-anchor="end">Values and norms</text>
+  <text class="item hit" x="208" y="209" text-anchor="end">Socialisation</text>
+  <text class="item" x="228" y="190" text-anchor="end">Social control</text>
+  <text class="item" x="248" y="171" text-anchor="end">Conflict</text>
+  <text class="item" x="268" y="152" text-anchor="end">Power and influence</text>
+  <text class="item" x="288" y="133" text-anchor="end">Cooperation</text>
+  <text class="item" x="308" y="114" text-anchor="end">Exchange</text>
+
+  <!-- Axis 3: field -->
+  <text class="fld" x="158.9" y="489" text-anchor="middle">Politics</text>
+  <text class="fld" x="216.7" y="489" text-anchor="middle">Economy</text>
+  <text class="fld" x="274.4" y="489" text-anchor="middle">Education</text>
+  <text class="fld hit" x="332.2" y="489" text-anchor="middle">Military</text>
+  <text class="fld" x="390" y="489" text-anchor="middle">Family</text>
+  <text class="fld" x="447.8" y="489" text-anchor="middle">Medicine</text>
+  <text class="fld" x="505.6" y="489" text-anchor="middle">Youth</text>
+  <text class="fld" x="563.3" y="489" text-anchor="middle">Science</text>
+  <text class="fld" x="621.1" y="489" text-anchor="middle">Religion</text>
+  <text class="lbl" x="390" y="524" text-anchor="middle">FIELD</text>
+
+  <!-- Reading rule -->
+  <text class="lbl" x="790" y="400">ONE STUDY =</text>
+  <text class="ex" x="790" y="424">one level</text>
+  <text class="ex" x="790" y="444">× one basic process</text>
+  <text class="ex" x="790" y="464">× one field</text>
+  <text class="sub" x="970" y="524" text-anchor="end">After Geser (2006)</text>
+
+  <!-- Example strip -->
+  <rect class="em" x="30" y="545" width="940" height="70" rx="8"/>
+  <text class="lbl" x="500" y="572" text-anchor="middle">EXAMPLE: SOCIALISATION × GROUP × MILITARY</text>
+  <text class="ex" x="500" y="597" text-anchor="middle">How does a recruit platoon turn civilians into soldiers?</text>
+</svg>
