@@ -20,7 +20,7 @@ const config: QuartzConfig = {
     analytics: null,
     locale: "en-US",
     // TODO: set to your domain or "<user>.github.io/<repo>" before deploying
-    baseUrl: "liberos.example.com",
+    baseUrl: "bytezent.github.io/LIBEROS",
     // Everything that is part of the *learning process* but not publishable stays out of the build
     ignorePatterns: [
       ...(showPrivate ? [] : ["_inbox", "_private"]),
