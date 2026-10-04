@@ -53,7 +53,9 @@ for (const file of notes(VAULT)) {
   }
 }
 
-const sorted = [...terms.values()].sort((a, b) => a.de.localeCompare(b.de, "de", { sensitivity: "base" }))
+const sorted = [...terms.values()].sort((a, b) =>
+  a.de.localeCompare(b.de, "de", { sensitivity: "base" }),
+)
 
 if (CHECK) {
   const missing = sorted.filter((t) => t.defs.size === 0)
@@ -61,8 +63,11 @@ if (CHECK) {
   const unrated = sorted.filter((t) => t.level === 0)
   for (const t of unrated) console.log(`no level:       ${t.de}  (${t.notes.join(", ")})`)
   for (const t of missing) console.log(`no definition:  ${t.de}  (${t.notes.join(", ")})`)
-  for (const t of conflict) console.log(`${t.defs.size} definitions: ${t.de}  (${t.notes.join(", ")})`)
-  console.log(`${sorted.length} terms · ${missing.length} without definition · ${conflict.length} with conflicting definitions · ${unrated.length} without level`)
+  for (const t of conflict)
+    console.log(`${t.defs.size} definitions: ${t.de}  (${t.notes.join(", ")})`)
+  console.log(
+    `${sorted.length} terms · ${missing.length} without definition · ${conflict.length} with conflicting definitions · ${unrated.length} without level`,
+  )
   process.exit(missing.length || conflict.length || unrated.length ? 1 : 0)
 }
 
@@ -111,4 +116,6 @@ for (const [l, list] of groups) {
   }
 }
 fs.writeFileSync(path.join(VAULT, OUT), out)
-console.log(`${sorted.length} terms from ${new Set(sorted.flatMap((t) => t.notes)).size} notes → ${VAULT}/${OUT}`)
+console.log(
+  `${sorted.length} terms from ${new Set(sorted.flatMap((t) => t.notes)).size} notes → ${VAULT}/${OUT}`,
+)
