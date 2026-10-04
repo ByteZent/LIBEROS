@@ -6,15 +6,12 @@ semester: HS 2026
 created: 2026-09-29
 tags:
   - course
-draft: true
+draft: false
 ---
 
 > [!info]
-> Bridge between the course and this vault. Lecture notes, slides and the German exam summary stay in the study vault:
-> `PARA BELLUM/04_Subjects/HS_26/Leadership I` (exam summary: `zusammenfassung-leadership/`).
+> Bridge between the course and this vault. Lecture notes, slides and the German exam summary are not part of it.
 > Every vault note that belongs to the course has `courses: [L1-HS26]`. Run `make course COURSE=L1-HS26` before the exam.
->
-> **Unpublished** (`draft: true`), because this map refers to the lecturer's slides and announced exam topics.
 
 ## Learning objectives → vault notes
 

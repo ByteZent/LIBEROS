@@ -6,15 +6,14 @@ semester: HS 2026
 created: 2026-10-02
 tags:
   - course
-draft: true
+draft: false
 ---
 
 > [!info]
-> Bridge between the course and this vault. Lecture notes, slides and the German exam summary stay in the study vault:
-> `PARA BELLUM/04_Subjects/HS_26/Militärsoziologie`.
+> Bridge between the course and this vault. Lecture notes, slides and the German exam summary are not part of it.
 > Every vault note that belongs to the course has `courses: [MilSoc-HS26]`. Run `make course COURSE=MilSoc-HS26` before the exam. Flashcards: deck `MilSoc-HS26` under `/flashcards/`.
 >
-> **Unpublished** (`draft: true`), because this map refers to the course plan and announced assessments. Built from the study summary of 30.09.2026; sessions after that date are the plan, not yet what was taught.
+> Built from the study summary of 30.09.2026; sessions after that date are the plan, not yet what was taught.
 
 The course studies the military as an organisation and institution inside society: how social structure, values, demography and change shape the armed forces, and how the military acts back on society and politics. It runs from general sociology through the sociology of organisations to military sociology.
 

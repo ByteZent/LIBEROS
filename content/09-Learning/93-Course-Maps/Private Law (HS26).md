@@ -6,15 +6,14 @@ semester: HS 2026
 created: 2026-10-02
 tags:
   - course
-draft: true
+draft: false
 ---
 
 > [!info]
-> Bridge between the course and this vault. Lecture notes, slides and the German exam summary stay in the study vault:
-> `PARA BELLUM/04_Subjects/HS_26/Privatrecht`.
+> Bridge between the course and this vault. Lecture notes, slides and the German exam summary are not part of it.
 > Every vault note that belongs to the course has `courses: [PrivLawI-HS26]`. Run `make course COURSE=PrivLawI-HS26` before the exam. Flashcards: deck `PrivLawI-HS26` under `/flashcards/`.
 >
-> **Unpublished** (`draft: true`), because this map refers to the course plan and announced assessments. Built from the study summary of 30.09.2026; sessions after that date are the plan, not yet what was taught.
+> Built from the study summary of 30.09.2026; sessions after that date are the plan, not yet what was taught.
 
 The course trains you to recognise private-law problems in professional and everyday facts, to structure them and to solve them with the statute. Obligation, formation, validity and defects of consent are the base. Contract for work, liability and insurance law carry the claim-based thinking further. The aim is traceable subsumption, not memorised results.
 

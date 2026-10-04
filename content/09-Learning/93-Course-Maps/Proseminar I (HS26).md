@@ -6,15 +6,14 @@ semester: HS 2026
 created: 2026-10-02
 tags:
   - course
-draft: true
+draft: false
 ---
 
 > [!info]
-> Bridge between the course and this vault. Lecture notes, slides and the German exam summary stay in the study vault:
-> `PARA BELLUM/04_Subjects/HS_26/Proseminar I`.
+> Bridge between the course and this vault. Lecture notes, slides and the German exam summary are not part of it.
 > Every vault note that belongs to the course has `courses: [PS1-HS26]`. Run `make course COURSE=PS1-HS26` before the exam. Flashcards: deck `PS1-HS26` under `/flashcards/`.
 >
-> **Unpublished** (`draft: true`), because this map refers to the course plan and announced assessments. Built from the study summary of 30.09.2026; sessions after that date are the plan, not yet what was taught.
+> Built from the study summary of 30.09.2026; sessions after that date are the plan, not yet what was taught.
 
 The proseminar leads from the critical reading of scientific texts to a small research paper of one's own. Quality comes from precise concepts, a justified research question, a traceable theory, testable expectations and open handling of sources and uncertainty.
 

@@ -6,15 +6,14 @@ semester: HS 2026
 created: 2026-10-02
 tags:
   - course
-draft: true
+draft: false
 ---
 
 > [!info]
-> Bridge between the course and this vault. Lecture notes, slides and the German exam summary stay in the study vault:
-> `PARA BELLUM/04_Subjects/HS_26/Grundlagen der Politikwissenschaften`.
+> Bridge between the course and this vault. Lecture notes, slides and the German exam summary are not part of it.
 > Every vault note that belongs to the course has `courses: [PolSci-HS26]`. Run `make course COURSE=PolSci-HS26` before the exam. Flashcards: deck `PolSci-HS26` under `/flashcards/`.
 >
-> **Unpublished** (`draft: true`), because this map refers to the course plan and announced assessments. Built from the study summary of 30.09.2026; sessions after that date are the plan, not yet what was taught.
+> Built from the study summary of 30.09.2026; sessions after that date are the plan, not yet what was taught.
 
 The course gives the concepts and methods to describe and explain political orders, actors, processes and decisions. It ties politics, state, power and legitimacy to the empirical-analytical research process, so that political claims can be tested with theory, measurement and evidence. Textbook: [[bernauer2025einfuhrung]], 13 chapters.
 
@@ -33,7 +32,7 @@ The course gives the concepts and methods to describe and explain political orde
 
 | Objective | Notes | Ready? |
 |---|---|---|
-| Define politics, state, sovereignty and state activity precisely | [[Polity, Policy, Politics]] · [[Sovereign Territorial State]] · [[Political System Model]] | ☑ seedling (in `_inbox`) |
+| Define politics, state, sovereignty and state activity precisely | [[Polity, Policy, Politics]] · [[Sovereign Territorial State]] · [[Political System Model]] | ☑ seedling / seedling (in `_inbox`) |
 | Tell research questions, theories, hypotheses and concepts apart | [[Research Design]] · [[Empirical-Analytical vs Hermeneutic Research]] · [[Falsificationism]] | ☑ seedling (in `_inbox`) |
 | Judge operationalisation, case selection and research design | [[Research Design]] · [[Bias in Research]] | ☑ seedling (in `_inbox`) / seedling |
 | Check experiments, forecasts and typical fallacies critically | [[Bias in Research]] · [[Falsificationism]] | ☑ seedling / seedling (in `_inbox`) |
