@@ -148,6 +148,161 @@ article > h2 {
   color: var(--tertiary);
 }
 
+// ─── Landing page "Start here" ──────────────────────────────────────────────
+// Five cards, each with an icon, a line of purpose and its links as rows.
+
+.start-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 0.85rem;
+  margin: 1rem 0 2rem;
+}
+
+.start-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--lightgray);
+  border-radius: 8px;
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--accent) 10%, transparent),
+    transparent 55%
+  );
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  // a line in the card's colour along the top
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 3px;
+    background: var(--accent);
+  }
+
+  &:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px -10px var(--accent);
+  }
+
+  .start-head {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 1rem 1rem 0.7rem;
+  }
+
+  .start-icon {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--accent) 18%, transparent);
+    color: var(--accent);
+
+    svg {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+  }
+
+  .start-title {
+    display: block;
+    font-family: var(--headerFont);
+    font-weight: 600;
+    color: var(--dark);
+  }
+
+  .start-desc {
+    display: block;
+    margin-top: 0.1rem;
+    font-size: 0.78rem;
+    line-height: 1.35;
+    color: var(--gray);
+  }
+
+  .start-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    border-top: 1px solid var(--lightgray);
+  }
+
+  a.start-link {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.45rem 1rem;
+    border-radius: 0;
+    background: none;
+    font-weight: normal;
+    color: var(--darkgray);
+    transition:
+      background-color 0.15s ease,
+      padding-left 0.15s ease;
+
+    & + a.start-link {
+      border-top: 1px dashed var(--lightgray);
+    }
+
+    // the arrow slides in from the right on hover
+    &::after {
+      content: "→";
+      margin-left: auto;
+      color: var(--accent);
+      opacity: 0;
+      transform: translateX(-4px);
+      transition:
+        opacity 0.15s ease,
+        transform 0.15s ease;
+    }
+
+    &:hover {
+      padding-left: 1.2rem;
+      background: color-mix(in srgb, var(--accent) 10%, transparent);
+
+      &::after {
+        opacity: 1;
+        transform: none;
+      }
+
+      .start-link-name {
+        color: var(--accent);
+      }
+    }
+  }
+
+  .start-link-name {
+    flex: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--dark);
+  }
+
+  .start-link-hint {
+    overflow: hidden;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: var(--gray);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .start-card,
+  .start-card a.start-link,
+  .start-card a.start-link::after {
+    transition: none;
+  }
+}
+
 // ─── Tags ───────────────────────────────────────────────────────────────────
 
 // List pages (folders, tags, courses): Quartz squeezes tags into a narrow right-hand column.
