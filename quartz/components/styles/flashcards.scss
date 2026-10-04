@@ -616,3 +616,50 @@
     }
   }
 }
+
+// ─── Phone: the three ratings as icons ──────────────────────────────────────
+// "Missed", "Hard" and "Knew it" do not fit side by side on a narrow screen. The words stay in
+// the button for screen readers; what is drawn is a cross, a wavy line and a tick.
+
+@media (max-width: 600px) {
+  .flashcards.qard-deck {
+    .qard-missed,
+    .qard-hard,
+    .qard-known {
+      font-size: 0;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 1.25rem;
+        height: 1.25rem;
+        margin: 0.1rem auto;
+        background: currentColor;
+        mask: var(--qard-icon) center / contain no-repeat;
+        -webkit-mask: var(--qard-icon) center / contain no-repeat;
+      }
+    }
+
+    // "← Previous" wraps onto two lines here: the arrow alone says it
+    .qard-prev {
+      font-size: 0;
+
+      &::before {
+        content: "←";
+        font-size: 1rem;
+      }
+    }
+
+    .qard-missed {
+      --qard-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>');
+    }
+
+    .qard-hard {
+      --qard-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c2.5-4 5-4 7.5 0s5 4 7.5 0 3-2 3-2"/></svg>');
+    }
+
+    .qard-known {
+      --qard-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>');
+    }
+  }
+}
