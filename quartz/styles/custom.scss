@@ -455,3 +455,151 @@ article > h3.references-heading {
     padding: 0.2rem 0;
   }
 }
+
+// ─── Header on a phone ──────────────────────────────────────────────────────
+
+// Menu, logo, search field and theme buttons are together wider than a 375px screen, and the
+// row cannot shrink: it pushed every page past the right edge. The search field becomes its
+// icon, and on the narrowest screens the logo gets a little smaller.
+@media (max-width: 480px) {
+  .sidebar.left .search > .search-button {
+    justify-content: center;
+    padding: 0;
+
+    & > p {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 340px) {
+  .site-logo {
+    font-size: 1.3rem;
+
+    a {
+      gap: 0.4rem;
+      letter-spacing: 0.08em;
+    }
+
+    .site-logo-mark {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
+
+// ─── Glossary on a phone ────────────────────────────────────────────────────
+
+// Deutsch | English | Definition | Be able to does not fit a phone: the table scrolled sideways
+// and the definition ran one word per line. Each row becomes an entry instead: the German term
+// with its level on the right, the English term and the definition below.
+// Applies to the central glossary and to the Glossary table of every note.
+@media (max-width: 600px) {
+  body[data-slug="09-Learning/Glossary"] article > .table-container,
+  article > h2#glossary + .table-container {
+    overflow-x: visible;
+
+    & > table,
+    tbody {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    // the column titles are the entry's layout now
+    thead {
+      display: none;
+    }
+
+    tr {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: baseline;
+      gap: 0.15rem 0.75rem;
+      padding: 0.7rem 0;
+    }
+
+    td {
+      min-width: 0;
+      padding: 0;
+      line-height: 1.45;
+      overflow-wrap: anywhere;
+    }
+
+    td:nth-child(1) {
+      font-family: var(--headerFont);
+      color: var(--dark);
+      hyphens: auto;
+    }
+
+    td:nth-child(2),
+    td:nth-child(3) {
+      grid-column: 1 / -1;
+      font-size: 0.9rem;
+    }
+
+    td:nth-child(2) {
+      color: var(--secondary);
+    }
+
+    td:nth-child(4) {
+      grid-area: 1 / 2;
+      font-family: var(--codeFont);
+      font-size: 0.66rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--gray);
+
+      &:empty {
+        display: none;
+      }
+    }
+
+    // "apply": the core terms, bold in the table
+    tr:has(td:first-child strong) td:nth-child(4) {
+      color: var(--tertiary);
+    }
+  }
+
+  // the letters: one row that stays under the header while the terms scroll, a thumb-sized
+  // button per letter (the dots between them are text, hence font-size 0)
+  body[data-slug="09-Learning/Glossary"] article {
+    & > p:has(> a[href^="#"]:first-child) {
+      position: sticky;
+      top: 5rem; // height of the header row
+      display: flex;
+      gap: 0.3rem;
+      margin: 1rem -1rem;
+      padding: 0.45rem 1rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+      border-bottom: 1px solid var(--lightgray);
+      background: var(--light);
+      font-size: 0;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      a.internal {
+        flex: none;
+        display: grid;
+        place-items: center;
+        width: 2.4rem;
+        height: 2.4rem;
+        padding: 0;
+        border: 1px solid var(--lightgray);
+        border-radius: 4px;
+        background: none;
+        font-family: var(--codeFont);
+        font-size: 0.9rem;
+        line-height: 1;
+      }
+    }
+
+    // a letter lands below the header and the row of letters
+    & > h2 {
+      scroll-margin-top: 5.5rem;
+    }
+  }
+}
