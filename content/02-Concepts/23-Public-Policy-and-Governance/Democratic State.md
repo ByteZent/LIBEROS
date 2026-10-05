@@ -110,8 +110,8 @@ The lecture's answer is yes: democracies have stronger incentives to provide pub
 | **What explains the difference** | **Who** decides (preferences) | **How dear** loyalty is (incentives) |
 | **Prediction for autocracies** | Policy as the elite wants it, for example less spending on education | Private goods for a few: offices, licences, corruption |
 
-- **Median voter:** line the voters up on one dimension, for example from less to more spending on education. The median voter is the one in the middle. Under majority rule a proposal at this position beats every other. In an autocracy only the elite counts, and its median lies elsewhere than that of the whole population.
-- **Selectorate theory** is worked out with numbers in [[Autocratic State#The ruler's arithmetic]] [@buenodemesquita2003logic].
+- **[[Median Voter Theorem|Median voter]]:** line the voters up on one dimension, for example from less to more spending on education. The median voter is the one in the middle. Under majority rule a proposal at this position beats every other. In an autocracy only the elite counts, and its median lies elsewhere than that of the whole population.
+- **[[Selectorate Theory]]** works the second explanation out with numbers [@buenodemesquita2003logic].
 
 ### Types of democracy
 
@@ -161,23 +161,7 @@ The extra veto player made the winset smaller. The bill that passed kept the goa
 
 ### Why states become democratic
 
-Political systems are mostly stable, but they change. The starting point of **modernisation theory** is a finding: rich countries are more often democracies [@lipset1959some]. There are two readings of why.
-
-| | Endogenous thesis | Exogenous thesis |
-|---|---|---|
-| **Chain** | Economic development → industry, education, a growing middle class → demand for a say → democratisation | Another cause (collapse of the regime, war, pressure from outside) → democratisation → with economic development, democracy survives |
-| **In one line** | Wealth **creates** democracy | Wealth **keeps** democracy |
-| **Evidence** | Weak: the effect largely disappears once historical differences between countries are taken into account [@acemoglu2008income] | Good: above a certain level of income, democracies hardly ever break down [@przeworski1997modernization] |
-
-Both are hard to test. Political systems change rarely and are path-dependent: few cases, many possible causes.
-
-| | Taiwan / South Korea | China | Russia |
-|---|---|---|---|
-| **Economic development** | Rapid industrialisation, 1960s to 1980s | Strong growth since the 1980s, a large middle class | 1990s: deep economic crisis. 2000s: growth mainly from oil and gas |
-| **Democratisation** | Yes, at the end of the 1980s | Not to this day | Yes in the 1990s, then a relapse |
-| **Fits …** | the endogenous thesis | neither: development without democratisation | the exogenous thesis: democracy came with the collapse of the regime and did not survive without broad wealth |
-
-The last row is my own reading: the slide leaves it open. The lecture's lesson is that modernisation does not work automatically. It depends on **which** development takes place (broad industrialisation or income from raw materials) and on whether the middle class is independent of the regime.
+Political systems are mostly stable, but they change. Rich countries are more often democracies, and **modernisation theory** gives two readings of why: wealth *creates* democracy (endogenous thesis) or wealth *keeps* a democracy alive that arose for other reasons (exogenous thesis). The evidence favours the second. The two chains, the evidence and the cases of Taiwan, South Korea, China and Russia are in [[Democratisation and Modernisation Theory]].
 
 ## Application
 
@@ -204,11 +188,8 @@ The last row is my own reading: the slide leaves it open. The lecture's lesson i
 | freie und faire Wahlen | Free and fair elections | Elections that are regular, general, equal, free, direct and secret, and that the government can lose. | apply |
 | eng gefasste / umfassende Demokratiedefinition | Narrow / broad definition of democracy | Elections, competition and changes of power suffice, or further conditions such as liberties and the rule of law are required. | apply |
 | politischer Wettbewerb / Partizipation | Political competition / participation | Dahl's two dimensions of democracy: a real choice between rivals, and the taking part of the citizens. | apply |
-| Rechtsstaat | Rule of law, constitutional state | A state in which all public power is bound by law and basic rights. | define |
 | Vetospieler | Veto player | An actor whose agreement is needed to change the status quo. | define |
 | Winset | Winset | The set of reforms that every veto player prefers to the status quo. | apply |
-| Medianwähler:in | Median voter | The voter in the middle of the electorate on one policy dimension, whose position wins under majority rule. | apply |
-| endogene / exogene Modernisierungsthese | Endogenous / exogenous modernisation thesis | Wealth creates democracy, or wealth keeps a democracy alive that arose for other reasons. | apply |
 | halbdirekte Demokratie | Semi-direct democracy | A combination of representative and direct democracy, as in Switzerland. | define |
 | Mehrheitsdemokratie / Konsensdemokratie | Majoritarian / consensus democracy | Democracy that concentrates power in the majority, or one that shares it among many parties and levels. | apply |
 | Konkordanz | Concordance | All major parties are included in government and decide by compromise. | apply |
@@ -224,6 +205,7 @@ The last row is my own reading: the slide leaves it open. The lecture's lesson i
 - [[Autocratic State]]: the other end of the same scale. Each is defined against the other.
 - [[Separation of Powers]]: one of the three principles by which a democracy limits state power. How strongly legislature and executive are separated gives the systems of government.
 - [[Federalism]]: the vertical separation of powers, and one mark of a consensus democracy such as Switzerland.
+- [[Democratisation and Modernisation Theory]]: explains how a state becomes a democracy and why rich democracies last.
 - [[Polity, Policy, Politics]]: democracy is a property of the *polity*.
 - [[Political System Model]]: in a democracy the input side is open. Demands can be voiced and bundled freely, and feedback reaches the rulers through elections.
 - [[Sovereign Territorial State]]: democracy answers the question of who holds the *Staatsgewalt*, namely the *Staatsvolk* itself.
@@ -270,9 +252,6 @@ The last row is my own reading: the slide leaves it open. The lecture's lesson i
 > <!-- qard-write -->
 > The CO₂ Act lay in the winset of both chambers but outside what the voters preferred to the status quo (51.6 % no). The Climate Act kept the goal, replaced levies with subsidies, lay closer to the status quo and inside the winset of all three (59 % yes).
 
-> [!qard]- 13. Endogenous or exogenous modernisation thesis: what does each claim, and which is better supported?
-> Endogenous: wealth creates democracy (development, middle class, demand for a say). Exogenous: democracy arises for other reasons and survives where a country is rich. The exogenous thesis has the better evidence.
-
 ## Open Questions
 
 - [ ] Does direct democracy make security policy better or only slower? The fighter-aircraft votes would be a case.
@@ -287,8 +266,7 @@ The last row is my own reading: the slide leaves it open. The lecture's lesson i
 - [@merkel2004embedded]: embedded and defective democracy. Not from the textbook's definition section. [High confidence]
 - [@lijphart1999patterns]: majoritarian and consensus democracy, Switzerland as the consensus case. [High confidence]
 - [@doyle1983kant], [@reiter2002democracies]: regime type and war. [Medium confidence]
-- Lecture of 5 October 2026 (slides): the table of measures, the comparison of median voter theorem and selectorate theory, the winset and the climate-policy case, the two modernisation theses with the three country cases. [High confidence]
+- Lecture of 5 October 2026 (slides): the table of measures, the comparison of median voter theorem and selectorate theory, the winset and the climate-policy case. [High confidence]
 - [@tsebelis2002veto]: veto players. Cited through the lecture and the textbook. [Medium confidence]
-- [@lipset1959some], [@acemoglu2008income], [@przeworski1997modernization]: the finding and the two readings of modernisation theory. Cited through the lecture, not read. [Medium confidence]
 - [@fukuyama1992end]: shown in the lecture next to the share of democracies over time. The one-line summary is mine. [Low confidence]
 - The definition and the types of democracy are aligned with the textbook and the lecture. Application and critiques are not based on the course material. [Low confidence]

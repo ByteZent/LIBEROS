@@ -89,32 +89,9 @@ In my own words: in an autocracy the government decides whether it stays. In a d
 
 ### The ruler's arithmetic
 
-**Selectorate theory** predicts policy from two numbers [@buenodemesquita2003logic]:
+[[Selectorate Theory]] turns this into a calculation with two numbers: the **selectorate (S)**, everyone with a say in who rules, and the **winning coalition (W)**, those whose support the ruler needs. Private goods cost more with every member of W, public goods cost the same. In the lecture's example a junta of 100 pays CHF 200,000 in private goods where public goods would cost CHF 1 billion. **What decides is the size of W, not whether the ruler is good or bad.**
 
-- the **selectorate (S)**: the people who have a say in who rules;
-- the **winning coalition (W)**: the people whose support the ruler needs to stay in power.
-
-In a democracy W is a large part of S. In an autocracy W is a small circle inside it.
-
-The ruler can pay supporters with two kinds of goods:
-
-| | Private goods | Public goods |
-|---|---|---|
-| **Properties** | Excludable and rival | Not excludable, not rival |
-| **Examples** | Offices, licences, money | Schools, roads, clean air |
-| **Cost** | Grows with W | Fixed |
-
-The lecture's example assumes that every member of W must receive benefits worth CHF 2,000, or they change to a rival. Public goods cost a fixed CHF 1 billion.
-
-| Regime | W | Cost of private goods | Cost of public goods | Cheaper |
-|---|---|---|---|---|
-| Military junta | 100 | CHF 200,000 | CHF 1 billion | private |
-| One-party regime | 10,000 | CHF 20 million | CHF 1 billion | private |
-| Democracy | 2 million | CHF 4 billion | CHF 1 billion | **public** |
-
-The larger W, the dearer it is to reward every member one by one. **What decides is the size of W, not whether the ruler is good or bad.**
-
-The **median voter theorem** reaches the same prediction by another route: in an autocracy only the elite counts, and its median position differs from that of the whole population, for example less spending on education. The two explanations are compared in [[Democratic State#Does democracy solve problems better?]].
+The **[[Median Voter Theorem|median voter theorem]]** reaches the same prediction by another route: in an autocracy only the elite counts, and its median position differs from that of the whole population, for example less spending on education. The two explanations are compared in [[Democratic State#Does democracy solve problems better?]].
 
 ## Origins & Evolution
 
@@ -161,9 +138,6 @@ The **median voter theorem** reaches the same prediction by another route: in an
 | Legitimation, Repression, Kooptation | Legitimation, repression, co-optation | The three pillars of autocratic stability: giving reasons to accept the regime, punishing opposition, buying in elites. | apply |
 | Putsch / Staatsstreich | Coup | The illegal seizure of power by a small group, usually from within the state. | translate |
 | Machtwechsel | Change of power | The transfer of government from one party or group to another. | translate |
-| Gewinnkoalition | Winning coalition | The group whose support a ruler needs to stay in power: small in an autocracy, large in a democracy. | define |
-| Selektorat | Selectorate | The people who have a say in who rules. | define |
-| Selektoratstheorie | Selectorate theory | The theory that the size of the winning coalition relative to the selectorate decides whether a ruler provides public or private goods. | apply |
 | Parteidiktatur | Party dictatorship | An autocracy in which a party organisation holds power: the lecture's word for a single-party regime. | translate |
 
 ## Key Connections
@@ -172,6 +146,7 @@ The **median voter theorem** reaches the same prediction by another route: in an
 - [[Political System Model]]: in an autocracy the input side is controlled from above. Articulation and aggregation are steered or faked, and feedback reaches the rulers only in distorted form.
 - [[Sovereign Territorial State]]: an autocracy can be fully sovereign. Sovereignty says nothing about who holds the state authority.
 - [[Cognitive Warfare]]: autocracies shield their own information space while using the openness of democracies.
+- [[Selectorate Theory]]: explains why a ruler with a small winning coalition pays supporters with private goods and neglects the population.
 - [[PMESII]]: regime type, pillars of stability and the winning coalition are the core of the political factor when the opponent is an autocracy.
 
 ## Self-Test: Autocracy
@@ -202,16 +177,6 @@ The **median voter theorem** reaches the same prediction by another route: in an
 
 > [!qard]- 9. Compare: why is a single-party regime usually more durable than a personalist one?
 > The party settles succession and shares out offices, so elites have a stake in the system. A personalist regime hollows out institutions and depends on one person, so it is unpredictable and often ends violently.
-
-> [!qard]- 10. What are the selectorate and the winning coalition?
-> The selectorate (S) is everyone with a say in who rules. The winning coalition (W) is the part of it whose support the ruler needs to stay in power. W is small in an autocracy and large in a democracy.
-
-> [!qard]- 11. Calculate: each member of W must receive CHF 2,000. Public goods cost CHF 1 billion. Which is cheaper for a junta with W = 100 and for a democracy with W = 2 million?
-> Junta: private goods (CHF 200,000). Democracy: public goods (CHF 1 billion against CHF 4 billion).
-> <!-- qard-solution -->
-> 1. Junta: 100 × 2,000 = CHF 200,000, far below CHF 1 billion.
-> 2. Democracy: 2,000,000 × 2,000 = CHF 4 billion, above CHF 1 billion.
-> 3. Private goods grow with W, public goods cost the same. The size of W decides.
 
 ## Open Questions
 

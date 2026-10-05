@@ -113,7 +113,6 @@ The rows *Covers* and *Examples* follow the textbook [@bernauer2025einfuhrung, p
 | Willensbildung | Will formation, opinion formation | The process in which opinions and demands are formed and brought together. | define |
 | Gesetzgebungsverfahren | Legislative procedure | The steps by which a law is drafted, debated and adopted. | translate |
 | Umsetzung und Durchsetzung | Implementation and enforcement | Putting a decision into practice and securing compliance. | translate |
-| Gewaltenteilung | Separation of powers | Division of state power among legislature, executive and judiciary, which check each other. | apply |
 | Vernehmlassung | Consultation procedure | The Swiss procedure in which cantons, parties and associations comment on a draft law. | define |
 
 ## Key Connections
