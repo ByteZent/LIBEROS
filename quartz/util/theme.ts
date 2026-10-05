@@ -13,6 +13,7 @@ export interface ColorScheme {
 interface Colors {
   lightMode: ColorScheme
   darkMode: ColorScheme
+  sepiaMode?: ColorScheme // a third theme between the two, chosen in the theme selector
 }
 
 export type FontSpecification =
@@ -35,7 +36,8 @@ export interface Theme {
   fontOrigin: "googleFonts" | "local"
 }
 
-export type ThemeKey = keyof Colors
+// the two schemes every site has; the optional sepia scheme is not offered for social images
+export type ThemeKey = "lightMode" | "darkMode"
 
 const DEFAULT_SANS_SERIF =
   'system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
@@ -140,6 +142,22 @@ export async function processGoogleFonts(
   return { processedStylesheet, fontFiles }
 }
 
+function schemeVariables(name: string, scheme?: ColorScheme) {
+  if (!scheme) return ""
+  return `
+:root[saved-theme="${name}"] {
+  --light: ${scheme.light};
+  --lightgray: ${scheme.lightgray};
+  --gray: ${scheme.gray};
+  --darkgray: ${scheme.darkgray};
+  --dark: ${scheme.dark};
+  --secondary: ${scheme.secondary};
+  --tertiary: ${scheme.tertiary};
+  --highlight: ${scheme.highlight};
+  --textHighlight: ${scheme.textHighlight};
+}`
+}
+
 export function joinStyles(theme: Theme, ...stylesheet: string[]) {
   return `
 ${stylesheet.join("\n\n")}
@@ -172,5 +190,6 @@ ${stylesheet.join("\n\n")}
   --highlight: ${theme.colors.darkMode.highlight};
   --textHighlight: ${theme.colors.darkMode.textHighlight};
 }
+${schemeVariables("sepia", theme.colors.sepiaMode)}
 `
 }

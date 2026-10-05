@@ -7,7 +7,7 @@ declare module "*.scss" {
 interface CustomEventMap {
   prenav: CustomEvent<{}>
   nav: CustomEvent<{ url: FullSlug }>
-  themechange: CustomEvent<{ theme: "light" | "dark" }>
+  themechange: CustomEvent<{ theme: "light" | "sepia" | "dark" }>
   readermodechange: CustomEvent<{ mode: "on" | "off" }>
 }
 

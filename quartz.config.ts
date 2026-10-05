@@ -63,6 +63,18 @@ const config: QuartzConfig = {
           highlight: "rgba(127, 179, 200, 0.10)",
           textHighlight: "#d4a84b44",
         },
+        // between the two: warm paper, easier on the eyes than the light theme
+        sepiaMode: {
+          light: "#e9dfc9",
+          lightgray: "#d2c5a8",
+          gray: "#8c8067",
+          darkgray: "#4a4132",
+          dark: "#2a2318",
+          secondary: "#1d5060",
+          tertiary: "#8a5a14",
+          highlight: "rgba(29, 80, 96, 0.09)",
+          textHighlight: "#d9a93a55",
+        },
       },
     },
   },
