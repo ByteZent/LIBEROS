@@ -9,6 +9,8 @@
 // The script lays the branches out to both sides of the centre, lets branches fold, pans and
 // zooms, and filters by text, by tag and by kind of node (note, link, idea). The list stays in
 // the page: "List" shows it, and it is what a reader without JavaScript gets.
+// On a phone the filters fold behind "Filters", two fingers zoom, a swipe up or down over the
+// map still scrolls the page, and "Full" gives the map the whole screen.
 
 const MM_ROW = 34 // vertical distance between two neighbouring leaves
 const MM_GAP = 34 // horizontal distance between a node and its children
@@ -217,7 +219,15 @@ function setupMindmap(callout: HTMLElement) {
     },
     "mm-chip mm-clear",
   )
-  tools.append(row("Search", search, clear, count))
+  // phone only (mindmap.scss): the rows below the search stay folded until asked for
+  const more = plain(
+    "Filters",
+    "Show or hide the filters",
+    () => more.setAttribute("aria-expanded", String(tools.classList.toggle("mm-tools-open"))),
+    "mm-chip mm-more",
+  )
+  more.setAttribute("aria-expanded", "false")
+  tools.append(row("Search", search, more, clear, count))
 
   const kinds = (["note", "link", "idea"] as Kind[]).filter((k) =>
     all.some((n) => n !== root && n.kind === k),
@@ -279,6 +289,8 @@ function setupMindmap(callout: HTMLElement) {
     plain("+", "Zoom in", () => zoomBy(1.25)),
     plain("Fit", "Fit the whole map into the frame", () => fit()),
   )
+  const full = plain("Full", "Show the map on the whole screen", () => setFull(!isFull()))
+  zoom.append(full)
   viewport.appendChild(zoom)
 
   content.prepend(tools, viewport)
@@ -294,8 +306,13 @@ function setupMindmap(callout: HTMLElement) {
     canvas.style.transform = `translate(${pan.x}px, ${pan.y}px) scale(${pan.scale})`
   }
   // the frame is as tall as the map needs at the current zoom, within limits
-  const tallest = () => Math.round(window.innerHeight * 0.7)
+  const isFull = () => viewport.classList.contains("mm-full")
+  const tallest = () => (isFull() ? window.innerHeight : Math.round(window.innerHeight * 0.7))
   const frame = () => {
+    if (isFull()) {
+      viewport.style.height = "" // the whole screen, see mindmap.scss
+      return
+    }
     const wanted = Math.round(size.h * pan.scale) + 16
     viewport.style.height = `${Math.min(Math.max(wanted, 220), tallest())}px`
   }
@@ -305,7 +322,8 @@ function setupMindmap(callout: HTMLElement) {
     const vw = viewport.clientWidth
     if (mode !== "keep") {
       pan.scale = Math.min(1, vw / size.w, tallest() / size.h)
-      if (mode === "readable") pan.scale = Math.max(pan.scale, 0.75)
+      // on a phone 0.75 is too small to read: full size, and the map is dragged
+      if (mode === "readable") pan.scale = Math.max(pan.scale, window.innerWidth <= 600 ? 1 : 0.75)
     }
     frame()
     const wide = size.w * pan.scale
@@ -323,22 +341,58 @@ function setupMindmap(callout: HTMLElement) {
     pan.scale = next
     place()
   }
+  function setFull(on: boolean) {
+    viewport.classList.toggle("mm-full", on)
+    document.documentElement.classList.toggle("mm-full-open", on)
+    full.textContent = on ? "Close" : "Full"
+    full.ariaLabel = on ? "Leave the full screen" : "Show the map on the whole screen"
+    fit("readable")
+  }
+  const onKey = (e: KeyboardEvent) => {
+    if (e.key === "Escape" && isFull()) setFull(false)
+  }
   let drag: { x: number; y: number } | null = null
+  // fingers on the map: one drags, two zoom
+  const fingers = new Map<number, { x: number; y: number }>()
+  let spread = 0 // distance between the two fingers at the last move
+  const apart = () => {
+    const [a, b] = [...fingers.values()]
+    return Math.hypot(a.x - b.x, a.y - b.y)
+  }
   const onDown = (e: PointerEvent) => {
     if ((e.target as HTMLElement).closest("a, button")) return
-    drag = { x: e.clientX - pan.x, y: e.clientY - pan.y }
+    fingers.set(e.pointerId, { x: e.clientX, y: e.clientY })
     viewport.setPointerCapture(e.pointerId)
+    if (fingers.size === 2) {
+      drag = null
+      spread = apart()
+      return
+    }
+    drag = { x: e.clientX - pan.x, y: e.clientY - pan.y }
     viewport.classList.add("mm-dragging")
   }
   const onMove = (e: PointerEvent) => {
+    if (fingers.has(e.pointerId)) fingers.set(e.pointerId, { x: e.clientX, y: e.clientY })
+    if (fingers.size === 2 && spread > 0) {
+      const [a, b] = [...fingers.values()]
+      const box = viewport.getBoundingClientRect()
+      const now = apart()
+      zoomBy(now / spread, (a.x + b.x) / 2 - box.left, (a.y + b.y) / 2 - box.top)
+      spread = now
+      return
+    }
     if (!drag) return
     pan.x = e.clientX - drag.x
     pan.y = e.clientY - drag.y
     place()
   }
-  const onUp = () => {
-    drag = null
-    viewport.classList.remove("mm-dragging")
+  const onUp = (e: PointerEvent) => {
+    fingers.delete(e.pointerId)
+    spread = 0
+    // the finger that stays goes on dragging from where it is
+    const [left] = [...fingers.values()]
+    drag = left ? { x: left.x - pan.x, y: left.y - pan.y } : null
+    if (!drag) viewport.classList.remove("mm-dragging")
   }
   // the page scrolls with the wheel; Ctrl or ⌘ + wheel (and pinch) zooms the map
   const onWheel = (e: WheelEvent) => {
@@ -357,6 +411,7 @@ function setupMindmap(callout: HTMLElement) {
   viewport.addEventListener("pointercancel", onUp)
   viewport.addEventListener("wheel", onWheel, { passive: false })
   search.addEventListener("input", onSearch)
+  document.addEventListener("keydown", onKey)
 
   // ── layout
   // anchor: the node that was clicked. It stays where it is on the screen and the zoom is kept,
@@ -519,6 +574,8 @@ function setupMindmap(callout: HTMLElement) {
     viewport.removeEventListener("pointercancel", onUp)
     viewport.removeEventListener("wheel", onWheel)
     search.removeEventListener("input", onSearch)
+    document.removeEventListener("keydown", onKey)
+    document.documentElement.classList.remove("mm-full-open")
   })
 }
 

@@ -294,3 +294,111 @@
     opacity: 0.35;
   }
 }
+
+// ─── Full screen ────────────────────────────────────────────────────────────
+
+html.mm-full-open {
+  overflow: hidden;
+}
+
+.mm-viewport.mm-full {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  background: var(--light);
+
+  .mm-zoom {
+    top: calc(0.6rem + env(safe-area-inset-top));
+    right: 0.6rem;
+  }
+}
+
+// the "Filters" button only exists for the phone layout
+.mm-tools .mm-more {
+  display: none;
+}
+
+// ─── Touch and phone ────────────────────────────────────────────────────────
+
+// A finger on the map must not trap the page: up and down scrolls on, sideways drags the map.
+// On the whole screen there is no page to scroll, so the map takes every direction.
+@media (pointer: coarse) {
+  .mm-viewport:not(.mm-full) {
+    touch-action: pan-y;
+  }
+
+  // the fold button is 16px: its touch area reaches further
+  .mm-node .mm-toggle {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: -10px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .callout[data-callout="mindmap"] {
+    padding: 0 0.5rem 0.5rem;
+  }
+
+  .mm-tools {
+    padding: 0.25rem 0.5rem;
+
+    // the filters took most of the screen above the map: folded until "Filters" is pressed
+    .mm-more {
+      display: inline-block;
+
+      &[aria-expanded="true"] {
+        border-color: var(--secondary);
+        color: var(--secondary);
+      }
+    }
+
+    &:not(.mm-tools-open) .mm-row + .mm-row {
+      display: none;
+    }
+
+    .mm-row {
+      gap: 0.4rem;
+    }
+
+    // the name of a row sits above its buttons
+    .mm-row-name {
+      width: 100%;
+    }
+
+    .mm-row:first-child .mm-row-name {
+      display: none;
+    }
+
+    // 16px, or iOS zooms into the page when the field is focused
+    .mm-search {
+      flex-basis: 100%;
+      max-width: none;
+      min-height: 2.25rem;
+      font-size: 1rem;
+    }
+
+    .mm-chip {
+      min-height: 2rem;
+      padding: 0.2rem 0.75rem;
+      font-size: 0.82rem;
+    }
+  }
+
+  .mm-zoom {
+    gap: 0.35rem;
+
+    .mm-chip {
+      min-width: 2.25rem;
+      min-height: 2.25rem;
+      font-size: 0.9rem;
+    }
+  }
+}
