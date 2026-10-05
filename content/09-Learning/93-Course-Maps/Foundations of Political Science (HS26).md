@@ -37,8 +37,8 @@ The course gives the concepts and methods to describe and explain political orde
 | Judge operationalisation, case selection and research design | [[Research Design]] · [[Bias in Research]] | ☑ seedling |
 | Check experiments, forecasts and typical fallacies critically | [[Bias in Research]] · [[Falsificationism]] | ☑ seedling |
 | Compare and explain political phenomena systematically | [[Democratic State]] · [[Autocratic State]] | ☑ seedling |
-| Explain why regime type matters for policy: median voter theorem and selectorate theory (ch. 3) | [[Democratic State#Does democracy solve problems better?]] · [[Autocratic State#The ruler's arithmetic]] | ◐ sections, no note of their own |
-| Explain democratisation: endogenous and exogenous modernisation thesis (ch. 3) | [[Democratic State#Why states become democratic]] | ◐ section |
+| Explain why regime type matters for policy: median voter theorem and selectorate theory (ch. 3) | [[Median Voter Theorem]] · [[Selectorate Theory]] · [[Democratic State#Does democracy solve problems better?]] (comparison) | ☑ seedling |
+| Explain democratisation: endogenous and exogenous modernisation thesis (ch. 3) | [[Democratisation and Modernisation Theory]] | ☑ seedling |
 | Compare systems of government and judge their effects; federalism; veto players (ch. 4) | [[Separation of Powers]] · [[Federalism]] · [[Democratic State#Types of democracy]] (veto players) · [[Bias in Research]] (third variable) | ☑ seedling, veto players ◐ section |
 | Elections and direct democracy (ch. 5) |  | ☐ no note yet |
 | Attitudes and political behaviour (ch. 6) |  | ☐ no note yet |
@@ -88,7 +88,7 @@ The practice questions on the textbook with worked answers, one page per chapter
 
 ## Exam preparation
 
-- [ ] Decide whether median voter theorem, selectorate theory, veto players and federalism get notes of their own. They are sections of [[Democratic State]] and [[Autocratic State]] for now, and the median voter returns in ch. 6, 7, 8 and 11
+- [ ] Decide whether veto players get a note of their own. They are a section of [[Democratic State]] for now. [[Median Voter Theorem]], [[Selectorate Theory]] and [[Federalism]] have their notes
 - [ ] One note per textbook chapter 5–8 before Test 1, each with a self-test
 - [ ] Draft the four pages of notes for Test 1 from the BLUFs of the notes for ch. 1–8
 - [ ] Work through the textbook's practice questions chapter by chapter (see *Practice questions* above; decks Bernauer Leitfragen [[/flashcards/Bernauer-Leitfragen-Test-1|Test 1]] and [[/flashcards/Bernauer-Leitfragen-Test-2|Test 2]])

@@ -35,7 +35,7 @@ The course studies the military as an organisation and institution inside societ
 | Use types of society as ideal types, not as exact pictures | [[Social Change]] | ☐ covered only in passing: needs a note on diagnoses of modern society |
 | Check value change and claims about generations critically | [[Value Change (Inglehart)]] · [[Generations and the Military]] | ☑ seedling / seedling (in `_inbox`) |
 | Carry every relation over to the military or Swiss society | [[Generations and the Military]] · [[Value Change (Inglehart)]] | ☑ seedling (in `_inbox`) / seedling |
-| Demographic change; social structure |  | ☐ no note yet |
+| Demographic change; social structure | [[Demographic Change in Switzerland]] · [[Demographic Transition]] | ☑ seedling (in `_inbox`) / ☐ social structure: no note yet |
 | Institutions and organisations |  | ☐ no note yet |
 | Scope and classics of military sociology; power, rule and violence |  | ☐ no note yet |
 | The military as institution and organisation; constabularisation of the army |  | ☐ no note yet |
@@ -46,7 +46,7 @@ The course studies the military as an organisation and institution inside societ
 |---|---|---|
 | 21.09. | Basic concepts and social change | [[Sociology - Levels and Schools]] · [[Values and Norms]] · [[Social Change]] |
 | 28.09. | Value change and generations | [[Value Change (Inglehart)]] · [[Generations and the Military]] |
-| 05.10. | Demographic change |  |
+| 05.10. | Demographic change | [[Demographic Change in Switzerland]] · [[Demographic Transition]] |
 | 12.10. | Social structures |  |
 | 19.10. | Institutions of society |  |
 | 26.10. | Organisations |  |
