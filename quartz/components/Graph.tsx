@@ -19,6 +19,8 @@ export interface D3Config {
   showTags: boolean
   focusOnHover?: boolean
   enableRadial?: boolean
+  // course codes in the order of their colours: a note is drawn in the colour of its course
+  courseOrder?: string[]
 }
 
 interface GraphOptions {
@@ -95,8 +97,10 @@ export default ((opts?: Partial<GraphOptions>) => {
             </svg>
           </button>
         </div>
+        <ul class="graph-legend"></ul>
         <div class="global-graph-outer">
           <div class="global-graph-container" data-cfg={JSON.stringify(globalGraph)}></div>
+          <ul class="graph-legend"></ul>
         </div>
       </div>
     )

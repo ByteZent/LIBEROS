@@ -68,6 +68,16 @@ type TweenNode = {
   stop: () => void
 }
 
+// LIBEROS: a note is drawn in the colour of its course. The colours are a fixed categorical
+// palette, one slot per entry of the graph's `courseOrder` option, light and dark stepped
+// separately. A course keeps its slot as long as its place in that list does not change; a
+// course outside the list, or beyond the last slot, stays neutral.
+const COURSE_TAG = "course/"
+const COURSE_COLORS = {
+  light: ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#4a3aa7", "#e34948"],
+  dark: ["#3987e5", "#d95926", "#199e70", "#c98500", "#d55181", "#008300", "#9085e9", "#e66767"],
+}
+
 async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   const slug = simplifySlug(fullSlug)
   const visited = getVisited()
@@ -87,6 +97,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     showTags,
     focusOnHover,
     enableRadial,
+    courseOrder,
   } = JSON.parse(graph.dataset["cfg"]!) as D3Config
 
   const data: Map<SimpleSlug, ContentDetails> = new Map(
@@ -205,10 +216,49 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     {} as Record<(typeof cssVars)[number], string>,
   )
 
+  // the colour of a note's course: of the first one, if it has several
+  const palette =
+    COURSE_COLORS[
+      document.documentElement.getAttribute("saved-theme") === "dark" ? "dark" : "light"
+    ]
+  const courseCodes = (courseOrder ?? []).slice(0, palette.length)
+  const courseOf = (d: NodeData): number =>
+    d.tags
+      .filter((tag) => tag.startsWith(COURSE_TAG))
+      .map((tag) => courseCodes.indexOf(tag.slice(COURSE_TAG.length)))
+      .find((slot) => slot >= 0) ?? -1
+
+  // the legend names every course that has a note in this graph, and links to its page
+  const legend = (graph.closest(".graph-outer") ?? graph).parentElement?.querySelector(
+    ":scope > .graph-legend",
+  )
+  if (legend) {
+    const shown = new Set(graphData.nodes.map(courseOf))
+    legend.replaceChildren(
+      ...courseCodes.flatMap((code, slot) => {
+        if (!shown.has(slot)) return []
+        const page = simplifySlug(("tags/" + COURSE_TAG + code) as FullSlug)
+        const item = document.createElement("li")
+        const dot = document.createElement("span")
+        dot.className = "graph-legend-dot"
+        dot.style.backgroundColor = palette[slot]
+        const link = document.createElement("a")
+        link.className = "internal"
+        link.href = resolveRelative(fullSlug, page as unknown as FullSlug)
+        link.textContent = (data.get(page)?.title ?? code).replace(/\s*·\s*[A-Z]{2}\d{2}$/, "")
+        item.append(dot, link)
+        return [item]
+      }),
+    )
+  }
+
   // calculate color
   const color = (d: NodeData) => {
     const isCurrent = d.id === slug
-    if (isCurrent) {
+    const course = courseOf(d)
+    if (course >= 0) {
+      return palette[course]
+    } else if (isCurrent) {
       return computedStyleMap["--secondary"]
     } else if (visited.has(d.id) || d.id.startsWith("tags/")) {
       return computedStyleMap["--tertiary"]
@@ -429,6 +479,9 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
 
     if (isTagNode) {
       gfx.stroke({ width: 2, color: computedStyleMap["--tertiary"] })
+    } else if (nodeId === slug && courseOf(n) >= 0) {
+      // the current note wears its course colour too: a ring marks it instead
+      gfx.stroke({ width: 1.5, color: computedStyleMap["--dark"] })
     }
 
     nodesContainer.addChild(gfx)

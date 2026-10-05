@@ -12,16 +12,6 @@ export const sharedPageComponents: SharedLayout = {
     Component.Timeline(),
     // mind maps: a nested list in a [!mindmap] callout, drawn as a filterable map
     Component.Mindmap(),
-    // "Recently updated" feed, only on the landing page
-    Component.ConditionalRender({
-      component: Component.RecentNotes({
-        title: "Recently updated",
-        limit: 8,
-        showTags: false,
-        filter: (f) => f.slug !== "index" && !f.slug!.endsWith("/index"),
-      }),
-      condition: (page) => page.fileData.slug === "index",
-    }),
   ],
   footer: Component.Footer({
     links: {
@@ -68,6 +58,20 @@ const explorer = Component.Explorer({
   },
 })
 
+// Graph: a note is drawn in the colour of its course, by the place of the course in this list.
+// Add a new course at the end, so the others keep their colours. There are eight colours:
+// a ninth course stays grey.
+const courseOrder = [
+  "PolSci-HS26",
+  "MikroEcon-HS26",
+  "MilPsy-HS26",
+  "L1-HS26",
+  "MilSoc-HS26",
+  "PrivLawI-HS26",
+  "PS1-HS26",
+  "Hist1-HS26",
+]
+
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
@@ -98,8 +102,8 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   right: [
     Component.Graph({
-      localGraph: { depth: 2, showTags: false },
-      globalGraph: { showTags: false, enableRadial: true },
+      localGraph: { depth: 2, showTags: false, courseOrder },
+      globalGraph: { showTags: false, enableRadial: true, courseOrder },
     }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
@@ -132,8 +136,8 @@ export const defaultListPageLayout: PageLayout = {
     // tag and course pages: graph of the notes carrying the tag (see graph.inline.ts)
     Component.ConditionalRender({
       component: Component.Graph({
-        localGraph: { showTags: false },
-        globalGraph: { showTags: false, enableRadial: true },
+        localGraph: { showTags: false, courseOrder },
+        globalGraph: { showTags: false, enableRadial: true, courseOrder },
       }),
       condition: (page) => page.fileData.slug?.startsWith("tags/") ?? false,
     }),
