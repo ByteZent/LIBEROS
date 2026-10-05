@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 470" width="1000" height="470" role="img" aria-labelledby="t d">
+  <title id="t">Demographic transition: four phases</title>
+  <desc id="d">A chart with time on the horizontal axis, divided into four phases. Phase 1, before industrialisation: birth rate and death rate are both high, the population hardly grows. Phase 2, early industrialisation: the death rate falls while the birth rate stays high, the population grows strongly. Phase 3, mid industrialisation: the birth rate falls as well, growth slows. Phase 4, late industrialisation: both rates are very low, the birth rate falls to or below the death rate, the population stagnates or shrinks unless migration fills the gap.</desc>
+  <defs>
+    <style>
+      .panel { fill: #0d1117; }
+      .plot { fill: #111821; stroke: #3a4654; stroke-width: 1.5; }
+      .core { font: 700 14px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #c9d1d9; }
+      .h { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #7fb3c8; }
+      .h-g { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #7fc8a0; }
+      .h-r { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #e07a5f; }
+      .ph { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #d4a84b; }
+      .lbl { font: 600 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .sub { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .q { font: italic 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .ln-g { stroke: #7fc8a0; stroke-width: 2.5; fill: none; }
+      .ln-r { stroke: #e07a5f; stroke-width: 2.5; fill: none; }
+      .ln-b { stroke: #7fb3c8; stroke-width: 2; stroke-dasharray: 7 5; fill: none; }
+      .sep { stroke: #5a6673; stroke-width: 1.5; stroke-dasharray: 4 5; fill: none; }
+    </style>
+  </defs>
+  <rect class="panel" x="0" y="0" width="1000" height="470" rx="10"/>
+  <text class="core" x="500" y="40" text-anchor="middle">DEMOGRAPHIC TRANSITION: FOUR PHASES</text>
+
+  <text class="ph" x="187" y="72" text-anchor="middle">PHASE 1</text>
+  <text class="sub" x="187" y="90" text-anchor="middle">before industrialisation</text>
+  <text class="ph" x="402" y="72" text-anchor="middle">PHASE 2</text>
+  <text class="sub" x="402" y="90" text-anchor="middle">early industrialisation</text>
+  <text class="ph" x="617" y="72" text-anchor="middle">PHASE 3</text>
+  <text class="sub" x="617" y="90" text-anchor="middle">mid industrialisation</text>
+  <text class="ph" x="832" y="72" text-anchor="middle">PHASE 4</text>
+  <text class="sub" x="832" y="90" text-anchor="middle">late industrialisation</text>
+
+  <rect class="plot" x="80" y="104" width="860" height="262" rx="6"/>
+  <line class="sep" x1="295" y1="104" x2="295" y2="366"/>
+  <line class="sep" x1="510" y1="104" x2="510" y2="366"/>
+  <line class="sep" x1="725" y1="104" x2="725" y2="366"/>
+  <text class="sub" x="62" y="235" text-anchor="middle" transform="rotate(-90 62 235)">rate per 1,000 · population</text>
+
+  <path class="ln-b" d="M80 352 L295 348 C400 330 450 260 510 220 C600 160 680 130 725 122 C800 112 880 110 940 116"/>
+  <path class="ln-g" d="M80 134 C150 128 220 138 295 134 L510 140 C600 147 640 300 725 326 C800 342 880 347 940 349"/>
+  <path class="ln-r" d="M80 156 C120 144 160 168 200 154 S270 162 295 156 C360 164 400 292 510 302 C600 314 680 330 725 334 L940 339"/>
+
+  <text class="h-g" x="96" y="124">BIRTH RATE</text>
+  <text class="h-r" x="96" y="186">DEATH RATE</text>
+  <text class="h" x="770" y="136">POPULATION</text>
+
+  <text class="lbl" x="187" y="392" text-anchor="middle">Almost no growth</text>
+  <text class="sub" x="187" y="410" text-anchor="middle">both rates high</text>
+  <text class="lbl" x="402" y="392" text-anchor="middle">Strong growth</text>
+  <text class="sub" x="402" y="410" text-anchor="middle">deaths fall, births stay high</text>
+  <text class="lbl" x="617" y="392" text-anchor="middle">Slower growth</text>
+  <text class="sub" x="617" y="410" text-anchor="middle">births fall as well</text>
+  <text class="lbl" x="832" y="392" text-anchor="middle">Stagnation or decline</text>
+  <text class="sub" x="832" y="410" text-anchor="middle">both low, births below deaths</text>
+
+  <text class="q" x="500" y="446" text-anchor="middle">The gap between the two curves is natural growth. Migration is not part of the model.</text>
+</svg>
