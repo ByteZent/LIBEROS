@@ -17,7 +17,7 @@ tags:
 ## Frontmatter
 
 ```yaml
-type: concept | model | actor | thinker | work | case | judgment | norm | assessment | framework | synthesis | source | question | moc | idea
+type: concept | model | actor | thinker | work | case | judgment | norm | assessment | framework | synthesis | source | question | moc | idea | practice
 domain: [economics, policy]   # one or more: strategy · military · policy · economics · law · ir · security · intelligence · technology · psychology · sociology
 courses: [PP-ECON-1]          # course codes this note serves (see Course Maps); shown as a COURSE badge
 status: seedling | developing | evergreen
@@ -66,6 +66,7 @@ Concept, model, framework and legal notes end with `## Self-Test: <short topic>`
 - Every course note with a BLUF gives one blank-page card in `/flashcards/recall`: the title only, everything I know in writing, then the BLUF for comparison.
 - Rating a card: *missed* sends it back to box 1, *hard* keeps it in its box and brings it back in half the time, *knew it* moves it up. A card missed on three days is a **leech** ("Leeches" in the deck's card selection): rewrite the card or the note.
 - **Exam** in a deck: ten cards of the chosen topic against the clock (two minutes each), every answer in writing and in German, nothing shown until the end.
+- The practice questions of a course are notes of `type: practice` in `09-Learning/96-Practice-Questions`, one page per textbook chapter, in the language of the exam. They have a deck of their own (`qard-deck:` the name of the question set) and `qard-topic:` names the chapter. Link each page to the book's source note and to the course map, but not from the map's Sessions table: that would pull every question into the booklet.
 - `make lint` reports notes with cards but no `qard-deck`, and self-tests that only ask for recall.
 
 ### Spaced repetition
