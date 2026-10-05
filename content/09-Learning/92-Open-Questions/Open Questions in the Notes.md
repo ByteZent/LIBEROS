@@ -12,7 +12,7 @@ draft: false
 ---
 
 > [!bluf]
-> Every unanswered question from the notes' *Open Questions* sections in one place: 61 questions from 26 notes, grouped by course. Use it as a reading list: pick a question, read for it, then answer it in the note or promote it to an Open Question note of its own.
+> Every unanswered question from the notes' *Open Questions* sections in one place: 75 questions from 31 notes, grouped by course. Use it as a reading list: pick a question, read for it, then answer it in the note or promote it to an Open Question note of its own.
 >
 > This page is **generated** by `make questions`.
 > Do not edit it: tick the question off in the note and run the command again.
@@ -30,11 +30,28 @@ draft: false
 - Does direct democracy make security policy better or only slower? The fighter-aircraft votes would be a case.
 - Is the democratic peace caused by democracy itself, or by wealth, trade and alliances that happen to go with it?
 
+**[[Democratisation and Modernisation Theory]]**
+
+- At what level of income does the exogenous thesis place the threshold, and has any democracy above it broken down since 1997? From memory, Przeworski and Limongi name the income of Argentina in 1975, about 6,000 dollars per head: check against the article.
+- Does democratic backsliding in rich countries contradict the exogenous thesis, or is it something other than a breakdown?
+- How do Inglehart's value change and Lipset's chain relate: two mechanisms, or the same one seen from two disciplines?
+
 **[[Empirical-Analytical vs Hermeneutic Research]]**
 
 - Is strategic theory (Clausewitz, [[John Boyd]]) hermeneutic, empirical-analytical, or something else?
 - Can a normative question be answered scientifically at all, or only made more precise?
 - How do mixed-methods designs combine the two currents without losing the strengths of either?
+
+**[[Federalism]]**
+
+- Does the pandemic show that federalism fails in a crisis, or that it works because it can be suspended?
+- How does Swiss federalism shape security policy, with cantonal police, a federal army and civil protection in between?
+- Is the majority of the cantons (*Ständemehr*) still justified when the smallest cantons weigh many times more per voter than the largest?
+
+**[[Median Voter Theorem]]**
+
+- Does the theorem say anything about Switzerland, with many parties, proportional representation and a government of all large parties?
+- Is the voter in a Swiss referendum a better case for the theorem than the voter in an election?
 
 **[[Political System Model]]**
 
@@ -46,6 +63,18 @@ draft: false
 
 - Where does "polity" sit in international politics, where there is no constitution and no central authority?
 - Is military doctrine polity (a standing rule), policy (a content) or the product of politics? See [[Doctrine (Swiss Armed Forces)]].
+
+**[[Selectorate Theory]]**
+
+- How would one measure W for a real regime without using the outcome (public goods) as the measure?
+- Does the theory explain why some autocracies with small coalitions (Singapore, the Gulf monarchies) provide many public goods?
+- Is the Swiss government, with all large parties in it, a case of an unusually large W?
+
+**[[Separation of Powers]]**
+
+- In a parliamentary system, is the real separation the one between government and opposition, and not between government and parliament?
+- How much may an emergency shift power to the executive and to the centre before the separation stops being effective?
+- Is direct democracy a third direction of the separation of powers, with the voters as a check on all three powers?
 
 **[[Sovereign Territorial State]]**
 

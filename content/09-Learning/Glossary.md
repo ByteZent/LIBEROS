@@ -13,14 +13,14 @@ draft: false
 ---
 
 > [!bluf]
-> Every German term from the notes' glossaries with its English equivalent and a one-line definition, 606 terms in alphabetical order.
+> Every German term from the notes' glossaries with its English equivalent and a one-line definition, 658 terms in alphabetical order.
 >
 > **Be able to:**
-> - **apply** = core term that carries a concept or model: explain it and use it on a case (252)
-> - **define** = technical term: give its definition (293)
-> - **translate** = plain vocabulary: know the equivalent (61).
+> - **apply** = core term that carries a concept or model: explain it and use it on a case (264)
+> - **define** = technical term: give its definition (320)
+> - **translate** = plain vocabulary: look it up here, no flashcard (74).
 >
-> Study the terms as flashcards: [[/flashcards/glossary|Glossary deck]].
+> Study the *apply* and *define* terms as flashcards: [[/flashcards/glossary|Glossary deck]].
 >
 > This page is **generated** by `make glossary`.
 > Do not edit it: change the glossary table in the note and run the command again.
@@ -41,6 +41,7 @@ draft: false
 | **absoluter Vorteil** | Absolute advantage | Producing a good with fewer inputs than another producer. | apply |
 | Abwehrmechanismus | Defence mechanism | A way the ego protects itself from inner conflict, such as repression, projection, denial or rationalisation. | define |
 | Ad-hoc-Hypothese | Ad hoc hypothesis | An extra assumption added only to save a theory from refutation. | define |
+| Agenda-Setting-Macht | Agenda-setting power | The power to decide what is put to a decision and in what form. | define |
 | Aggregationsebene | Level of aggregation | The level at which a phenomenon is studied, from micro to macro. | define |
 | **allgemein verbindlich** | Generally binding | All members of a certain group have to accept and follow it. | apply |
 | Allgemeine Geschäftsbedingungen (AGB) | General terms and conditions | Pre-drafted contract terms. They bind only if they were made part of the contract. | define |
@@ -80,6 +81,7 @@ draft: false
 | auslegen | Interpret | To work out the meaning of a text or statement. | translate |
 | **Auslegung** | Interpretation | Finding the parties' actual common intention, or else what a reasonable person in good faith would understand. | apply |
 | Aussenhandel | Foreign trade | Trade in goods and services across national borders. | translate |
+| ausserordentliche Lage | Extraordinary situation | The highest of the three levels of the Swiss Epidemics Act, at which the Federal Council decides for the whole country. | define |
 | Auswahl der Untersuchungseinheiten | Selection of units, sampling | Deciding who or what is studied. | define |
 | **Auswahl nach der abhängigen Variable** | Selection on the outcome | Only cases in which the outcome occurred are studied, so whatever they share looks like a cause. | apply |
 | Autarkie / Selbstversorgung | Autarky / self-sufficiency | An economy that produces everything it consumes and does not trade. | define |
@@ -110,6 +112,7 @@ draft: false
 | **Biologische Psychologie** | Biological psychology | The school that explains experience and behaviour by the nervous system, hormones and genes. | apply |
 | Bruttoinlandprodukt (BIP) | Gross domestic product (GDP) | The value of an economy's output. Measured by spending, by income or by production, it is in principle the same number. | define |
 | **Budgetbeschränkung (Budgetgerade)** | Budget constraint | The limit on the bundles of goods a consumer can afford with a given income and given prices. | apply |
+| Bundesstaat | Federal state | A state whose member states have powers of their own, guaranteed by the constitution. | define |
 | Bürokratie | Bureaucracy | Weber's ideal type of organisation: specialised roles, hierarchy, merit, rules, and authority attached to the office. | define |
 
 ## C
@@ -133,9 +136,11 @@ draft: false
 | defekte Demokratie | Defective democracy | A regime with free elections in which other parts of liberal democracy, such as the rule of law, are impaired. | define |
 | deklarativ | Declarative | Memory content that can be put into words. | define |
 | demokratische Regression | Democratic backsliding | Elected governments weaken courts, media and electoral rules from the inside. | define |
+| **Demokratisierung** | Democratisation | The change of a political system from autocracy towards democracy. | apply |
 | Denkaufwand | Thinking effort | The amount of conscious mental capacity a task takes up. | translate |
 | Desinformation | Disinformation | False or misleading content that is spread on purpose. | define |
 | **direkte Demokratie** | Direct democracy | Citizens decide on issues themselves by vote. | apply |
+| Direktorialsystem | Directorial system | A collegial government elected by parliament that parliament cannot remove during its term, as in Switzerland. Not a textbook term. | define |
 | **dispositional / situativ** | Dispositional / situational | Caused by the person's traits, or caused by the circumstances. | apply |
 | **Dissonanzreduktion** | Dissonance reduction | Removing the contradiction by adding fitting thoughts, changing a thought, or changing behaviour. | apply |
 | **Doktrin** | Doctrine | The fundamental principles by which armed forces guide their actions: binding, but to be checked against the situation each time. | apply |
@@ -144,6 +149,7 @@ draft: false
 | **Drei-Elemente-Lehre** | Three-element doctrine | Jellinek's definition of a state by its people, its territory and its state authority. | apply |
 | Drill | Drill | Repetitive training until a procedure runs automatically. | define |
 | Drohung / Furchterregung | Duress | Obtaining a contract by causing well-founded fear (Art. 29 f. OR). | define |
+| duale Legitimation | Dual legitimacy | President and parliament are both elected by the people and make competing claims to speak for them. | define |
 
 ## E
 
@@ -155,7 +161,9 @@ draft: false
 | **einfacher Wirtschaftskreislauf** | Circular flow diagram | The simplest model of a whole economy: households and firms exchange goods, factors and money in two markets. | apply |
 | **Einfrieren / Auftauen** | Freezing / unfreezing | A war of movement turns into attrition when neither side has an edge / attrition turns back into manoeuvre through an innovation. | apply |
 | eingebettete Demokratie | Embedded democracy | Merkel's broad definition: elections are embedded in further partial regimes (political rights, civil rights, horizontal accountability, effective power to govern). | define |
+| eingipflige Präferenzen | Single-peaked preferences | Each voter has one most preferred point and likes options less the further they are from it. | define |
 | Einheit | Unity (mutual trust) | Boyd's term for mutual trust and a shared outlook in a force. | define |
+| Einheitsstaat | Unitary state | A state in which the main decisions lie with the national institutions. | define |
 | Einkommen (Lohn, Pacht, Zins, Gewinn) | Income (wage, rent, interest, profit) | What households receive from firms for the use of their factors. | define |
 | **Einkommenseffekt** | Income effect | The change in consumption that comes from a price change moving the consumer to a higher or lower indifference curve. | apply |
 | **Einkommenselastizität der Nachfrage** | Income elasticity of demand | Percentage change in quantity demanded divided by the percentage change in income. | apply |
@@ -171,7 +179,7 @@ draft: false
 | **Elastizität** | Elasticity | How strongly quantity demanded or supplied reacts to a change in one of its determinants, as a ratio of percentage changes. | apply |
 | **Emergenz / Effektivität von Führung** | Leader emergence / leader effectiveness | Who is seen as or becomes the leader of a group, and how well the leader and the group perform: two different criteria. | apply |
 | **empirisch-analytisch** | Empirical-analytical | Research that explains cause and effect by testing hypotheses against observation. | apply |
-| **endogene / exogene Modernisierungsthese** | Endogenous / exogenous modernisation thesis | Wealth creates democracy, or wealth keeps a democracy alive that arose for other reasons. | apply |
+| **endogene Modernisierungsthese** | Endogenous modernisation thesis | Economic development leads to democratisation: wealth creates democracy. | apply |
 | **eng gefasste / umfassende Demokratiedefinition** | Narrow / broad definition of democracy | Elections, competition and changes of power suffice, or further conditions such as liberties and the rule of law are required. | apply |
 | **Entlastungsfunktion** | Relief function | Norms spare people from weighing every action anew and make others predictable. | apply |
 | entscheidender Punkt | Decisive point | A place or node where a small effort produces a large effect. | define |
@@ -191,6 +199,8 @@ draft: false
 | Erziehung / Ausbildung | Education / training | Education shapes behaviour and values, training builds abilities and skills. The model projects both onto the three aspects. | define |
 | **Es / Ich / Über-Ich** | Id / ego / superego | Freud's three instances: drives and wishes / the mediator with reality / internalised norms and conscience. | apply |
 | Evaluierungsstudie | Evaluation study | A study that estimates whether a measure had an effect. | define |
+| Exekutive | Executive | The institutions that carry out the laws: government and administration. | translate |
+| **exogene Modernisierungsthese** | Exogenous modernisation thesis | Democracy arises for other reasons, and a high level of development prevents its breakdown: wealth keeps democracy. | apply |
 | Experiment / Quasi-Experiment | Experiment / quasi-experiment | The researcher sets the cause and assigns units at random / the cause varies, but not by random assignment. | define |
 | explorative / deskriptive Studie | Exploratory / descriptive study | A study that looks for hypotheses in a little-known field, or one that describes how things are. | define |
 | **Externalität** | Externality | The effect of one person's action on the welfare of an uninvolved third party. | apply |
@@ -208,11 +218,15 @@ draft: false
 | Fehlertoleranz | Tolerance of mistakes | Accepting honest errors, so that subordinates dare to decide. | define |
 | Fingerspitzengefühl | Intuitive feel | The trained, intuitive feel for a situation. | define |
 | **Fiscal-military state** | Fiscal-military state | A state reshaped by permanent war: higher taxes and a professional administration pay for the army and navy. | apply |
+| fiskalische Dezentralisierung | Fiscal decentralisation | The share of the subnational levels in public spending and tax revenue. | define |
 | Flaschenhals | Bottleneck | A point in processing where things can no longer be done in parallel. | translate |
+| Flickenteppich | Patchwork | Different rules in neighbouring member states for the same matter. | translate |
+| **Föderalismus** | Federalism | Division of state authority between the national level and member states, each of which decides finally in some areas. | apply |
 | **Forderungen / Unterstützung** | Demands / support | The two inputs that citizens and groups send into the political system. | apply |
 | **Formfreiheit** | Freedom of form | Contracts are valid without a special form unless the law prescribes one (Art. 11 OR). | apply |
 | Formvorschrift | Form requirement | A legal rule that a contract must be in a certain form to be valid. | define |
 | **Forschungsfrage** | Research question | The question a study is meant to answer. | apply |
+| Fraktionsdisziplin | Party discipline (in parliament) | Members of a parliamentary group vote together. | define |
 | **freie und faire Wahlen** | Free and fair elections | Elections that are regular, general, equal, free, direct and secret, and that the government can lose. | apply |
 | Freihandel | Free trade | Britain's guiding economic and foreign-policy principle from 1815 to 1873. | define |
 | Fremdbestimmung (Heteronomie) | External direction (heteronomy) | Having one's actions determined by others. | translate |
@@ -253,7 +267,8 @@ draft: false
 | **Gesetz des Angebots** | Law of supply | Other things equal, the quantity supplied rises when the price rises. | apply |
 | Gesetzgebungsverfahren | Legislative procedure | The steps by which a law is drafted, debated and adopted. | translate |
 | **Gewaltenteilung** | Separation of powers | Division of state power among legislature, executive and judiciary, which check each other. | apply |
-| Gewinnkoalition | Winning coalition | The group whose support a ruler needs to stay in power: small in an autocracy, large in a democracy. | define |
+| Gewaltenverschränkung | Fusion of powers | Legislature and executive depend on each other, as in parliamentary systems. | define |
+| **Gewinnkoalition** | Winning coalition | The part of the selectorate whose support a ruler needs to stay in power. | apply |
 | Giffen-Gut | Giffen good | A good for which a higher price raises the quantity demanded. | define |
 | **Gleichgewicht** | Equilibrium | The state in which the quantity supplied equals the quantity demanded. | apply |
 | **Gleichgewichtspreis / Gleichgewichtsmenge** | Equilibrium price / equilibrium quantity | The price at which the quantity supplied equals the quantity demanded, and the quantity traded at that price. | apply |
@@ -289,6 +304,7 @@ draft: false
 | **Heuristik** | Heuristic | A mental rule of thumb for reaching a judgement quickly. | apply |
 | **Höchstpreis** | Price ceiling | A legal maximum price. Set below equilibrium, it causes a lasting shortage. | apply |
 | hoheitlicher Akt | Sovereign act, act of public authority | An act by which the state exercises its authority. | translate |
+| **horizontale Gewaltenteilung** | Horizontal separation of powers | Division of state power among legislature, executive and judiciary of one level. | apply |
 | Human-Relations-Ansatz | Human Relations approach | The response to classical management after the Hawthorne studies: attitudes, group norms and attention shape performance. | define |
 | **Humanistische Psychologie** | Humanistic psychology | The school that sees people as free, responsible and striving to grow. | apply |
 | hybride Bedrohung | Hybrid threat | Hostile action that stays below the threshold of armed attack and combines several means. | define |
@@ -327,6 +343,7 @@ draft: false
 | Deutsch | English | Definition | Be able to |
 |---|---|---|---|
 | **Jingoists / Little Englanders** | Jingoists / Little Englanders | Aggressive supporters of empire, and its critics who wanted Britain to turn back to itself. A split made visible by the Boer War. | apply |
+| Judikative | Judiciary | The courts. | translate |
 
 ## K
 
@@ -345,14 +362,18 @@ draft: false
 | **kognitive Kriegsführung** | Cognitive warfare | The deliberate attempt to change how a target population or its decision-makers think, not only what they know. | apply |
 | **kognitive Resilienz** | Cognitive resilience | A society's ability to resist influence on how it forms its picture of reality and decides. | apply |
 | **Kognitivismus (kognitive Psychologie)** | Cognitive psychology | The school that explains behaviour by how information is perceived, processed and interpreted. | apply |
+| Kohabitation | Cohabitation | President and prime minister of a semi-presidential system belong to different political camps. | define |
 | **komparativer Vorteil** | Comparative advantage | Producing a good at a lower opportunity cost than another producer. | apply |
+| Kompetenzverteilung | Division of powers | Which level may decide in which policy field. | translate |
 | Komplementärgüter (Komplemente) | Complements | Goods used together: a higher price of one lowers the demand for the other. | define |
 | **Konflikttheorie** | Conflict theory | The school that sees conflict between groups as the source of social structure and change. | apply |
 | **Konkordanz** | Concordance | All major parties are included in government and decide by compromise. | apply |
 | Konsens | Agreement (consensus) | Both parties have expressed matching intentions. | define |
 | **konsonant / dissonant** | Consonant / dissonant | Two cognitions that fit together, or that contradict each other. | apply |
 | **konstante / steigende Opportunitätskosten** | Constant / increasing opportunity cost | A straight frontier / a frontier bowed outward, because resources are specialised. | apply |
+| konstruktives Misstrauensvotum | Constructive vote of no confidence | Parliament can remove the head of government only by electing a successor at the same time. | define |
 | Konsumgesellschaft | Consumer society | A society in which mass-produced goods and leisure are available to broad groups and shape identity. | define |
+| Kontrollen und Gegengewichte | Checks and balances | A system in which the holders of power control and limit each other. | define |
 | Kontrollüberzeugung | Locus of control | The belief about whether outcomes depend on oneself or on outside forces. | define |
 | **Konzeptdefinition / Konzeptspezifikation** | Concept definition / specification | Stating what a term means and which dimensions it has. | apply |
 | konzeptionelle / gemeinschaftliche / institutionelle Lösungsansätze | Conceptual / communal / institutional solutions | The kind of solution each aspect offers. | define |
@@ -372,6 +393,7 @@ draft: false
 | Landflucht | Flight from the land | Migration from the countryside to the towns that feeds urbanisation. | define |
 | **Langzeitgedächtnis** | Long-term memory | The lasting store of knowledge, experience and skills. | apply |
 | Lebensstandard | Standard of living | The quantity of goods and services a population can afford. | translate |
+| Legislative | Legislature | The law-making institutions. | translate |
 | **Legitimation, Repression, Kooptation** | Legitimation, repression, co-optation | The three pillars of autocratic stability: giving reasons to accept the regime, punishing opposition, buying in elites. | apply |
 | Legitimationsdruck | Pressure to legitimate | In an open society every norm must be able to justify itself. | define |
 | legitime Macht | Legitimate power | Power that comes from an appointed role and is accepted as rightful: the main base of command. | define |
@@ -379,13 +401,16 @@ draft: false
 | **Leistungsstörung** | Breach of contract | The obligation is not performed, performed late or performed badly. | apply |
 | Loci-Methode | Method of loci | A memory technique: placing items along a mental walk. | define |
 | **Logischer Empirismus** | Logical empiricism | The position that statements are meaningful and scientific only if they can be verified by experience. | apply |
+| Loyalität | Loyalty | How firmly members of the winning coalition hold to the ruler: high when W is small and S is large. | define |
 | Lückenfüllung | Filling gaps | Completing a contract where the parties settled nothing: by non-mandatory law or by their hypothetical intention. | define |
 
 ## M
 
 | Deutsch | English | Definition | Be able to |
 |---|---|---|---|
+| Machterhalt | Staying in power | The ruler's aim in the theory: political survival. | translate |
 | **Machtinstrumente (DIME)** | Instruments of national power (DIME) | Diplomatic, informational, military, economic: the means you act with, as opposed to the system you act on. | apply |
+| Machtkonzentration | Concentration of power | State power lies with one office or organ that can decide without the others. | translate |
 | Machtwechsel | Change of power | The transfer of government from one party or group to another. | translate |
 | Machtwechsel | Change of power, alternation in office | The transfer of government from one party or group to another. | translate |
 | Mangel | Defect | A deviation of the work from what was agreed. | define |
@@ -397,6 +422,7 @@ draft: false
 | **materialistisch / postmaterialistisch** | Materialist / post-materialist | Giving priority to security and prosperity, or to self-fulfilment and participation. | apply |
 | MDMP / JPP | Military Decision-Making Process / Joint Planning Process | The US Army's and the US joint planning processes, both built around developing and comparing courses of action. | define |
 | **Medianwähler:in** | Median voter | The voter in the middle of the electorate on one policy dimension, whose position wins under majority rule. | apply |
+| **Medianwählertheorem** | Median voter theorem | Under majority rule on one dimension, the position of the median voter beats every alternative. | apply |
 | Medienkompetenz | Media literacy | The ability to judge sources and content. | translate |
 | **Mehrheitsdemokratie / Konsensdemokratie** | Majoritarian / consensus democracy | Democracy that concentrates power in the majority, or one that shares it among many parties and levels. | apply |
 | **Menschenbild** | Image of the human | The basic assumptions a theory makes about human nature: what drives people, how free they are and how far they can change. | apply |
@@ -409,8 +435,11 @@ draft: false
 | Militärregime | Military regime | An autocracy in which the officer corps governs. | define |
 | **militärstrategisch / operativ / taktisch** | Military-strategic / operational / tactical | The three command levels: the army's role in the overall strategy / campaigns and major operations / engagements. | apply |
 | Milizprinzip | Militia principle | The army consists of citizens who serve in short, repeated periods. | define |
+| Minderheitsregierung | Minority government | A government without a majority of its own in parliament that is tolerated by a majority. | define |
 | **Minderung** | Reduction of the price | The customer's right to lower the payment by the reduced value of the work. | apply |
 | **Mindestpreis** | Price floor | A legal minimum price. Set above equilibrium, it causes a lasting surplus. | apply |
+| Misstrauensvotum | Vote of no confidence | A vote by which the parliamentary majority brings down the government. | define |
+| Mittelschicht | Middle class | The social group between the poor and the rich, whose growth carries the demand for participation in Lipset's chain. | define |
 | **Mittelwertmethode** | Midpoint method | Computing a percentage change by dividing the change by the average of the old and the new value. | apply |
 | modale Theorie | Modal theory | Test for private or public law: is the sanction private or public? | define |
 | Modellkette | Chain of models | Models built on models, each step reducing again: terrain, report, map, sketch, mental picture. | define |
@@ -432,6 +461,7 @@ draft: false
 | Nachtwächterstaat | Night-watchman state | A state limited to internal order, external defence and a legal frame for the economy. | define |
 | negatives Interesse | Negative interest | Damages that put the claimant where they would be had they never relied on the contract. | define |
 | neuronale Verarbeitung | Neural processing | The processing of the signals in the nervous system. | translate |
+| Nichtausschliessbarkeit / Nichtrivalität | Non-excludability / non-rivalry | Nobody can be kept from using the good, and one person's use does not reduce another's. | define |
 | Nichteinmischung | Non-interference | The principle that states do not intervene in each other's internal affairs. | define |
 | **nichtig / Nichtigkeit** | Void / nullity | Without legal effect from the start, for everyone (Art. 20 OR). | apply |
 | Nominatvertrag / Innominatvertrag | Nominate / innominate contract | A contract type regulated in the special part of the OR / one that is not, such as leasing or franchising. | define |
@@ -449,6 +479,7 @@ draft: false
 | **Obligation / Schuldverhältnis** | Obligation | A legal relationship in which one person owes a performance to another. | apply |
 | Obligationenrecht (OR) | Code of Obligations | The Swiss code on contracts, torts and companies. Formally the fifth part of the Civil Code. | define |
 | öffentliche Beurkundung | Notarial deed | Recording of a contract by a notary, required for example for the sale of land. | translate |
+| **öffentliche Güter** | Public goods | Goods that are not excludable and not rival in use, with costs that do not depend on the number of users. | apply |
 | Ökologischer Fehlschluss | Ecological fallacy | Inferring the behaviour of individuals from data about groups. | define |
 | **operante Konditionierung** | Operant conditioning | Behaviour is shaped by its consequences (Skinner). | apply |
 | **Operationalisierung** | Operationalisation | Assigning observable indicators to a theoretical concept so that it can be measured. | apply |
@@ -466,13 +497,16 @@ draft: false
 |---|---|---|---|
 | Panelmortalität, Ausfall | Attrition | Participants drop out of a study over time. | define |
 | Paradigma | Paradigm | Kuhn: the framework inside which scientists work and which they give up only in rare crises. | define |
+| **parlamentarisches / präsidentielles System** | Parliamentary / presidential system | The government comes out of parliament and depends on its confidence, or a president is elected by the people for a fixed term. | apply |
 | Parteidiktatur | Party dictatorship | An autocracy in which a party organisation holds power: the lecture's word for a single-party regime. | translate |
 | Partialanalyse / allgemeines Gleichgewicht | Partial / general equilibrium | Looking at one market in isolation / at all markets clearing at once, linked through prices. | define |
 | personalistisches Regime | Personalist regime | An autocracy built around one leader and his personal circle. | define |
 | Pfadabhängigkeit | Path dependence | A resource was built over time under conditions that cannot be repeated, which makes it hard to copy. | define |
+| Pfadabhängigkeit (politischer Systeme) | Path dependence (of political systems) | Earlier decisions and events limit which later developments are possible, so systems change rarely. | define |
 | Pflichtgefühl | Sense of duty | The inner conviction that one must fulfil one's obligations. | translate |
 | Planentwicklung / Befehlsgebung | Plan development / issuing orders | The fourth and fifth command activities. | translate |
 | **Policy-Funktionen** | Policy functions | What outputs do to society: extract resources, regulate behaviour, distribute goods and services. | apply |
+| Politikdimension | Policy dimension | One line on which positions can be ordered, such as left–right or less–more spending. | define |
 | Politiken | Policies | Political contents: the substance of politics in a policy field. | translate |
 | Politikimplementierung | Policy implementation | Applying and enforcing a decision. | define |
 | **politisch, militärisch, wirtschaftlich, sozial, Information, Infrastruktur** | Political, military, economic, social, information, infrastructure (PMESII) | The six interacting sub-systems as which an actor or an operating environment is described. | apply |
@@ -493,6 +527,7 @@ draft: false
 | Preisforderung | Asking price | The price the seller asks at the outset. | translate |
 | Preisnehmer | Price taker | A buyer or seller who is too small to influence the market price and takes it as given. | define |
 | **primäre / sekundäre Bewertung** | Primary / secondary appraisal | Lazarus: is the situation a threat? / are my resources enough to cope with it? | apply |
+| **private Güter** | Private goods | Goods that are excludable and rival, with costs that grow with every person who receives them. | apply |
 | **Privatrecht / öffentliches Recht** | Private law / public law | Relations between equals / relations in which the state acts with sovereign power. | apply |
 | Problemerfassung | Problem recognition | The first command activity. | translate |
 | Produktionsfaktoren | Factors of production | Labour, land and capital: the inputs used to produce goods and services. | define |
@@ -526,9 +561,10 @@ draft: false
 | **Realstrom** | Real flow | The flow of goods and factors through the circle. | apply |
 | Rechtfertigung | Justification | Reasons given afterwards to make one's action appear consistent. | translate |
 | Rechtsprechung / Lehre | Case law / doctrine | Court decisions (BGE) / legal scholarship. Both are used to define the conditions of a rule. | define |
-| Rechtsstaat | Rule of law, constitutional state | A state in which all public power is bound by law and basic rights. | define |
+| Rechtsstaat | Rule of law | All political decision-makers are subject to the existing law: nobody stands above it. | define |
 | Réduit | Réduit | The plan of 1940 to withdraw the main force into the Alps: the best-known form of static defence. | define |
 | reflexive Kontrolle | Reflexive control | Soviet and Russian concept: giving an opponent information that leads him to choose, of his own will, the decision you want. | define |
+| Regimezusammenbruch | Regime collapse | The breakdown of a political system, one of the "other causes" of democratisation. | translate |
 | Regression zur Mitte | Regression to the mean | Cases chosen because they were extreme move back towards the average on their own. | define |
 | Reiz / Umgebungsreiz | Stimulus / environmental stimulus | Physical energy that acts on a sense organ, and its source in the surroundings. | define |
 | Reiz-Reaktions-Schema | Stimulus–response | The behaviourist unit of analysis: only the observable stimulus and the observable response are studied. | define |
@@ -540,9 +576,11 @@ draft: false
 | **Ressourcen / Fähigkeiten** | Resources / capabilities | What you have / what you can do with it. | apply |
 | ressourcenbasierter Ansatz | Resource-based view | Barney's view that a firm's advantage comes from the resources and capabilities it controls. | define |
 | Risikogesellschaft | Risk society | Beck's term for a society preoccupied with the risks it produces itself. | define |
+| Rohstoffrente | Resource rent | State income from raw materials such as oil and gas, gained without taxing a broad economy. | define |
 | Rolle / Gruppe / Organisation / Institution | Role / group / organisation / institution | Levels between the single action and society: expected behaviour, people in direct contact, a purposive association, a lasting set of rules. | define |
 | Rosinenpicken | Cherry-picking | Choosing only the evidence that fits the claim. | define |
 | Rückabwicklung | Unwinding | Returning what was received after a contract proves void or non-binding. | define |
+| Rückfall (in die Autokratie) | Relapse (into autocracy) | The change of a democracy back towards autocracy. | translate |
 | **Rückkopplung** | Feedback | The effect of a system's output on its next input. | apply |
 | Rückmeldung (Backbrief) | Backbrief | The subordinate repeats in their own words what they will do and why, to check that the intent was understood. | define |
 | **Rückschaufehler** | Hindsight bias | Once the outcome is known, it seems to have been predictable. | apply |
@@ -571,6 +609,7 @@ draft: false
 | **selektive / geteilte Aufmerksamkeit** | Selective / divided attention | Focusing on one source while ignoring others, and trying to attend to two tasks at once. | apply |
 | Selektorat | Selectorate | The people who have a say in who rules. | define |
 | **Selektoratstheorie** | Selectorate theory | The theory that the size of the winning coalition relative to the selectorate decides whether a ruler provides public or private goods. | apply |
+| **semi-präsidentielles System** | Semi-presidential system | A president elected by the people shares executive power with a prime minister whose cabinet is responsible to parliament. | apply |
 | **sensorischer Speicher** | Sensory store | The store that holds raw sense impressions for under two seconds. | apply |
 | Sicherheitspolitischer Bericht | Security policy report | The Federal Council's report from which military doctrine is derived. | define |
 | Sinn / Werte / Ordnung | Purpose / values / order | What education conveys for Command, Leadership and Management. | define |
@@ -591,10 +630,13 @@ draft: false
 | Spezialisierung | Specialisation | Concentrating on the production of what one does relatively best. | define |
 | Spiegelbilddenken | Mirror imaging | Assuming that the other side thinks and values as you do. | define |
 | Splendid isolation | Splendid isolation | Britain's relative distance from European alliances while it looked overseas. | define |
+| Staatenbund | Confederation | A league of sovereign states with few common institutions. | define |
 | Staatskunde | Civics | The description of a state's institutions, without systematic analysis. | translate |
+| Staatsorgan | Organ of the state | An office or body that exercises state power. | translate |
 | **Staatsquote** | Government spending as a share of GDP | Government spending as a share of GDP. The usual measure of the size of state activity. | apply |
 | **Staatsvolk / Staatsgebiet / Staatsgewalt** | People / territory / state authority | The three elements of a state: a people, a territory and effective authority. | apply |
 | **stabil / variabel** | Stable / variable | Whether the cause is lasting or can change from one occasion to the next. | apply |
+| Ständemehr | Majority of the cantons | The majority of the cantons that a change of the Swiss constitution needs in addition to the majority of the people. | define |
 | **starke / schwache Situation** | Strong / weak situation | A situation with clear rules and expectations that makes behaviour uniform, or an ambiguous one in which individual differences show. | apply |
 | **Stereotyp** | Stereotype | Stored knowledge, beliefs and expectations about a social group. | apply |
 | Steuerungsmechanismus | Steering mechanism | A rule, procedure or organisation that directs how people live together. | define |
@@ -605,6 +647,7 @@ draft: false
 | **Stroop-Effekt** | Stroop effect | Slower colour naming when a colour word is printed in another colour: automatic reading cannot be switched off. | apply |
 | Stützung | Backing | Toulmin's term for what supports a warrant. | define |
 | Subordinationstheorie | Subordination theory | Test for private or public law: are the parties on equal footing? | define |
+| **Subsidiaritätsprinzip** | Principle of subsidiarity | Every power to decide should lie at the lowest political level that can exercise it. | apply |
 | **Substitutionseffekt** | Substitution effect | The change in consumption that comes from a price change moving the consumer along an indifference curve to a point with a different marginal rate of substitution. | apply |
 | Substitutionsgüter (Substitute) | Substitutes | Goods used instead of each other: a higher price of one raises the demand for the other. | define |
 | **Subsumtion** | Subsumption | Checking whether the facts meet the definition of the rule. | apply |
@@ -617,6 +660,7 @@ draft: false
 |---|---|---|---|
 | **Tatbestand / Rechtsfolge** | Conditions / legal consequence | What a rule requires / what follows when it is met. Conditions are checked first. | apply |
 | Teilnichtigkeit | Partial nullity | Only the defective part of a contract is void (Art. 20 II OR). | define |
+| Teilstaat (Kanton, Bundesland) | Member state (canton, *Land*) | A subnational unit of a federal state with its own powers and institutions. | translate |
 | Teilsystem | Sub-system | One of the six parts of the system. The analysis lies in the links between them. | define |
 | Tempo, Überraschung, Täuschung | Tempo, surprise, deception | The key factors of manoeuvre, next to the focus of effort. | translate |
 | Theoriebeladenheit der Beobachtung | Theory-ladenness of observation | What is observed depends on the observer's background assumptions. | define |
@@ -638,6 +682,7 @@ draft: false
 | Übervorteilung | Unfair advantage | An obvious imbalance obtained by exploiting distress, inexperience or thoughtlessness (Art. 21 OR). | define |
 | Umgekehrte Kausalität | Reverse causality | The supposed effect is in fact the cause. | define |
 | Umsetzung und Durchsetzung | Implementation and enforcement | Putting a decision into practice and securing compliance. | translate |
+| Umverteilung | Redistribution | Shifting income or wealth from richer to poorer by taxes and transfers. | translate |
 | **unabhängige / abhängige Variable** | Independent / dependent variable | The supposed cause (X) and the effect to be explained (Y). | apply |
 | **Unaufmerksamkeitsblindheit** | Inattentional blindness | Failing to see a clearly visible object because attention is elsewhere. | apply |
 | unbestellte Sache | Unsolicited goods | Goods sent without an order. They are not an offer and need not be returned (Art. 6a OR). | define |
@@ -662,6 +707,7 @@ draft: false
 | **Validität / Reliabilität** | Validity / reliability | Whether an instrument measures what it should, and whether it gives the same result when repeated. | apply |
 | Variante | Variant | The Swiss term for a course of action in FSO 17. | define |
 | verdeckter Mangel | Hidden defect | A defect that could not be found by proper inspection on delivery. | define |
+| Verfassungsgerichtsbarkeit | Constitutional review | The power of a court to check laws and acts of state against the constitution. | define |
 | Verfügung | Decree, administrative decision | A binding order by an authority in an individual case. | define |
 | **Vergessenskurve / Lernkurve** | Forgetting curve / learning curve | Forgetting is fastest right after learning. Learning effort rises steeply with the amount of material. | apply |
 | **Verhaltensansatz** | Behavioural approach | Research that asks what leaders do, not what they are like. | apply |
@@ -676,9 +722,11 @@ draft: false
 | Verschulden | Fault | Intent or negligence for which a person is held responsible. | define |
 | Versicherheitlichung | Securitisation | Treating a political matter as a security threat, which justifies exceptional measures. | define |
 | Versuchsleitereffekt | Observer / experimenter effect | The researcher's expectations influence the behaviour of participants or the recording of results. | define |
+| **vertikale Gewaltenteilung** | Vertical separation of powers | Division of state authority between the national and the subnational levels. | apply |
 | **Vertrag** | Contract | An agreement that creates obligations through matching declarations of intent. | apply |
 | **Vertragsabschluss** | Formation (conclusion) of a contract | A contract comes into being through matching mutual declarations of intent (Art. 1 OR). | apply |
 | **Vertrauen** | Trust | Confidence in superiors, subordinates and one's own abilities: the precondition of mission command. | apply |
+| Vertrauensfrage | Confidence question | The government asks parliament to confirm its confidence, usually to discipline its own majority. | define |
 | Vertrauenshaftung (culpa in contrahendo) | Reliance liability (culpa in contrahendo) | Quasi-contractual liability for disappointing justified reliance, for instance in contract negotiations. | define |
 | **Vertrauensprinzip** | Principle of reliance | A statement counts as a reasonable recipient could and had to understand it. | apply |
 | Verwöhnung | Spoiling | A drive is satisfied too quickly and without effort, so ever stronger stimuli are needed. | define |
@@ -696,6 +744,7 @@ draft: false
 | vollkommen unelastisch | Perfectly inelastic | Elasticity of zero: the quantity does not react to the price. | define |
 | vollkommene Komplemente | Perfect complements | Two goods with right-angled indifference curves. | define |
 | vollkommene Substitute | Perfect substitutes | Two goods with straight indifference curves. | define |
+| Vollzugsföderalismus | Executive federalism | The member states carry out the law of the national level. | define |
 | Vorschnelle Generalisierung | Hasty generalisation | Drawing a general conclusion from too few cases. | define |
 | **vorübergehender / dauerhafter Wettbewerbsvorteil** | Temporary / sustained competitive advantage | An advantage that lasts until others catch up / one that is also hard to imitate and supported by the organisation. | apply |
 | Vorurteil | Prejudice | A judgement about a person or group formed in advance, without examination. | translate |
@@ -731,6 +780,7 @@ draft: false
 | Willensbildung | Will formation, opinion formation | The process in which opinions and demands are formed and brought together. | define |
 | **Willensmangel** | Defect of consent | A flaw in forming or declaring one's will that makes the contract non-binding for that party. | apply |
 | **Winset** | Winset | The set of reforms that every veto player prefers to the status quo. | apply |
+| wirtschaftliche Entwicklung | Economic development | Growth of income together with a shift from agriculture to industry and services. | translate |
 | **Wirtschaftswachstum** | Economic growth | An outward shift of the frontier through more resources or better technology. | apply |
 | Wissenschaftliche Betriebsführung (Taylorismus) | Scientific Management (Taylorism) | Taylor's system: find the one best way for each task by time study, and separate planning from doing. | define |
 | Wohlfahrtsstaat | Welfare state | A state that secures its citizens against social risks and redistributes income. | define |
@@ -739,6 +789,7 @@ draft: false
 
 | Deutsch | English | Definition | Be able to |
 |---|---|---|---|
+| Zauberformel | Magic formula | The fixed distribution of the seven Swiss Federal Council seats among the four largest parties. | define |
 | **zentrales politisches Entscheidungssystem** | Central political decision-making system | Legislature, executive and judiciary: the institutions where binding decisions are taken. | apply |
 | **Zielkonflikt** | Trade-off | More of one goal means less of another. | apply |
 | Zirkelschluss | Circular argument | The reason only restates the claim in other words. | define |
@@ -751,4 +802,5 @@ draft: false
 | Zufallsstichprobe | Random sample | A sample drawn by chance. Only it allows statistical inference from the sample to the population. | define |
 | Zuordnung (eines Angriffs) | Attribution (of an attack) | Establishing who is behind an operation. | define |
 | Zusammenhalt / Kohäsion | Cohesion | The bonds that keep a unit or force acting as one under stress. | define |
+| zweite Parlamentskammer (Bikameralismus) | Second chamber (bicameralism) | A chamber of parliament in which the member states are represented. | define |
 | zwingendes / dispositives Recht | Mandatory / non-mandatory law | Rules that cannot be contracted away / rules that apply only if the parties agreed nothing else. | define |
