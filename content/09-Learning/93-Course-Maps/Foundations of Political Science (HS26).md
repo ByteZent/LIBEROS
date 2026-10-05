@@ -13,7 +13,7 @@ draft: false
 > Bridge between the course and this vault. Lecture notes, slides and the German exam summary are not part of it.
 > Every vault note that belongs to the course has `courses: [PolSci-HS26]`. Run `make course COURSE=PolSci-HS26` before the exam. Flashcards: deck `PolSci-HS26` under `/flashcards/`.
 >
-> Built from the study summary of 30.09.2026; sessions after that date are the plan, not yet what was taught.
+> Built from the study summary of 30.09.2026; sessions after that date are the plan, not yet what was taught. The session of 05.10. has been checked against its slides.
 
 The course gives the concepts and methods to describe and explain political orders, actors, processes and decisions. It ties politics, state, power and legitimacy to the empirical-analytical research process, so that political claims can be tested with theory, measurement and evidence. Textbook: [[bernauer2025einfuhrung]], 13 chapters.
 
@@ -37,6 +37,9 @@ The course gives the concepts and methods to describe and explain political orde
 | Judge operationalisation, case selection and research design | [[Research Design]] · [[Bias in Research]] | ☑ seedling |
 | Check experiments, forecasts and typical fallacies critically | [[Bias in Research]] · [[Falsificationism]] | ☑ seedling |
 | Compare and explain political phenomena systematically | [[Democratic State]] · [[Autocratic State]] | ☑ seedling |
+| Explain why regime type matters for policy: median voter theorem and selectorate theory (ch. 3) | [[Democratic State#Does democracy solve problems better?]] · [[Autocratic State#The ruler's arithmetic]] | ◐ sections, no note of their own |
+| Explain democratisation: endogenous and exogenous modernisation thesis (ch. 3) | [[Democratic State#Why states become democratic]] | ◐ section |
+| Compare systems of government and judge their effects; federalism; veto players (ch. 4) | [[Separation of Powers]] · [[Federalism]] · [[Democratic State#Types of democracy]] (veto players) · [[Bias in Research]] (third variable) | ☑ seedling, veto players ◐ section |
 | Elections and direct democracy (ch. 5) |  | ☐ no note yet |
 | Attitudes and political behaviour (ch. 6) |  | ☐ no note yet |
 | Parties and party systems (ch. 7) |  | ☐ no note yet |
@@ -51,7 +54,7 @@ The course gives the concepts and methods to describe and explain political orde
 |---|---|---|
 | 21.09. | Introduction: politics and political science (ch. 1) | [[Polity, Policy, Politics]] · [[Sovereign Territorial State]] · [[Political System Model]] |
 | 28.09. | Research process, theory and methods (ch. 2) | [[Research Design]] · [[Empirical-Analytical vs Hermeneutic Research]] · [[Falsificationism]] |
-| 05.10. | Political systems and democratic systems of government (ch. 3–4) | [[Democratic State]] · [[Autocratic State]] |
+| 05.10. | Catch-up on the research process (selection of units). Political systems and democratic systems of government (ch. 3–4): measures of democracy, median voter and selectorate, modernisation, parliamentary and presidential systems, federalism, veto players | [[Democratic State]] · [[Autocratic State]] · [[Separation of Powers]] · [[Federalism]] |
 | 12.10. | Elections and direct democracy (ch. 5) |  |
 | 19.10. | Attitudes and political behaviour (ch. 6) |  |
 | 26.10. | Parties and party systems (ch. 7) |  |
@@ -85,6 +88,7 @@ The practice questions on the textbook with worked answers, one page per chapter
 
 ## Exam preparation
 
+- [ ] Decide whether median voter theorem, selectorate theory, veto players and federalism get notes of their own. They are sections of [[Democratic State]] and [[Autocratic State]] for now, and the median voter returns in ch. 6, 7, 8 and 11
 - [ ] One note per textbook chapter 5–8 before Test 1, each with a self-test
 - [ ] Draft the four pages of notes for Test 1 from the BLUFs of the notes for ch. 1–8
 - [ ] Work through the textbook's practice questions chapter by chapter (see *Practice questions* above; decks Bernauer Leitfragen [[/flashcards/Bernauer-Leitfragen-Test-1|Test 1]] and [[/flashcards/Bernauer-Leitfragen-Test-2|Test 2]])

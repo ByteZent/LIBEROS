@@ -73,11 +73,12 @@ draft: false
 > | Besonderes Gewicht | Schutz der Grundrechte; wehrhafte Demokratie (Verbote, starkes Verfassungsgericht) | Schutz der Grundrechte gegen Mehrheitsentscheide | direktdemokratische Mitwirkung bei Sachfragen |
 
 > [!qard]- 3.09 Weist die EU ein Demokratiedefizit auf? Argumente dafür und dagegen.
+> <!-- qard-important -->
 > Die Antwort hängt von der Demokratiedefinition ab. (S. 124–127)
 >
 > - **Dafür (Defizit):**
 >     - Bundesverfassungsgericht 2009: Das Europäische Parlament ist nicht nach dem Prinzip der Wahlgleichheit gewählt und repräsentiert kein souveränes europäisches Volk; es fehlt ein echter Wettstreit zwischen Regierung und Opposition.
->     - Follesdal und Hix (2006): Es fehlt **politischer Wettbewerb**. Bürger:innen können die EU-Führung weder direkt wählen noch abwählen, und es gibt keinen Mechanismus, der ihre Präferenzen mit der EU-Politik verbindet. Ohne Wettbewerb entsteht keine öffentliche Debatte und kein europäischer Demos.
+>     - Follesdal und Hix (2006): Es fehlt **politischer Wettbewerb**. Bürger:innen können die **EU-Führung weder direkt wählen noch abwählen**, und es gibt keinen Mechanismus, der ihre Präferenzen mit der EU-Politik verbindet. Ohne Wettbewerb entsteht keine öffentliche Debatte und kein europäischer Demos.
 > - **Dagegen (kein Defizit), Moravcsik (2002):**
 >     - Starke Gewaltenteilung zwischen den EU-Organen, indirekte Kontrolle durch die gewählten nationalen Regierungen, wachsende Macht des Parlaments.
 >     - Die EU ist kein «Superstaat» (geringe Verwaltungsmacht) und kein Technokratenstaat (Kommission ist dem Parlament und indirekt den Regierungen rechenschaftspflichtig).
@@ -148,7 +149,9 @@ draft: false
 > - Je grösser dieser Unterschied in einem Politikfeld, desto stärker unterscheidet sich die Politik von Demokratien und Autokratien. (S. 140–141)
 
 > [!qard]- 3.22 Weshalb geben demokratische Staaten mehr für soziale Wohlfahrt aus?
-> Der demokratische Medianwähler hat ein **tieferes Einkommen** als der Medianwähler der autokratischen Elite. Er bewertet Umverteilung von Reich zu Arm (z. B. Sozialhilfe) positiver. Politiker:innen, die sich an ihm ausrichten, geben deshalb mehr für Wohlfahrt aus. (S. 141)
+> Der demokratische Medianwähler hat ein **tieferes Einkommen** als der Medianwähler der autokratischen Elite.
+> Er bewertet **Umverteilung von Reich zu Arm** (z. B. Sozialhilfe) positiver. Politiker:innen, die sich an ihm ausrichten, geben deshalb mehr für Wohlfahrt aus. (S. 141)
+> **Nagel:** Andere Interessen und Erwartungen in Demokratien als in Autokratien.
 
 > [!qard]- 3.23 Weshalb kann es auch in hoch-demokratischen Staaten zu Abweichungen vom Interesse des Medianwählers kommen?
 > - Das Modell nimmt an, dass alle Wahlberechtigten wählen oder Nichtwähler:innen dieselben Präferenzen haben.
@@ -166,11 +169,13 @@ draft: false
 > - Achtung: Die Aussage gilt **im Vergleich** und als Tendenz, nicht absolut. (S. 142–143)
 
 > [!qard]- 3.26 Erläutern Sie die Selektoratstheorie.
+> <!-- qard-important -->
 > Bueno de Mesquita et al. (2003), zwei Variablen (S. 144–145):
 > - **Selektorat:** alle, die bei der Auswahl der Regierung mitreden. Demokratie: alle Wahlberechtigten. Autokratie: Oligarchen, Offiziere, Parteikader, Familie des Herrschers.
 > - **Winning coalition:** der Teil des Selektorats, dessen Unterstützung genügt, um an der Macht zu sein. Demokratie: die nötige Mehrheit der Wähler:innen. Militärregime: die für Putsch und Konsolidierung nötigen Militärs.
 > - **Loyalität:** Ist die Koalition im Verhältnis zum Selektorat gross (Demokratie), ist die Loyalität gering, denn man gehört auch nach einem Wechsel wahrscheinlich dazu; die Regierung muss sich stark nach ihren Wünschen richten. Ist sie klein bei grossem Selektorat (personalisierte Autokratie), ist die Loyalität sehr hoch, weil man nach einem Wechsel kaum wieder dazugehört.
 > - **Mittel des Machterhalts:** grosse Koalition → öffentliche Güter; kleine Koalition → private Güter.
+> - **Nagel**: Je grösser die Winning coalition (W), desto teurer wird es, alle Mitglieder einzeln zu belohnen.
 
 > [!qard]- 3.27 Weshalb ist die Wohlstandsverteilung in Demokratien oft gleicher? (Selektoratstheorie)
 > - Demokratien haben eine **grosse** winning coalition. Die Regierung sichert ihre Macht mit öffentlichen Gütern, von denen alle profitieren; der Wohlstand verteilt sich breit.
@@ -200,14 +205,17 @@ draft: false
 > - **Beispiel failed states:** Aus vergangenen Fällen wird geschätzt, welche Faktoren den Zusammenbruch staatlicher Ordnung oder Bürgerkrieg wahrscheinlicher machen; daraus wird das Risiko für heutige Staaten berechnet. (Kap. 1.4.3, S. 50) Welche Faktoren das sind, nennt das Buch an dieser Stelle nicht.
 
 > [!qard]- 3.32 Wie könnte ein nicht-linearer Zusammenhang zwischen Demokratie und Wirtschaftsleistung aussehen? Welche Mechanismen?
-> - **Form (Barro 1996):** Eine leichte Demokratisierung in sehr autokratischen Systemen bringt mehr Wachstum als zusätzliche Demokratisierung in bereits sehr demokratischen Systemen. Der Nutzen nimmt also ab (oder kehrt sich um: umgekehrtes U).
+> <!-- qard-important -->
+> - **Form (Barro 1996):** Eine leichte Demokratisierung in sehr autokratischen Systemen bringt mehr Wachstum als zusätzliche Demokratisierung in bereits sehr demokratischen Systemen. **Der Nutzen nimmt also ab (oder kehrt sich um: umgekehrtes U).** Der "Nutzen" flacht ab.
 > - **Mechanismen:**
 >     - Am unteren Ende wirken die positiven Kanäle: Rechtssicherheit, Eigentumsschutz, Stabilität, Bildung.
 >     - Am oberen Ende wirken die bremsenden: Der ärmere Medianwähler verlangt Umverteilung und höhere Löhne, und Interessengruppen bilden Verteilungskoalitionen (Olson). (S. 149)
+> **Nagel:** Endogene These und **Exogene These**
 
 ### 3.6 Demokratisierung
 
-> [!qard]- 3.33 Skizzieren Sie die Modernisierungstheorie von Lipset. Schwachstellen?
+> [!qard]- 3.33 Skizzieren Sie die (endogene) Modernisierungstheorie von Lipset. Schwachstellen?
+> <!-- qard-important -->
 > Kausalkette (Lipset 1959, S. 156):
 > 1. Wirtschaftliche Entwicklung verändert die **Wirtschaftsstruktur**: weniger Landwirtschaft, mehr Industrie und Dienstleistungen.
 > 2. Das erhöht die Nachfrage nach qualifizierten Arbeitskräften: **Bildung** steigt; dazu Urbanisierung und Infrastruktur.

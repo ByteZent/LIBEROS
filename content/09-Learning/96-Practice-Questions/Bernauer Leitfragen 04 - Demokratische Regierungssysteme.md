@@ -23,7 +23,7 @@ draft: false
 
 - **Buch:** [[bernauer2025einfuhrung|Einführung in die Politikwissenschaft]], Kapitel 4 [@bernauer2025einfuhrung]
 - **Kurs:** [[Foundations of Political Science (HS26)]]
-- **Notizen zum Kapitel:** [[Democratic State]]
+- **Notizen zum Kapitel:** [[Separation of Powers]] · [[Federalism]] · [[Democratic State]]
 - **Karteikarten:** [[/flashcards/Bernauer-Leitfragen-Test-1|Deck «Bernauer Leitfragen Test 1»]]
 - **Weiter:** ← [[Bernauer Leitfragen 03 - Grundformen politischer Systeme|Kapitel 3]] · [[Bernauer Leitfragen 05 - Wahlen und direkte Demokratie|Kapitel 5]] →
 
@@ -36,7 +36,10 @@ draft: false
 > Die politische Macht ist auf verschiedene Ämter und Staatsorgane verteilt, und **kein Machtträger kann unabhängig von den anderen** Entscheidungen fällen und umsetzen, die das politische System als solches verändern. Es entsteht ein System von Kontrollen und Gegengewichten **(checks and balances)**, das Machtkonzentration verhindert. (4.1)
 
 > [!qard]- 4.03 Ist die horizontale Gewaltenteilung in präsidentiellen oder parlamentarischen Systemen stärker?
-> In **präsidentiellen** Systemen: Legislative und Exekutive sind klar getrennt (separation of power). In parlamentarischen Systemen sind sie stark verschränkt (fusion of power). (4.2)
+> <!-- qard-important -->
+> In **präsidentiellen** Systemen: Legislative und Exekutive sind klar getrennt (separation of power).
+> In parlamentarischen Systemen sind sie stark verschränkt (fusion of power). (4.2)
+> **Nagel:** in parlamentarischen Systemen wird die Exekutive zur Erweiterung des Parlamentes.
 
 > [!qard]- 4.04 In welchem System wird die Regierung direkt, in welchem indirekt gewählt?
 > - **Präsidentiell:** Der:die Präsident:in wird vom Volk gewählt (direkt oder über ein Wahlpersonengremium wie in den USA).

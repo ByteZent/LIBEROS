@@ -67,13 +67,15 @@ In my own words: in an autocracy the government decides whether it stays. In a d
     | **Military regime** (*Militärregime*) | The armed forces |
     | **Civilian regime** (*ziviles Regime*) | Civilians who are neither monarchs nor officers: typically a party or a single leader |
 
-    The finer typology below splits the civilian regimes into single-party and personalist ones. That mapping is my own.
+    The finer typology below splits the civilian regimes into single-party and personalist ones. The lecture's chart of the number of autocracies from 1946 to 2010 uses the same four types: military regimes, party dictatorships, monarchies and personalist autocracies.
+
+- **How the four types developed** (read off the lecture's chart, so the numbers are rough). Party dictatorships were the most common type, with a peak of about 50 around 1980 and a fall to about 25 after 1990. Personalist autocracies rose steadily to about 25. Military regimes peaked at about 20 in the 1970s and have almost disappeared. Monarchies stayed at about 10.
 
 - **Who rules matters** [@geddes1999what]:
 
     | Type | Who holds power | Typical feature |
     |---|---|---|
-    | **Single-party** | A party organisation | Most durable: the party settles succession and shares out offices |
+    | **Single-party** | A party organisation | Most durable: the party settles succession and shares out offices (China) |
     | **Military** | The officer corps, a junta | Often short-lived: officers value the unity of the army over staying in government |
     | **Personalist** | One leader and his circle | Unpredictable, institutions hollowed out, often ends violently |
     | **Monarchy** | A ruling family | Succession by descent |
@@ -84,6 +86,35 @@ In my own words: in an autocracy the government decides whether it stays. In a d
     - **Repression:** punishing or deterring opposition, from censorship to violence.
     - **Co-optation:** tying elites and key groups to the regime with offices, money and privileges.
 - **The small winning coalition.** Every ruler needs supporters to stay in power. A democratic leader needs a large share of voters and so has to provide public goods. An autocrat needs a small group (generals, party leaders, oligarchs) and can keep it loyal with private rewards [@buenodemesquita2003logic].
+
+### The ruler's arithmetic
+
+**Selectorate theory** predicts policy from two numbers [@buenodemesquita2003logic]:
+
+- the **selectorate (S)**: the people who have a say in who rules;
+- the **winning coalition (W)**: the people whose support the ruler needs to stay in power.
+
+In a democracy W is a large part of S. In an autocracy W is a small circle inside it.
+
+The ruler can pay supporters with two kinds of goods:
+
+| | Private goods | Public goods |
+|---|---|---|
+| **Properties** | Excludable and rival | Not excludable, not rival |
+| **Examples** | Offices, licences, money | Schools, roads, clean air |
+| **Cost** | Grows with W | Fixed |
+
+The lecture's example assumes that every member of W must receive benefits worth CHF 2,000, or they change to a rival. Public goods cost a fixed CHF 1 billion.
+
+| Regime | W | Cost of private goods | Cost of public goods | Cheaper |
+|---|---|---|---|---|
+| Military junta | 100 | CHF 200,000 | CHF 1 billion | private |
+| One-party regime | 10,000 | CHF 20 million | CHF 1 billion | private |
+| Democracy | 2 million | CHF 4 billion | CHF 1 billion | **public** |
+
+The larger W, the dearer it is to reward every member one by one. **What decides is the size of W, not whether the ruler is good or bad.**
+
+The **median voter theorem** reaches the same prediction by another route: in an autocracy only the elite counts, and its median position differs from that of the whole population, for example less spending on education. The two explanations are compared in [[Democratic State#Does democracy solve problems better?]].
 
 ## Origins & Evolution
 
@@ -131,6 +162,9 @@ In my own words: in an autocracy the government decides whether it stays. In a d
 | Putsch / Staatsstreich | Coup | The illegal seizure of power by a small group, usually from within the state. | translate |
 | Machtwechsel | Change of power | The transfer of government from one party or group to another. | translate |
 | Gewinnkoalition | Winning coalition | The group whose support a ruler needs to stay in power: small in an autocracy, large in a democracy. | define |
+| Selektorat | Selectorate | The people who have a say in who rules. | define |
+| Selektoratstheorie | Selectorate theory | The theory that the size of the winning coalition relative to the selectorate decides whether a ruler provides public or private goods. | apply |
+| Parteidiktatur | Party dictatorship | An autocracy in which a party organisation holds power: the lecture's word for a single-party regime. | translate |
 
 ## Key Connections
 
@@ -169,9 +203,19 @@ In my own words: in an autocracy the government decides whether it stays. In a d
 > [!qard]- 9. Compare: why is a single-party regime usually more durable than a personalist one?
 > The party settles succession and shares out offices, so elites have a stake in the system. A personalist regime hollows out institutions and depends on one person, so it is unpredictable and often ends violently.
 
+> [!qard]- 10. What are the selectorate and the winning coalition?
+> The selectorate (S) is everyone with a say in who rules. The winning coalition (W) is the part of it whose support the ruler needs to stay in power. W is small in an autocracy and large in a democracy.
+
+> [!qard]- 11. Calculate: each member of W must receive CHF 2,000. Public goods cost CHF 1 billion. Which is cheaper for a junta with W = 100 and for a democracy with W = 2 million?
+> Junta: private goods (CHF 200,000). Democracy: public goods (CHF 1 billion against CHF 4 billion).
+> <!-- qard-solution -->
+> 1. Junta: 100 × 2,000 = CHF 200,000, far below CHF 1 billion.
+> 2. Democracy: 2,000,000 × 2,000 = CHF 4 billion, above CHF 1 billion.
+> 3. Private goods grow with W, public goods cost the same. The size of W decides.
+
 ## Open Questions
 
-- [ ] Do autocracies decide faster and democracies better, as is often said? What would count as evidence?
+- [ ] Do autocracies decide faster, as is often said? What would count as evidence? The lecture of 5 October answers only the other half: democracies solve problems better because they have stronger incentives to provide public goods.
 - [ ] Which types of autocracy are most likely to start wars?
 - [ ] The textbook's three kinds (monarchies, military regimes, civilian regimes) are now in. The rest of the note still has to be checked against ch. 3.
 
@@ -185,4 +229,5 @@ In my own words: in an autocracy the government decides whether it stays. In a d
 - [@buenodemesquita2003logic]: winning coalition and selectorate. [High confidence]
 - [@talmadge2015dictators]: coup-proofing and battlefield effectiveness. [High confidence]
 - The three questions about rule (access, structure, limits) follow the usual German-language typology of systems of rule. I have no source for it in the library yet. [Low confidence]
-- Apart from the three kinds above, this note was written **before** the lecture on forms of political systems (5 October 2026) and is not based on the course material. Check it against [@bernauer2025einfuhrung], ch. 3. [Low confidence]
+- Lecture of 5 October 2026 (slides): the four types over time, selectorate theory with the CHF example, the median voter in an autocracy. [High confidence]
+- Apart from the three kinds, the four types and the section on the ruler's arithmetic, this note was written **before** the lecture on forms of political systems (5 October 2026) and is not based on the course material. Check it against [@bernauer2025einfuhrung], ch. 3. [Low confidence]
