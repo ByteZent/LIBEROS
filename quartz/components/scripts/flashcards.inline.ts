@@ -520,18 +520,24 @@ document.addEventListener("nav", () => {
         e.preventDefault()
         if (exam) onNext()
         else toggle()
+      } else if (!target.value && !e.ctrlKey && !e.metaKey && !e.altKey && !e.shiftKey) {
+        // an empty field has no text to move through: the arrows change the card.
+        // The last card of an exam is handed in on purpose, not by an arrow.
+        if (e.key === "ArrowLeft") onPrev()
+        else if (e.key === "ArrowRight" && !(exam && index === cards.length - 1)) onNext()
       }
       return
     }
     if (e.ctrlKey || e.metaKey || e.altKey) return
-    if (
-      target instanceof Element &&
-      target.closest("input, textarea, select, button, a, summary, [contenteditable]")
-    )
+    if (target instanceof Element && target.closest("input, textarea, select, [contenteditable]"))
       return
     if (document.querySelector(".search-container.active, .image-zoom")) return
     const revealed = deck.classList.contains("qard-revealed")
+    // a button or link that was clicked keeps the focus: Space and Enter are its own keys,
+    // the arrows and the rating keys still work
+    const onControl = target instanceof Element && !!target.closest("button, a, summary")
     if (e.key === " " || e.key === "Enter") {
+      if (onControl) return
       e.preventDefault()
       toggle()
     } else if (e.key === "ArrowRight") {
