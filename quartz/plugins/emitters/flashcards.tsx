@@ -38,6 +38,7 @@ export interface FlashcardDeck {
   slug: FullSlug
   title: string
   topics: string[]
+  practice?: boolean // a set of practice questions (notes of `type: practice`): listed under test preparation
   mixed?: boolean // not a course deck: starts shuffled, and is featured on the overview
   bridges?: boolean // the generated "how does X relate to Y?" deck
   // what a generated deck is made of; a course deck has none
@@ -64,6 +65,7 @@ function collectDecks(allFiles: QuartzPluginData[]): FlashcardDeck[] {
       })
     }
     const deck = decks.get(name)!
+    if (file.frontmatter?.type === "practice") deck.practice = true
     const source = { slug: file.slug!, title: file.frontmatter?.title ?? file.slug! }
     for (const card of file.qards!) {
       if (!deck.topics.includes(card.topic)) deck.topics.push(card.topic)
@@ -246,7 +248,7 @@ export const Flashcards: QuartzEmitterPlugin = () => {
         {
           slug: joinSegments(FLASHCARDS_SLUG, "index") as FullSlug,
           frontmatter: { title: "Flashcards", tags: [] },
-          description: `${total} flashcards in ${decks.filter((d) => !d.mixed).length} decks, collected from the notes' self-tests.`,
+          description: `${total} flashcards in ${decks.filter((d) => !d.mixed).length} decks, collected from the notes' self-tests and the practice questions.`,
           flashcardDecks: decks,
         },
         allFiles,

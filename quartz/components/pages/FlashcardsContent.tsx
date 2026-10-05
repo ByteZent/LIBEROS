@@ -41,6 +41,9 @@ export default (() => {
     if (!deck) {
       const decks = fileData.flashcardDecks ?? []
       const featured = decks.filter((d) => d.mixed)
+      // the practice questions of a course, one deck per test
+      const practice = decks.filter((d) => d.practice && !d.mixed)
+      const courses = decks.filter((d) => !d.practice && !d.mixed)
       // the script adds "· n due" to each deck from the review history in this browser
       const card = (d: FlashcardDeck, desc: string) => (
         <a
@@ -78,10 +81,20 @@ export default (() => {
                   )}
                 </div>
               )}
-              {featured.length > 0 && <p class="qard-divider">Decks by course</p>}
-              <div class="section-grid">
-                {decks.filter((d) => !d.mixed).map((d) => card(d, brief(d.topics)))}
-              </div>
+              {practice.length > 0 && (
+                <>
+                  <p class="qard-divider">Test preparation</p>
+                  <div class="section-grid">{practice.map((d) => card(d, brief(d.topics)))}</div>
+                </>
+              )}
+              {courses.length > 0 && (
+                <>
+                  {(featured.length > 0 || practice.length > 0) && (
+                    <p class="qard-divider">Decks by course</p>
+                  )}
+                  <div class="section-grid">{courses.map((d) => card(d, brief(d.topics)))}</div>
+                </>
+              )}
               <p class="qard-backup">
                 <button type="button" class="qard-export">
                   Export progress
