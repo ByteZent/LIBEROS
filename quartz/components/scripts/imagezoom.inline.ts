@@ -1,13 +1,18 @@
 // Click an image in a note to view it full screen. Click the image again to zoom to 2x
 // (pan by scrolling or dragging on touch), click the backdrop or press Esc to close.
+// On a phone held upright a wide diagram would come out as small as it is in the note, so it is
+// turned by a quarter and fills the screen: turn the phone to read it.
 
 let overlay: HTMLDivElement | null = null
 let lastFocus: HTMLElement | null = null
+let stopResize: (() => void) | null = null
 
 function closeZoom() {
   if (!overlay) return
   overlay.remove()
   overlay = null
+  stopResize?.()
+  stopResize = null
   document.documentElement.classList.remove("image-zoom-open")
   document.removeEventListener("keydown", onKey)
   lastFocus?.focus()
@@ -32,6 +37,11 @@ function openZoom(source: HTMLImageElement) {
   img.src = source.currentSrc || source.src
   img.alt = source.alt
   img.title = "Click to zoom"
+  // the stage has the size of the picture as it is seen, so the overlay can scroll over it;
+  // the picture lies inside it, turned or not
+  const stage = document.createElement("div")
+  stage.className = "image-zoom-stage"
+  stage.append(img)
 
   const close = document.createElement("button")
   close.type = "button"
@@ -39,7 +49,7 @@ function openZoom(source: HTMLImageElement) {
   close.ariaLabel = "Close"
   close.textContent = "×"
 
-  el.append(img, close)
+  el.append(stage, close)
   if (source.alt) {
     const caption = document.createElement("div")
     caption.className = "image-zoom-caption"
@@ -47,37 +57,55 @@ function openZoom(source: HTMLImageElement) {
     el.append(caption)
   }
 
-  img.addEventListener("click", (e) => {
+  let zoom = 1
+  const box = source.getBoundingClientRect()
+  const aspect = () => img.naturalWidth / img.naturalHeight || box.width / box.height || 1
+  const size = () => {
+    const style = getComputedStyle(el)
+    const vw = el.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight)
+    const vh = el.clientHeight - parseFloat(style.paddingTop) - parseFloat(style.paddingBottom)
+    const a = aspect()
+    // upright: w × h. Turned: the picture's width runs down the screen.
+    const w = Math.min(vw, vh * a)
+    const long = Math.min(vh, vw * a)
+    const turned = window.innerWidth <= 600 && vh > vw && long > w * 1.3
+    const [sw, sh] = turned ? [long / a, long] : [w, w / a]
+    el.classList.toggle("turned", turned)
+    stage.style.width = `${sw * zoom}px`
+    stage.style.height = `${sh * zoom}px`
+    img.style.width = `${(turned ? sh : sw) * zoom}px`
+    img.style.height = `${(turned ? sw : sh) * zoom}px`
+    img.style.transform = turned ? `translateX(${sw * zoom}px) rotate(90deg)` : ""
+  }
+  const onResize = () => size()
+
+  stage.addEventListener("click", (e) => {
     e.stopPropagation()
-    if (el.classList.contains("zoomed")) {
-      el.classList.remove("zoomed")
-      img.style.width = ""
-      img.title = "Click to zoom"
-    } else {
-      // object-fit letterboxes the picture inside the <img> box: measure the visible picture,
-      // double it, then scroll so the clicked point stays under the cursor
-      const rect = img.getBoundingClientRect()
-      const aspect = img.naturalWidth / img.naturalHeight || rect.width / rect.height
-      const w = Math.min(rect.width, rect.height * aspect)
-      const h = w / aspect
-      const fx = Math.min(Math.max((e.clientX - rect.left - (rect.width - w) / 2) / w, 0), 1)
-      const fy = Math.min(Math.max((e.clientY - rect.top - (rect.height - h) / 2) / h, 0), 1)
-      el.classList.add("zoomed")
-      img.style.width = `${w * 2}px`
-      img.title = "Click to fit"
-      el.scrollLeft = fx * img.offsetWidth - e.clientX
-      el.scrollTop = fy * img.offsetHeight - e.clientY
-    }
+    // the clicked point stays under the cursor
+    const rect = stage.getBoundingClientRect()
+    const fx = (e.clientX - rect.left) / rect.width
+    const fy = (e.clientY - rect.top) / rect.height
+    zoom = zoom === 1 ? 2 : 1
+    el.classList.toggle("zoomed", zoom > 1)
+    img.title = zoom > 1 ? "Click to fit" : "Click to zoom"
+    size()
+    el.scrollLeft = stage.offsetLeft + fx * stage.offsetWidth - e.clientX
+    el.scrollTop = stage.offsetTop + fy * stage.offsetHeight - e.clientY
   })
   close.addEventListener("click", closeZoom)
   el.addEventListener("click", (e) => {
     if (e.target === el) closeZoom()
   })
+  window.addEventListener("resize", onResize)
+  stopResize = () => window.removeEventListener("resize", onResize)
 
   document.body.append(el)
   document.documentElement.classList.add("image-zoom-open")
   document.addEventListener("keydown", onKey)
   overlay = el
+  size()
+  // an SVG only knows its proportions once it is loaded
+  if (!img.complete) img.addEventListener("load", size, { once: true })
   close.focus()
 }
 

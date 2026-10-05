@@ -16,8 +16,6 @@ html.image-zoom-open {
   inset: 0;
   z-index: 1000;
   display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 2rem 1rem;
   box-sizing: border-box;
   overflow: auto;
@@ -25,25 +23,47 @@ html.image-zoom-open {
   cursor: zoom-out;
   animation: image-zoom-in 0.15s ease-out;
 
-  & > img {
-    width: 100%;
-    height: 100%;
-    max-width: none;
-    object-fit: contain;
-    margin: 0;
-    border-radius: 0;
+  // sized by the script to the picture as it is seen; auto margins centre it and, unlike
+  // centring on the container, keep all of it reachable by scrolling once it is zoomed
+  .image-zoom-stage {
+    position: relative;
+    flex: none;
+    margin: auto;
     cursor: zoom-in;
+
+    & > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: none;
+      margin: 0;
+      border-radius: 0;
+      transform-origin: 0 0;
+    }
   }
 
   &.zoomed {
-    display: block;
     padding: 0;
 
-    & > img {
-      display: block;
-      height: auto;
-      margin: auto;
+    .image-zoom-stage {
       cursor: zoom-out;
+    }
+  }
+
+  // phone: every pixel goes to the picture
+  @media (max-width: 600px) {
+    padding: 0.5rem;
+
+    // the turned picture reaches the bottom edge, where the caption would lie across it
+    &.turned .image-zoom-caption {
+      display: none;
+    }
+
+    // with the phone turned to read the picture, the bottom right of the screen is the
+    // picture's top right
+    &.turned .image-zoom-close {
+      top: auto;
+      bottom: calc(0.75rem + env(safe-area-inset-bottom));
     }
   }
 }
