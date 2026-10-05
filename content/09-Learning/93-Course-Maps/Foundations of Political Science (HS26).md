@@ -65,7 +65,7 @@ The course gives the concepts and methods to describe and explain political orde
 
 ## Practice questions
 
-The practice questions on the textbook with worked answers, one page per chapter, in German. Each question is a card in the deck [[/flashcards/Bernauer-Leitfragen|Bernauer Leitfragen]], with the chapter as its topic.
+The practice questions on the textbook with worked answers, one page per chapter, in German. Each question is a card, with the chapter as its topic, in the deck of its test: Bernauer Leitfragen [[/flashcards/Bernauer-Leitfragen-Test-1|Test 1]] (chapters 1–8) and [[/flashcards/Bernauer-Leitfragen-Test-2|Test 2]] (chapters 9–13).
 
 | Ch. | Page | Questions | Assessment |
 |---|---|---|---|
@@ -87,7 +87,7 @@ The practice questions on the textbook with worked answers, one page per chapter
 
 - [ ] One note per textbook chapter 5–8 before Test 1, each with a self-test
 - [ ] Draft the four pages of notes for Test 1 from the BLUFs of the notes for ch. 1–8
-- [ ] Work through the textbook's practice questions chapter by chapter (see *Practice questions* above; deck [[/flashcards/Bernauer-Leitfragen|Bernauer Leitfragen]])
+- [ ] Work through the textbook's practice questions chapter by chapter (see *Practice questions* above; decks Bernauer Leitfragen [[/flashcards/Bernauer-Leitfragen-Test-1|Test 1]] and [[/flashcards/Bernauer-Leitfragen-Test-2|Test 2]])
 - [ ] One note per chapter 9–13 before Test 2
 - [ ] Four pages of notes for Test 2
 - [ ] One synthesis: *what regime type means for how a state fights and decides* ([[Democratic State]] + [[Autocratic State]] + [[Attrition vs Manoeuvre Warfare]])

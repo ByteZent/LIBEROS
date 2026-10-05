@@ -5,7 +5,7 @@ aliases:
 type: practice
 domain: ["policy"]
 courses: ["PolSci-HS26"]
-qard-deck: Bernauer Leitfragen
+qard-deck: Bernauer Leitfragen Test 1
 qard-topic: "Kapitel 2: Der Forschungsprozess"
 status: seedling
 created: 2026-10-01
@@ -24,7 +24,7 @@ draft: false
 - **Buch:** [[bernauer2025einfuhrung|Einführung in die Politikwissenschaft]], Kapitel 2 [@bernauer2025einfuhrung]
 - **Kurs:** [[Foundations of Political Science (HS26)]]
 - **Notizen zum Kapitel:** [[Research Design]] · [[Falsificationism]] · [[Bias in Research]]
-- **Karteikarten:** [[/flashcards/Bernauer-Leitfragen|Deck «Bernauer Leitfragen»]]
+- **Karteikarten:** [[/flashcards/Bernauer-Leitfragen-Test-1|Deck «Bernauer Leitfragen Test 1»]]
 - **Weiter:** ← [[Bernauer Leitfragen 01 - Politik und Politikwissenschaft|Kapitel 1]] · [[Bernauer Leitfragen 03 - Grundformen politischer Systeme|Kapitel 3]] →
 
 ## Fragen und Antworten

@@ -9,7 +9,7 @@ Practice questions for a course, worked through chapter by chapter: one page per
 
 ## Foundations of Political Science (HS26)
 
-415 questions on the textbook [[bernauer2025einfuhrung|Bernauer et al. (2025)]] for the course [[Foundations of Political Science (HS26)]]. Deck: [[/flashcards/Bernauer-Leitfragen|Bernauer Leitfragen]], one topic per chapter.
+415 questions on the textbook [[bernauer2025einfuhrung|Bernauer et al. (2025)]] for the course [[Foundations of Political Science (HS26)]]. One deck per test, one topic per chapter: [[/flashcards/Bernauer-Leitfragen-Test-1|Test 1]] (chapters 1–8, 259 cards) and [[/flashcards/Bernauer-Leitfragen-Test-2|Test 2]] (chapters 9–13, 156 cards).
 
 | Ch. | Page | Questions | Assessment |
 |---|---|---|---|

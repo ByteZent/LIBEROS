@@ -5,7 +5,7 @@ aliases:
 type: practice
 domain: ["policy"]
 courses: ["PolSci-HS26"]
-qard-deck: Bernauer Leitfragen
+qard-deck: Bernauer Leitfragen Test 1
 qard-topic: "Kapitel 1: Politik und Politikwissenschaft"
 status: seedling
 created: 2026-10-01
@@ -24,7 +24,7 @@ draft: false
 - **Buch:** [[bernauer2025einfuhrung|Einführung in die Politikwissenschaft]], Kapitel 1 [@bernauer2025einfuhrung]
 - **Kurs:** [[Foundations of Political Science (HS26)]]
 - **Notizen zum Kapitel:** [[Polity, Policy, Politics]] · [[Sovereign Territorial State]] · [[Political System Model]] · [[Empirical-Analytical vs Hermeneutic Research]]
-- **Karteikarten:** [[/flashcards/Bernauer-Leitfragen|Deck «Bernauer Leitfragen»]]
+- **Karteikarten:** [[/flashcards/Bernauer-Leitfragen-Test-1|Deck «Bernauer Leitfragen Test 1»]]
 - **Weiter:** [[Bernauer Leitfragen 02 - Der Forschungsprozess|Kapitel 2]] →
 
 ## Fragen und Antworten

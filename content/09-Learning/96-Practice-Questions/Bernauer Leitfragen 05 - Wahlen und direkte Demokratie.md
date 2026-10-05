@@ -5,7 +5,7 @@ aliases:
 type: practice
 domain: ["policy"]
 courses: ["PolSci-HS26"]
-qard-deck: Bernauer Leitfragen
+qard-deck: Bernauer Leitfragen Test 1
 qard-topic: "Kapitel 5: Wahlen und direkte Demokratie"
 status: seedling
 created: 2026-10-01
@@ -23,7 +23,7 @@ draft: false
 
 - **Buch:** [[bernauer2025einfuhrung|Einführung in die Politikwissenschaft]], Kapitel 5 [@bernauer2025einfuhrung]
 - **Kurs:** [[Foundations of Political Science (HS26)]]
-- **Karteikarten:** [[/flashcards/Bernauer-Leitfragen|Deck «Bernauer Leitfragen»]]
+- **Karteikarten:** [[/flashcards/Bernauer-Leitfragen-Test-1|Deck «Bernauer Leitfragen Test 1»]]
 - **Weiter:** ← [[Bernauer Leitfragen 04 - Demokratische Regierungssysteme|Kapitel 4]] · [[Bernauer Leitfragen 06 - Politische Einstellungen und politisches Verhalten|Kapitel 6]] →
 
 ## Fragen und Antworten

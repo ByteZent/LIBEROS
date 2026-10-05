@@ -5,7 +5,7 @@ aliases:
 type: practice
 domain: ["policy"]
 courses: ["PolSci-HS26"]
-qard-deck: Bernauer Leitfragen
+qard-deck: Bernauer Leitfragen Test 2
 qard-topic: "Kapitel 12: Die Judikative"
 status: seedling
 created: 2026-10-01
@@ -23,7 +23,7 @@ draft: false
 
 - **Buch:** [[bernauer2025einfuhrung|Einführung in die Politikwissenschaft]], Kapitel 12 [@bernauer2025einfuhrung]
 - **Kurs:** [[Foundations of Political Science (HS26)]]
-- **Karteikarten:** [[/flashcards/Bernauer-Leitfragen|Deck «Bernauer Leitfragen»]]
+- **Karteikarten:** [[/flashcards/Bernauer-Leitfragen-Test-2|Deck «Bernauer Leitfragen Test 2»]]
 - **Weiter:** ← [[Bernauer Leitfragen 11 - Regierung und Verwaltung|Kapitel 11]] · [[Bernauer Leitfragen 13 - Internationale Beziehungen|Kapitel 13]] →
 
 ## Fragen und Antworten
