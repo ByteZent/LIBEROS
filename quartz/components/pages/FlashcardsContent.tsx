@@ -13,6 +13,18 @@ import style from "../styles/flashcards.scss"
 // Notes and course pages link here through FlashcardsLink and the NoteStatus strip.
 const plural = (n: number, word: string) => `${n} ${word}${n === 1 ? "" : "s"}`
 
+// the overview card of a deck names its topics: only the first words, so that a deck with many
+// or long topics does not get a card several times the height of its neighbours
+const DESC_WORDS = 14
+const brief = (topics: string[]) => {
+  const words = topics.join(" · ").split(" ")
+  if (words.length <= DESC_WORDS) return words.join(" ")
+  return `${words
+    .slice(0, DESC_WORDS)
+    .join(" ")
+    .replace(/[\s·:,]+$/, "")} … (${plural(topics.length, "topic")})`
+}
+
 const FEATURED: Record<string, string> = {
   connections: "How does one note relate to another? Generated from Key Connections.",
   recall:
@@ -68,7 +80,7 @@ export default (() => {
               )}
               {featured.length > 0 && <p class="qard-divider">Decks by course</p>}
               <div class="section-grid">
-                {decks.filter((d) => !d.mixed).map((d) => card(d, d.topics.join(" · ")))}
+                {decks.filter((d) => !d.mixed).map((d) => card(d, brief(d.topics)))}
               </div>
               <p class="qard-backup">
                 <button type="button" class="qard-export">
