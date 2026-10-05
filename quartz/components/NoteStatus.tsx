@@ -30,6 +30,7 @@ const TYPE_LABELS: Record<string, string> = {
   judgment: "Judgment",
   meta: "Meta",
   idea: "Idea",
+  practice: "Practice Questions",
 }
 
 const STATUS_LABELS: Record<string, string> = {
