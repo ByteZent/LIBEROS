@@ -16,7 +16,7 @@ qard-deck: MilPsy-HS26
 status: seedling
 confidence: medium
 created: 2026-10-01
-modified: 2026-10-02
+modified: 2026-10-05
 review: 
 tags:
   - concept
@@ -73,6 +73,8 @@ draft: false
 - **After-action reviews.** Units tend to explain their own success by skill and failure by weather, terrain or the umpire. A good review forces the question "what would we do differently?", which moves the cause back to something controllable.
 - **Giving feedback.** Tie success to effort and method, not only to talent. Tie failure to things that can be changed. That keeps motivation up and makes improvement possible.
 - **Judging the enemy.** Analysts explain an opponent's actions by his character ("aggressive", "irrational") and their own side's by circumstances. This is the same error at the level of states, and it makes the opponent look more hostile and less predictable than he is.
+- **Judging leaders.** The Great Man view explains history by exceptional individuals [@carlyle1841heroes]. Spencer's reply is the situational correction: before a great man can remake his society, his society must make him [@spencer1873study]. Followers and observers make the same move every day when they explain a unit's success by its commander. Gustavus Adolphus is the test case: he combined drill, conscription and field guns into one army, but the drill reforms came from Maurice of Nassau a generation earlier, Oxenstierna ran the state, and French subsidies paid for the war.
+- **Seen as a leader is not the same as leading well.** Who is *perceived* as a leader (emergence) and how well the group performs (effectiveness) are different criteria. Charles Gordon was a national hero for courage and piety long before Khartoum, where he defied his mission and died. Perception is an attribution, and it can be wrong.
 - **The bullied recruit.** A recruit hides the dirt his comrades put in his uniform. Seen from outside he looks careless. The situation explains the behaviour.
 
 > [!counter] Critiques & Limits
@@ -99,7 +101,7 @@ draft: false
 - [[Cognitive Dissonance]]: both protect a consistent and favourable picture of oneself.
 - [[Heuristics and Anchoring]]: attribution errors are shortcuts in judging people.
 - [[Perception]]: we react to the situation as we see it, and we rarely see the other's situation.
-- [[Bias in Research]]: the same tendency in the reader of a study.
+- [[Bias in Research]]: the same tendency in the reader of a study. Great-man explanations combine the attribution error with survivorship bias.
 - [[Holistic Model of Military Psychology]]: self-reflection, one of the four pillars, includes checking one's own attributions.
 
 ## Self-Test: Attribution
@@ -128,9 +130,14 @@ draft: false
 > [!qard]- 7. Compare: self-serving attribution and the fundamental attribution error.
 > Self-serving attribution is about **my own** results: success is mine, failure is circumstance. The fundamental error is about **other people's** behaviour: too much person, too little situation. Both distort an after-action review.
 
+> [!qard]- 8. Apply: Gustavus Adolphus is credited with the military revolution. Give the dispositional and the situational explanation.
+> <!-- qard-write -->
+> Dispositional (Carlyle): he combined drill, conscription and field guns, took the risk of invading Germany and led from the front. Situational (Spencer): the drill came from Maurice of Nassau, Oxenstierna ran the state, parish conscription supplied the men, France paid.
+
 ## Sources
 
 - [@weiner1985attributional]: the scheme of causes. [High confidence: primary]
 - [@ross1977intuitive]: the fundamental attribution error. [High confidence: primary]
 - Structure from the lecture Militärpsychologie und -pädagogik I of 29 September 2026. [Medium confidence]
-- The applications and the critiques are my own. [Low confidence]
+- [@carlyle1841heroes], [@spencer1873study]: the Great Man view and its critique, with the cases of Gustavus Adolphus and Gordon, from the Leadership I lecture of 6 October 2026. Neither book read. The link to attribution theory is the lecture's ("attributional" problem). [Medium confidence]
+- The other applications and the critiques are my own. [Low confidence]

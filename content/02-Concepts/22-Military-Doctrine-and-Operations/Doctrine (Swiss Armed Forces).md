@@ -83,7 +83,7 @@ A related idea is often quoted: good doctrine shows *how* leaders can succeed, n
 - **Legal tasks.** Article 58 of the Federal Constitution: the army serves to **prevent war and maintain peace**, to **defend the country and its population**, and to **support the civil authorities** [@bv1999art58]. The Armed Forces Act (Art. 1, as revised in 2018) lists the tasks doctrine must cover as **defence**, **safeguarding air sovereignty**, **support to civil authorities** and **peace support** [@krauer2016militardoktrin]. Doctrine has to cover all of these, not only high-intensity combat.
 - **Militia principle.** The army is organised as a militia. Doctrine must be learnable by citizens who serve in short, repeated periods, which pushes it towards clear procedures and a common command language.
 - **Neutrality and home ground.** Swiss doctrine has long been written for defence **on Swiss territory**, using terrain to channel an attacker. That fits the historical threat, but it can narrow imagination when a scenario does not fit, such as defending together with partners beyond the border.
-- **Mission command.** FSO 17 defines *Auftragstaktik* as the Swiss Army's method of command, usable at every command level. It describes it as leading by setting objectives (*Führen durch Zielvorgabe*) [@schweizerarmee2017fso].
+- **[[Mission Command|Mission command]].** FSO 17 defines *Auftragstaktik* as the Swiss Army's method of command, usable at every command level. It describes it as leading by setting objectives (*Führen durch Zielvorgabe*) [@schweizerarmee2017fso].
 
 ## Origins & Evolution
 
@@ -142,6 +142,8 @@ Swiss doctrinal debate has been shaped by a tension between two schools since th
 - [[Course of Action]]: the planning procedure that doctrine prescribes (FSO 17 in Switzerland, JP 5-0 and FM 5-0 in the US)
 - [[PMESII]]: the whole of which military strategy is one part
 - [[VRIO]]: doctrine answers the *organisation* question for new capabilities
+- [[Mission Command]]: the method of command that Swiss doctrine prescribes, and that shared doctrine makes possible
+- [[Command, Leadership, Management]]: in the CLM model, doctrine is where the Command aspect is anchored
 
 ## Self-Test: Doctrine
 

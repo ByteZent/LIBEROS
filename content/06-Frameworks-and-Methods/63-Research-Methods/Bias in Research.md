@@ -72,6 +72,10 @@ These biases concern **internal validity**: is the claimed cause really the caus
 | **Regression to the mean** | Cases chosen because they were extreme move back towards the average on their own. | Units were selected *because* they were very bad or very good, and then "improved" or "declined". |
 | **Ecological fallacy** (*ökologischer Fehlschluss*) | A relation between groups is read as a relation between individuals. | Data on regions or countries, conclusions about persons. |
 
+A reference case for confounding:
+
+- **Are presidential systems unstable?** Presidential democracies break down more often than parliamentary ones. But presidential systems arise far more often after military regimes (66 % against 28 %), and democracies that follow a military regime last about 20 years on average instead of about 90, whatever their system. The history of military rule drives both the choice of system and the breakdown. Whoever does not control for it credits the system of government with an effect it does not have [@cheibub2007presidentialism]. See [[Democratic State]].
+
 ### 2. Selection: who is missing, and why?
 
 | Bias | What happens | How to spot it in a paper |
@@ -83,10 +87,11 @@ These biases concern **internal validity**: is the claimed cause really the caus
 | **Attrition** (*Panelmortalität*) | People drop out during the study, and not at random. | The *n* shrinks from table to table with no account of who left. |
 | **Convenience sample** | The units studied are those that were easy to reach. | Students, one unit, one country. The title claims more than the sample covers. |
 
-Two reference cases:
+Three reference cases:
 
 - **The returning bombers.** In the Second World War, the statistician Abraham Wald worked on where to protect aircraft, using damage data from planes that had come back. His method started from the fact that the planes shot down were missing from the data: hits on the returning planes showed where a plane could be hit and still fly home [@mangel1984abraham]. The popular version of the story (*armour the places without holes*) is simplified, but the point holds.
 - **WEIRD samples.** Much of behavioural science rests on participants from Western, educated, industrialised, rich and democratic societies, who are unusual compared with the rest of humanity [@henrich2010weirdest]. This is a problem of **external validity**: the finding may be correct for the sample and not travel.
+- **Great men.** The view that history is made by exceptional individuals rests on biographies chosen after the outcome was known [@carlyle1841heroes]. Great men who lost, or never got the chance, are rarely studied. That is survivorship bias and selection on the outcome at once. Two further problems follow: the claim is **counterfactual** (would events have differed without him? history cannot be rerun), and it explains outcomes by persons, which is the [[Attribution|fundamental attribution error]] applied to history.
 
 ### 3. Measurement: does the number mean what the paper says?
 
@@ -98,6 +103,8 @@ Two reference cases:
 | **Question wording and order** | The question suggests the answer. | The questionnaire is not printed. If it is: leading words, one-sided answer scales. |
 | **Observer expectancy** (*Versuchsleitereffekt*) | The person who measures or codes knows the hypothesis and sees what fits. | Coding done by the authors alone, no second coder, no blinding. |
 | **Reactivity** (Hawthorne effect) | People behave differently because they know they are being studied. | Open observation, exercises with evaluators present. |
+
+A caution on the **Hawthorne effect**: the name comes from studies at the Western Electric Hawthorne Works (1924–1932). The illumination study was inconclusive, in the relay assembly test room output rose whatever was changed, and in the bank wiring room an existing group held its output at a level of its own. Mayo read this as proof that attitudes, group norms and the supervisor's attention shape performance. The course reading calls it the most misunderstood study in the social sciences [@bright2019principles], and a re-analysis of the original illumination data doubts that the effect was there at all [@levitt2011hawthorne]. Use the term for reactivity, and do not cite the original study as its proof.
 
 ### 4. Analysis: was the test fixed before the data was seen?
 
@@ -124,6 +131,14 @@ How large is the problem?
 - In a set of social science experiments that were all approved in advance, studies with strong results were far more likely to be published than studies with null results. Most null results were never even written up [@franco2014publication].
 - When 100 published psychology studies were repeated, 97 % of the originals had reported a significant result, but only 36 % of the replications did, and the effects were on average about half as large [@opensciencecollaboration2015estimating].
 - Ioannidis argues from this logic that a published finding is less likely to be true when studies are small, effects are small, analysis is flexible, and interests are strong [@ioannidis2005why].
+
+**Mixed findings are not yet evidence against an idea.** Small single studies disagree partly through **sampling error**, which is random error and not bias. A **meta-analysis** pools the effects of many studies to estimate the underlying effect more exactly. Leadership research shows what this changes [@day2012leadership]:
+
+- Reviews of 1948 and 1959 found inconsistent results on leaders' traits. Many scholars concluded that no trait predicts leadership, and trait research lost its influence for almost thirty years.
+- In 1986 a meta-analysis of largely the same studies found that intelligence was strongly related to being perceived as a leader (about *r* = .50) [@lord1986metaanalysis].
+- The same happened with leader behaviour: contradictory findings in the 1960s, clear pooled effects in a meta-analysis of 2004.
+
+The lesson has two sides. Do not read scattered small studies as a null result. And a meta-analysis is only as good as the studies that were published: it inherits publication bias.
 
 ### 6. The reader
 
@@ -213,6 +228,8 @@ An **invented** abstract, built to contain typical problems:
 | Erinnerungsverzerrung | Recall bias | Memory is selective, and the outcome shapes what is remembered. | define |
 | Reaktivität (Hawthorne-Effekt) | Reactivity (Hawthorne effect) | People behave differently because they know they are being studied. | define |
 | HARKing | HARKing | Hypothesising after the results are known: a pattern found in the data is presented as if it had been predicted. | define |
+| Metaanalyse | Meta-analysis | A study that pools the effects of many studies to estimate the underlying effect more exactly. | define |
+| Stichprobenfehler | Sampling error | Random deviation of a sample's result from the true value, larger in small samples. | define |
 | Zitationsbias | Citation bias | Supporting studies are cited, contradicting ones are left out. | define |
 
 ## Key Connections
@@ -259,6 +276,15 @@ An **invented** abstract, built to contain typical problems:
 > [!qard]- 9. Apply: units picked for retraining because of very poor scores do better afterwards. Does that show the retraining works?
 > No. This is regression to the mean: cases chosen because they were extreme move back towards the average on their own. You need equally poor units without retraining as a comparison group.
 
+> [!qard]- 10. Apply: presidential democracies break down more often than parliamentary ones. Which bias threatens the conclusion that the system is the cause?
+> Confounding. Presidential systems follow military regimes more often (66 % against 28 %), and democracies after military regimes are short-lived under any system. The history drives both (Cheibub).
+
+> [!qard]- 11. Twenty small studies of the same question give mixed results. Why is that not yet evidence against the hypothesis?
+> Small studies scatter through sampling error. A meta-analysis pools them and can show a clear effect, as with intelligence and perceived leadership (1948/1959 reviews against the 1986 meta-analysis). It still inherits publication bias.
+
+> [!qard]- 12. Name three problems with explaining history by great men.
+> Retrospective: cases are chosen after the outcome, so losers are missing (survivorship). Counterfactual: history cannot be rerun. Attributional: outcomes are explained by persons and not by situations.
+
 ## Open Questions
 
 - [ ] Which of these biases apply to qualitative case studies and document analysis, and which need a different vocabulary?
@@ -280,5 +306,9 @@ An **invented** abstract, built to contain typical problems:
 - [@opensciencecollaboration2015estimating]: replication rates in psychology. [High confidence]
 - [@ioannidis2005why]: conditions under which published findings are likely to be false. The title's claim is itself disputed. [Medium confidence]
 - [@nickerson1998confirmation]: confirmation bias. [High confidence]
+- [@cheibub2007presidentialism]: the confounding case, cited through the political science lecture of 5 October 2026. [Medium confidence]
+- [@day2012leadership], [@lord1986metaanalysis]: mixed findings and the meta-analytic revival of trait research, through the Leadership I lecture of 6 October 2026. Lord et al. not read. [Medium confidence]
+- [@bright2019principles], [@levitt2011hawthorne]: the Hawthorne studies and the doubt about them, through the same lecture. Levitt and List not read: the one-line summary follows the title. [Low–medium confidence]
+- [@carlyle1841heroes]: the Great Man view. The three problems are from the Leadership I lecture. [Medium confidence]
 - Hindsight bias and anecdotal evidence from Proseminar I, session of 24 September 2026. No source for them in my library yet. [Medium confidence]
 - The five-question routine, the worked example and the self-test cases are my own. [Medium confidence]

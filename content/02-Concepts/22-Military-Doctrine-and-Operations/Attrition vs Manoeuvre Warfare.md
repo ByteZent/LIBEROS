@@ -52,7 +52,7 @@ draft: false
 
 - **Manoeuvre is not only movement.** It is about **position** in a broad sense: physical, but also in time and in the enemy's mind. A force can move a lot and still fight attrition, or hold still and fight manoeuvre (e.g. by an ambush that paralyses an enemy's command).
 - **The target of manoeuvre is the enemy's orientation.** In [[OODA Loop|Boyd's]] terms, manoeuvre gets *inside* the enemy's loop, so he keeps reacting to a situation that has already changed until his picture of reality collapses [@boyd2018discourse].
-- **Manoeuvre needs mission command.** Exploiting fleeting weakness requires subordinates who act on intent without waiting for orders. That is why manoeuvre doctrine and mission command came together, e.g. in the US Marine Corps' *Warfighting* [@usmc1989warfighting].
+- **Manoeuvre needs [[Mission Command|mission command]].** Exploiting fleeting weakness requires subordinates who act on intent without waiting for orders. That is why manoeuvre doctrine and mission command came together, e.g. in the US Marine Corps' *Warfighting* [@usmc1989warfighting].
 - **Attrition is not stupid.** It is the rational choice when neither side has a decisive edge, when the enemy has no exploitable weakness, or when you have more resources and time than he does.
 - **Both are always present.** Every manoeuvre involves fighting and losses; every attrition campaign looks for local weaknesses. The question is what the *main* logic is.
 

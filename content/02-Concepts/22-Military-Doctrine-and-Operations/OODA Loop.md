@@ -64,7 +64,7 @@ Attrition seeks victory by destroying the enemy's physical means. **Manoeuvre** 
 
 ### Mission command and implicit guidance
 
-Boyd's *organic design for command and control* borrows German terms. **Einheit** is mutual trust and a shared outlook. **Fingerspitzengefühl** is intuitive feel for the situation. **Auftragstaktik** is mission-type orders: *what* and *why*, not *how*. **Schwerpunkt** is focus of effort. Together they create a **shared orientation**, so subordinates can act through *implicit guidance and control* instead of waiting for explicit decisions. That is how an organisation's loop becomes faster than its hierarchy.
+Boyd's *organic design for command and control* borrows German terms. **Einheit** is mutual trust and a shared outlook. **Fingerspitzengefühl** is intuitive feel for the situation. **Auftragstaktik** is [[Mission Command|mission-type orders]]: *what* and *why*, not *how*. **Schwerpunkt** is focus of effort. Together they create a **shared orientation**, so subordinates can act through *implicit guidance and control* instead of waiting for explicit decisions. That is how an organisation's loop becomes faster than its hierarchy.
 
 ### Leadership practice
 
@@ -114,6 +114,7 @@ A classic exam comparison. **Define both separately, then connect them through o
 - [[John Boyd]]: author; life and other ideas
 - [[osinga2007science|Osinga (2007)]]: the standard study of Boyd's theory
 - [[Attrition vs Manoeuvre Warfare]]: manoeuvre as an attack on the enemy's orientation
+- [[Mission Command]]: the way of commanding that turns a shared orientation into implicit guidance and control
 - [[Course of Action]]: the formal, deliberate version of *Decide*
 - [[Cognitive Warfare]]: an attack aimed directly at the opponent's *Orient*
 
