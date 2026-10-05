@@ -225,12 +225,30 @@
     text-overflow: ellipsis;
   }
 
+  // a cut-off node shows its full text under the pointer: it keeps its width and its place and
+  // grows downwards over its neighbours, so it never leaves the frame sideways
+  &.mm-cut:hover,
+  &.mm-cut:focus-within {
+    z-index: 3;
+    height: auto;
+    min-height: 26px;
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+    border-color: var(--mm-color, var(--secondary));
+    line-height: 1.3;
+    white-space: normal;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  }
+
   // links keep their meaning, without the site's link chip
   a,
   a.internal {
     padding: 0;
     background: none;
     font-weight: 600;
+    line-height: inherit;
+    // a long link is cut off like any other label, not wrapped out of the node
+    white-space: inherit;
     color: var(--secondary);
   }
 

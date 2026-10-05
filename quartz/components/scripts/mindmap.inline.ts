@@ -296,7 +296,15 @@ function setupMindmap(callout: HTMLElement) {
   content.prepend(tools, viewport)
   callout.classList.add("mm-ready")
 
-  for (const node of all) node.w = node.el.offsetWidth
+  for (const node of all) {
+    node.w = node.el.offsetWidth
+    // a label that does not fit is cut off: the node opens to its full text under the pointer
+    const label = node.el.querySelector<HTMLElement>(".mm-label")
+    if (label && label.scrollWidth > label.clientWidth) {
+      node.el.classList.add("mm-cut")
+      node.el.title = label.textContent ?? ""
+    }
+  }
 
   // ── pan and zoom
   const pan = { x: 0, y: 0, scale: 1 }
