@@ -17,7 +17,7 @@ author: Thomas Bernauer, Detlef Jahn, Sylvia Kritzinger, Patrick M. Kuhn
 year: 2025
 source_type: book
 created: 2026-10-01
-modified: 2026-10-01
+modified: 2026-10-05
 review: 
 tags:
   - source
@@ -39,25 +39,25 @@ The book has three parts.
 2. **National political systems** (ch. 3 to 12): first the basic forms (democracy and autocracy) and the systems of government, then the building blocks of figure 0.1 one by one. Germany, Austria, Switzerland and the EU are the running examples.
 3. **Across borders** (ch. 13): international cooperation, war, globalisation, European integration.
 
-Chapters 3 to 13 can be read in any order. Each ends with reading tips. The book has an online glossary and test questions.
+Chapters 3 to 13 can be read in any order. Each ends with reading tips. The book has an online glossary and test questions. My answers to the practice questions are in [[09-Learning/96-Practice-Questions/index|Practice Questions]], one page per chapter (in German).
 
 ## Chapter Map
 
-| Ch. | Title | Topic | Vault notes |
-|---|---|---|---|
-| 1 | Politik und Politikwissenschaft | Definition of politics, the state as a political system, research traditions | [[Polity, Policy, Politics]] · [[Sovereign Territorial State]] · [[Political System Model]] |
-| 2 | Der Forschungsprozess | Research question, theory, hypotheses, concepts, measurement, testing | [[Research Design]] |
-| 3 | Grundformen politischer Systeme | Democracy, autocracy, measuring regime type, effects, democratisation | [[Democratic State]] · [[Autocratic State]] |
-| 4 | Demokratische Regierungssysteme | Horizontal and vertical separation of powers, systems of government, veto players | [[Democratic State]] |
-| 5 | Wahlen und direkte Demokratie | Electoral systems; direct, representative and semi-direct democracy | |
-| 6 | Politische Einstellungen und politisches Verhalten | Public opinion, political culture, participation | |
-| 7 | Parteien und Parteiensysteme | Parties as intermediaries, party systems, median voter | |
-| 8 | Interessengruppen und soziale Bewegungen | Interest groups, corporatism, movements | |
-| 9 | Politische Kommunikationsplattformen | Media as intermediaries | |
-| 10 | Die Legislative | Parliaments | |
-| 11 | Regierung und Verwaltung | Government, coalitions, administration | |
-| 12 | Die Judikative | Rule of law, constitutional review | |
-| 13 | Internationale Beziehungen | Cooperation, war, globalisation, European integration | |
+| Ch. | Title | Topic | Vault notes | Practice questions |
+|---|---|---|---|---|
+| 1 | Politik und Politikwissenschaft | Definition of politics, the state as a political system, research traditions | [[Polity, Policy, Politics]] · [[Sovereign Territorial State]] · [[Political System Model]] | [[Bernauer Leitfragen 01 - Politik und Politikwissenschaft\|31 questions]] |
+| 2 | Der Forschungsprozess | Research question, theory, hypotheses, concepts, measurement, testing | [[Research Design]] | [[Bernauer Leitfragen 02 - Der Forschungsprozess\|34 questions]] |
+| 3 | Grundformen politischer Systeme | Democracy, autocracy, measuring regime type, effects, democratisation | [[Democratic State]] · [[Autocratic State]] | [[Bernauer Leitfragen 03 - Grundformen politischer Systeme\|34 questions]] |
+| 4 | Demokratische Regierungssysteme | Horizontal and vertical separation of powers, systems of government, veto players | [[Democratic State]] | [[Bernauer Leitfragen 04 - Demokratische Regierungssysteme\|31 questions]] |
+| 5 | Wahlen und direkte Demokratie | Electoral systems; direct, representative and semi-direct democracy | | [[Bernauer Leitfragen 05 - Wahlen und direkte Demokratie\|33 questions]] |
+| 6 | Politische Einstellungen und politisches Verhalten | Public opinion, political culture, participation | | [[Bernauer Leitfragen 06 - Politische Einstellungen und politisches Verhalten\|34 questions]] |
+| 7 | Parteien und Parteiensysteme | Parties as intermediaries, party systems, median voter | | [[Bernauer Leitfragen 07 - Parteien und Parteiensysteme\|31 questions]] |
+| 8 | Interessengruppen und soziale Bewegungen | Interest groups, corporatism, movements | | [[Bernauer Leitfragen 08 - Interessengruppen und soziale Bewegungen\|31 questions]] |
+| 9 | Politische Kommunikationsplattformen | Media as intermediaries | | [[Bernauer Leitfragen 09 - Politische Kommunikationsplattformen\|31 questions]] |
+| 10 | Die Legislative | Parliaments | | [[Bernauer Leitfragen 10 - Die Legislative\|31 questions]] |
+| 11 | Regierung und Verwaltung | Government, coalitions, administration | | [[Bernauer Leitfragen 11 - Regierung und Verwaltung\|31 questions]] |
+| 12 | Die Judikative | Rule of law, constitutional review | | [[Bernauer Leitfragen 12 - Die Judikative\|32 questions]] |
+| 13 | Internationale Beziehungen | Cooperation, war, globalisation, European integration | | [[Bernauer Leitfragen 13 - Internationale Beziehungen\|31 questions]] |
 
 ## Key Claims
 
