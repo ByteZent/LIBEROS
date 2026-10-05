@@ -4,8 +4,8 @@ aliases:
   - Glossar
   - Central glossary
 type: meta
-created: 2026-10-04
-modified: 2026-10-04
+created: 2026-10-05
+modified: 2026-10-05
 tags:
   - meta
   - glossary
