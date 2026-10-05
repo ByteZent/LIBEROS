@@ -31,6 +31,9 @@ import {
 //   solution, folded away under the result until asked for.
 // - `<!-- qard-write -->` makes a written card: the site asks for the answer in a text field and
 //   shows it next to the card's answer when the card is turned.
+// - `<!-- qard-important -->` marks a question that matters more than the others: it gets a star
+//   on its note and in its deck, and the deck can be narrowed to these cards. The id does not
+//   change, so a card can be marked later without losing its review history.
 //
 // Bridge cards are generated, not written: each line of a note's `## Key Connections` section
 // (`- [[Other Note]]: how it relates`) becomes "How does <note> relate to <other note>?" in
@@ -65,6 +68,7 @@ export interface Qard {
   id: string // stable while the note keeps its place and the question its wording: keys the review history
   kind: QardKind
   write?: boolean // the answer is typed first, then compared
+  important?: boolean // marked with `<!-- qard-important -->`
   topic: string
   front: string // HTML, links already relative to the deck page
   back: string
@@ -466,9 +470,16 @@ export const Qards: QuartzTransformerPlugin = () => ({
 
           const clean = (nodes: ElementContent[]) =>
             withoutComments(nodes).filter((n) => !isEmpty(n))
+          const important = findMarker(body, "qard-important") >= 0
+          // the note shows the star as well
+          if (important) {
+            const className = (node.properties.className as string[] | undefined) ?? []
+            node.properties.className = [...className, "qard-important"]
+          }
           cards.push({
             id: uniqueId(questionText),
             write: findMarker(body, "qard-write") >= 0,
+            important,
             kind:
               hideAt >= 0
                 ? "image"

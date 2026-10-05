@@ -117,6 +117,7 @@ export default (() => {
     }
 
     const count = (topic: string) => deck.cards.filter((c) => c.topic === topic).length
+    const important = deck.cards.filter((c) => c.important).length
     return (
       <div class="popover-hint flashcards qard-deck" data-kind={deck.kind ?? "course"}>
         <p class="qard-summary">
@@ -125,6 +126,7 @@ export default (() => {
           </a>
           <span>
             {plural(deck.cards.length, "card")} · {plural(deck.topics.length, "topic")}
+            {important > 0 && ` · ${important} important`}
           </span>
         </p>
 
@@ -151,6 +153,16 @@ export default (() => {
           <button type="button" class="qard-shuffle" aria-pressed={deck.mixed ? "true" : "false"}>
             Shuffle
           </button>
+          {important > 0 && (
+            <button
+              type="button"
+              class="qard-important-only"
+              aria-pressed="false"
+              title="Only the cards marked as important"
+            >
+              ★ Important
+            </button>
+          )}
           <button
             type="button"
             class="qard-write-all"
@@ -177,12 +189,19 @@ export default (() => {
         <div class="qard-stage">
           {deck.cards.map((card) => (
             <article
-              class={`qard-card qard-${card.kind}${card.write ? " qard-write" : ""}`}
+              class={`qard-card qard-${card.kind}${card.write ? " qard-write" : ""}${
+                card.important ? " qard-important" : ""
+              }`}
               data-topic={card.topic}
               data-id={card.id}
             >
               <div class="qard-meta">
                 <span class="qard-topic">
+                  {card.important && (
+                    <span class="qard-star" title="Important">
+                      ★{" "}
+                    </span>
+                  )}
                   {card.topic}
                   <span class="qard-box"></span>
                 </span>

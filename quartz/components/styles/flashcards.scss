@@ -126,6 +126,15 @@
     text-transform: none;
   }
 
+  // a card marked `<!-- qard-important -->`
+  .qard-card.qard-important {
+    border: 2px solid var(--secondary);
+  }
+
+  .qard-star {
+    color: var(--secondary);
+  }
+
   // written card: the field only exists in the study view
   .qard-written {
     display: none;
@@ -211,6 +220,7 @@
       margin: 1.5rem 0 1rem;
     }
 
+    .qard-important-only[aria-pressed="true"],
     .qard-write-all[aria-pressed="true"],
     .qard-shuffle[aria-pressed="true"] {
       border-color: var(--secondary);

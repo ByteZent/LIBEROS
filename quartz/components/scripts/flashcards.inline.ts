@@ -5,6 +5,8 @@
 // repeated until none are left.
 // A written card (`<!-- qard-write -->` in the note), or every card while "Write answers" is on,
 // asks for the answer in a text field first and shows it above the card's answer for comparison.
+// "★ Important" narrows the deck to the cards marked `<!-- qard-important -->`: the selection, the
+// counts and the exam then only draw from those.
 // `?topic=<name>` in the URL preselects a topic, so notes and course maps can link to their cards.
 // On every page, links that carry `data-qard-ids` (deck overview, FLASHCARDS badges) get the
 // number of due cards and leeches; the overview can also export and import the history as a file.
@@ -128,6 +130,8 @@ document.addEventListener("nav", () => {
   const select = deck.querySelector<HTMLSelectElement>(".qard-topic-select")!
   const shuffle = deck.querySelector<HTMLButtonElement>(".qard-shuffle")!
   const writeAll = deck.querySelector<HTMLButtonElement>(".qard-write-all")!
+  // only there if the deck has important cards
+  const importantOnly = deck.querySelector<HTMLButtonElement>(".qard-important-only")
   const progressLabel = deck.querySelector<HTMLElement>(".qard-progress")!
   const prev = deck.querySelector<HTMLButtonElement>(".qard-prev")!
   const flip = deck.querySelector<HTMLButtonElement>(".qard-flip")!
@@ -156,7 +160,12 @@ document.addEventListener("nav", () => {
   const rated = (rating: Rating) => cards.filter((card) => ratings.get(card) === rating)
   const idOf = (card: HTMLElement) => card.dataset.id ?? ""
   const inTopic = () =>
-    all.filter((card) => select.value === "" || card.dataset.topic === select.value)
+    all.filter(
+      (card) =>
+        (select.value === "" || card.dataset.topic === select.value) &&
+        (importantOnly?.getAttribute("aria-pressed") !== "true" ||
+          card.classList.contains("qard-important")),
+    )
 
   // the text field of a card whose answer is written first, if this is such a card
   const field = (card?: HTMLElement) =>
@@ -483,6 +492,11 @@ document.addEventListener("nav", () => {
     shuffle.setAttribute("aria-pressed", String(on))
     rebuild()
   }
+  const onImportantOnly = () => {
+    const on = importantOnly?.getAttribute("aria-pressed") !== "true"
+    importantOnly?.setAttribute("aria-pressed", String(on))
+    rebuild()
+  }
   const setWriteAll = (on: boolean) => {
     writeAll.setAttribute("aria-pressed", String(on))
     deck.classList.toggle("qard-writing", on)
@@ -559,6 +573,9 @@ document.addEventListener("nav", () => {
     [select, "change", onTopic],
     [shuffle, "click", onShuffle],
     [writeAll, "click", onWriteAll],
+    ...(importantOnly
+      ? [[importantOnly, "click", onImportantOnly] as [Element, string, EventListener]]
+      : []),
     [prev, "click", onPrev],
     [flip, "click", toggle],
     [next, "click", onNext],
