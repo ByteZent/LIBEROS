@@ -266,8 +266,24 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
       padding: 5px;
       z-index: 101;
 
-      .lucide-menu {
+      .lucide-menu,
+      .lucide-x {
         stroke: var(--darkgray);
+      }
+
+      .lucide-x {
+        display: none;
+      }
+    }
+
+    // open: the button closes the drawer, so it shows a cross
+    &:not(.collapsed) .mobile-explorer:not(.hide-until-loaded) {
+      .lucide-menu {
+        display: none;
+      }
+
+      .lucide-x {
+        display: block;
       }
     }
   }

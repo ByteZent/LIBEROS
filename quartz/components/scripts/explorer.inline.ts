@@ -29,6 +29,9 @@ function toggleExplorer(this: HTMLElement) {
     nearestExplorer.getAttribute("aria-expanded") === "true" ? "false" : "true",
   )
 
+  if (this.dataset.mobile === "true")
+    this.setAttribute("aria-label", explorerCollapsed ? "Menu" : "Close menu")
+
   if (!explorerCollapsed) {
     // Stop <html> from being scrollable when mobile explorer is open
     document.documentElement.classList.add("mobile-no-scroll")
