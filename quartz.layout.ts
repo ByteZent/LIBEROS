@@ -36,6 +36,8 @@ export const sharedPageComponents: SharedLayout = {
 
 // Explorer: hide the tag index, the attachments folder and folders without any note
 // (only their index page, or only empty subfolders) from the sidebar tree.
+// A folder whose index page is the content itself (the podcast list) is named in `standalone`
+// and always shown.
 // NB: filterFn is serialised to the client, so it must be self-contained.
 const explorer = Component.Explorer({
   title: "Knowledge Base",
@@ -43,12 +45,14 @@ const explorer = Component.Explorer({
   filterFn: (node) => {
     if (node.slugSegment === "tags" || node.slugSegment === "assets") return false
     if (!node.isFolder) return true
+    const standalone = ["86-Podcasts"]
+    if (standalone.includes(node.slugSegment)) return true
     // the filter runs top-down, so look through the whole subtree for a note
     // (a loop, not a recursive helper: see the __name() remark at sortFn)
     const todo = [...node.children]
     while (todo.length > 0) {
       const child = todo.pop()!
-      if (!child.isFolder) return true
+      if (!child.isFolder || standalone.includes(child.slugSegment)) return true
       todo.push(...child.children)
     }
     return false
