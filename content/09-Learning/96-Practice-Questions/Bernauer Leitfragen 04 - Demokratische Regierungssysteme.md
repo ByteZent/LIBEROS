@@ -30,10 +30,10 @@ draft: false
 ## Fragen und Antworten
 
 > [!qard]- 4.01 Wodurch zeichnet sich der Rechtsstaat aus?
-> Er unterwirft **alle** politischen Entscheidungsträger:innen dem bestehenden Recht und beschränkt so ihre Handlungsfreiheit: Niemand steht über dem Gesetz, auch nicht Regierende, Beamt:innen oder Richter:innen. Auch wer ein neues Gesetz erlassen will, muss die Regeln des politischen Prozesses einhalten. Der Rechtsstaat allein genügt aber nicht, um Macht wirksam zu beschränken. (4.1)
+> Er unterwirft **alle** politischen Entscheidungsträger:innen dem bestehenden Recht und beschränkt so ihre Handlungsfreiheit: **Niemand steht über dem Gesetz**, auch nicht Regierende, Beamt:innen oder Richter:innen. Auch wer ein neues Gesetz erlassen will, muss die Regeln des politischen Prozesses einhalten. Der Rechtsstaat allein genügt aber nicht, um Macht wirksam zu beschränken. (4.1)
 
 > [!qard]- 4.02 Was bedeutet wirksame Gewaltenteilung?
-> Die politische Macht ist auf verschiedene Ämter und Staatsorgane verteilt, und **kein Machtträger kann unabhängig von den anderen** Entscheidungen fällen und umsetzen, die das politische System als solches verändern. Es entsteht ein System von Kontrollen und Gegengewichten (checks and balances), das Machtkonzentration verhindert. (4.1)
+> Die politische Macht ist auf verschiedene Ämter und Staatsorgane verteilt, und **kein Machtträger kann unabhängig von den anderen** Entscheidungen fällen und umsetzen, die das politische System als solches verändern. Es entsteht ein System von Kontrollen und Gegengewichten **(checks and balances)**, das Machtkonzentration verhindert. (4.1)
 
 > [!qard]- 4.03 Ist die horizontale Gewaltenteilung in präsidentiellen oder parlamentarischen Systemen stärker?
 > In **präsidentiellen** Systemen: Legislative und Exekutive sind klar getrennt (separation of power). In parlamentarischen Systemen sind sie stark verschränkt (fusion of power). (4.2)
@@ -82,12 +82,12 @@ draft: false
 > [!qard]- 4.15 Weshalb hat das Parlament Österreichs eine stärkere Stellung gegenüber der Regierung?
 > Der Nationalrat kann die Regierung durch ein Misstrauensvotum stürzen, aber der:die **Bundeskanzler:in kann das Parlament nicht auflösen**. Der Regierung fehlt damit das übliche Disziplinierungsinstrument. (Auflösen kann nur der:die Bundespräsident:in auf Vorschlag der Regierung; bisher einmal, 1930.) (4.2.4)
 
-> [!qard]- 4.16 Inwiefern ist die Schweiz eine Mischform?
+> [!qard]- 4.16 Inwiefern ist die Schweiz eine Mischform? (Parlamentarisch / Präsidentiell)
 > - **Parlamentarisch:** Die Regierung (Bundesrat) wird vom Parlament gewählt (Vereinigte Bundesversammlung), nicht vom Volk.
 > - **Präsidentiell:** Das Parlament kann die Regierung während der Legislatur nicht zum Rücktritt zwingen, und die Regierung kann das Parlament nicht auflösen.
 > - Besonderheiten: sieben gleichberechtigte Mitglieder, Zauberformel, kein eigenständiges Präsidentenamt (jährlich wechselnd), starke direkte Demokratie. (4.2.4)
 
-> [!qard]- 4.17 Weshalb hat die Kommission einen starken Einfluss auf die EU-Gesetzgebung?
+> [!qard]- 4.17 Weshalb hat die (EU) Kommission einen starken Einfluss auf die EU-Gesetzgebung?
 > Sie hat als **einziges EU-Organ das Initiativrecht** für neue Gesetzesvorschläge. Dazu ist sie für die Umsetzung zuständig und kann in gewissen Bereichen Mitgliedstaaten sanktionieren («Hüterin der Verträge»). (4.2.4)
 
 > [!qard]- 4.18 Weshalb und inwiefern ist das EU-Parlament schwächer als ein nationales Parlament?
@@ -122,7 +122,7 @@ draft: false
 > 2. **Geschriebene Verfassung**, die die Kompetenzverteilung festhält.
 > 3. **Starke Verfassungsgerichtsbarkeit**.
 >
-> Die Schweiz ist bei der **Verfassungsgerichtsbarkeit** untypisch: Das Bundesgericht hat weniger Kompetenzen als die Verfassungsgerichte in Deutschland und Österreich. Das Buch nennt als Hintergrund die stark ausgebaute direkte Demokratie; dass das Volk und nicht ein Gericht das letzte Wort haben soll, ist meine Folgerung. (4.3.1, 4.3.2)
+> Die Schweiz ist bei der **Verfassungsgerichtsbarkeit** untypisch: Das Bundesgericht hat **weniger Kompetenzen als die Verfassungsgerichte** in Deutschland und Österreich. Das Buch nennt als Hintergrund die stark ausgebaute direkte Demokratie; dass das Volk und nicht ein Gericht das letzte Wort haben soll, ist meine Folgerung. (4.3.1, 4.3.2)
 
 > [!qard]- 4.24 In welchem der drei Staaten ist der Föderalismus am stärksten? Wie messen?
 > - In der **Schweiz**: Die Kompetenzen der Kantone gehen deutlich weiter (z. B. Sozialhilfe, grosse Teile von Gesundheit und Bildung; eigene Verfassung und Judikative). Österreichs Bundesländer haben eher geringe Kompetenzen.

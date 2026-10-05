@@ -32,10 +32,14 @@ draft: false
 ### 3.1 Politische Systeme
 
 > [!qard]- 3.01 Wie lässt sich ein politisches System definieren?
-> Die Gesamtheit der staatlichen und nichtstaatlichen Einrichtungen und Akteure, Regeln und Verfahren, die innerhalb eines Staates an der Formulierung und Lösung politischer Probleme sowie an der Herstellung und Durchsetzung allgemein verbindlicher Entscheidungen beteiligt sind (Holtmann 1994). (S. 117)
+> Die **Gesamtheit der staatlichen und nichtstaatlichen Einrichtungen und Akteure**, Regeln und Verfahren, die innerhalb eines Staates an der Formulierung und Lösung politischer Probleme sowie an der Herstellung und Durchsetzung allgemein verbindlicher Entscheidungen beteiligt sind (Holtmann 1994). (S. 117)
 
 > [!qard]- 3.02 Woraus besteht das zentrale politische Entscheidungssystem?
-> Aus den gesetzgebenden (Legislative), ausführenden (Exekutive) und richterlichen (Judikative) Institutionen. Dort werden die verbindlichen Entscheidungen getroffen. (S. 118)
+> - **Legislative:** gesetzgebenden Institutionen
+> - **Exekutive:** ausführenden Institutionen
+> - **Judikative:** richterlichen Institutionen
+>
+> Dort werden die verbindlichen Entscheidungen getroffen. (S. 118)
 
 > [!qard]- 3.03 Was sind politische Intermediäre?
 > - Akteure zwischen den Bürger:innen (Basis) und dem zentralen politischen Entscheidungssystem: Parteien, Interessengruppen, soziale Bewegungen, Medien.
