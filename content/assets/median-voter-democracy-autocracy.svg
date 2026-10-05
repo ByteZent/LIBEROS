@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460" width="1000" height="460" role="img" aria-labelledby="t d">
+  <title id="t">Median voter in a democracy and in an autocracy</title>
+  <desc id="d">Two panels with the same axis, from less to more spending on education, and the number of voters on the vertical axis. Left, democracy: a bell-shaped distribution of all voters with the median voter M in the middle; two parties A and B move towards M. Right, autocracy: only a small elite counts, its distribution lies further towards less spending, and its median, M elite, differs from the median of the whole population, which is drawn as a dashed curve and has no say. The larger the gap between the two medians, the more the policies of democracies and autocracies differ.</desc>
+  <defs>
+    <marker id="m-gr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#8b97a3"/></marker>
+    <marker id="m-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7fb3c8"/></marker>
+    <marker id="m-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#d4a84b"/></marker>
+    <marker id="m-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7fc8a0"/></marker>
+    <marker id="m-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#e07a5f"/></marker>
+    <style>
+      .panel { fill: #0d1117; }
+      .box { fill: #161d26; stroke: #3a4654; stroke-width: 1.5; }
+      .box-b { fill: #161d26; stroke: #7fb3c8; stroke-width: 1.5; }
+      .box-a { fill: #1a2330; stroke: #d4a84b; stroke-width: 2; }
+      .box-g { fill: #1a2330; stroke: #7fc8a0; stroke-width: 2; }
+      .box-r { fill: #161d26; stroke: #e07a5f; stroke-width: 1.5; }
+      .core { font: 700 14px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #c9d1d9; }
+      .h { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #7fb3c8; }
+      .h-ig { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #d4a84b; }
+      .h-g { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #7fc8a0; }
+      .h-r { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #e07a5f; }
+      .big { font: 600 16px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .lbl { font: 600 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .item { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .sub { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .q { font: italic 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .axis { stroke: #8b97a3; stroke-width: 1.5; fill: none; }
+      .ln-b { stroke: #7fb3c8; stroke-width: 2.5; fill: none; }
+      .ln-a { stroke: #d4a84b; stroke-width: 2.5; fill: none; }
+      .ln-r { stroke: #e07a5f; stroke-width: 2.5; fill: none; }
+      .ln-g { stroke: #7fc8a0; stroke-width: 2.5; fill: none; }
+      .ghost { stroke: #5a6673; stroke-width: 1.5; stroke-dasharray: 6 5; fill: none; }
+      .arr { stroke: #8b97a3; stroke-width: 1.5; fill: none; }
+    </style>
+  </defs>
+  <rect class="panel" x="0" y="0" width="1000" height="460" rx="10"/>
+  <text class="core" x="500" y="44" text-anchor="middle">MEDIAN VOTER: WHOSE MIDDLE DECIDES?</text>
+
+  <rect class="box" x="30" y="66" width="455" height="344" rx="10"/>
+  <text class="h" x="257" y="94" text-anchor="middle">DEMOCRACY</text>
+  <text class="sub" x="257" y="113" text-anchor="middle">everyone with the vote counts</text>
+  <line class="axis" x1="60" y1="330" x2="462" y2="330" marker-end="url(#m-gr)"/>
+  <line class="axis" x1="60" y1="330" x2="60" y2="128" marker-end="url(#m-gr)"/>
+  <text class="sub" x="70" y="140">number of voters</text>
+  <path class="ln-b" d="M 72 330 C 170 330, 200 150, 257 150 C 314 150, 344 330, 442 330"/>
+  <line class="ln-a" x1="257" y1="150" x2="257" y2="330"/>
+  <circle cx="257" cy="330" r="5" fill="#d4a84b"/>
+  <text class="h-ig" x="257" y="352" text-anchor="middle">M</text>
+  <text class="lbl" x="318" y="166">median voter</text>
+  <text class="sub" x="330" y="184">half want less,</text>
+  <text class="sub" x="344" y="200">half want more</text>
+  <circle cx="150" cy="330" r="5" fill="#c9d1d9"/>
+  <text class="lbl" x="150" y="318" text-anchor="middle">A</text>
+  <line class="arr" x1="160" y1="313" x2="236" y2="313" marker-end="url(#m-gr)"/>
+  <circle cx="364" cy="330" r="5" fill="#c9d1d9"/>
+  <text class="lbl" x="364" y="318" text-anchor="middle">B</text>
+  <line class="arr" x1="354" y1="313" x2="278" y2="313" marker-end="url(#m-gr)"/>
+  <text class="sub" x="62" y="372">less spending on education</text>
+  <text class="sub" x="452" y="372" text-anchor="end">more</text>
+  <text class="item" x="257" y="396" text-anchor="middle">Parties A and B move to M: policy follows the middle of the electorate.</text>
+
+  <rect class="box" x="515" y="66" width="455" height="344" rx="10"/>
+  <text class="h-r" x="742" y="94" text-anchor="middle">AUTOCRACY</text>
+  <text class="sub" x="742" y="113" text-anchor="middle">only a small elite counts</text>
+  <line class="axis" x1="545" y1="330" x2="947" y2="330" marker-end="url(#m-gr)"/>
+  <line class="axis" x1="545" y1="330" x2="545" y2="128" marker-end="url(#m-gr)"/>
+  <text class="sub" x="555" y="140">number of voters</text>
+  <path class="ghost" d="M 557 330 C 655 330, 685 150, 742 150 C 799 150, 829 330, 927 330"/>
+  <line class="ghost" x1="742" y1="150" x2="742" y2="330"/>
+  <text class="sub" x="800" y="150">M of the whole</text>
+  <text class="sub" x="800" y="166">population (no say)</text>
+  <path class="ln-r" d="M 565 330 C 600 330, 612 252, 632 252 C 652 252, 664 330, 699 330"/>
+  <line class="ln-a" x1="632" y1="252" x2="632" y2="330"/>
+  <circle cx="632" cy="330" r="5" fill="#d4a84b"/>
+  <text class="h-ig" x="632" y="352" text-anchor="middle">M elite</text>
+  <text class="lbl" x="632" y="240" text-anchor="middle">elite</text>
+  <line class="arr" x1="640" y1="300" x2="734" y2="300" marker-start="url(#m-gr)" marker-end="url(#m-gr)"/>
+  <text class="sub" x="687" y="292" text-anchor="middle">gap</text>
+  <text class="sub" x="547" y="372">less spending on education</text>
+  <text class="sub" x="937" y="372" text-anchor="end">more</text>
+  <text class="item" x="742" y="396" text-anchor="middle">Policy follows the middle of the elite, not of the population.</text>
+
+  <text class="q" x="500" y="438" text-anchor="middle">The larger the gap between the two medians in a policy field, the more democracies and autocracies differ in it.</text>
+</svg>

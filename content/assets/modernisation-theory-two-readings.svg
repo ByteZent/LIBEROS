@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 544" width="1000" height="544" role="img" aria-labelledby="t d">
+  <title id="t">Modernisation theory: the endogenous and the exogenous thesis</title>
+  <desc id="d">Two causal chains side by side. Endogenous thesis: economic development leads to industry, education and a growing middle class, which leads to a demand for a say in politics, which leads to democratisation. The evidence is weak (Acemoglu et al. 2008). Exogenous thesis: another cause, such as regime collapse, war or outside pressure, leads to democratisation; combined with economic development, the democracy survives. The evidence is good (Przeworski and Limongi 1997). In short: in the endogenous reading wealth creates democracy, in the exogenous reading wealth keeps democracy.</desc>
+  <defs>
+    <marker id="m-gr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#8b97a3"/></marker>
+    <marker id="m-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7fb3c8"/></marker>
+    <marker id="m-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#d4a84b"/></marker>
+    <marker id="m-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7fc8a0"/></marker>
+    <marker id="m-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#e07a5f"/></marker>
+    <style>
+      .panel { fill: #0d1117; }
+      .box { fill: #161d26; stroke: #3a4654; stroke-width: 1.5; }
+      .box-b { fill: #161d26; stroke: #7fb3c8; stroke-width: 1.5; }
+      .box-a { fill: #1a2330; stroke: #d4a84b; stroke-width: 2; }
+      .box-g { fill: #1a2330; stroke: #7fc8a0; stroke-width: 2; }
+      .box-r { fill: #161d26; stroke: #e07a5f; stroke-width: 1.5; }
+      .core { font: 700 14px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #c9d1d9; }
+      .h { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #7fb3c8; }
+      .h-ig { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #d4a84b; }
+      .h-g { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #7fc8a0; }
+      .h-r { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #e07a5f; }
+      .big { font: 600 16px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .lbl { font: 600 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .item { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .sub { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .q { font: italic 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .axis { stroke: #8b97a3; stroke-width: 1.5; fill: none; }
+      .ln-b { stroke: #7fb3c8; stroke-width: 2.5; fill: none; }
+      .ln-a { stroke: #d4a84b; stroke-width: 2.5; fill: none; }
+      .ln-r { stroke: #e07a5f; stroke-width: 2.5; fill: none; }
+      .ln-g { stroke: #7fc8a0; stroke-width: 2.5; fill: none; }
+      .ghost { stroke: #5a6673; stroke-width: 1.5; stroke-dasharray: 6 5; fill: none; }
+      .arr { stroke: #8b97a3; stroke-width: 1.5; fill: none; }
+    </style>
+  </defs>
+  <rect class="panel" x="0" y="0" width="1000" height="544" rx="10"/>
+  <text class="core" x="500" y="44" text-anchor="middle">MODERNISATION THEORY: TWO READINGS</text>
+  <text class="sub" x="500" y="64" text-anchor="middle">Finding: rich countries are more often democracies (Lipset 1959). But why?</text>
+  <rect class="box" x="30" y="74" width="455" height="372" rx="10" style="fill:#111821"/>
+  <rect class="box" x="515" y="74" width="455" height="372" rx="10" style="fill:#111821"/>
+  <text class="h-ig" x="257" y="96" text-anchor="middle">ENDOGENOUS THESIS</text>
+  <rect class="box" x="82" y="112" width="350" height="40" rx="8"/>
+  <text class="item" x="257" y="137" text-anchor="middle">Economic development</text>
+  <line class="arr" x1="257" y1="154" x2="257" y2="172" marker-end="url(#m-gr)"/>
+  <rect class="box" x="82" y="174" width="350" height="40" rx="8"/>
+  <text class="item" x="257" y="199" text-anchor="middle">Industry, education, a growing middle class</text>
+  <line class="arr" x1="257" y1="216" x2="257" y2="234" marker-end="url(#m-gr)"/>
+  <rect class="box" x="82" y="236" width="350" height="40" rx="8"/>
+  <text class="item" x="257" y="261" text-anchor="middle">Demand for a say in politics</text>
+  <line class="arr" x1="257" y1="278" x2="257" y2="296" marker-end="url(#m-gr)"/>
+  <rect class="box-a" x="82" y="298" width="350" height="44" rx="8"/>
+  <text class="big" x="257" y="326" text-anchor="middle">Democratisation</text>
+  <text class="h-g" x="742" y="96" text-anchor="middle">EXOGENOUS THESIS</text>
+  <rect class="box" x="567" y="112" width="350" height="40" rx="8"/>
+  <text class="item" x="742" y="137" text-anchor="middle">Another cause: regime collapse, war, outside pressure</text>
+  <line class="arr" x1="742" y1="154" x2="742" y2="172" marker-end="url(#m-gr)"/>
+  <rect class="box" x="567" y="174" width="350" height="40" rx="8"/>
+  <text class="item" x="742" y="199" text-anchor="middle">Democratisation</text>
+  <line class="arr" x1="742" y1="216" x2="742" y2="234" marker-end="url(#m-gr)"/>
+  <rect class="box" x="567" y="236" width="350" height="40" rx="8"/>
+  <text class="item" x="742" y="261" text-anchor="middle">+ economic development</text>
+  <line class="arr" x1="742" y1="278" x2="742" y2="296" marker-end="url(#m-gr)"/>
+  <rect class="box-g" x="567" y="298" width="350" height="44" rx="8"/>
+  <text class="big" x="742" y="326" text-anchor="middle">Democracy survives</text>
+  <text class="lbl" x="257" y="372" text-anchor="middle">Evidence: weak</text>
+  <text class="sub" x="257" y="391" text-anchor="middle">The effect largely disappears once historical differences</text>
+  <text class="sub" x="257" y="407" text-anchor="middle">between countries are taken into account</text>
+  <text class="sub" x="257" y="427" text-anchor="middle">(Acemoglu et al. 2008)</text>
+  <text class="lbl" x="742" y="372" text-anchor="middle">Evidence: good</text>
+  <text class="sub" x="742" y="391" text-anchor="middle">Above a certain level of income,</text>
+  <text class="sub" x="742" y="407" text-anchor="middle">democracies hardly ever break down</text>
+  <text class="sub" x="742" y="427" text-anchor="middle">(Przeworski &amp; Limongi 1997)</text>
+
+  <rect class="box" x="30" y="462" width="940" height="62" rx="10"/>
+  <text class="big" x="500" y="488" text-anchor="middle">Endogenous: wealth <tspan fill="#d4a84b">creates</tspan> democracy.   Exogenous: wealth <tspan fill="#7fc8a0">keeps</tspan> democracy.</text>
+  <text class="sub" x="500" y="510" text-anchor="middle">Hard to test: political systems change rarely and are path-dependent. Few cases, many possible causes.</text>
+</svg>

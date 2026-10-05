@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 492" width="1000" height="492" role="img" aria-labelledby="t d">
+  <title id="t">Vertical separation of powers: unitary state and federal state</title>
+  <desc id="d">Two panels. Unitary state: the national level decides finally and delegates tasks to regions, which carry out national policy and whose powers can be taken back. Example: United Kingdom. Federal state: the national level and the member states each have their own powers, in which they decide finally. A written constitution fixes who decides what. The member states take part in national law through a second chamber. A constitutional court settles disputes between the levels. Subsidiarity means that power lies at the lowest possible level. Member states have their own executive, legislature and judiciary. Examples: Switzerland, Germany, United States.</desc>
+  <defs>
+    <marker id="m-gr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#8b97a3"/></marker>
+    <marker id="m-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7fb3c8"/></marker>
+    <marker id="m-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#d4a84b"/></marker>
+    <marker id="m-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7fc8a0"/></marker>
+    <marker id="m-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#e07a5f"/></marker>
+    <style>
+      .panel { fill: #0d1117; }
+      .box { fill: #161d26; stroke: #3a4654; stroke-width: 1.5; }
+      .box-b { fill: #161d26; stroke: #7fb3c8; stroke-width: 1.5; }
+      .box-a { fill: #1a2330; stroke: #d4a84b; stroke-width: 2; }
+      .box-g { fill: #1a2330; stroke: #7fc8a0; stroke-width: 2; }
+      .box-r { fill: #161d26; stroke: #e07a5f; stroke-width: 1.5; }
+      .core { font: 700 14px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #c9d1d9; }
+      .h { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #7fb3c8; }
+      .h-ig { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #d4a84b; }
+      .h-g { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #7fc8a0; }
+      .h-r { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #e07a5f; }
+      .big { font: 600 16px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .lbl { font: 600 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .item { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .sub { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .q { font: italic 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .axis { stroke: #8b97a3; stroke-width: 1.5; fill: none; }
+      .ln-b { stroke: #7fb3c8; stroke-width: 2.5; fill: none; }
+      .ln-a { stroke: #d4a84b; stroke-width: 2.5; fill: none; }
+      .ln-r { stroke: #e07a5f; stroke-width: 2.5; fill: none; }
+      .ln-g { stroke: #7fc8a0; stroke-width: 2.5; fill: none; }
+      .ghost { stroke: #5a6673; stroke-width: 1.5; stroke-dasharray: 6 5; fill: none; }
+      .arr { stroke: #8b97a3; stroke-width: 1.5; fill: none; }
+    </style>
+  </defs>
+  <rect class="panel" x="0" y="0" width="1000" height="492" rx="10"/>
+  <text class="core" x="500" y="44" text-anchor="middle">VERTICAL SEPARATION OF POWERS: UNITARY AND FEDERAL STATE</text>
+
+  <rect class="box" x="30" y="66" width="360" height="380" rx="10" style="fill:#111821"/>
+  <text class="h-r" x="210" y="96" text-anchor="middle">UNITARY STATE</text>
+  <text class="sub" x="210" y="115" text-anchor="middle">the main decisions are taken at the national level</text>
+  <rect class="box-r" x="90" y="140" width="240" height="70" rx="8"/>
+  <text class="lbl" x="210" y="170" text-anchor="middle">National level</text>
+  <text class="item" x="210" y="190" text-anchor="middle">decides finally</text>
+  <line class="ln-r" x1="130" y1="212" x2="130" y2="296" marker-end="url(#m-r)"/>
+  <line class="ln-r" x1="290" y1="212" x2="290" y2="296" marker-end="url(#m-r)"/>
+  <text class="sub" x="210" y="250" text-anchor="middle">delegates,</text>
+  <text class="sub" x="210" y="266" text-anchor="middle">can take back</text>
+  <rect class="box" x="78" y="300" width="84" height="56" rx="8"/>
+  <rect class="box" x="168" y="300" width="84" height="56" rx="8"/>
+  <rect class="box" x="258" y="300" width="84" height="56" rx="8"/>
+  <text class="item" x="120" y="332" text-anchor="middle">Region</text>
+  <text class="item" x="210" y="332" text-anchor="middle">Region</text>
+  <text class="item" x="300" y="332" text-anchor="middle">Region</text>
+  <text class="item" x="210" y="386" text-anchor="middle">Regions carry out national policy.</text>
+  <text class="sub" x="210" y="420" text-anchor="middle">Example: United Kingdom</text>
+
+  <rect class="box" x="410" y="66" width="560" height="380" rx="10" style="fill:#111821"/>
+  <text class="h-g" x="620" y="96" text-anchor="middle">FEDERAL STATE</text>
+  <text class="sub" x="620" y="115" text-anchor="middle">each level decides finally in its own areas</text>
+  <rect class="box-b" x="440" y="140" width="360" height="70" rx="8"/>
+  <text class="lbl" x="550" y="170" text-anchor="middle">National level</text>
+  <text class="item" x="550" y="190" text-anchor="middle">own powers</text>
+  <rect class="box-a" x="670" y="150" width="118" height="50" rx="6"/>
+  <text class="lbl" x="729" y="172" text-anchor="middle">Second chamber</text>
+  <text class="sub" x="729" y="189" text-anchor="middle">member states</text>
+  <rect class="box-g" x="440" y="300" width="112" height="56" rx="8"/>
+  <rect class="box-g" x="564" y="300" width="112" height="56" rx="8"/>
+  <rect class="box-g" x="688" y="300" width="112" height="56" rx="8"/>
+  <text class="lbl" x="496" y="324" text-anchor="middle">Member state</text>
+  <text class="lbl" x="620" y="324" text-anchor="middle">Member state</text>
+  <text class="lbl" x="744" y="324" text-anchor="middle">Member state</text>
+  <text class="sub" x="496" y="343" text-anchor="middle">own powers</text>
+  <text class="sub" x="620" y="343" text-anchor="middle">own powers</text>
+  <text class="sub" x="744" y="343" text-anchor="middle">own powers</text>
+  <line class="ln-a" x1="700" y1="298" x2="718" y2="204" marker-end="url(#m-a)"/>
+  <line class="ln-a" x1="744" y1="298" x2="738" y2="204" marker-end="url(#m-a)"/>
+  <text class="sub" x="756" y="256">take part in</text>
+  <text class="sub" x="756" y="272">national law</text>
+  <line class="ghost" x1="440" y1="255" x2="680" y2="255"/>
+  <text class="h-ig" x="446" y="246">WRITTEN CONSTITUTION</text>
+  <text class="sub" x="446" y="274">fixes who decides what</text>
+  <rect class="box" x="826" y="296" width="128" height="78" rx="8"/>
+  <text class="lbl" x="890" y="322" text-anchor="middle">Constitutional</text>
+  <text class="lbl" x="890" y="338" text-anchor="middle">court</text>
+  <text class="sub" x="890" y="358" text-anchor="middle">settles disputes</text>
+  <line class="ln-g" x1="828" y1="140" x2="828" y2="204" marker-end="url(#m-g)"/>
+  <text class="h-g" x="842" y="160">SUBSIDIARITY</text>
+  <text class="sub" x="842" y="178">power at the lowest</text>
+  <text class="sub" x="842" y="194">possible level</text>
+  <text class="item" x="620" y="386" text-anchor="middle">Member states have their own executive, legislature and judiciary.</text>
+  <text class="sub" x="620" y="420" text-anchor="middle">Examples: Switzerland, Germany, United States</text>
+
+  <text class="q" x="500" y="472" text-anchor="middle">Three typical features of a federal state: a second chamber, a written constitution, strong constitutional review.</text>
+</svg>
