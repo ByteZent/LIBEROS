@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 462" width="1000" height="462" role="img" aria-labelledby="t d">
+  <title id="t">Memory: forgetting curve and serial position curve</title>
+  <desc id="d">Two schematic curves. Left, the forgetting curve after Ebbinghaus: what is retained falls fast right after learning and then flattens. A second, dashed curve shows that after an early review the loss is slower. Right, the serial position curve after Murdock: in free recall of a list the first items are recalled well (primacy effect, already rehearsed into long-term memory), the last items best (recency effect, still in short-term memory), and the middle is lost.</desc>
+  <defs>
+    <marker id="m-gr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#8b97a3"/></marker>
+    <marker id="m-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7fb3c8"/></marker>
+    <marker id="m-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#d4a84b"/></marker>
+    <marker id="m-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7fc8a0"/></marker>
+    <marker id="m-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#e07a5f"/></marker>
+    <style>
+      .panel { fill: #0d1117; }
+      .box { fill: #161d26; stroke: #3a4654; stroke-width: 1.5; }
+      .box-b { fill: #161d26; stroke: #7fb3c8; stroke-width: 1.5; }
+      .box-a { fill: #1a2330; stroke: #d4a84b; stroke-width: 2; }
+      .box-g { fill: #1a2330; stroke: #7fc8a0; stroke-width: 2; }
+      .box-r { fill: #161d26; stroke: #e07a5f; stroke-width: 1.5; }
+      .core { font: 700 14px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #c9d1d9; }
+      .h { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #7fb3c8; }
+      .h-ig { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #d4a84b; }
+      .h-g { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #7fc8a0; }
+      .h-r { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #e07a5f; }
+      .big { font: 600 16px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .lbl { font: 600 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .item { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .sub { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .q { font: italic 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .axis { stroke: #8b97a3; stroke-width: 1.5; fill: none; }
+      .ln-b { stroke: #7fb3c8; stroke-width: 2.5; fill: none; }
+      .ln-a { stroke: #d4a84b; stroke-width: 2.5; fill: none; }
+      .ln-r { stroke: #e07a5f; stroke-width: 2.5; fill: none; }
+      .ln-g { stroke: #7fc8a0; stroke-width: 2.5; fill: none; }
+      .ghost { stroke: #5a6673; stroke-width: 1.5; stroke-dasharray: 6 5; fill: none; }
+      .arr { stroke: #8b97a3; stroke-width: 1.5; fill: none; }
+    </style>
+  </defs>
+  <rect class="panel" x="0" y="0" width="1000" height="462" rx="10"/>
+  <text class="core" x="500" y="44" text-anchor="middle">MEMORY: TWO CURVES</text>
+
+  <rect class="box" x="30" y="66" width="455" height="350" rx="10"/>
+  <text class="h" x="257" y="94" text-anchor="middle">FORGETTING CURVE</text>
+  <text class="sub" x="257" y="113" text-anchor="middle">Ebbinghaus: what is retained over time</text>
+  <line class="axis" x1="70" y1="340" x2="462" y2="340" marker-end="url(#m-gr)"/>
+  <line class="axis" x1="70" y1="340" x2="70" y2="128" marker-end="url(#m-gr)"/>
+  <text class="sub" x="80" y="140">retained</text>
+  <text class="sub" x="452" y="360" text-anchor="end">time since learning</text>
+  <path class="ln-r" d="M 72 150 C 92 262, 150 308, 450 322"/>
+  <line class="ghost" x1="200" y1="150" x2="200" y2="340"/>
+  <path class="ln-g" d="M 200 150 C 240 220, 320 250, 450 262" stroke-dasharray="7 5"/>
+  <text class="h-g" x="200" y="360" text-anchor="middle">review</text>
+  <text class="lbl" x="100" y="172">fast at first</text>
+  <text class="lbl" x="330" y="296">then it flattens</text>
+  <text class="item" x="300" y="206">with an early review</text>
+  <text class="item" x="257" y="396" text-anchor="middle">Most is lost soon after learning. Repeat early.</text>
+
+  <rect class="box" x="515" y="66" width="455" height="350" rx="10"/>
+  <text class="h-ig" x="742" y="94" text-anchor="middle">SERIAL POSITION CURVE</text>
+  <text class="sub" x="742" y="113" text-anchor="middle">Murdock: free recall of a list</text>
+  <line class="axis" x1="555" y1="340" x2="947" y2="340" marker-end="url(#m-gr)"/>
+  <line class="axis" x1="555" y1="340" x2="555" y2="128" marker-end="url(#m-gr)"/>
+  <text class="sub" x="565" y="140">recalled</text>
+  <text class="sub" x="557" y="360">first item</text>
+  <text class="sub" x="937" y="360" text-anchor="end">last item</text>
+  <path class="ln-a" d="M 570 190 C 610 290, 680 300, 750 298 C 830 296, 890 250, 925 150"/>
+  <text class="h-ig" x="600" y="176">primacy effect</text>
+  <text class="sub" x="600" y="200">already rehearsed into</text>
+  <text class="sub" x="604" y="216">long-term memory</text>
+  <text class="h-ig" x="912" y="136" text-anchor="end">recency effect</text>
+  <text class="sub" x="880" y="196" text-anchor="end">still in</text>
+  <text class="sub" x="868" y="212" text-anchor="end">short-term memory</text>
+  <text class="lbl" x="750" y="322" text-anchor="middle">the middle is lost</text>
+  <text class="item" x="742" y="396" text-anchor="middle">Put the most important point first and last.</text>
+
+  <text class="q" x="500" y="442" text-anchor="middle">Both curves are schematic: they show the shape of the findings, not measured values.</text>
+</svg>

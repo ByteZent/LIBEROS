@@ -36,6 +36,8 @@ draft: false
 
 ### The three-store model
 
+![[memory-three-store-model.svg]]
+
 | Store | Holds | Duration |
 |---|---|---|
 | **Sensory store** | Raw visual, auditory, tactile impressions | Under 2 seconds |
@@ -56,6 +58,10 @@ draft: false
 | **Procedural** | Skills | Non-declarative | How does one drive a car? |
 
 ## Key Points
+
+![[memory-forgetting-serial-position.svg]]
+
+Both curves are schematic: they show the shape of the findings, not measured values. The dashed curve for an early review illustrates the advice under *Application* and is not from the lecture.
 
 - **Forgetting curve.** Ebbinghaus learned rows of nonsense syllables (to rule out prior knowledge) and measured retention by the **saving** when learning them again. Most is lost soon after learning. After that the curve flattens [@ebbinghaus1885gedachtnis].
 - **Learning curve.** The number of repetitions needed rises steeply with the length of the list. Twice as much material needs far more than twice the effort.
@@ -157,6 +163,16 @@ draft: false
 > [!qard]- 10. Compare: semantic and procedural memory. What follows for weapon training?
 > Semantic memory holds facts that can be stated. Procedural memory holds skills: learned by doing, hard to put into words, very durable. So weapon handling is trained by repetition, not by explanation.
 
+> [!qard]- 11. Diagram: name the three processes (1), (2) and (3) that move information between the stores.
+> ![[memory-three-store-model.svg]]
+> <!-- qard-hide: attention; transfer; retrieval -->
+> (1) Attention: from the sensory store into short-term memory. (2) Transfer by rehearsal: from short-term into long-term memory. (3) Retrieval: from long-term memory back into working memory.
+
+> [!qard]- 12. Diagram: name the two effects (1) and (2).
+> ![[memory-forgetting-serial-position.svg]]
+> <!-- qard-hide: primacy effect; recency effect -->
+> (1) Primacy effect: the first items are already rehearsed into long-term memory. (2) Recency effect: the last items are still in short-term memory.
+
 ## Sources
 
 - [@atkinson1968human]: the three-store model. The lecture cites it as Shiffrin and Atkinson (1969). [High confidence: primary]
@@ -164,4 +180,5 @@ draft: false
 - [@murdock1962serial]: serial position effect. [High confidence: primary]
 - [@loftus1974reconstruction]: the car accident study. The barn study is a separate paper by Loftus that is not in my library. [High confidence]
 - Structure from the lecture Militärpsychologie und -pädagogik I of 29 September 2026. [Medium confidence]
+- The two diagrams are my own drawings of the note's content. The word "transfer" for the step into long-term memory and the dashed review curve are my additions. [Medium confidence]
 - The applications and the critiques are my own. [Low confidence]

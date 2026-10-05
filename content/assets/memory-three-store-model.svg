@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 466" width="1000" height="466" role="img" aria-labelledby="t d">
+  <title id="t">Memory: the three-store model</title>
+  <desc id="d">A flow from left to right. A stimulus enters the sensory store, which holds raw sense impressions for under two seconds. Attention passes information on to short-term or working memory, which holds what is attended to for about five seconds to twenty minutes. Rehearsal keeps it there, and it is transferred into long-term memory, the permanent store that is lasting but not perfect. Retrieval brings information back from long-term memory into working memory. From every store information can be forgotten. Long-term memory has three kinds: episodic (events, declarative), semantic (facts, declarative) and procedural (skills, non-declarative).</desc>
+  <defs>
+    <marker id="m-gr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#8b97a3"/></marker>
+    <marker id="m-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7fb3c8"/></marker>
+    <marker id="m-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#d4a84b"/></marker>
+    <marker id="m-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7fc8a0"/></marker>
+    <marker id="m-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#e07a5f"/></marker>
+    <style>
+      .panel { fill: #0d1117; }
+      .box { fill: #161d26; stroke: #3a4654; stroke-width: 1.5; }
+      .box-b { fill: #161d26; stroke: #7fb3c8; stroke-width: 1.5; }
+      .box-a { fill: #1a2330; stroke: #d4a84b; stroke-width: 2; }
+      .box-g { fill: #1a2330; stroke: #7fc8a0; stroke-width: 2; }
+      .box-r { fill: #161d26; stroke: #e07a5f; stroke-width: 1.5; }
+      .core { font: 700 14px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #c9d1d9; }
+      .h { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #7fb3c8; }
+      .h-ig { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #d4a84b; }
+      .h-g { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #7fc8a0; }
+      .h-r { font: 700 13px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; fill: #e07a5f; }
+      .big { font: 600 16px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .lbl { font: 600 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .item { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .sub { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .q { font: italic 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #e8edf2; }
+      .axis { stroke: #8b97a3; stroke-width: 1.5; fill: none; }
+      .ln-b { stroke: #7fb3c8; stroke-width: 2.5; fill: none; }
+      .ln-a { stroke: #d4a84b; stroke-width: 2.5; fill: none; }
+      .ln-r { stroke: #e07a5f; stroke-width: 2.5; fill: none; }
+      .ln-g { stroke: #7fc8a0; stroke-width: 2.5; fill: none; }
+      .ghost { stroke: #5a6673; stroke-width: 1.5; stroke-dasharray: 6 5; fill: none; }
+      .arr { stroke: #8b97a3; stroke-width: 1.5; fill: none; }
+    </style>
+  </defs>
+  <rect class="panel" x="0" y="0" width="1000" height="466" rx="10"/>
+  <text class="core" x="500" y="44" text-anchor="middle">MEMORY: THE THREE-STORE MODEL</text>
+
+  <text class="lbl" x="68" y="168" text-anchor="middle">stimulus</text>
+  <line class="arr" x1="30" y1="180" x2="106" y2="180" marker-end="url(#m-gr)"/>
+
+  <rect class="box-b" x="110" y="130" width="190" height="100" rx="10"/>
+  <text class="h" x="205" y="160" text-anchor="middle">SENSORY STORE</text>
+  <text class="item" x="205" y="184" text-anchor="middle">raw sense impressions</text>
+  <text class="sub" x="205" y="208" text-anchor="middle">under 2 seconds</text>
+
+  <text class="h-ig" x="355" y="166" text-anchor="middle">attention</text>
+  <line class="ln-a" x1="304" y1="180" x2="406" y2="180" marker-end="url(#m-a)"/>
+
+  <rect class="box-a" x="410" y="130" width="220" height="100" rx="10"/>
+  <text class="h-ig" x="520" y="160" text-anchor="middle">SHORT-TERM MEMORY</text>
+  <text class="item" x="520" y="184" text-anchor="middle">working memory: what is attended to</text>
+  <text class="sub" x="520" y="208" text-anchor="middle">about 5 seconds to 20 minutes</text>
+  <path class="ln-a" d="M 480 126 C 480 84, 560 84, 560 124" marker-end="url(#m-a)"/>
+  <text class="h-ig" x="520" y="82" text-anchor="middle">rehearsal</text>
+
+  <text class="h-g" x="685" y="150" text-anchor="middle">transfer</text>
+  <line class="ln-g" x1="634" y1="162" x2="736" y2="162" marker-end="url(#m-g)"/>
+  <line class="ln-b" x1="736" y1="200" x2="634" y2="200" marker-end="url(#m-b)"/>
+  <text class="h" x="685" y="222" text-anchor="middle">retrieval</text>
+
+  <rect class="box-g" x="740" y="130" width="220" height="100" rx="10"/>
+  <text class="h-g" x="850" y="160" text-anchor="middle">LONG-TERM MEMORY</text>
+  <text class="item" x="850" y="184" text-anchor="middle">permanent store</text>
+  <text class="sub" x="850" y="208" text-anchor="middle">lasting, but not perfect</text>
+
+  <line class="ghost" x1="205" y1="234" x2="205" y2="270" marker-end="url(#m-gr)"/>
+  <line class="ghost" x1="520" y1="234" x2="520" y2="270" marker-end="url(#m-gr)"/>
+  <line class="ghost" x1="800" y1="234" x2="800" y2="270" marker-end="url(#m-gr)"/>
+  <text class="sub" x="205" y="288" text-anchor="middle">forgotten</text>
+  <text class="sub" x="520" y="288" text-anchor="middle">forgotten</text>
+  <text class="sub" x="800" y="288" text-anchor="middle">forgotten</text>
+
+  <rect class="box" x="40" y="322" width="350" height="96" rx="10"/>
+  <text class="lbl" x="58" y="352">Two gates</text>
+  <text class="item" x="58" y="374">Only what is attended to reaches short-term memory.</text>
+  <text class="item" x="58" y="394">Only what is rehearsed reaches long-term memory.</text>
+
+  <line class="arr" x1="905" y1="232" x2="905" y2="320"/>
+  <rect class="box" x="420" y="322" width="530" height="96" rx="10" style="fill:#111821"/>
+  <text class="sub" x="436" y="342">KINDS OF LONG-TERM MEMORY</text>
+  <rect class="box" x="436" y="352" width="160" height="56" rx="8"/>
+  <rect class="box" x="606" y="352" width="160" height="56" rx="8"/>
+  <rect class="box" x="776" y="352" width="160" height="56" rx="8"/>
+  <text class="lbl" x="516" y="374" text-anchor="middle">Episodic</text>
+  <text class="sub" x="516" y="394" text-anchor="middle">events · declarative</text>
+  <text class="lbl" x="686" y="374" text-anchor="middle">Semantic</text>
+  <text class="sub" x="686" y="394" text-anchor="middle">facts · declarative</text>
+  <text class="lbl" x="856" y="374" text-anchor="middle">Procedural</text>
+  <text class="sub" x="856" y="394" text-anchor="middle">skills · non-declarative</text>
+
+  <text class="q" x="500" y="446" text-anchor="middle">At every stage information can be forgotten.</text>
+</svg>
