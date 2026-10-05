@@ -47,7 +47,7 @@ Disciplines are **not** folders. *Public Goods* is economics, but it explains al
 | Policy reform or decision | `T - Case Study` | `04-Case-Studies/42-Policy-Cases` |
 | Analytical method (CBA, process tracing, …) | `T - Framework` | `06-Frameworks-and-Methods` |
 
-**New course?** Pick a short code (e.g. `L1-HS26`) and use it in the Course Map's `course:` and in each note's `courses:`. Then create `content/tags/course/<code>.md` with the course name as `title`. That page lists every published note for the course, is found by searching the course name, and supplies the label of the COURSE badge.
+**New course?** Pick a short code (e.g. `L1-HS26`) and use it in the Course Map's `course:` and in each note's `courses:`. Then create `content/tags/course/<code>.md` with the course name as `title`. That page lists every published note for the course, is found by searching the course name, and supplies the label of the COURSE badge. Add `exam-language: en` there if the course is examined in English (see [[#Self-test and flashcards]]).
 
 ## Structure
 
@@ -60,8 +60,9 @@ Concept, model, framework and legal notes end with `## Self-Test: <short topic>`
 - `qard-deck:` in the frontmatter names the deck: the course code, normally the first entry of `courses`. The text after "Self-Test:" becomes the topic inside the deck.
 - One fact or one distinction per card. Keep the answer under about 40 words, so I can grade myself honestly.
 - Recall is not enough. Every self-test has at least one card that makes me **use** the idea: apply it to a case, compare it with a neighbouring concept, or name where it fails.
-- The rows of a note's `## Glossary` table become cards by themselves: German term on the front, English term and definition on the back, in the deck `/flashcards/glossary`, grouped by course. A term keeps its review history when its note moves.
-- The same rows give a second deck in the other direction, `/flashcards/glossary-reverse` (English to German).
+- The rows of a note's `## Glossary` table marked **apply** or **define** become cards by themselves: German term on the front, English term and definition on the back, in the deck `/flashcards/glossary`, grouped by course. A term keeps its review history when its note moves.
+- A row marked **translate**, or without a level, gives no card: it is vocabulary to look up in the [[Glossary]]. A term that one note marks *translate* and another *define* still gets its card.
+- Each term is asked in one direction only, the one the exam needs. Exams are in German, so that is German to English. A course examined in English has `exam-language: en` on its page `content/tags/course/<code>.md`: its terms go to `/flashcards/glossary-reverse` (English to German) instead.
 - A definition I must reproduce word for word is a cloze card: `> [!cloze] Politics is ==social action== aimed at …`. The front blanks every highlighted part, the back shows the sentence in full.
 - Every course note with a BLUF gives one blank-page card in `/flashcards/recall`: the title only, everything I know in writing, then the BLUF for comparison.
 - Rating a card: *missed* sends it back to box 1, *hard* keeps it in its box and brings it back in half the time, *knew it* moves it up. A card missed on three days is a **leech** ("Leeches" in the deck's card selection): rewrite the card or the note.
