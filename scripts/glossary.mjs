@@ -100,9 +100,9 @@ draft: false
 > **Be able to:**
 > - **apply** = core term that carries a concept or model: explain it and use it on a case (${count(3)})
 > - **define** = technical term: give its definition (${count(2)})
-> - **translate** = plain vocabulary: know the equivalent (${count(1)}).
+> - **translate** = plain vocabulary: look it up here, no flashcard (${count(1)}).
 >
-> Study the terms as flashcards: [[/flashcards/glossary|Glossary deck]].
+> Study the *apply* and *define* terms as flashcards: [[/flashcards/glossary|Glossary deck]].
 >
 > This page is **generated** by \`make glossary\`.
 > Do not edit it: change the glossary table in the note and run the command again.
