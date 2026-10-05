@@ -111,5 +111,4 @@ Custom callouts (styled identically in Obsidian and on the site): `[!bluf]`, `[!
 ## TODO
 
 - [ ] `content/00-Meta/About.md`: name, programme, links
-- [ ] `quartz.config.ts`: `baseUrl`
 - [ ] `quartz.layout.ts`: footer links
