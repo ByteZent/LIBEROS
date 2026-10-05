@@ -7,7 +7,7 @@
 //   - an image card (`<!-- qard-hide: Label; … -->`) without an SVG above the comment, or naming
 //     a label the SVG does not have
 // Warnings everywhere:
-//   - `qard-deck` is not one of the note's `courses`
+//   - `qard-deck` is not one of the note's `courses` (practice questions are exempt: `type: practice`)
 //   - a concept, model or framework note without any card
 //   - a Self-Test with only recall cards (no card that asks to apply, compare or judge)
 import fs from "fs"
@@ -20,7 +20,7 @@ const UNPUBLISHED = new Set(["_inbox", "_private"])
 const NEEDS_CARDS = new Set(["concept", "model", "framework"])
 // a card that makes you use the idea, not just recall it
 const DEEP =
-  /\b(apply|compare|contrast|differ|distinguish|versus|vs\.?|why|explain|judge|assess|evaluate|predict|what (would|happens|changes|follows)|how (would|does|do|can|could)|case|scenario|example|limit|critici[sz]e)\b/i
+  /\b(apply|compare|contrast|differ|distinguish|versus|vs\.?|why|explain|judge|assess|evaluate|predict|what (would|happens|changes|follows)|how (would|does|do|can|could)|case|scenario|example|limit|critici[sz]e|weshalb|warum|wieso|inwiefern|erkl[äa]r\w*|erl[äa]uter\w*|vergleich\w*|unterscheid\w*|unterschied\w*|beurteil\w*|bewert\w*|beispiel\w*)\b/i
 
 function* notes(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -111,7 +111,14 @@ for (const file of notes(VAULT)) {
   const courses = asList(data.courses)
   if (cards.length > 0 && !deck)
     problems.push([published, `${cards.length} cards but no \`qard-deck\``])
-  if (published && deck && courses.length > 0 && !courses.includes(deck))
+  // a set of practice questions has a deck of its own, named after the set
+  if (
+    published &&
+    deck &&
+    data.type !== "practice" &&
+    courses.length > 0 &&
+    !courses.includes(deck)
+  )
     problems.push([
       false,
       `\`qard-deck: ${deck}\` is not one of its courses (${courses.join(", ")})`,
