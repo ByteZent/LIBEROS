@@ -622,6 +622,116 @@
 // the button for screen readers; what is drawn is a cross, a wavy line and a tick.
 
 @media (max-width: 600px) {
+  // ─── Phone: one screen, everything in reach of the thumb ──────────────────
+  // The two selections share a row, the card fills the height that is left, and the buttons
+  // stay at the bottom edge however long the answer is.
+  .flashcards.qard-deck {
+    // 16px, or iOS zooms into the page when a field is focused
+    select,
+    .qard-written textarea {
+      font-size: 1rem;
+    }
+
+    button,
+    select {
+      min-height: 2.5rem;
+    }
+
+    .qard-stats {
+      overflow-x: auto;
+
+      th,
+      td {
+        padding: 0.3rem 0.25rem;
+      }
+
+      thead th {
+        font-size: 0.62rem;
+        letter-spacing: 0;
+      }
+    }
+  }
+
+  .flashcards.qard-deck.qard-ready {
+    .qard-toolbar {
+      label {
+        flex: 1 1 calc(50% - 0.5rem);
+      }
+
+      select {
+        width: 100%;
+        padding-inline: 0.5rem;
+        text-overflow: ellipsis;
+      }
+
+      // "Due today (12)" and "All topics (57)" say what they select; kept for screen readers
+      .qard-key {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+      }
+    }
+
+    .qard-card,
+    &.qard-finished .qard-done {
+      box-sizing: border-box;
+      min-height: max(14rem, calc(100svh - 28.5rem));
+      margin: 0.75rem 0;
+      padding: 0.9rem 1rem;
+    }
+
+    // the question in the middle of the card, whatever its height
+    .qard-card.current:not(.revealed) {
+      display: flex;
+      flex-direction: column;
+
+      .qard-front {
+        margin: auto 0;
+        padding: 1rem 0;
+      }
+    }
+
+    .qard-nav {
+      position: sticky;
+      bottom: 0;
+      grid-template-columns: 3rem 1fr auto;
+      margin: 0 -1rem;
+      padding: 0.5rem 1rem calc(0.5rem + env(safe-area-inset-bottom));
+      border-top: 1px solid var(--lightgray);
+      background: var(--light);
+
+      button {
+        min-height: 3rem;
+      }
+
+      .qard-flip,
+      .qard-next {
+        font-size: 0.95rem;
+        white-space: nowrap;
+      }
+
+      .qard-prev {
+        padding: 0;
+      }
+    }
+
+    // keyboard shortcuts
+    .qard-hint {
+      display: none;
+    }
+
+    &.qard-exam-reviewing .qard-exam-rate button {
+      min-height: 3rem;
+    }
+  }
+
+  .flashcards .qard-backup button {
+    min-height: 2.5rem;
+  }
+
   .flashcards.qard-deck {
     .qard-missed,
     .qard-hard,
