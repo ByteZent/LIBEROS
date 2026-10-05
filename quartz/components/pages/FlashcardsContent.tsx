@@ -29,8 +29,10 @@ const FEATURED: Record<string, string> = {
   connections: "How does one note relate to another? Generated from Key Connections.",
   recall:
     "One topic, a blank page: write down everything you know, then compare with the note's BLUF.",
-  glossary: "German term on the front, English term and definition on the back.",
-  "glossary-reverse": "English term on the front, German term on the back.",
+  glossary:
+    "Core and technical terms: German term on the front, English term and definition on the back.",
+  "glossary-reverse":
+    "Terms of courses examined in English: English term on the front, German term on the back.",
 }
 
 export default (() => {

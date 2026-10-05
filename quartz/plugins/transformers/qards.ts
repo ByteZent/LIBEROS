@@ -40,11 +40,14 @@ import {
 // file.data.qardBridges; Plugin.Flashcards() collects them in a deck of their own.
 //
 // Glossary cards are generated too: each row of a note's `## Glossary` table
-// (| Deutsch | English | Definition | Be able to |) becomes a card with the German term on the
-// front and the English term and definition on the back, in file.data.qardGlossary;
-// Plugin.Flashcards() collects them in the glossary deck. The id depends on the term only, so a
-// term keeps its review history when its note moves.
-// Each row also gives a reverse card (English term on the front) in file.data.qardGlossaryReverse.
+// (| Deutsch | English | Definition | Be able to |) whose level is `apply` or `define` becomes a
+// card with the German term on the front and the English term and definition on the back, in
+// file.data.qardGlossary. A `translate` row, or one without a level, is vocabulary to look up and
+// gives no card. The id depends on the term only, so a term keeps its review history when its
+// note moves.
+// Each of these rows also gives a reverse card (English term on the front) in
+// file.data.qardGlossaryReverse. Plugin.Flashcards() puts a term into one of the two decks only,
+// by the language of its course's exam.
 //
 // Blank-page cards: every course note with a `[!bluf]` gives one card that asks for everything
 // about the note in writing and shows the BLUF for comparison (file.data.qardRecall).
@@ -57,7 +60,6 @@ export const BRIDGES_HEADING = "Key Connections"
 export const GLOSSARY_HEADING = /^glossary\b/i
 // what the front of a glossary card asks for, by the row's "Be able to" level
 const GLOSSARY_ASK: Record<string, string> = {
-  translate: "English term?",
   define: "English term and definition?",
   apply: "English term, definition, and where does it apply?",
 }
@@ -247,6 +249,7 @@ export const Qards: QuartzTransformerPlugin = () => ({
             const english = toString(en).trim()
             if (!term || !english) return
             const ask = GLOSSARY_ASK[level ? toString(level).trim().toLowerCase() : ""]
+            if (!ask) return // translate, or no level: stays in the table, no card
             const para = (children: ElementContent[], className?: string): Element => ({
               type: "element",
               tagName: "p",
@@ -278,7 +281,7 @@ export const Qards: QuartzTransformerPlugin = () => ({
               topic: course ?? "",
               front: render([
                 para([strong(de.children)], "qard-term"),
-                para([{ type: "text", value: ask ?? GLOSSARY_ASK.define }], "qard-ask"),
+                para([{ type: "text", value: ask }], "qard-ask"),
               ]),
               back: render([
                 para([strong(en.children)]),
