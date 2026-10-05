@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" width="1000" height="760" role="img" aria-labelledby="t d">
+  <title id="t">The leadership model of the Swiss Armed Forces (CLM)</title>
+  <desc id="d">A disc in three sectors, read from the centre outwards in six rings. Ring 1, orientation: organisation, people (Mensch), mission (Auftrag). Ring 2, leading: Management, Leadership, Command. Ring 3, education: order (Ordnung), values (Werte), purpose (Sinn). Ring 4, training: sureness in procedure, in behaviour, in action. Ring 5, where it is established: processes and structures, culture, doctrine. Outer ring: organisational challenges and institutional approaches, human challenges and communal approaches, challenges of substance and conceptual approaches. After Hofstetter (2023, 2025).</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#1c2128"/>
+    </marker>
+    <style>
+      .panel { fill: #0d1117; }
+      .ring { stroke: #ffffff; stroke-width: 2; }
+      .l { font: 700 15px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #1c2128; }
+      .l1 { font: 700 13.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #1c2128; }
+      .band { fill: #3a4233; }
+      .bl { font: 500 8.6px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #ffffff; }
+      .a { stroke: #1c2128; stroke-width: 1.6; fill: none; }
+      .src { font: italic 11px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #5b6773; }
+    </style>
+    <path id="m1" d="M413.3 388.0 A89.0 89.0 0 0 1 520.0 281.3"/>
+    <path id="m2" d="M361.6 399.9 A142.0 142.0 0 0 1 531.9 229.6"/>
+    <path id="m3" d="M309.0 412.1 A196.0 196.0 0 0 1 544.1 177.0"/>
+    <path id="m4" d="M255.4 424.5 A251.0 251.0 0 0 1 556.5 123.4"/>
+    <path id="m5" d="M229.8 511.7 A306.0 306.0 0 0 1 489.3 62.2"/>
+    <path id="l1" d="M480.0 281.3 A89.0 89.0 0 0 1 586.7 388.0"/>
+    <path id="l2" d="M468.1 229.6 A142.0 142.0 0 0 1 638.4 399.9"/>
+    <path id="l3" d="M455.9 177.0 A196.0 196.0 0 0 1 691.0 412.1"/>
+    <path id="l4" d="M443.5 123.4 A251.0 251.0 0 0 1 744.6 424.5"/>
+    <path id="l5" d="M510.7 62.2 A306.0 306.0 0 0 1 770.2 511.7"/>
+    <path id="c5" d="M232.0 535.5 A316.0 316.0 0 0 0 768.0 535.5"/>
+  </defs>
+  <rect class="panel" width="1000" height="760" rx="14"/>
+
+  <!-- rings, from the outside in -->
+  <path class="ring" fill="#e6e6ec" d="M500 368 L207.3 537.0 A338 338 0 0 1 500.0 30.0 Z"/>
+  <path class="ring" fill="#fcece2" d="M500 368 L500.0 30.0 A338 338 0 0 1 792.7 537.0 Z"/>
+  <path class="ring" fill="#e3eadb" d="M500 368 L792.7 537.0 A338 338 0 0 1 207.3 537.0 Z"/>
+  <path class="ring" fill="#d1d1da" d="M500 368 L254.0 510.0 A284 284 0 0 1 500.0 84.0 Z"/>
+  <path class="ring" fill="#f9dbca" d="M500 368 L500.0 84.0 A284 284 0 0 1 746.0 510.0 Z"/>
+  <path class="ring" fill="#cad6be" d="M500 368 L746.0 510.0 A284 284 0 0 1 254.0 510.0 Z"/>
+  <path class="ring" fill="#c1c1cd" d="M500 368 L302.5 482.0 A228 228 0 0 1 500.0 140.0 Z"/>
+  <path class="ring" fill="#f7ccb3" d="M500 368 L500.0 140.0 A228 228 0 0 1 697.5 482.0 Z"/>
+  <path class="ring" fill="#b6c6a6" d="M500 368 L697.5 482.0 A228 228 0 0 1 302.5 482.0 Z"/>
+  <path class="ring" fill="#b2b2c0" d="M500 368 L349.3 455.0 A174 174 0 0 1 500.0 194.0 Z"/>
+  <path class="ring" fill="#f5bc9d" d="M500 368 L500.0 194.0 A174 174 0 0 1 650.7 455.0 Z"/>
+  <path class="ring" fill="#a1b58d" d="M500 368 L650.7 455.0 A174 174 0 0 1 349.3 455.0 Z"/>
+  <path class="ring" fill="#a2a2b2" d="M500 368 L396.1 428.0 A120 120 0 0 1 500.0 248.0 Z"/>
+  <path class="ring" fill="#f3ab86" d="M500 368 L500.0 248.0 A120 120 0 0 1 603.9 428.0 Z"/>
+  <path class="ring" fill="#89a172" d="M500 368 L603.9 428.0 A120 120 0 0 1 396.1 428.0 Z"/>
+  <path class="ring" fill="#8e8ea0" d="M500 368 L441.1 402.0 A68 68 0 0 1 500.0 300.0 Z"/>
+  <path class="ring" fill="#f0996e" d="M500 368 L500.0 300.0 A68 68 0 0 1 558.9 402.0 Z"/>
+  <path class="ring" fill="#6f8a58" d="M500 368 L558.9 402.0 A68 68 0 0 1 441.1 402.0 Z"/>
+
+  <!-- Management (blue) and Leadership (red): labels along the rings -->
+  <text class="l1" text-anchor="middle" transform="translate(469 351) rotate(-62)">Organisation</text>
+  <text class="l1" text-anchor="middle" transform="translate(534 344) rotate(40)">Mensch</text>
+  <text class="l" text-anchor="middle"><textPath href="#m1" startOffset="50%">Management</textPath></text>
+  <text class="l" text-anchor="middle"><textPath href="#m2" startOffset="50%">Ordnung</textPath></text>
+  <text class="l" text-anchor="middle"><textPath href="#m3" startOffset="50%">Verfahrenssicherheit</textPath></text>
+  <text class="l" text-anchor="middle"><textPath href="#m4" startOffset="50%">Prozesse und Strukturen</textPath></text>
+  <text class="l" text-anchor="middle"><textPath href="#m5" startOffset="50%">organisatorische Herausforderungen – institutionelle Ansätze</textPath></text>
+  <text class="l" text-anchor="middle"><textPath href="#l1" startOffset="50%">Leadership</textPath></text>
+  <text class="l" text-anchor="middle"><textPath href="#l2" startOffset="50%">Werte</textPath></text>
+  <text class="l" text-anchor="middle"><textPath href="#l3" startOffset="50%">Verhaltenssicherheit</textPath></text>
+  <text class="l" text-anchor="middle"><textPath href="#l4" startOffset="50%">Kultur</textPath></text>
+  <text class="l" text-anchor="middle"><textPath href="#l5" startOffset="50%">menschliche Herausforderungen – gemeinschaftliche Ansätze</textPath></text>
+
+  <!-- Command (green): horizontal labels -->
+  <text class="l1" x="500" y="423" text-anchor="middle">Auftrag</text>
+  <text class="l" x="500" y="467" text-anchor="middle">Command</text>
+  <text class="l" x="500" y="520" text-anchor="middle">Sinn</text>
+  <text class="l" x="500" y="574" text-anchor="middle">Handlungssicherheit</text>
+  <text class="l" x="500" y="629" text-anchor="middle">Doktrin</text>
+  <text class="l" text-anchor="middle"><textPath href="#c5" startOffset="50%">inhaltliche Herausforderungen – konzeptionelle Ansätze</textPath></text>
+
+  <!-- band naming the rings, with arrows into the Command sector -->
+  <path class="band" d="M500.0 368.0 L254.0 510.0 L260.0 520.4 L499.1 382.4 Z"/>
+  <text class="bl" text-anchor="middle" transform="translate(471.6 394.8) rotate(-30)">Ausrichtung</text>
+  <text class="bl" text-anchor="middle" transform="translate(423.1 422.8) rotate(-30)">Führung</text>
+  <text class="bl" text-anchor="middle" transform="translate(377.2 449.3) rotate(-30)">Erziehung</text>
+  <text class="bl" text-anchor="middle" transform="translate(330.4 476.3) rotate(-30)">Ausbildung</text>
+  <text class="bl" text-anchor="middle" transform="translate(282.8 503.8) rotate(-30)">Etablierung</text>
+  <path class="a" d="M465.4 404.1 A50.0 50.0 0 0 0 468.6 406.9" marker-end="url(#arr)"/>
+  <path class="a" d="M426.5 426.6 A94.0 94.0 0 0 0 462.6 454.2" marker-end="url(#arr)"/>
+  <path class="a" d="M380.3 453.3 A147.0 147.0 0 0 0 475.1 512.9" marker-end="url(#arr)"/>
+  <path class="a" d="M333.4 480.4 A201.0 201.0 0 0 0 417.5 551.3" marker-end="url(#arr)"/>
+  <path class="a" d="M285.6 507.9 A256.0 256.0 0 0 0 463.1 621.3" marker-end="url(#arr)"/>
+
+  <!-- source -->
+  <text class="src" x="970" y="744" text-anchor="end">After Hofstetter, “95 Thesen zur Führung in der Schweizer Armee” (2023), and Hofstetter (2025), fig. 1. Redrawn for LIBEROS.</text>
+</svg>
