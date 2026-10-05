@@ -13,7 +13,7 @@ qard-deck: MikroEcon-HS26
 status: developing
 confidence: high
 created: 2026-09-29
-modified: 2026-10-02
+modified: 2026-10-05
 review: 
 originators:
   - Paul Samuelson
@@ -97,6 +97,19 @@ Opportunity costs are **reciprocal**: if 1 tank costs 4 tractors, then 1 tractor
 > - **Static:** it shows possibilities at one moment. It says nothing about *how fast* the frontier shifts or how long reallocation takes (converting a car factory to tanks is not instant).
 > - **Says nothing about which point is best:** choosing between guns and butter is a **normative** question. The PPF only shows what is *possible*, not what is desirable.
 > - **Hard to measure:** where exactly the frontier lies, and how far inside it an economy is, can only be estimated.
+
+## Glossary
+
+| Deutsch | English | Definition | Be able to |
+|---|---|---|---|
+| Produktionsmöglichkeitenkurve | Production possibilities frontier (PPF) | The maximum combinations of two goods an economy can produce with its given resources and technology. | apply |
+| effizient / ineffizient | Efficient / inefficient | On the frontier: more of one good only by giving up some of the other / inside it: more of both would be possible. | apply |
+| erreichbar / unerreichbar | Attainable / unattainable | On or inside the frontier / outside it with today's resources and technology. | define |
+| konstante / steigende Opportunitätskosten | Constant / increasing opportunity cost | A straight frontier / a frontier bowed outward, because resources are specialised. | apply |
+| Wirtschaftswachstum | Economic growth | An outward shift of the frontier through more resources or better technology. | apply |
+| Vollbeschäftigung | Full employment | All resources are in use: the economy is on its frontier. | define |
+| Reallokation | Reallocation | Moving resources from one good to the other: a movement along the frontier. | define |
+| Kanonen oder Butter | Guns or butter | The standard example of the trade-off between defence goods and civilian goods. | translate |
 
 ## Key Connections
 

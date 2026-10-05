@@ -14,7 +14,7 @@ qard-deck: L1-HS26
 status: seedling
 confidence: medium
 created: 2026-09-30
-modified: 2026-10-02
+modified: 2026-10-05
 review: 
 tags:
   - framework
@@ -121,6 +121,20 @@ The example shows the most useful lesson of VRIO: **the object is rarely the adv
 > - **Circular?** Priem and Butler argue that the RBV comes close to a tautology: resources that produce advantage are defined as valuable, and valuable resources produce advantage. It then says little that can be tested [@priem2001resourcebased].
 > - **Where does value come from?** VRIO takes value as given. It does not explain how to find it; that needs an outward-looking analysis of the environment (e.g. [[PMESII]] or a market analysis).
 > - **Transfer to war.** Firms compete for customers under rules; armed forces fight an opponent who tries to destroy their resources and exploit their weaknesses. "Rarity" and "imitability" are only part of it: **counters**, deception and destruction also end an advantage. CRIO is a useful lens, but it is not yet tested against cases.
+
+## Glossary
+
+| Deutsch | English | Definition | Be able to |
+|---|---|---|---|
+| Wert, Seltenheit, Imitierbarkeit, Organisation | Value, rarity, imitability, organisation (VRIO) | The four questions that test whether a resource or capability gives a lasting advantage. | apply |
+| ressourcenbasierter Ansatz | Resource-based view | Barney's view that a firm's advantage comes from the resources and capabilities it controls. | define |
+| Ressourcen / Fähigkeiten | Resources / capabilities | What you have / what you can do with it. | apply |
+| Wettbewerbsnachteil | Competitive disadvantage | The result when a resource is not even valuable. | define |
+| Wettbewerbsparität | Competitive parity | The result for a valuable but common resource: needed to stay in the game, but it does not set you apart. | define |
+| vorübergehender / dauerhafter Wettbewerbsvorteil | Temporary / sustained competitive advantage | An advantage that lasts until others catch up / one that is also hard to imitate and supported by the organisation. | apply |
+| Pfadabhängigkeit | Path dependence | A resource was built over time under conditions that cannot be repeated, which makes it hard to copy. | define |
+| Kampfwert | Combat value | The military counterpart of value in CRIO, the adaptation of VRIO to armed forces. | apply |
+| Nachahmung / Gegenmassnahme | Imitation / countermeasure | A rival copies a capability / an enemy neutralises it without copying it. | define |
 
 ## Key Connections
 

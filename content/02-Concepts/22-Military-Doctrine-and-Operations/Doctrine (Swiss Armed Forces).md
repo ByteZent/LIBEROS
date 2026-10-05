@@ -14,7 +14,7 @@ qard-deck: L1-HS26
 status: seedling
 confidence: medium
 created: 2026-09-30
-modified: 2026-10-02
+modified: 2026-10-05
 review: 
 tags:
   - concept
@@ -108,6 +108,32 @@ Swiss doctrinal debate has been shaped by a tension between two schools since th
 > - **Posen's argument.** Military organisations, left to themselves, prefer offensive doctrines that increase their autonomy and reduce uncertainty, and they rarely innovate on their own. Innovation usually needs **civilian intervention** [@posen1984sources]. In Switzerland, with its strong political control of the army, this raises the question of who drives change.
 > - **The missing top level.** Without a clear overall strategy, military-strategic doctrine has nothing firm to derive from, and it may fill the gap with its own assumptions.
 > - **"How, not what" is easy to say.** Regulations tend to grow more detailed over time. Detailed doctrine and mission command pull in opposite directions.
+
+## Glossary
+
+| Deutsch | English | Definition | Be able to |
+|---|---|---|---|
+| Doktrin | Doctrine | The fundamental principles by which armed forces guide their actions: binding, but to be checked against the situation each time. | apply |
+| Führungsgrundlagen | Command regulations | The four Swiss regulations GMSF 17, FSO 17, OF 17 and TF 17 taken together. | define |
+| militärstrategisch / operativ / taktisch | Military-strategic / operational / tactical | The three command levels: the army's role in the overall strategy / campaigns and major operations / engagements. | apply |
+| Gefechtstechnik | Combat technique | How units and sub-units carry out procedures, below the tactical level. | define |
+| Operationssphäre | Operational sphere | One of the spaces in which the army acts: intelligence, air, land, electromagnetic and cyber space. | define |
+| Fähigkeit | Capability | What a force is able to do. Doctrine names capabilities, not weapon systems. | define |
+| Führungstätigkeiten | Command activities | The five steps of the command process in FSO 17: problem recognition, assessment of the situation, decision, plan development, issuing orders. | apply |
+| Problemerfassung | Problem recognition | The first command activity. | translate |
+| Beurteilung der Lage | Assessment of the situation | The second command activity. | translate |
+| Entschlussfassung | Decision | The third command activity. | translate |
+| Planentwicklung / Befehlsgebung | Plan development / issuing orders | The fourth and fifth command activities. | translate |
+| Sofortmassnahmen / Zeitplanung | Immediate measures / time planning | The two activities that run alongside the command process from the start. | translate |
+| Auftragstaktik | Mission command | Command by intent: the superior states the purpose and limits, the subordinate chooses how to achieve it. | apply |
+| Führen durch Zielvorgabe | Leading by setting objectives | How FSO 17 describes mission command. | define |
+| Milizprinzip | Militia principle | The army consists of citizens who serve in short, repeated periods. | define |
+| Wahrung der Lufthoheit | Safeguarding air sovereignty | One of the army's legal tasks. | translate |
+| Unterstützung der zivilen Behörden | Support to the civil authorities | One of the army's legal tasks. | translate |
+| Friedensförderung | Peace support | One of the army's legal tasks. | translate |
+| Sicherheitspolitischer Bericht | Security policy report | The Federal Council's report from which military doctrine is derived. | define |
+| Gesamtstrategie | Overall (grand) strategy | How the state uses all its instruments for security. Military strategy is one part of it. | define |
+| Réduit | Réduit | The plan of 1940 to withdraw the main force into the Alps: the best-known form of static defence. | define |
 
 ## Key Connections
 

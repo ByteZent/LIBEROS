@@ -13,7 +13,7 @@ qard-deck: L1-HS26
 status: developing
 confidence: high
 created: 2026-09-29
-modified: 2026-10-02
+modified: 2026-10-05
 review:
 tags:
   - concept
@@ -99,6 +99,18 @@ According to Herbert Stachowiak, a model is characterized by at least three prop
 > - **What is the "original"?** If we only ever know models, the original is itself only accessible through models. Realists object that Stachowiak's pragmatism evades the question of truth instead of answering it.
 > - **Necessary, not sufficient:** the three features say what a model *is*, not what makes a model *good*. They give no criteria for validity or for how much reduction is too much.
 > - **Mapping is hard to check for mental models,** where the original (a situation, an intention, an enemy's plan) is not directly observable.
+
+## Glossary
+
+| Deutsch | English | Definition | Be able to |
+|---|---|---|---|
+| Allgemeine Modelltheorie | General model theory | Stachowiak's theory that every model maps an original, reduces it, and serves a purpose for someone. | apply |
+| Abbildungs- / Verkürzungs- / pragmatisches Merkmal | Mapping / reduction / pragmatic feature | The three features of a model: it represents something, leaves most of it out, and is made for a user and a purpose. | apply |
+| Präterierte / abundante Attribute | Preterite / abundant attributes | Attributes of the original left out of the model, and attributes of the model that the original does not have. | define |
+| Original / Modell | Original / model | What is represented / its shortened representation. The original can itself be a model. | define |
+| mentales Modell | Mental model | A model held in the mind: a perception, a picture of the situation, a doctrine. | define |
+| Lagebild | Situation picture | A commander's or staff's model of the current situation. | define |
+| Modellkette | Chain of models | Models built on models, each step reducing again: terrain, report, map, sketch, mental picture. | define |
 
 ## Key Connections
 

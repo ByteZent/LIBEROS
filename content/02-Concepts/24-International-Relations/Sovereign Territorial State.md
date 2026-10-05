@@ -15,7 +15,7 @@ qard-deck: PolSci-HS26
 status: seedling
 confidence: medium
 created: 2026-10-01
-modified: 2026-10-04
+modified: 2026-10-05
 review: 
 tags:
   - concept
@@ -106,6 +106,9 @@ In my own words: a state is a group of people on a marked piece of land with an 
 | Wohlfahrtsstaat | Welfare state | A state that secures its citizens against social risks and redistributes income. | define |
 | Staatsquote | Government spending as a share of GDP | Government spending as a share of GDP. The usual measure of the size of state activity. | apply |
 | gescheiterter Staat | Failed state | A state that can no longer exercise authority on its territory. | define |
+| Drei-Elemente-Lehre | Three-element doctrine | Jellinek's definition of a state by its people, its territory and its state authority. | apply |
+| Quasi-Staat | Quasi-state | A state that is recognised from outside but does not effectively rule inside. | define |
+| Industriepolitik | Industrial policy | The state steers which industries grow. | translate |
 
 ## Key Connections
 

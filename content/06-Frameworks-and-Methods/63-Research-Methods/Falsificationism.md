@@ -16,7 +16,7 @@ qard-deck: PS1-HS26
 status: seedling
 confidence: medium
 created: 2026-10-01
-modified: 2026-10-02
+modified: 2026-10-05
 review: 
 tags:
   - concept
@@ -90,6 +90,8 @@ draft: false
 | Ad-hoc-Hypothese | Ad hoc hypothesis | An extra assumption added only to save a theory from refutation. | define |
 | Theoriebeladenheit der Beobachtung | Theory-ladenness of observation | What is observed depends on the observer's background assumptions. | define |
 | Nullhypothese | Null hypothesis | The claim that there is no relation, which research tries to reject. | apply |
+| Falsifizierbarkeit | Falsifiability | A statement is scientific only if some possible observation would contradict it. | apply |
+| Paradigma | Paradigm | Kuhn: the framework inside which scientists work and which they give up only in rare crises. | define |
 
 ## Key Connections
 

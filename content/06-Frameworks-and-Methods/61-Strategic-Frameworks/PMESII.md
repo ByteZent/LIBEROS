@@ -12,7 +12,7 @@ qard-deck: L1-HS26
 status: seedling
 confidence: medium
 created: 2026-09-30
-modified: 2026-10-02
+modified: 2026-10-05
 review: 
 tags:
   - framework
@@ -101,6 +101,20 @@ A common matrix crosses PMESII (rows) with ASCOPE (columns): *which areas, struc
 > - **Effects-based heritage.** PMESII grew out of *effects-based operations* around 2000, which promised that a society could be modelled well enough to predict the effects of actions on it. US Joint Forces Command dropped the effects-based approach in 2008, arguing that it assumed more predictability than war allows [@mattis2008usjfcom]. PMESII survives as a descriptive checklist, but the promise of predictable second- and third-order effects should be treated with caution.
 > - **A static picture of an adaptive system.** The actors inside each sub-system react to what you do. A PMESII analysis is a snapshot of an opponent who is also running their own [[OODA Loop|loop]].
 > - **Categories overlap.** Is a state broadcaster political, social or information? The boundaries are conventions, which is fine as long as nobody mistakes them for reality (see [[General Model Theory]]).
+
+## Glossary
+
+| Deutsch | English | Definition | Be able to |
+|---|---|---|---|
+| politisch, militärisch, wirtschaftlich, sozial, Information, Infrastruktur | Political, military, economic, social, information, infrastructure (PMESII) | The six interacting sub-systems as which an actor or an operating environment is described. | apply |
+| Operationsumfeld | Operational environment | The conditions and actors that affect an operation. | define |
+| Teilsystem | Sub-system | One of the six parts of the system. The analysis lies in the links between them. | define |
+| Knoten / Verbindungen | Nodes / links | People, places and things / the relations between them. | define |
+| Machtinstrumente (DIME) | Instruments of national power (DIME) | Diplomatic, informational, military, economic: the means you act with, as opposed to the system you act on. | apply |
+| zivile Faktoren (ASCOPE) | Civil considerations (ASCOPE) | Areas, structures, capabilities, organisations, people, events: the civil picture of a specific area. | define |
+| Gravitationszentrum | Centre of gravity | The source of an actor's strength, which the analysis tries to identify. | define |
+| entscheidender Punkt | Decisive point | A place or node where a small effort produces a large effect. | define |
+| Spiegelbilddenken | Mirror imaging | Assuming that the other side thinks and values as you do. | define |
 
 ## Key Connections
 

@@ -17,7 +17,7 @@ qard-deck: MilPsy-HS26
 status: seedling
 confidence: medium
 created: 2026-10-01
-modified: 2026-10-02
+modified: 2026-10-05
 review: 
 tags:
   - concept
@@ -113,6 +113,9 @@ draft: false
 | Ersparnis | Saving | The effort saved when relearning something. Ebbinghaus' measure of what was retained. | translate |
 | Augenzeuge | Eyewitness | A person who reports what they saw of an event. | translate |
 | Suggestivfrage | Leading question | A question whose wording suggests the answer. | define |
+| Chunking (Bündelung) | Chunking | Grouping items into larger units so that more fits into short-term memory. | define |
+| Loci-Methode | Method of loci | A memory technique: placing items along a mental walk. | define |
+| Rekonstruktion | Reconstruction | Remembering rebuilds a memory each time, so it can be changed afterwards. | apply |
 
 ## Key Connections
 

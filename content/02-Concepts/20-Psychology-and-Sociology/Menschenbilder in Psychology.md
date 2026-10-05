@@ -18,7 +18,7 @@ qard-deck: MilPsy-HS26
 status: seedling
 confidence: medium
 created: 2026-09-30
-modified: 2026-10-02
+modified: 2026-10-05
 review: 
 tags:
   - concept
@@ -179,6 +179,35 @@ Organisational psychology has a separate, well-known typology of **images of the
 > - **Biological psychology risks reductionism.** Showing *where* something happens in the brain does not explain *why* a person acts; meaning and context get lost.
 > - **Drive theory is largely outdated.** The picture of drive energy that builds up by itself and must be discharged (the "hydraulic" model) is not supported by modern biology, least of all for aggression. Applying it to society, as the idea of spoiling does, goes well beyond the evidence.
 > - **Each school is a model.** Each reduces the human to what it can study, for its own purpose (see [[General Model Theory]]). Trouble begins when one lens is taken for the whole picture.
+
+## Glossary
+
+| Deutsch | English | Definition | Be able to |
+|---|---|---|---|
+| Menschenbild | Image of the human | The basic assumptions a theory makes about human nature: what drives people, how free they are and how far they can change. | apply |
+| Tiefenpsychologie | Depth psychology | The school that explains behaviour by unconscious processes, inner conflicts and early experience. | apply |
+| Behaviorismus | Behaviourism | The school that explains behaviour by learning from the environment and its consequences, and treats the mind as a black box. | apply |
+| Kognitivismus (kognitive Psychologie) | Cognitive psychology | The school that explains behaviour by how information is perceived, processed and interpreted. | apply |
+| Humanistische Psychologie | Humanistic psychology | The school that sees people as free, responsible and striving to grow. | apply |
+| Biologische Psychologie | Biological psychology | The school that explains experience and behaviour by the nervous system, hormones and genes. | apply |
+| das Unbewusste | The unconscious | Mental processes that drive behaviour without the person being aware of them. | define |
+| Es / Ich / Über-Ich | Id / ego / superego | Freud's three instances: drives and wishes / the mediator with reality / internalised norms and conscience. | apply |
+| Abwehrmechanismus | Defence mechanism | A way the ego protects itself from inner conflict, such as repression, projection, denial or rationalisation. | define |
+| Reiz-Reaktions-Schema | Stimulus–response | The behaviourist unit of analysis: only the observable stimulus and the observable response are studied. | define |
+| klassische Konditionierung | Classical conditioning | A neutral stimulus becomes linked to a reflex (Pavlov). | apply |
+| operante Konditionierung | Operant conditioning | Behaviour is shaped by its consequences (Skinner). | apply |
+| positive / negative Verstärkung | Positive / negative reinforcement | Behaviour becomes more likely because something pleasant is added / something unpleasant is removed. | apply |
+| Bestrafung | Punishment | A consequence that makes behaviour less likely, by adding something unpleasant or removing something pleasant. | define |
+| Schema | Schema | A stored pattern of knowledge through which a person selects and interprets information. | define |
+| primäre / sekundäre Bewertung | Primary / secondary appraisal | Lazarus: is the situation a threat? / are my resources enough to cope with it? | apply |
+| Selbstkonzept | Self-concept | The picture a person has of themselves (Rogers). | define |
+| Bedürfnishierarchie (Bedürfnispyramide) | Hierarchy of needs | Maslow's order of needs: physiological, safety, belonging, esteem, self-actualisation. | apply |
+| Kampf-oder-Flucht-Reaktion | Fight-or-flight response | The body's immediate reaction to acute threat (Cannon). | define |
+| Verhaltensbiologie | Behavioural biology | The branch that studies inherited behaviour in animals and humans. | define |
+| Trieb / Instinkt | Drive / instinct | An inborn urge whose strength builds up by itself (Lorenz): food, sexuality, aggression, curiosity, bonding. | define |
+| Appetenzverhalten | Appetitive behaviour | The active, effortful search for the stimulus that triggers a drive action. | define |
+| Gesetz der doppelten Quantifizierung | Law of double quantification | Whether a drive action occurs depends on both the outer stimulus and the inner drive strength. | define |
+| Verwöhnung | Spoiling | A drive is satisfied too quickly and without effort, so ever stronger stimuli are needed. | define |
 
 ## Key Connections
 

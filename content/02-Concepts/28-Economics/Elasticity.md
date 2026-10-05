@@ -18,7 +18,7 @@ qard-deck: MikroEcon-HS26
 status: seedling
 confidence: medium
 created: 2026-10-02
-modified: 2026-10-02
+modified: 2026-10-05
 review: 
 originators:
   - Alfred Marshall
@@ -143,6 +143,7 @@ A straight demand curve has a constant slope and a **changing** elasticity. The 
 | elastisch / unelastisch | Elastic / inelastic | Elasticity above 1 / below 1. | define |
 | vollkommen unelastisch | Perfectly inelastic | Elasticity of zero: the quantity does not react to the price. | define |
 | vollkommen elastisch | Perfectly elastic | Infinite elasticity: the curve is horizontal. | define |
+| notwendiges Gut / Luxusgut | Necessity / luxury | A good with inelastic demand / with elastic demand. Which one a good is depends on the buyer's preferences. | define |
 
 ## Key Connections
 

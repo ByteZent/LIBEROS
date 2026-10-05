@@ -13,7 +13,7 @@ qard-deck: PolSci-HS26
 status: seedling
 confidence: low
 created: 2026-10-01
-modified: 2026-10-02
+modified: 2026-10-05
 review: 
 tags:
   - concept
@@ -172,6 +172,8 @@ Outside the textbook this arrangement is usually called a **directorial system**
 | Volksinitiative / Referendum | Popular initiative / referendum | Citizens propose a constitutional change, or call a popular vote on a decision of parliament. | define |
 | defekte Demokratie | Defective democracy | A regime with free elections in which other parts of liberal democracy, such as the rule of law, are impaired. | define |
 | Machtwechsel | Change of power, alternation in office | The transfer of government from one party or group to another. | translate |
+| eingebettete Demokratie | Embedded democracy | Merkel's broad definition: elections are embedded in further partial regimes (political rights, civil rights, horizontal accountability, effective power to govern). | define |
+| demokratische Regression | Democratic backsliding | Elected governments weaken courts, media and electoral rules from the inside. | define |
 
 ## Key Connections
 

@@ -14,7 +14,7 @@ qard-deck: PolSci-HS26
 status: seedling
 confidence: medium
 created: 2026-10-01
-modified: 2026-10-02
+modified: 2026-10-05
 review: 
 originators:
   - David Easton
@@ -131,6 +131,8 @@ The model is a **framework for description**, not a theory with testable hypothe
 | politische Intermediäre | Political intermediaries | Actors between citizens and decision-making institutions: parties, interest groups, movements, media. | apply |
 | Interessengruppe / Verband | Interest group / association | An organisation that represents the interests of its members towards politics. | define |
 | soziale Bewegung | Social movement | A loosely organised group that pursues social change through protest and mobilisation. | define |
+| Forderungen / Unterstützung | Demands / support | The two inputs that citizens and groups send into the political system. | apply |
+| Output | Output | What the system produces: laws, decisions and services that extract resources, regulate behaviour and distribute goods. | apply |
 
 ## Key Connections
 

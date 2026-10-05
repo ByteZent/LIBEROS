@@ -13,7 +13,7 @@ qard-deck: MikroEcon-HS26
 status: developing
 confidence: high
 created: 2026-09-29
-modified: 2026-10-02
+modified: 2026-10-05
 review: 
 originators:
   - François Quesnay
@@ -100,6 +100,23 @@ These are **not four separate sources of value** but the same circle measured at
 1. **François Quesnay's *Tableau économique* (1758)** was the first diagram of an economy as a circulation of goods and money between social classes.
 2. **Frank Knight** drew an early modern version, the "wheel of wealth", in his Chicago teaching material (1933).
 3. **Textbooks after 1945** (Samuelson, later Mankiw) made the two-market, two-actor diagram the standard first model of economics courses.
+
+## Glossary
+
+| Deutsch | English | Definition | Be able to |
+|---|---|---|---|
+| einfacher Wirtschaftskreislauf | Circular flow diagram | The simplest model of a whole economy: households and firms exchange goods, factors and money in two markets. | apply |
+| Haushalte / Unternehmen | Households / firms | The two actors of the model: households own the factors and buy goods, firms use the factors and sell goods. | define |
+| Produktionsfaktoren | Factors of production | Labour, land and capital: the inputs used to produce goods and services. | define |
+| Gütermarkt | Market for goods and services | The market in which firms sell and households buy. | define |
+| Faktormarkt | Market for factors of production | The market in which households sell the use of labour, land and capital and firms buy it. | define |
+| Realstrom | Real flow | The flow of goods and factors through the circle. | apply |
+| Geldstrom | Money flow | The flow of spending and income, opposite to the real flow. | apply |
+| Einkommen (Lohn, Pacht, Zins, Gewinn) | Income (wage, rent, interest, profit) | What households receive from firms for the use of their factors. | define |
+| Ausgaben / Einnahmen | Spending / revenue | What households pay in the goods market is what firms receive there. | define |
+| Abfluss / Zufluss | Leakage / injection | Money that leaves the circle (saving, taxes, imports) / that enters it (investment, government spending, exports). | define |
+| Bruttoinlandprodukt (BIP) | Gross domestic product (GDP) | The value of an economy's output. Measured by spending, by income or by production, it is in principle the same number. | define |
+| volkswirtschaftliche Gesamtrechnung | National accounts | The bookkeeping of a whole economy, built on the identity of spending, income and output. | define |
 
 ## Key Connections
 

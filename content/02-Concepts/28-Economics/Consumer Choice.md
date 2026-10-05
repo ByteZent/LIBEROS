@@ -19,7 +19,7 @@ qard-deck: MikroEcon-HS26
 status: seedling
 confidence: medium
 created: 2026-10-02
-modified: 2026-10-02
+modified: 2026-10-05
 review: 
 tags:
   - model
@@ -164,6 +164,8 @@ At the optimum the last franc spent on each good brings the **same extra utility
 | vollkommene Substitute | Perfect substitutes | Two goods with straight indifference curves. | define |
 | vollkommene Komplemente | Perfect complements | Two goods with right-angled indifference curves. | define |
 | Nutzen | Utility | A measure of the satisfaction a consumer gets from a bundle of goods. | define |
+| Präferenzen | Preferences | What the consumer wants, drawn as indifference curves. | define |
+| Haushaltsoptimum | Consumer's optimum | The affordable bundle on the highest indifference curve: marginal rate of substitution equals relative price. | apply |
 
 ## Key Connections
 

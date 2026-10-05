@@ -16,7 +16,7 @@ qard-deck: PolSci-HS26
 status: seedling
 confidence: low
 created: 2026-10-01
-modified: 2026-10-02
+modified: 2026-10-05
 review: 
 tags:
   - concept
@@ -130,6 +130,7 @@ In my own words: in an autocracy the government decides whether it stays. In a d
 | Legitimation, Repression, Kooptation | Legitimation, repression, co-optation | The three pillars of autocratic stability: giving reasons to accept the regime, punishing opposition, buying in elites. | apply |
 | Putsch / Staatsstreich | Coup | The illegal seizure of power by a small group, usually from within the state. | translate |
 | Machtwechsel | Change of power | The transfer of government from one party or group to another. | translate |
+| Gewinnkoalition | Winning coalition | The group whose support a ruler needs to stay in power: small in an autocracy, large in a democracy. | define |
 
 ## Key Connections
 

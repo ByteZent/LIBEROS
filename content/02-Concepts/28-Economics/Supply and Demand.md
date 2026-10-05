@@ -11,7 +11,7 @@ qard-deck: MikroEcon-HS26
 status: developing
 confidence: high
 created: 2026-09-29
-modified: 2026-10-02
+modified: 2026-10-05
 review: 
 originators:
   - Antoine Augustin Cournot
@@ -219,6 +219,32 @@ Whether such an intervention is *justified* is a **normative** question. The mod
 > - **Distribution and fairness:** the model says nothing about who *should* get the good. An efficient equilibrium can still be one many consider unjust.
 > - **Partial equilibrium:** it looks at one market in isolation; large shocks spill over into other markets (general equilibrium effects).
 > - **No magnitudes without elasticities:** it predicts directions, not sizes.
+
+## Glossary
+
+| Deutsch | English | Definition | Be able to |
+|---|---|---|---|
+| Markt | Market | A group of potential buyers and sellers of a particular good or service. | apply |
+| Wettbewerbsmarkt (vollständige Konkurrenz) | Competitive market (perfect competition) | A market with so many buyers and sellers of the same good that none of them can influence the price. | define |
+| Preisnehmer | Price taker | A buyer or seller who is too small to influence the market price and takes it as given. | define |
+| ceteris paribus | Ceteris paribus (other things equal) | Everything except the variable under study is held constant. | define |
+| nachgefragte Menge | Quantity demanded | The amount of a good that buyers are willing and able to buy at a given price. | apply |
+| angebotene Menge | Quantity supplied | The amount of a good that sellers are willing and able to sell at a given price. | apply |
+| Gesetz der Nachfrage | Law of demand | Other things equal, the quantity demanded falls when the price rises. | apply |
+| Gesetz des Angebots | Law of supply | Other things equal, the quantity supplied rises when the price rises. | apply |
+| Nachfragekurve / Angebotskurve | Demand curve / supply curve | The quantity demanded / supplied at each price, drawn with the price on the vertical axis. | apply |
+| Marktnachfrage / Marktangebot | Market demand / market supply | The horizontal sum of all individual demand / supply curves. | define |
+| normales Gut | Normal good | A good for which demand rises when income rises. | define |
+| Substitutionsgüter (Substitute) | Substitutes | Goods used instead of each other: a higher price of one raises the demand for the other. | define |
+| Komplementärgüter (Komplemente) | Complements | Goods used together: a higher price of one lowers the demand for the other. | define |
+| Bewegung auf der Kurve / Verschiebung der Kurve | Movement along / shift of the curve | A change in the good's own price moves along the curve; a change in any other determinant shifts the whole curve. | apply |
+| Gleichgewicht | Equilibrium | The state in which the quantity supplied equals the quantity demanded. | apply |
+| Gleichgewichtspreis / Gleichgewichtsmenge | Equilibrium price / equilibrium quantity | The price at which the quantity supplied equals the quantity demanded, and the quantity traded at that price. | apply |
+| Angebotsüberschuss | Surplus (excess supply) | The quantity supplied exceeds the quantity demanded because the price is above equilibrium. | apply |
+| Nachfrageüberschuss | Shortage (excess demand) | The quantity demanded exceeds the quantity supplied because the price is below equilibrium. | apply |
+| Höchstpreis | Price ceiling | A legal maximum price. Set below equilibrium, it causes a lasting shortage. | apply |
+| Mindestpreis | Price floor | A legal minimum price. Set above equilibrium, it causes a lasting surplus. | apply |
+| Partialanalyse / allgemeines Gleichgewicht | Partial / general equilibrium | Looking at one market in isolation / at all markets clearing at once, linked through prices. | define |
 
 ## Key Connections
 

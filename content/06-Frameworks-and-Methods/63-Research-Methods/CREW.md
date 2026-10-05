@@ -11,7 +11,7 @@ courses: []
 status: seedling
 confidence: medium
 created: 2026-09-30
-modified: 2026-10-02
+modified: 2026-10-05
 qard-deck: L1-HS26
 review: 
 tags:
@@ -127,6 +127,20 @@ The table shows two things. First, **Evidence 2 is still a gap**: the reason is 
 > - **Warrants are hard to pin down.** Toulmin's own distinction between *data* and *warrant* is blurry in practice, and different readers reconstruct different warrants for the same argument.
 > - **Assumes a reasonable reader.** The model presumes a reader who will be moved by reasons and evidence. In political or adversarial settings, arguments often fail for reasons the structure cannot capture: interest, identity, trust in the speaker.
 > - **Built for Anglo-American writing.** The claim-first, explicitly argued style is a convention. Other academic traditions build up to the claim, or leave more implicit.
+
+## Glossary
+
+| Deutsch | English | Definition | Be able to |
+|---|---|---|---|
+| Behauptung (These) | Claim | What you want the reader to believe. | apply |
+| Begründung | Reason | Why the reader should believe the claim. | apply |
+| Beleg (Evidenz) | Evidence | What the reason rests on: data, sources, observations. | apply |
+| Schlussregel | Warrant | The general principle that connects the reason to the claim. | apply |
+| Einwand und Erwiderung | Acknowledgment and response | Naming the reader's strongest objection and answering it. | apply |
+| Stützung | Backing | Toulmin's term for what supports a warrant. | define |
+| Zirkelschluss | Circular argument | The reason only restates the claim in other words. | define |
+| Rosinenpicken | Cherry-picking | Choosing only the evidence that fits the claim. | define |
+| Strohmann-Argument | Straw man | Answering a weak objection instead of the strongest one. | define |
 
 ## Key Connections
 

@@ -13,7 +13,7 @@ qard-deck: PS1-HS26
 status: seedling
 confidence: medium
 created: 2026-10-01
-modified: 2026-10-02
+modified: 2026-10-05
 review: 
 tags:
   - framework
@@ -206,6 +206,14 @@ An **invented** abstract, built to contain typical problems:
 | Vorschnelle Generalisierung | Hasty generalisation | Drawing a general conclusion from too few cases. | define |
 | Ökologischer Fehlschluss | Ecological fallacy | Inferring the behaviour of individuals from data about groups. | define |
 | Interne / externe Validität | Internal / external validity | Whether the causal conclusion holds within the study, and whether it can be generalised beyond it. | apply |
+| Regression zur Mitte | Regression to the mean | Cases chosen because they were extreme move back towards the average on their own. | define |
+| Auswahl nach der abhängigen Variable | Selection on the outcome | Only cases in which the outcome occurred are studied, so whatever they share looks like a cause. | apply |
+| Überlebensirrtum | Survivorship bias | Only those who came through a filter can be observed. | define |
+| Gelegenheitsstichprobe | Convenience sample | The units studied are those that were easy to reach. | define |
+| Erinnerungsverzerrung | Recall bias | Memory is selective, and the outcome shapes what is remembered. | define |
+| Reaktivität (Hawthorne-Effekt) | Reactivity (Hawthorne effect) | People behave differently because they know they are being studied. | define |
+| HARKing | HARKing | Hypothesising after the results are known: a pattern found in the data is presented as if it had been predicted. | define |
+| Zitationsbias | Citation bias | Supporting studies are cited, contradicting ones are left out. | define |
 
 ## Key Connections
 

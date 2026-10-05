@@ -13,7 +13,7 @@ qard-deck: PrivLawI-HS26
 status: seedling
 confidence: medium
 created: 2026-09-30
-modified: 2026-10-02
+modified: 2026-10-05
 review: 
 jurisdiction: CH
 citation: ZGB · OR
@@ -226,6 +226,50 @@ Finish every claim with a clear **overall result** (*Gesamtergebnis*): "K can de
 > - The claim-based method comes from German legal training and fits **dispute resolution** best. For advisory or drafting questions ("How should the contract be written?") it is less natural.
 > - A fixed order of claim bases can hide how claims interact, e.g. the concurrence of contract and tort (*Anspruchskonkurrenz*), which Swiss law generally allows.
 > - The five steps simplify reality: in practice, **proof** (Art. 8 ZGB: whoever derives rights from a fact must prove it) and **procedure** (ZPO) often decide more than substantive law.
+
+## Glossary
+
+| Deutsch | English | Definition | Be able to |
+|---|---|---|---|
+| Sachverhalt | Facts of the case | The set of facts that has to be turned into an ordered legal argument. | define |
+| Anspruch | Claim | What one person can demand from another. Every case is split into claims. | apply |
+| Anspruchsgrundlage | Claim basis | The legal rule or contract from which a claim can arise. | apply |
+| Prüfungsreihenfolge | Order of examination | The fixed order in which possible claim bases are checked: contract first, then quasi-contract, then the others. | define |
+| Privatrecht / öffentliches Recht | Private law / public law | Relations between equals / relations in which the state acts with sovereign power. | apply |
+| Interessentheorie | Interest theory | Test for private or public law: whose interests does the norm serve? | define |
+| Subordinationstheorie | Subordination theory | Test for private or public law: are the parties on equal footing? | define |
+| Funktionstheorie | Function theory | Test for private or public law: does the norm fulfil a public task? | define |
+| modale Theorie | Modal theory | Test for private or public law: is the sanction private or public? | define |
+| Methodenpluralismus | Pluralism of methods | The Federal Supreme Court uses the theory that fits the case best. No single one decides. | define |
+| Gutachtenstil | Opinion style | Writing each step as hypothesis, rule, subsumption, conclusion. | apply |
+| Urteilsstil | Judgment style | The result comes first and the reasons follow, as courts write. | define |
+| Obersatz | Hypothesis (opening sentence) | The first sentence of the opinion style: who could have which claim against whom, on which basis. | apply |
+| Subsumtion | Subsumption | Checking whether the facts meet the definition of the rule. | apply |
+| Tatbestand / Rechtsfolge | Conditions / legal consequence | What a rule requires / what follows when it is met. Conditions are checked first. | apply |
+| Rechtsprechung / Lehre | Case law / doctrine | Court decisions (BGE) / legal scholarship. Both are used to define the conditions of a rule. | define |
+| Qualifikation | Classification (of the contract) | Deciding which type of contract the agreement is. | define |
+| Nominatvertrag / Innominatvertrag | Nominate / innominate contract | A contract type regulated in the special part of the OR / one that is not, such as leasing or franchising. | define |
+| Konsens | Agreement (consensus) | Both parties have expressed matching intentions. | define |
+| wesentliche Vertragspunkte (essentialia negotii) | Essential terms | The points the parties must agree on for a contract to exist: for a sale, the goods and the price. | define |
+| Vertrauensprinzip | Principle of reliance | A statement counts as a reasonable recipient could and had to understand it. | apply |
+| Lückenfüllung | Filling gaps | Completing a contract where the parties settled nothing: by non-mandatory law or by their hypothetical intention. | define |
+| zwingendes / dispositives Recht | Mandatory / non-mandatory law | Rules that cannot be contracted away / rules that apply only if the parties agreed nothing else. | define |
+| Allgemeine Geschäftsbedingungen (AGB) | General terms and conditions | Pre-drafted contract terms. They bind only if they were made part of the contract. | define |
+| Ungewöhnlichkeitsregel | Unusual-terms rule | An unusual clause does not bind a party who was not specifically told about it. | define |
+| Unklarheitenregel | Rule against the drafter | An unclear clause is read against the party that drafted it. | define |
+| Erfüllung | Performance (discharge) | The obligation ends because what was owed has been done. | define |
+| Leistungsstörung | Breach of contract | The obligation is not performed, performed late or performed badly. | apply |
+| Verzug / Mahnung | Delay (default) / reminder | The debtor is late with a due obligation / the creditor's demand that puts him in default. | define |
+| Einreden / Einwendungen | Defences and objections | What the debtor can hold against a claim, such as set-off or prescription. | define |
+| Verrechnung | Set-off | Extinguishing a debt with a counterclaim against the same person. | define |
+| Schadenersatz | Damages | Money that makes good a loss. | define |
+| positives Interesse | Positive interest | Damages that put the claimant where they would be had the contract been performed. | define |
+| Genugtuung | Compensation for non-material harm | Money for suffering, not for a financial loss. | define |
+| Anspruchskonkurrenz | Concurrence of claims | Several claim bases, such as contract and tort, apply to the same facts side by side. | define |
+| Vertrauenshaftung (culpa in contrahendo) | Reliance liability (culpa in contrahendo) | Quasi-contractual liability for disappointing justified reliance, for instance in contract negotiations. | define |
+| Auslegung | Interpretation | Finding the parties' actual common intention, or else what a reasonable person in good faith would understand. | apply |
+| Rückabwicklung | Unwinding | Returning what was received after a contract proves void or non-binding. | define |
+| negatives Interesse | Negative interest | Damages that put the claimant where they would be had they never relied on the contract. | define |
 
 ## Key Connections
 

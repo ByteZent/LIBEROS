@@ -17,7 +17,7 @@ qard-deck: L1-HS26
 status: seedling
 confidence: medium
 created: 2026-09-30
-modified: 2026-10-02
+modified: 2026-10-05
 review: 
 tags:
   - framework
@@ -131,6 +131,21 @@ Note how the COAs map onto [[Attrition vs Manoeuvre Warfare|attrition and manoeu
 > - **Recognition-primed decision making.** Klein's field studies of experienced decision-makers (fire commanders, military officers) found they rarely compare options. They **recognise** the situation as typical, take the first workable option, and test it by **mental simulation**; only if it fails do they consider another [@klein1998sources]. On this view, the COA method describes how novices should decide, or how staffs should justify, more than how experts decide under time pressure.
 > - **Speed and tempo.** A process built for thoroughness can make a force slow to adapt. In [[OODA Loop|Boyd's]] terms, an elaborate *Decide* phase risks acting on a situation that has already changed.
 > - **Planning versus design.** Critics argue that the MDMP is good at solving well-defined problems but poor at *framing* ill-defined ones, which is why US doctrine added a separate "design" or conceptual planning step before it.
+
+## Glossary
+
+| Deutsch | English | Definition | Be able to |
+|---|---|---|---|
+| Handlungsmöglichkeit | Course of action (COA) | One possible way to accomplish the mission. | apply |
+| Variante | Variant | The Swiss term for a course of action in FSO 17. | define |
+| Angemessenheit / Exklusivität / Machbarkeit / Tragbarkeit / Vollständigkeit | Suitable / distinguishable / feasible / acceptable / complete | The five checks every course of action must pass, in the Swiss and the US wording. | apply |
+| Kriegsspiel | Wargame | Playing a course of action through against the enemy's courses of action: action, reaction, counteraction. | apply |
+| Absicht des Kommandanten | Commander's intent | The purpose the commander wants to achieve. It frames every course of action. | define |
+| Beurteilungskriterien | Evaluation criteria | The yardsticks, set in advance, against which the courses of action are compared. | define |
+| Entscheidungsmatrix | Decision matrix | A table that scores each course of action against weighted criteria. | define |
+| Entscheidungspunkt | Decision point | A point in time or space at which the commander must decide. The wargame shows where these lie. | define |
+| wahrscheinlichste / gefährlichste gegnerische Möglichkeit | Most likely / most dangerous enemy course of action | The two enemy options a wargame is played against. | define |
+| MDMP / JPP | Military Decision-Making Process / Joint Planning Process | The US Army's and the US joint planning processes, both built around developing and comparing courses of action. | define |
 
 ## Key Connections
 

@@ -15,7 +15,7 @@ qard-deck: L1-HS26
 status: seedling
 confidence: medium
 created: 2026-09-30
-modified: 2026-10-02
+modified: 2026-10-05
 review: 
 tags:
   - concept
@@ -94,6 +94,21 @@ The Swiss debate between a **mobile** school and a **static** school of defence 
 > - **Manoeuvre as ideology.** Critics argue that the 1980s manoeuvre school idealised German practice, treated attrition as intellectually inferior, and promised cheap victories that rarely come.
 > - **Force employment matters more than the label.** Biddle shows that since 1918 outcomes depend less on numbers or technology than on the **modern system** of force employment: cover, concealment, dispersion, combined arms and depth. That system is neither pure attrition nor pure manoeuvre [@biddle2004military].
 > - **Is the spectrum too neat?** The Hofstetter model assumes two rational actors and one dimension (perceived strength). Real choices also depend on politics, casualty tolerance, time pressure and alliance constraints. The authors state these limits themselves.
+
+## Glossary
+
+| Deutsch | English | Definition | Be able to |
+|---|---|---|---|
+| Abnützung vs. Manöver | Attrition vs manoeuvre | Two styles of warfare: wearing the enemy down by destruction, or breaking his cohesion by movement and tempo. | apply |
+| relationales Manöver | Relational manoeuvre | Luttwak: neutralising the enemy's strength by finding a weakness and applying selective force there. | define |
+| Guerilla | Guerrilla | The style chosen against an enemy seen as stronger: avoid battle, hide and strike locally. | define |
+| wahrgenommenes Kräfteverhältnis | Perceived force ratio | How strong a commander believes the enemy to be compared with his own force. It decides the choice of style. | apply |
+| Einfrieren / Auftauen | Freezing / unfreezing | A war of movement turns into attrition when neither side has an edge / attrition turns back into manoeuvre through an innovation. | apply |
+| Zusammenhalt / Kohäsion | Cohesion | The bonds that keep a unit or force acting as one under stress. | define |
+| Schwerpunkt | Focus of effort | The point where a commander concentrates effort to decide the action. | apply |
+| Auftragstaktik | Mission command | Command by intent: the superior states the purpose and limits, the subordinate chooses how to achieve it. | apply |
+| Befehlstaktik | Detailed command | Command by detailed orders that prescribe how a task is to be done. | define |
+| Tempo, Überraschung, Täuschung | Tempo, surprise, deception | The key factors of manoeuvre, next to the focus of effort. | translate |
 
 ## Key Connections
 

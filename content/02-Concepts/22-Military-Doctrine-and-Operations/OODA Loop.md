@@ -15,7 +15,7 @@ qard-deck: L1-HS26
 status: developing
 confidence: high
 created: 2026-09-29
-modified: 2026-10-02
+modified: 2026-10-05
 review: 2026-10-02
 tags:
   - concept
@@ -93,6 +93,21 @@ A classic exam comparison. **Define both separately, then connect them through o
 > - **Naturalistic decision-making** (Klein): experts often go from *recognising* a situation directly to *acting*, without deliberate option comparison. This actually fits Boyd's *implicit guidance and control* better than the simple four-step version does.
 > - **Transfer from air combat:** a one-on-one duel with clear feedback is not a coalition campaign, a bureaucracy or a policy process. Loops at higher levels are slower, noisier and politically contested.
 > - **Getting "inside" the enemy's loop assumes you can read it.** An adversary with a different culture may not be disoriented by what would disorient you.
+
+## Glossary
+
+| Deutsch | English | Definition | Be able to |
+|---|---|---|---|
+| Beobachten / Orientieren / Entscheiden / Handeln | Observe / Orient / Decide / Act | The four elements of Boyd's loop: take in information, make sense of it, choose, act. | apply |
+| Orientierung | Orientation | The mental model through which observations are interpreted. It also shapes what is observed, decided and done. | apply |
+| Implizite Steuerung | Implicit guidance and control | Acting directly from orientation, without an explicit decision step, on the basis of training and shared understanding. | apply |
+| relatives Tempo | Relative tempo | Adapting faster than the opponent. Speed helps only if the orientation is sound. | apply |
+| Selbstähnlichkeit | Self-similarity | The same pattern repeats at every level, from the squad to the army. | define |
+| Auftragstaktik | Mission command | Command by intent: the superior states the purpose and limits, the subordinate chooses how to achieve it. | apply |
+| Schwerpunkt | Focus of effort | The point where a commander concentrates effort to decide the action. | apply |
+| Einheit | Unity (mutual trust) | Boyd's term for mutual trust and a shared outlook in a force. | define |
+| Fingerspitzengefühl | Intuitive feel | The trained, intuitive feel for a situation. | define |
+| Sinnstiftung (Sensemaking) | Sensemaking | Weick: how people give meaning to an unclear situation. It describes much of what happens inside Orient. | define |
 
 ## Key Connections
 

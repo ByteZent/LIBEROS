@@ -14,7 +14,7 @@ qard-deck: MilPsy-HS26
 status: seedling
 confidence: medium
 created: 2026-09-30
-modified: 2026-10-02
+modified: 2026-10-05
 review: 
 tags:
   - concept
@@ -94,6 +94,26 @@ Switzerland had a historic form of cognitive defence long before the term existe
 > - **Effects are often overstated.** Research on persuasion suggests people are **harder to fool** than alarmist accounts assume: they filter messages by plausibility and trust, and most disinformation reaches people who already agree with it [@mercier2020not]. The measurable electoral effect of campaigns like 2016 is disputed.
 > - **Offensive use is ethically fraught.** For democracies, deliberately manipulating cognition, even of an adversary's population, conflicts with the values being defended, and the effects spill back home through shared platforms.
 > - **Neuro-hype.** Claims about "hacking the brain" often run far ahead of what neuroscience can actually do.
+
+## Glossary
+
+| Deutsch | English | Definition | Be able to |
+|---|---|---|---|
+| kognitive Kriegsführung | Cognitive warfare | The deliberate attempt to change how a target population or its decision-makers think, not only what they know. | apply |
+| Informationskriegsführung | Information warfare | The contest over information and information systems: content and networks, including cyber. | define |
+| psychologische Operationen (PSYOPS) | Psychological operations | Military activities that aim at the behaviour of specific audiences in an operation. | define |
+| Propaganda | Propaganda | Messages meant to shape beliefs and attitudes. | define |
+| Desinformation | Disinformation | False or misleading content that is spread on purpose. | define |
+| reflexive Kontrolle | Reflexive control | Soviet and Russian concept: giving an opponent information that leads him to choose, of his own will, the decision you want. | define |
+| hybride Bedrohung | Hybrid threat | Hostile action that stays below the threshold of armed attack and combines several means. | define |
+| Zuordnung (eines Angriffs) | Attribution (of an attack) | Establishing who is behind an operation. | define |
+| Mikrotargeting | Micro-targeting | Addressing small groups or single persons with content chosen from detailed personal data. | define |
+| kognitive Resilienz | Cognitive resilience | A society's ability to resist influence on how it forms its picture of reality and decides. | apply |
+| Medienkompetenz | Media literacy | The ability to judge sources and content. | translate |
+| Prebunking | Prebunking | Exposing a false narrative before it spreads, instead of correcting it afterwards. | define |
+| Geistige Landesverteidigung | Spiritual national defence | The Swiss state-backed effort from the late 1930s to strengthen a shared identity against totalitarian propaganda. | define |
+| Versicherheitlichung | Securitisation | Treating a political matter as a security threat, which justifies exceptional measures. | define |
+| Drei Kriegsführungen | Three warfares | China's concept of 2003: public opinion warfare, psychological warfare and legal warfare. | define |
 
 ## Key Connections
 

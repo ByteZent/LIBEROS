@@ -13,7 +13,7 @@ qard-deck: PS1-HS26
 status: seedling
 confidence: medium
 created: 2026-10-01
-modified: 2026-10-02
+modified: 2026-10-05
 review: 
 tags:
   - framework
@@ -207,6 +207,10 @@ The table makes the weak point visible, and it lies in the **type of study**, no
 | unabhängige / abhängige Variable | Independent / dependent variable | The supposed cause (X) and the effect to be explained (Y). | apply |
 | Validität / Reliabilität | Validity / reliability | Whether an instrument measures what it should, and whether it gives the same result when repeated. | apply |
 | Querschnitt / Längsschnitt (Trend, Panel) | Cross-section / longitudinal (trend, panel) | Data collected at one point in time, or at several points. | define |
+| Indikator | Indicator | An observable thing that stands for a concept, such as a survey answer or a budget figure. | apply |
+| Experiment / Quasi-Experiment | Experiment / quasi-experiment | The researcher sets the cause and assigns units at random / the cause varies, but not by random assignment. | define |
+| Vollerhebung | Full census | All units of the population are studied, not a sample. | define |
+| Zufallsstichprobe | Random sample | A sample drawn by chance. Only it allows statistical inference from the sample to the population. | define |
 
 ## Key Connections
 

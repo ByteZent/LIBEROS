@@ -16,7 +16,7 @@ qard-deck: MikroEcon-HS26
 status: seedling
 confidence: medium
 created: 2026-10-01
-modified: 2026-10-02
+modified: 2026-10-05
 review: 
 tags:
   - concept
@@ -103,6 +103,9 @@ draft: false
 | Lebensstandard | Standard of living | The quantity of goods and services a population can afford. | translate |
 | Produktivität | Productivity | The value of goods and services produced per hour of work. | define |
 | Geldmenge | Money supply | The amount of money in circulation in an economy. | translate |
+| Mikroökonomie / Makroökonomie | Microeconomics / macroeconomics | The study of the decisions of households and firms and their meeting in markets / of the economy as a whole. | define |
+| Effizienz / Gerechtigkeit | Efficiency / equality | Getting the most out of scarce resources / distributing the result evenly. The two often conflict. | define |
+| Inflation | Inflation | A rise in the general price level, caused by fast growth of the money supply. | define |
 
 ## Key Connections
 
