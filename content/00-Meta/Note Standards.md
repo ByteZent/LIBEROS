@@ -104,6 +104,16 @@ Three comments turn a card into more than text. Obsidian ignores them and shows 
 > It determines what is observed, which options are visible, and how risks are judged.
 ```
 
+### Important questions
+
+`<!-- qard-important -->` anywhere in a card marks a question that matters more than the others: one the lecturer stressed, an old exam question, or one that a whole chapter hangs on. The site puts a star on it, on the note and in the deck, and **★ Important** in a deck narrows everything to these cards: the selection, the counts and the exam. Marking a card later does not reset its history. Mark few, about one question in five: if everything is important, nothing is.
+
+```markdown
+> [!qard]- Welches ist das wichtigste Merkmal von Demokratien gegenüber Nicht-Demokratien?
+> <!-- qard-important -->
+> Die Besetzung politischer Ämter durch freie und faire Wahlen.
+```
+
 ### Bridge cards
 
 Every line under `## Key Connections` of the form `- [[Other Note]]: how it relates` becomes a card "How does *this note* relate to *Other Note*?" in the deck `/flashcards/connections`. So the text after the colon has to answer that question on its own. `make bridges` lists the opposite: notes that share tags but do not link to each other yet.
