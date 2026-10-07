@@ -3,6 +3,7 @@
 // The date is the bold text at the start of the title and the body holds the notes. The words
 // after the bar are the category (colour and icon of the marker) and `key` for a turning point.
 // The chart, the filters and the self-test are built by scripts/timeline.inline.ts.
+// `ideas` is split by current of thought (conservatism … science); `ideas` itself stays for the rest.
 // Mirrored (list view only) in content/.obsidian/snippets/liberos.css.
 
 @use "sass:list";
@@ -27,6 +28,30 @@ $categories: (
   "empire": (
     #7d5ba6,
     '<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/>',
+  ),
+  "conservatism": (
+    #34558b,
+    '<path d="M3 19h18"/><path d="m3 8 4.5 4L12 5l4.5 7L21 8l-2 8H5z"/>',
+  ),
+  "liberalism": (
+    #c9762f,
+    '<path d="M20 4c-8 0-13 5-13 13"/><path d="M20 4c0 7-4 11-11 11"/><path d="m4 20 3-3"/>',
+  ),
+  "radicalism": (
+    #b0407a,
+    '<path d="M12 3c1 4 5 6 5 11a5 5 0 0 1-10 0c0-2 1-3.500 2-4.500 0 2 1 3 2 3 1-2 0-5.500 1-9.500z"/>',
+  ),
+  "political-economy": (
+    #7a8f2f,
+    '<circle cx="9" cy="9" r="6"/><circle cx="15" cy="15" r="6"/>',
+  ),
+  "religion": (
+    #8c6e54,
+    '<path d="M12 3v18"/><path d="M6 9h12"/>',
+  ),
+  "science": (
+    #1f9fb0,
+    '<path d="M9 3h6"/><path d="M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/>',
   ),
   "ideas": (
     #2f8f8a,
@@ -267,7 +292,7 @@ $categories: (
 .callout a.timeline-ref {
   display: inline-block;
   padding: 0 0.45rem;
-  border: 1px solid var(--lightgray);
+  border: 1px solid var(--darkgray);
   border-radius: 999px;
   background: none;
   font-size: 0.8rem;

@@ -11,7 +11,22 @@
 
 const ENTRY = '.callout[data-callout="event"], .callout[data-callout="process"]'
 const PERIOD = '.callout[data-callout="period"]'
-const ORDER = ["political", "war", "empire", "economy", "social", "ideas", "law"]
+const ORDER = [
+  "political",
+  "war",
+  "empire",
+  "economy",
+  "social",
+  // currents of thought, split out of "ideas"
+  "conservatism",
+  "liberalism",
+  "radicalism",
+  "political-economy",
+  "religion",
+  "science",
+  "ideas",
+  "law",
+]
 const FIELDS = ["why it matters", "debate", "source", "perspectives"]
 // how a connection reads from the source, and from the target looking back
 const TYPES: Record<string, string> = {
