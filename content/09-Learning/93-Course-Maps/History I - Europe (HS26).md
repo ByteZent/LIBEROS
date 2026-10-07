@@ -4,7 +4,7 @@ type: moc
 course: Hist1-HS26
 semester: HS 2026
 created: 2026-10-02
-modified: 2026-10-04
+modified: 2026-10-07
 tags:
   - course
 draft: false
@@ -67,7 +67,7 @@ Also expected: the required reading for every session, work with the slides, and
 | Date | Theme | Notes |
 |---|---|---|
 | 30.09. | 1 · Introduction: aims and structure. Chronology: Britain in the world, 1780–1939 | [[Britain 1780–1939 (Timeline)]] |
-| 07.10. | 2 · "Ruling Ideologies": the rise of conservatism and radicalism / liberalism |  |
+| 07.10. | 2 · "Ruling Ideologies": the rise of conservatism and radicalism / liberalism | [[Liberal Toryism vs High Toryism]] · [[Utilitarianism]] · [[Britain 1780–1939 (Timeline)]] |
 | 14.10. | 3 · "Industrial Revolution": economic, ecological and political dimensions |  |
 | 21.10. | 4 · No session (lecturer away) |  |
 | 28.10. | 5 · "The Bitter Cry of Outcast London": population growth, urbanisation, poverty and welfare |  |

@@ -101,7 +101,7 @@ By session of History I. Chapters in brackets are background.
 
 ## Concepts Extracted
 
-- [[Britain 1780–1939 (Timeline)]]: 34 entries with page numbers, tagged with the session they belong to.
+- [[Britain 1780–1939 (Timeline)]]: the entries of the sessions held so far. The entries for later sessions wait in the inbox backlog and go in after each lecture.
 
 Still to write as notes of their own: the industrial revolution debate, laissez-faire and state regulation, the New Poor Law, separate spheres.
 

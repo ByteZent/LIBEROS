@@ -10,7 +10,7 @@ courses: ["Hist1-HS26"]
 status: seedling
 confidence: medium
 created: 2026-10-04
-modified: 2026-10-04
+modified: 2026-10-07
 review: 
 tags:
   - timeline
@@ -22,9 +22,31 @@ draft: false
 > [!bluf]
 > The frame for History I: Britain in the world from the late 18th century to the Second World War. Britain rises to world power in the wars against France (1793–1815), secures that position by free trade and gunboat diplomacy (1815–1873), is challenged by rivals (1874–1914) and comes out of two world wars drained. The course looks most closely at the "age of transformation", 1830–1914.
 >
-> Entries tagged `S1` come from the first lecture. Entries tagged `S2` to `S11` come from [[evans2011shaping|Evans, *The Shaping of Modern Britain*]] and are placed by theme ahead of the lectures: check and extend them after each session.
+> The timeline grows **session by session**. It holds only the sessions that have taken place: an entry gets in after its lecture, with the tag of that session (`S1` = session 1). The table below shows which sessions are in.
 >
-> Every session adds its events and processes here. The tag at the end of a title names the session (`S1` = session 1). The chart shows everything to scale, one lane per category. The buttons filter by category and session, show only the turning points, or hide dates or titles for a self-test.
+> The chart shows everything to scale, one lane per category. The buttons filter by category and session, show only the turning points, or hide dates or titles for a self-test.
+
+## Sessions
+
+| Session | Date | Theme | On the timeline | From |
+|---|---|---|---|---|
+| `S1` | 30.09. | Chronology: Britain in the world | ☑ 22 entries and the five periods | Lecture slides |
+| `S2` | 07.10. | Ruling ideologies | ◐ 29 entries from the required reading and the survey. To check against the lecture | [@hilton2006mad], ch. 5; [@evans2011shaping] |
+| `S3` | 14.10. | Industrial Revolution | ☐ | |
+| `S5` | 28.10. | Population, urbanisation, poverty and welfare | ☐ | |
+| `S6` | 04.11. | Police and penal system | ☐ | |
+| `S7` | 11.11. | Effects of empire on the motherland | ☐ | |
+| `S8` | 18.11. | Sexuality, gender roles and gender politics | ☐ | |
+| `S9` | 25.11. | Mass politics, consumer culture and class | ☐ | |
+| `S10` | 02.12. | Religion and science | ☐ | |
+| `S11` | 09.12. | Migration and migrants | ☐ | |
+
+**After each session:**
+
+1. Go through the slides and the required reading and pick what belongs on the timeline: events with a date, processes with a range. Five to ten entries are enough.
+2. Write each entry at its place in the order, with the session tag. Give every entry a "Why it matters", or it is a date and not yet an argument.
+3. Connect the new entries to those of earlier sessions (see *Connections* below). This is where the sessions grow together.
+4. Tick the session in the table above and name the sources.
 
 ## Timeline
 
@@ -41,23 +63,14 @@ draft: false
 
 ^union-scotland
 
-> [!process|social] **c. 1750–1901** Urbanisation `S5`
-> Britain becomes a mostly urban society: about 23% of the English live in towns in 1750, 34% in 1801, 54% in 1851 and 78% in 1901 [@evans2011shaping, p. 51]. From 1851 more than half the population lives in towns [@evans2011shaping, p. 248].
+> [!event|political-economy economy key] **1776** Smith, *Wealth of Nations* `S2`
+> The book makes economics central to discussions of moral and political philosophy. Growth comes from the supply side (division of labour, saving) and needs a "system of natural liberty" instead of management by politicians [@hilton2006mad, p. 342–343].
 >
-> **Why it matters:** the early industrial towns were overcrowded and insanitary, with death rates above the birth rates in the 1820s and 1830s [@evans2011shaping, p. 19]. Poverty, public health and policing become questions for the state because of the towns.
+> **Why it matters:** the optimistic starting point. Smith welcomes population growth and trusts a natural harmony of interests. Malthus and Ricardo will turn both into pessimism.
+>
+> - → provokes [[#^malthus|1798 and 1803 Malthus, Essay on Population]]: Malthus sees in population growth the harbinger of catastrophe, where Smith saw a stimulus.
 
-> [!process|economy] **c. 1760–1850** Industrial Revolution `S3`
-> Purpose-built factories, above all in textiles, mechanisation, canals and from the 1820s railways, with coal and iron behind them [@evans2011shaping, p. 42].
->
-> **Why it matters:** it changes population, towns, markets, social relations and how people relate to government. Britain's status as a great power in the 19th century rests on it [@evans2011shaping, p. 43, 50].
->
-> **Debate:** revolution or evolution? The older view (Rostow) saw a "take-off" in the 1780s. Later figures (Crafts) show gradual growth, with modern economic growth fully established only in the railway age. As late as 1860 only about 30% of jobs were in sectors transformed since 1780. Defenders of "revolution" answer that the data are fragile and that change was concentrated in regions, where it was revolutionary [@evans2011shaping, p. 46–50].
->
-> **Perspectives:** contemporaries were sure they lived through profound change, whatever the growth rates say [@evans2011shaping, p. 49].
->
-> - → provokes [[#^luddism|1811–12 Luddism]]: new machinery threatens the job security and wages of skilled workers.
-
-^industrial-revolution
+^smith
 
 > [!event|empire key] **1783** Loss of the American colonies `S1`
 > End of the "First Empire".
@@ -75,7 +88,7 @@ draft: false
 
 ^second-empire
 
-> [!event|ideas] **1790** Burke, *Reflections on the Revolution in France* `S2`
+> [!event|conservatism] **1790** Burke, *Reflections on the Revolution in France* `S2`
 > Burke argues that established political traditions hold practical wisdom, and predicts that a revolution which defies the established order will end in bloodshed [@evans2011shaping, p. 80].
 >
 > **Why it matters:** the founding text of British conservatism. Burke distrusts the abstract principles of the Enlightenment.
@@ -84,15 +97,50 @@ draft: false
 
 ^burke
 
-> [!event|ideas] **1791–92** Paine, *Rights of Man* `S2`
+> [!process|liberalism] **1790s** Young Whigs study in Scotland `S2`
+> War closes the Continental universities. Mackintosh, Lansdowne, Brougham, Jeffrey, Horner and Russell hear Dugald Stewart in Edinburgh and take in the last of the Scottish Enlightenment: societies progress through stages, up to commercial society [@hilton2006mad, p. 348–349].
+>
+> **Why it matters:** the root of "philosophic Whiggism". High Tories and most Radicals find truth in the past, liberal Tories and Utilitarians in a timeless present, these Whigs in the future [@hilton2006mad, p. 350].
+
+^scottish-whigs
+
+> [!event|radicalism] **1791–92** Paine, *Rights of Man* `S2`
 > A polemic grounded in Enlightenment rationalism. It educates and galvanises middle-class radicals and artisans to press for parliamentary reform [@evans2011shaping, p. 84, 108].
 >
 > **Why it matters:** the conflict of ideas between reformers and conservatives starts here and runs through the whole period.
 
 ^paine
 
+> [!event|radicalism law] **1791** Bentham, *Panopticon* `S2`
+> A model prison: cells in a circle, an unseen inspector at the centre. The inmate should "conceive himself" watched at every moment until good behaviour becomes habit. The Government rejects the plan in 1813 in favour of the evangelical penitentiary and pays Bentham £23,000 in compensation [@hilton2006mad, p. 329].
+>
+> **Why it matters:** the same principle of inspection was meant for factories, workhouses, madhouses, hospitals and schools. See [[Utilitarianism]].
+>
+> **Perspectives:** for Bentham a humane punishment that leads to rehabilitation. For later critics the subordination of the poor: "repression through freedom" [@hilton2006mad, p. 330].
+
+^panopticon
+
+> [!event|radicalism social] **1792** Wollstonecraft, *A Vindication of the Rights of Woman* `S2`
+> Her target is Rousseau and "the oppressor, sovereign man". Dependence turns women into creatures of sensibility who cannot judge morally [@hilton2006mad, p. 358].
+>
+> **Debate:** Hilton doubts that it is a feminist starting point. It was little read before the 1850s and is better seen as the end of a tradition of free public comment by women in the mid-18th century [@hilton2006mad, p. 359].
+
+> [!process|political ideas] **1792–1848** No agreed "public opinion" `S2`
+> Between the Jacobin scare of 1792 and the last Chartist convention of 1848 the privileged classes share no common set of values. Politicians who appeal to public opinion therefore qualify it: "respectable", "rational", "the better sort of people" [@hilton2006mad, p. 311].
+>
+> **Why it matters:** "public opinion" in this period is an imagined constituency of the respectable, not a majority. It takes shape only with the debates before the Reform Act of 1832.
+
 > [!period] **1793–1815** Wars against France
 > Britain ends the conflict as the unchallenged ruler of the seas. Permanent war turns it into a "fiscal-military state": a professional administration and wider taxation pay for the army and navy. **Result:** rise to world power.
+
+> [!event|political-economy social key] **1798 and 1803** Malthus, *Essay on the Principle of Population* `S2`
+> Population grows geometrically, food only arithmetically. The first edition softens this with the hope of an agricultural revolution. The second edition of 1803 is harsher: only the "preventive check" (sexual abstinence) avoids famine, and poor relief should be removed step by step [@hilton2006mad, p. 336–337].
+>
+> **Why it matters:** widely denounced, but its effect on "the official mind" is enormous. Evangelicals such as Sumner and Chalmers turn it into a sign of God's design: want teaches restraint.
+>
+> - → leads to [[#^new-poor-law|1834 New Poor Law]]: deterrent poor laws and minimal welfare stand at the heart of liberal Toryism.
+
+^malthus
 
 > [!event|political key] **1801** Union with Ireland `S1`
 > The United Kingdom is created: one unified and stronger state.
@@ -104,131 +152,171 @@ draft: false
 > [!event|political] **1801** First census `S1`
 > **Why it matters:** a sign of the growing power of the state to count and administer. Bureaucratisation is one of the key aspects of modernity.
 
-> [!event|empire law] **1807** Abolition of the slave trade `S7`
-> Wilberforce's campaign succeeds after several failed attempts in the 1790s [@evans2011shaping, p. 116]. Slavery itself is abolished in the Empire in 1833.
+> [!event|religion] **1802** Paley, *Natural Theology* `S2`
+> The harmonies of the world are the contrivance of a divine clockmaker. Hilton calls the position "theological utilitarianism" and judges Paley more representative of his time than Bentham [@hilton2006mad, p. 313–314].
+>
+> - → leads to [[#^bridgewater|1833–36 Bridgewater Treatises]]: the last high-profile statement of the argument from design.
 
-> [!event|social] **1811–12** Luddism `S3`
-> Machine-breaking in the East Midlands and the West Riding. The Luddites were highly skilled textile workers defending their craft and wages, supported by their communities. Not vandals [@evans2011shaping, p. 75].
+^paley
 
-^luddism
+> [!event|political-economy economy] **1808** Spence–Mill debate `S2`
+> Spence argues that wealth comes from land alone and that reliance on exports leads to crises. James Mill, Torrens, Ricardo and Brougham answer that commerce is essential to civilisation [@hilton2006mad, p. 310].
+>
+> **Why it matters:** until about 1850 nobody knows whether urbanisation and industry are irreversible, so policy-makers do not know whether to promote or to impede them. The values of the landed interest and of the rest polarise.
+
+> [!event|economy] **1810** Bullion Report `S2`
+> The report of the Commons committee on the high price of gold: the paper currency should again be convertible into gold. The high Tory George Rose denounces it [@hilton2006mad, p. 321, 324].
+>
+> - → leads to [[#^cash-payments|1819 Resumption of cash payments]]: in 1819 Peel reads the report for the first time and takes its central syllogism for proven "like a proposition in mathematics".
+
+^bullion
 
 > [!period] **1815–1873** Age of free trade
 > Peace and free-trade liberalism guide foreign policy: balance of power, an overseas orientation and "splendid isolation" from Europe. Palmerston is the architect. **Result:** world-power status secured by (gunboat) diplomacy.
 
+> [!event|economy political] **1815** Corn Law `S2`
+> Highly protectionist. Most liberal Tory ministers support it. The high Tory Rose opposes it out of concern for the poor [@hilton2006mad, p. 322].
+>
+> **Why it matters:** it breaks the easy equation "high Tory = landed interest, liberal Tory = free trade".
+>
+> - → contrasts with [[#^repeal|1846 Repeal of the Corn Laws]]: a liberal Tory government passes the law and Peel, a liberal Tory, removes it.
+
+^corn-law
+
+> [!event|political-economy economy] **1817** Ricardo, *Principles of Political Economy and Taxation* `S2`
+> Enough analytical rigour to convince many that political economy is a science with predictive power. Landlords, capitalists and workers are locked in a zero-sum economy: wages tend to subsistence, and any rise comes out of profits [@hilton2006mad, p. 342, 344].
+>
+> **Why it matters:** the opposite of a natural harmony of interests. This is why political economy is called the "dismal science".
+>
+> - → provokes [[#^hodgskin|1825 Hodgskin, Labour Defended]]: the "Ricardian socialists" turn his labour theory of value against capital.
+
+^ricardo
+
 > [!event|political social] **1819** Peterloo `S2`
 > A mass meeting for parliamentary reform in Manchester ends in bloodshed. The year polarises opinion for and against reform, against a background of economic distress [@evans2011shaping, p. 169].
 
-> [!event|political ideas] **1829** Catholic Emancipation `S2`
+> [!event|economy political key] **1819** Resumption of cash payments `S2`
+> The return to a currency convertible into gold. Hilton calls it "the defining issue": nearly all high Tories resist it (Wellington is the exception), liberals in both parties support it. Most bankers, merchants and manufacturers oppose it [@hilton2006mad, p. 310, 323].
+>
+> **Why it matters:** it takes the money supply out of the hands of ministers and financiers. A "natural" system replaces a "discretionary" one, and the Bank becomes, in Huskisson's image, a self-regulating steam engine [@hilton2006mad, p. 323–324].
+>
+> **Perspectives:** for the Whig Scrope the deflation that followed was an attack on property, made "silently and stealthily" at the cost of the productive classes [@hilton2006mad, p. 350–351].
+>
+> - → leads to [[#^exchequer-bills|1826 Refusal to issue exchequer bills]]: once money is neutral, nobody can blame the system for failing, and nobody is to be rescued.
+
+^cash-payments
+
+> [!event|radicalism] **1824** *Westminster Review* founded `S2`
+> The journal of the Benthamites. Bentham, almost unknown for most of his life, becomes famous in the 1820s [@hilton2006mad, p. 328].
+>
+> - → continues [[#^panopticon|1791 Bentham, Panopticon]]: the disciples carry into politics what the Government had turned down.
+
+^westminster-review
+
+> [!event|radicalism political-economy] **1825** Hodgskin, *Labour Defended against the Claims of Capital* `S2`
+> Workers are the only source of wealth, and the profits of employers amount to expropriation [@hilton2006mad, p. 345].
+>
+> **Why it matters:** it pushes the capitalist classes towards a new theory of value based on supply and demand, which Cobden will later use for free trade.
+
+^hodgskin
+
+> [!event|law conservatism] **1826** Peel's reform of the criminal law `S2`
+> Peel reduces the number of capital offences and grades offences and punishments precisely. He is no humanitarian: he is for "salutary terror" and lets more people hang in the 1820s than any predecessor [@hilton2006mad, p. 318–319].
+>
+> **Why it matters:** the aim is certainty, not mildness. Citizens should be able to calculate what a crime will cost them.
+>
+> **Perspectives:** Eldon, the high Tory, wants severe laws that are rarely enforced and wide discretion for judges. Bentham wants lenient fixed penalties. Peel wants harsh fixed ones [@hilton2006mad, p. 320].
+
+^peel-criminal-law
+
+> [!event|economy political] **1826** Refusal to issue exchequer bills `S2`
+> After the financial crisis the liberal Tories refuse state credit to firms in distress. The question almost splits the Government [@hilton2006mad, p. 325].
+>
+> **Why it matters:** businessmen, like the poor, must stand on their own feet. Peel expects that "ultimate good after some severe suffering will result" [@hilton2006mad, p. 326–327].
+
+^exchequer-bills
+
+> [!event|radicalism] **1828** London University opens `S2`
+> The "Godless institution of Gower Street", carried by Brougham, James Mill and Grote in Bentham's spirit. King's College, its Church-and-King counterpart, is founded in the same year [@hilton2006mad, p. 328].
+
+> [!event|political religion] **1829** Catholic Emancipation `S2`
 > Catholics are admitted to Parliament. The Act satisfies neither side and helps to break up the Tory party [@evans2011shaping, p. 208].
+
+> [!event|law political] **1829** Metropolitan Police `S2`
+> Peel rejects spies and agents provocateurs and wants "a vigorous preventive police". The new force wears uniform, against the objection that this looks military and un-English [@hilton2006mad, p. 320].
+>
+> **Why it matters:** the state should be visible as well as small. Hilton sees in this, not in any humanity, what makes Peel a liberal [@hilton2006mad, p. 321].
+>
+> - → continues [[#^peel-criminal-law|1826 Peel's reform of the criminal law]]: the same preference for rule and visibility over discretion and secrecy.
+
+> [!event|liberalism] **1829–30** Macaulay against the Utilitarians and against Southey `S2`
+> In the *Edinburgh Review* Macaulay attacks the Utilitarians for their deductive method and their blindness to history and feeling. He then attacks the high Tory Southey, whose *Colloquies* wanted a state that is "jack-of-all-trades" [@hilton2006mad, p. 321, 348].
+>
+> **Why it matters:** the Whig position between both camps. The state should keep to its "legitimate duties" and leave the rest to the people, and society is an organism with a history, not a machine.
+>
+> - → continues [[#^scottish-whigs|1790s Young Whigs study in Scotland]]: Macaulay speaks for the philosophic Whiggism that began there.
 
 > [!process|social economy] **1830–1914** The "age of transformation" `S1`
 > The phase of rapid and comprehensive economic, political, social and cultural change.
 >
 > **Why it matters:** this is the focus of the whole course. Sessions 2 to 11 each take one strand of it.
 
-> [!event|economy] **1830** Liverpool to Manchester railway `S3`
-> The first railway line between major towns. "Railway manias" follow in 1839–40, 1847 and 1865–66, and at times construction absorbs almost 5% of national income [@evans2011shaping, p. 243].
-
 > [!event|political key] **1832** Great Reform Act `S2`
 > The work of a government of Whig landowners. It was not meant to satisfy the radicals: the aim was to bring the lower middle classes inside the constitution and away from the radicals [@evans2011shaping, p. 214].
 >
 > **Why it matters:** reform as a conservative move. The propertied order is widened in order to be kept.
 >
-> - → leads to [[#^chartism|1838–1848 Chartism]]: working men are left without the vote.
+> **Perspectives:** for the first time the franchise is explicitly confined to "male persons". In practice little changes, since women householders had not voted in parliamentary elections for at least 150 years. The Municipal Corporations Act three years later takes away a vote that women ratepayers did have. After the Act a handful of "Philosophic Radicals" (Grote, Roebuck, Molesworth) enter Parliament as Bentham's disciples [@hilton2006mad, p. 328, 354].
 
 ^reform-1832
 
-> [!event|law social] **1833** Factory Act `S3`
-> Children under 9 may not work in textile factories, those from 9 to 13 at most eight hours. Four inspectors enforce it. The Ten Hours Act of 1847 limits the day for women and children [@evans2011shaping, p. 272].
+> [!event|religion science] **1833–36** Bridgewater Treatises `S2`
+> Eight treatises by five scientists and three clergymen on the power, wisdom and goodness of God in creation. Among them Chalmers on political economy [@hilton2006mad, p. 333].
 >
-> **Why it matters:** the state regulates in the middle of the age of laissez-faire. The argument was that children, unlike adults, are not free agents who can bargain.
+> **Why it matters:** science and religion are still allies. But the tone has turned defensive: after revolution, war and cholera the machinery of creation is read as proof of God's justice, no longer of his benevolence [@hilton2006mad, p. 334].
 
-> [!event|ideas] **1833** Oxford Movement begins `S10`
-> A "High Church" reaction against Whig policy towards the Established Church. It wants to move the Church of England closer to Catholic doctrine and ritual [@evans2011shaping, p. 297].
+^bridgewater
 
-> [!event|social law key] **1834** Poor Law Amendment Act `S5`
-> A uniform national system meant to save the ratepayers money. Its principle: whoever cannot or will not work must not be better off than those in work. Workhouses are built to resemble prisons [@evans2011shaping, p. 287–288].
+> [!event|social law key] **1834** New Poor Law `S2`
+> A "mean and minimalist policy" that cuts spending on relief and in theory makes residence in a workhouse the condition of entitlement. Liberal Tories such as Peel are enthusiastically in favour. The high Tories Sidmouth, Eldon and Vansittart oppose the "hazardous measure" [@hilton2006mad, p. 323].
 >
-> **Why it matters:** the workhouse marks the line Victorians drew between the respectable wage earner and the "pauper". Its deterrent effect lasts for the rest of the century.
+> **Why it matters:** the test case for the whole chapter. Benthamite deterrence, Malthus and evangelical self-help point the same way.
 >
-> **Perspectives:** for the ratepayer a saving, for the poor a threat and a humiliation.
+> **Perspectives:** its bastardy clauses put the blame on unmarried mothers, and many women demonstrated against the Act and the separation of families [@hilton2006mad, p. 353, 361].
 
-^poor-law-1834
+^new-poor-law
 
 > [!event|political] **1837–1901** Reign of Queen Victoria `S1`
 > Ruler and symbol of the most powerful empire.
 
-> [!event|social political] **1838–1848** Chartism `S9`
-> The People's Charter of 1838 demands six points, among them equal electoral districts, paid MPs and the secret ballot. The movement challenges the authorities in three brief periods, the last in 1847–48 [@evans2011shaping, p. 220–222].
+> [!event|law social] **1839** Infant Custody Act `S2`
+> After Caroline Norton's campaign, custody of children under seven goes to the mother unless a court has found her guilty of adultery. Hilton calls it the only significant step in favour of women in these years [@hilton2006mad, p. 354].
 
-^chartism
-
-> [!event|social] **1845–1852** Great Famine in Ireland `S11`
-> More than a million Irish die and more than a million emigrate, above all to England and the United States. Ireland's population falls from then on, unlike that of Great Britain [@evans2011shaping, p. 16].
+> [!event|economy political key] **1846** Repeal of the Corn Laws `S2`
+> Peel repeals the Corn Laws and sacrifices his political career: the Conservative party splits over it. By the early 1860s free trade is Britain's dominant economic ideology [@evans2011shaping, p. 267].
 >
-> **Why it matters:** the largest migration into British towns in the century. By 1851 the Irish-born are a marked share of Lancashire's population [@evans2011shaping, p. 54].
-
-> [!event|economy political] **1846** Repeal of the Corn Laws `S2`
-> The Conservative party splits over it. By the early 1860s free trade is Britain's dominant economic ideology [@evans2011shaping, p. 267].
+> **Why it matters:** free trade is won by a pessimist. In his speech of 16 February 1846 Peel does not promise lasting prosperity: dearth will return, and then Parliament will at least not have made it worse by laws that restrict the supply of food. He joins Utilitarianism, natural theology and political economy into a fatalism about providence [@hilton2006mad, p. 327–328].
 >
-> **Debate:** how did free trade win? The traditional view credits the Anti-Corn Law League (Manchester, 1839, led by Cobden), which presented free trade as a campaign against aristocratic waste. Evans calls the question fiercely debated [@evans2011shaping, p. 267]. The other positions are still to fill in.
-
-> [!event|social law] **1848** Public Health Act `S5`
-> The first national act, pushed by Edwin Chadwick. A Board of Health is set up, with a mostly advisory remit [@evans2011shaping, p. 274].
-
-> [!event|economy] **1851** Great Exhibition `S3`
-> A trade exhibition in Hyde Park with over 100,000 exhibits, centred on the machinery and manufactures in which Britain led [@evans2011shaping, p. 262].
+> **Debate:** how did free trade win? The traditional view credits the Anti-Corn Law League (Manchester, 1839, led by Cobden), which presented free trade as a campaign against aristocratic waste. Evans calls the question fiercely debated [@evans2011shaping, p. 267]. Hilton stresses the road through government: the liberal Tory road is moral, Malthusian and concerned with justice. Only after 1850 do the same policies become public doctrine in a different spirit, as "Cobdenism": free trade as the recipe for growth and peace. Cobden's own contribution was to persuade contemporaries that wages can rise while prices fall [@hilton2006mad, p. 326, 345]. See [[Liberal Toryism vs High Toryism]].
 >
-> **Perspectives:** contemporaries read Britain's prosperity as a mark of special favour while the rest of Europe was in turmoil.
+> - → continues [[#^cash-payments|1819 Resumption of cash payments]]: the same aim of an economy returned to its natural state, free of managing hands.
+
+^repeal
 
 > [!event|war] **1854–1856** Crimean War `S1`
 > The only break in the European peace of this period. Outside Europe Britain fights some 200 colonial wars.
 
-> [!event|law] **1856** County and Borough Police Act `S6`
-> Professional police forces become compulsory in all counties and boroughs [@evans2011shaping, p. 242].
-
-> [!event|empire war] **1857** Indian Mutiny `S7`
-> The decisive turning point on the way by which India became an integral part of the Empire [@evans2011shaping, p. 371].
-
-> [!event|law social] **1857** Matrimonial Causes Act `S8`
-> Divorce no longer needs an Act of Parliament. It stays much easier for a husband than for a wife: a single act of adultery by the woman is enough [@evans2011shaping, p. 264].
-
-> [!event|ideas] **1859** Mill, *On Liberty* `S2`
+> [!event|liberalism] **1859** Mill, *On Liberty* `S2`
 > A cornerstone of Liberal thought. Mill defends liberty on utilitarian grounds, not by natural rights, and argues that reliance on the market alone often gives inefficient results [@evans2011shaping, p. 263].
-
-> [!event|law social] **1864–1886** Contagious Diseases Act `S8`
-> Police may arrest prostitutes in ports and army towns and have them tested and confined. Their clients are left alone. Josephine Butler's campaign against this double standard wins repeal in 1886 [@evans2011shaping, p. 404].
-
-> [!event|political] **1867** Second Reform Act `S9`
-> Male householders in the boroughs get the vote, and the largest towns get more seats [@evans2011shaping, p. 324].
 
 > [!event|political] **1870** Civil service reform `S1`
 > The administration becomes a profession.
 
-> [!event|social] **1870** Elementary Education Act `S9`
-> It fills the gaps in the existing school system. Contrary to common belief it makes schooling neither compulsory (1880) nor free (1891) [@evans2011shaping, p. 302].
-
-> [!event|social] **1871** Bank Holidays Act `S9`
-> The state defines and protects leisure time. The August bank holiday soon becomes the day for family trips to the seaside [@evans2011shaping, p. 304].
-
 > [!period] **1874–1914** European rivalries and "New Imperialism"
 > Germany, France and the USA challenge Britain's economic and political lead. **Result:** an arms race and debates on "national efficiency" and self-sufficiency.
 
-> [!event|empire political] **1876** Victoria becomes Empress of India `S7`
-> Disraeli's idea. It starts the selling of the Empire to the public at home: the jubilees of 1887 and 1897 are imperial celebrations [@evans2011shaping, p. 373, 377].
->
-> **Why it matters:** an example of how the Empire worked back on Britain. Music-hall songs of the 1880s carry the same message [@evans2011shaping, p. 378].
-
 > [!event|empire] **1880s** Scramble for Africa `S1`
 > A new wave of imperial expansion.
-
-> [!event|political] **1884** Third Reform Act `S9`
-> The electorate grows by about 72%. About 60% of adult men can now vote. The redistribution that follows creates constituencies of roughly equal size [@evans2011shaping, p. 384].
->
-> - → continues [[#^chartism|1838–1848 Chartism]]: the first real step towards the Chartists' equal electoral districts.
-
-> [!event|social] **1888** Football League `S9`
-> Professional clubs from the industrial North and Midlands. Many grew out of chapels or works teams [@evans2011shaping, p. 305].
 
 > [!event|war] **1889** Naval Defence Act `S1`
 > The two-power standard: the navy must match the next two largest navies together.
@@ -239,29 +327,6 @@ draft: false
 > Britain's first great "imperial war", with troops from the Dominions. It tests British military strength.
 >
 > **Perspectives:** the war splits the public into "jingoists", who cheer the Empire on, and "Little Englanders", who want Britain to turn back to itself.
-
-> [!event|political] **1900** Labour Representation Committee `S9`
-> Socialist societies and trade unions join to get working men into Parliament. The Taff Vale judgment of 1901 against union funds drives unions to join [@evans2011shaping, p. 431–433].
-
-> [!event|social ideas] **1901** Rowntree's study of poverty in York `S5`
-> Like Booth in London from the mid-1880s, Rowntree finds about 30% of the population in poverty. Most are not idlers: their earnings are too low or too irregular [@evans2011shaping, p. 291–292].
->
-> **Why it matters:** poverty is shown to be a matter of income and the life cycle, not of character. That is the case for state action.
->
-> - → leads to [[#^pensions-1908|1908 Old Age Pensions Act]]: the surveys support using the power of the state against poverty.
-
-> [!event|social political] **1903** Women's Social and Political Union `S8`
-> Founded by Emmeline and Christabel Pankhurst in Manchester as a breakaway from the constitutional suffragists (NUWSS, 1897). Militant action starts in 1905, hunger strikes and force-feeding in 1909 [@evans2011shaping, p. 407–408].
-
-> [!event|social law] **1908** Old Age Pensions Act `S5`
-> Five shillings a week for people over 70 with small incomes. Just under half a million qualify. The pension is paid from taxes [@evans2011shaping, p. 430].
->
-> - → contrasts with [[#^poor-law-1834|1834 Poor Law Amendment Act]]: support as a right instead of relief as a deterrent.
-
-^pensions-1908
-
-> [!event|social law] **1911** National Insurance Act `S5`
-> Health and unemployment insurance, paid for jointly by worker, employer and state [@evans2011shaping, p. 430].
 
 > [!period] **1914–1939** First World War and the interwar years
 > The war arrives in the middle of internal social conflicts. It drives social protest and democratisation at home and decolonisation in the Empire. **Result:** a drained country.
@@ -335,7 +400,7 @@ Put the entry at its place in the order. Only the title line is required.
 
 Dates the chart understands: `1801`, `1837–1901`, `1914–18`, `1880s`, `c. 1600`.
 
-**Categories.** Each has its own colour, icon and lane in the chart. Two categories are possible (`war empire`): the first sets the icon, and the entry appears in both lanes.
+**Categories.** Each has its own colour, icon and lane in the chart. Ideas are split by current of thought, so that the chart shows the ideologies side by side. Two categories are possible (`war empire`): the first sets the icon, and the entry appears in both lanes.
 
 | Category | For |
 |---|---|
@@ -344,7 +409,13 @@ Dates the chart understands: `1801`, `1837–1901`, `1914–18`, `1880s`, `c. 16
 | `empire` | Expansion, colonies, decolonisation |
 | `economy` | Industry, trade, finance |
 | `social` | Classes, protest, welfare, migration, gender |
-| `ideas` | Ideologies, religion, science, culture |
+| `conservatism` | Conservative and Tory thought and the measures that show it: Burke, Peel |
+| `liberalism` | Whig and liberal thought: progress, liberty, the limited state |
+| `radicalism` | Radical thought: Paine, Bentham and the Utilitarians, early socialism and feminism |
+| `political-economy` | Economic thought, as distinct from what happens in the economy: Smith, Malthus, Ricardo |
+| `religion` | Churches, belief, theology |
+| `science` | Science and its institutions |
+| `ideas` | Any other idea, and culture: what fits none of the six above |
 | `law` | Statutes and court decisions as such |
 
 **Fields.** A paragraph that opens with `**Why it matters:**`, `**Debate:**`, `**Source:**` or `**Perspectives:**` is shown as a labelled field. The line under the buttons counts the entries that still have no "Why it matters". An entry without it is a date, not yet an argument.
@@ -375,11 +446,14 @@ The site writes the way back at the target by itself, with the same reason, and 
 
 ## Key Connections
 
-- [[evans2011shaping]]: the survey behind most entries, with a map from the sessions to its chapters.
+- [[evans2011shaping]]: the survey to check dates against, with a map from the sessions to its chapters.
+- [[Liberal Toryism vs High Toryism]]: the comparison that explains the entries from 1815 to 1834; each of them is one of its test cases.
+- [[Utilitarianism]]: the note behind the entries on Bentham, the *Westminster Review* and London University.
 - [[History I - Europe (HS26)]]: the course map. Its sessions are the source of the events.
 - [[Sovereign Territorial State]]: the unions of 1536, 1707 and 1801 are a case of how such a state is built.
 
 ## Sources
 
-- [@evans2011shaping]: all entries tagged `S2` to `S11`, with page numbers. The connections between them are my own. [High confidence]
+- [@evans2011shaping]: the entries tagged `S2`, with page numbers. The connections between them are my own. [High confidence]
+- [@hilton2006mad], ch. 5, p. 309–371: most entries tagged `S2`, with page numbers. Read from a scanned copy. [Medium confidence: one historian's interpretation, not yet checked against the lecture]
 - Lecture 1 of History I (30.09.2026), part 5: *Britain and the world, c. 1780–1939*. [Medium confidence: lecture slides, not yet checked against a survey]
