@@ -11,8 +11,6 @@ tags:
 
 ## Author
 
-<!-- TODO: add your name, programme and institution, and links (LinkedIn, ORCID, email). -->
-
 *Student of Public Policy and Military Strategy.*
 
 ## Why this exists
