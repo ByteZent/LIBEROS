@@ -61,6 +61,14 @@ The course explains the experience and behaviour of people in training, leadersh
 | 01./08.12. | Motivation; motivation in the military |  |
 | 15.12. | Reserve and synthesis: practice check |  |
 
+## Practice questions
+
+The practice questions with worked answers, all on one page with one section per block, in German. Each question is a card in the deck [[/flashcards/MilPsy-Übungsfragen|MilPsy Übungsfragen]], with the block as its topic.
+
+| Block | Section | Questions |
+|---|---|---|
+| A | [[MilPsy Übungsfragen#A: Psychologisches Denken\|Psychologisches Denken]] | 4 |
+
 ## Exam preparation
 
 - [ ] Practice example for the intermezzo by 11.10.: pick one case and explain it with two schools

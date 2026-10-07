@@ -47,15 +47,15 @@ The intake and interpretation of sensory signals is influenced by
 
 ### The perceptual process
 
-| Step | What happens | Example |
-|---|---|---|
-| 1 | **Environmental stimulus** | A drone in the air |
-| 2 | Light is reflected and transformed (sound is carried) | |
-| 3 | **Transduction** in the receptors: physical energy becomes a nerve signal | |
-| 4 | **Neural processing** | |
-| 5 | **Perceiving** | "I hear something." |
-| 6 | **Recognising** | "It is a drone." |
-| 7 | **Acting** | "I take cover." |
+| Step | What happens                                                              | Example             |
+| ---- | ------------------------------------------------------------------------- | ------------------- |
+| 1    | **Environmental stimulus**                                                | A drone in the air  |
+| 2    | Light is reflected and transformed (sound is carried)                     |                     |
+| 3    | **Transduction** in the receptors: physical energy becomes a nerve signal |                     |
+| 4    | **Neural processing**                                                     |                     |
+| 5    | **Perception (Wahrnehmung)**                                             | "I hear something." |
+| 6    | **Recognising (Erkennen)**                                                | "It is a drone."    |
+| 7    | **Acting (Handeln)**                                                      | "I take cover."     |
 
 Steps 5 to 7 are where knowledge enters. A soldier who has never heard that drone hears a noise. A trained one hears a threat.
 

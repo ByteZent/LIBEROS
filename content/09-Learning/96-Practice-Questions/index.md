@@ -26,3 +26,11 @@ Practice questions for a course, worked through chapter by chapter: one page per
 | 11 | [[Bernauer Leitfragen 11 - Regierung und Verwaltung\|Regierung und Verwaltung]] | 31 | Test 2 |
 | 12 | [[Bernauer Leitfragen 12 - Die Judikative\|Die Judikative]] | 32 | Test 2 |
 | 13 | [[Bernauer Leitfragen 13 - Internationale Beziehungen\|Internationale Beziehungen]] | 31 | Test 2 |
+
+## Military Psychology (HS26)
+
+Practice questions for the course [[Military Psychology (HS26)]], all on one page, one section per block of the question list. One deck for the session exam, one topic per block: [[/flashcards/MilPsy-Übungsfragen|MilPsy Übungsfragen]].
+
+| Block | Section | Questions |
+|---|---|---|
+| A | [[MilPsy Übungsfragen#A: Psychologisches Denken\|Psychologisches Denken]] | 4 |
