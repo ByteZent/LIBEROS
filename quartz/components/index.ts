@@ -3,6 +3,7 @@ import TagContent from "./pages/TagContent"
 import FolderContent from "./pages/FolderContent"
 import NotFound from "./pages/404"
 import FlashcardsContent from "./pages/FlashcardsContent"
+import PlannerContent from "./pages/PlannerContent"
 import ChangelogContent from "./pages/ChangelogContent"
 import ArticleTitle from "./ArticleTitle"
 import Darkmode from "./Darkmode"
@@ -39,6 +40,7 @@ export {
   TagContent,
   FolderContent,
   FlashcardsContent,
+  PlannerContent,
   ChangelogContent,
   Darkmode,
   ReaderMode,

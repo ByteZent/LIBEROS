@@ -1,0 +1,575 @@
+/* LIBEROS planner board. One stylesheet for Obsidian and for the site: every colour falls back
+   from Obsidian's variable to the Quartz theme's, so the board follows whichever theme is active. */
+.lp-root {
+  --lp-bg: var(--background-primary, var(--light, #fff));
+  --lp-bg-alt: var(--background-secondary, var(--highlight, #f4f4f4));
+  --lp-fg: var(--text-normal, var(--dark, #222));
+  --lp-muted: var(--text-muted, var(--gray, #777));
+  --lp-border: var(--background-modifier-border, var(--lightgray, #ddd));
+  --lp-accent: var(--interactive-accent, var(--secondary, #1f4e5f));
+  --lp-on-accent: var(--text-on-accent, var(--light, #fff));
+  --lp-danger: #b3261e;
+  --lp-past: color-mix(in srgb, var(--lp-muted) 34%, var(--lp-bg));
+  --lp-past-text: var(--lp-muted);
+
+  --fc-border-color: var(--lp-border);
+  --fc-page-bg-color: var(--lp-bg);
+  --fc-neutral-bg-color: var(--lp-bg-alt);
+  --fc-neutral-text-color: var(--lp-muted);
+  --fc-today-bg-color: color-mix(in srgb, var(--lp-accent) 9%, transparent);
+  --fc-highlight-color: color-mix(in srgb, var(--lp-accent) 18%, transparent);
+  --fc-now-indicator-color: var(--lp-danger);
+  --fc-list-event-hover-bg-color: var(--lp-bg-alt);
+  --fc-button-bg-color: var(--lp-bg);
+  --fc-button-border-color: var(--lp-border);
+  --fc-button-text-color: var(--lp-fg);
+  --fc-button-hover-bg-color: var(--lp-bg-alt);
+  --fc-button-hover-border-color: var(--lp-border);
+  --fc-button-active-bg-color: var(--lp-accent);
+  --fc-button-active-border-color: var(--lp-accent);
+  --fc-small-font-size: 0.8em;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  height: 100%;
+  min-height: 0;
+  color: var(--lp-fg);
+  font-size: 0.9rem;
+}
+
+/* ── controls ─────────────────────────────────────────────────────────────── */
+.lp-root button,
+.lp-dialog button {
+  font: inherit;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--lp-border);
+  border-radius: 6px;
+  background: var(--lp-bg);
+  color: var(--lp-fg);
+  cursor: pointer;
+  box-shadow: none;
+  height: auto;
+}
+.lp-root button:hover,
+.lp-dialog button:hover {
+  background: var(--lp-bg-alt);
+}
+.lp-root button.lp-primary,
+.lp-dialog button.lp-primary {
+  background: var(--lp-accent);
+  border-color: var(--lp-accent);
+  color: var(--lp-on-accent);
+}
+.lp-dialog button.lp-danger {
+  color: var(--lp-danger);
+}
+.lp-root input,
+.lp-dialog input,
+.lp-dialog select,
+.lp-dialog textarea {
+  font: inherit;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--lp-border);
+  border-radius: 6px;
+  background: var(--lp-bg);
+  color: var(--lp-fg);
+  min-width: 0;
+  height: auto;
+}
+
+/* a plain tick box, whatever the host makes of checkboxes */
+.lp-root input[type="checkbox"] {
+  appearance: auto;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  margin: 0;
+  accent-color: var(--lp-accent);
+}
+
+.lp-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.lp-search {
+  flex: 1 1 10rem;
+  max-width: 22rem;
+}
+.lp-toggle {
+  margin-left: auto;
+}
+/* the chips get a row of their own: next to the controls they would wrap into a narrow column */
+.lp-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  flex: 1 1 100%;
+  order: 1;
+}
+.lp-root button.lp-chip {
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+.lp-root button.lp-chip.lp-off {
+  color: var(--lp-muted);
+  text-decoration: line-through;
+}
+.lp-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--lp-muted);
+}
+
+/* ── layout ───────────────────────────────────────────────────────────────── */
+.lp-main {
+  display: grid;
+  grid-template-columns: 17rem minmax(0, 1fr);
+  gap: 0.8rem;
+  flex: 1;
+  min-height: 0;
+}
+.lp-main.lp-no-side {
+  grid-template-columns: minmax(0, 1fr);
+}
+.lp-no-side .lp-side {
+  display: none;
+}
+.lp-calendar {
+  min-height: 0;
+  min-width: 0;
+}
+.lp-side {
+  overflow-y: auto;
+  min-height: 0;
+  padding-right: 0.3rem;
+}
+@media (max-width: 800px) {
+  .lp-main {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .lp-side {
+    max-height: 14rem;
+    order: 2;
+  }
+}
+
+/* ── side panel ───────────────────────────────────────────────────────────── */
+.lp-quick input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0.5rem;
+}
+.lp-section {
+  margin-bottom: 0.5rem;
+}
+.lp-section > summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--lp-muted);
+  padding: 0.25rem 0;
+}
+.lp-count {
+  margin-left: 0.4rem;
+  font-weight: 400;
+}
+.lp-task {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  padding: 0.25rem 0.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+  line-height: 1.3;
+}
+.lp-task:hover {
+  background: var(--lp-bg-alt);
+}
+.lp-task.lp-drag {
+  cursor: grab;
+}
+.lp-task .lp-title {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.lp-meta {
+  color: var(--lp-muted);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+.lp-dot {
+  flex: none;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+}
+.lp-box {
+  flex: none;
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  border: 1.5px solid currentColor;
+  border-radius: 3px;
+  margin-right: 0.35em;
+  vertical-align: -0.08em;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.lp-task .lp-box {
+  margin-right: 0;
+  align-self: center;
+}
+.lp-done .lp-box {
+  background: currentColor;
+}
+
+/* ── events ───────────────────────────────────────────────────────────────── */
+.lp-root .fc {
+  font-size: 0.85rem;
+}
+.lp-root .fc .fc-toolbar-title {
+  font-size: 1.15rem;
+  margin: 0;
+}
+.lp-root .fc .fc-button {
+  padding: 0.25rem 0.6rem;
+  text-transform: none;
+}
+.lp-root .fc .fc-button-primary:not(:disabled).fc-button-active {
+  color: var(--lp-on-accent);
+}
+.lp-root .fc a {
+  color: inherit;
+  text-decoration: none;
+  background: none;
+}
+.lp-root .fc table {
+  margin: 0;
+  /* Quartz gives tables in an article their own width and padding */
+  width: 100%;
+}
+.lp-root .fc th,
+.lp-root .fc td {
+  padding: 0;
+}
+.lp-root .fc tr:nth-child(even),
+.lp-root .fc tbody tr:hover {
+  background: none;
+}
+.lp-event {
+  cursor: pointer;
+}
+.lp-event.lp-done {
+  opacity: 0.55;
+}
+.lp-event.lp-done .fc-event-title,
+.lp-task.lp-done .lp-title {
+  text-decoration: line-through;
+}
+/* a deadline: outlined rather than filled, so it stands apart from the timetable */
+.lp-root .lp-event.lp-deadline {
+  background: transparent !important;
+  color: var(--lp-danger) !important;
+  border: 1.5px solid var(--lp-danger);
+  font-weight: 600;
+}
+.lp-root .lp-deadline .fc-event-main {
+  color: var(--lp-danger);
+}
+.lp-root .lp-task.fc-event {
+  border-style: dashed;
+}
+.lp-event.lp-high {
+  box-shadow: inset 3px 0 0 var(--lp-danger);
+}
+
+/* what is over: grey, with the category left as a stripe */
+.lp-root .lp-event.lp-past {
+  background-color: var(--lp-past) !important;
+  border-color: var(--lp-past) !important;
+  box-shadow: inset 3px 0 0 var(--lp-category, transparent);
+}
+.lp-root .lp-event.lp-past,
+.lp-root .lp-event.lp-past .fc-event-main {
+  color: var(--lp-past-text) !important;
+}
+.lp-root .lp-past .fc-daygrid-event-dot,
+.lp-root .lp-past .fc-list-event-dot {
+  border-color: var(--lp-muted) !important;
+}
+.lp-root .fc-list-event.lp-past {
+  color: var(--lp-muted);
+}
+
+/* week and day views: the title first, the time below it; board.ts shrinks the text of a block
+   until it fits and drops the time line when there is no room for it */
+.lp-root .fc .fc-timegrid-slot {
+  height: 2.1em;
+}
+.lp-root .fc-timegrid-event .fc-event-main {
+  padding: 1px 3px;
+  overflow: hidden;
+}
+.lp-root .fc-timegrid-event .fc-event-main-frame {
+  flex-direction: column;
+}
+.lp-root .fc-timegrid-event .fc-event-title-container {
+  order: 1;
+  flex: 0 1 auto;
+}
+.lp-root .fc-timegrid-event .fc-event-title {
+  font-weight: 600;
+  line-height: 1.15;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+.lp-root .fc-timegrid-event .fc-event-time {
+  order: 2;
+  flex: none;
+  margin: 0;
+  font-size: 0.85em;
+  line-height: 1.2;
+  opacity: 0.85;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.lp-root .fc-timegrid-event-short .fc-event-time::after {
+  content: none;
+}
+.lp-root .fc-timegrid-event.lp-no-time .fc-event-time {
+  display: none;
+}
+/* the all-day row of those views: titles wrap instead of being cut */
+.lp-root .fc-timegrid .fc-daygrid-block-event .fc-event-title {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.2;
+}
+
+/* ── dialogs ──────────────────────────────────────────────────────────────── */
+.lp-dialog {
+  border: 1px solid var(--lp-border);
+  border-radius: 12px;
+  padding: 0;
+  background: var(--lp-bg);
+  color: var(--lp-fg);
+  width: min(36rem, calc(100vw - 2rem));
+  max-height: calc(100vh - 2rem);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+  font-size: 0.9rem;
+}
+.lp-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.45);
+}
+.lp-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem 1.1rem;
+  margin: 0;
+}
+.lp-editor h3 {
+  margin: 0 0 0.2rem;
+  font-size: 1.05rem;
+}
+.lp-editor p {
+  margin: 0;
+}
+.lp-editor [hidden] {
+  display: none !important;
+}
+.lp-head {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.lp-kind {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--lp-muted);
+}
+.lp-dialog button.lp-quiet {
+  border-color: transparent;
+  color: var(--lp-muted);
+  padding: 0.2rem 0.5rem;
+}
+.lp-title-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--lp-border);
+  padding-bottom: 0.5rem;
+}
+.lp-title-line .lp-box {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0;
+}
+.lp-dialog input.lp-title-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0.1rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  box-shadow: none;
+}
+.lp-title-line.lp-done .lp-title-input {
+  text-decoration: line-through;
+  color: var(--lp-muted);
+}
+/* one line of the form: what it is about on the left, its controls on the right */
+.lp-line {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  gap: 0.6rem;
+  align-items: start;
+}
+.lp-label {
+  font-size: 0.8rem;
+  color: var(--lp-muted);
+  padding-top: 0.4rem;
+}
+.lp-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 0;
+}
+.lp-controls > input[type="text"],
+.lp-controls > textarea,
+.lp-controls > select {
+  flex: 1 1 10rem;
+}
+.lp-controls > textarea {
+  resize: vertical;
+}
+.lp-dash {
+  color: var(--lp-muted);
+}
+.lp-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--lp-muted);
+  white-space: nowrap;
+}
+/* a row of buttons of which one is chosen */
+.lp-choice {
+  display: inline-flex;
+  flex-wrap: wrap;
+  border: 1px solid var(--lp-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.lp-dialog .lp-choice button {
+  border: none;
+  border-radius: 0;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  color: var(--lp-muted);
+}
+.lp-dialog .lp-choice button + button {
+  border-left: 1px solid var(--lp-border);
+}
+.lp-dialog .lp-choice button.lp-on {
+  background: var(--lp-accent);
+  color: var(--lp-on-accent);
+}
+.lp-head .lp-choice button {
+  font-size: 0.9rem;
+  padding: 0.3rem 0.9rem;
+}
+.lp-dialog button.lp-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+.lp-dialog .lp-chip.lp-on .lp-dot {
+  display: none;
+}
+.lp-dialog input.lp-new-category {
+  flex: 0 1 8rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+.lp-dialog button:disabled,
+.lp-dialog input:disabled,
+.lp-dialog select:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+.lp-more > summary {
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: var(--lp-muted);
+  margin-bottom: 0.5rem;
+}
+.lp-more > .lp-line + .lp-line {
+  margin-top: 0.5rem;
+}
+.lp-hint,
+.lp-description {
+  color: var(--lp-muted);
+  font-size: 0.8rem;
+  overflow-wrap: anywhere;
+}
+.lp-line + .lp-hint {
+  margin: -0.4rem 0 0 5.6rem;
+}
+.lp-description {
+  white-space: pre-wrap;
+  padding: 0.5rem 0.7rem;
+  border-radius: 6px;
+  background: var(--lp-bg-alt);
+}
+.lp-error {
+  color: var(--lp-danger);
+}
+.lp-error:empty,
+.lp-hint:empty {
+  display: none;
+}
+.lp-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--lp-border);
+}
+.lp-grow {
+  flex: 1;
+}
+
+/* ── hosts ────────────────────────────────────────────────────────────────── */
+/* the site: a message at the bottom of the window (Obsidian has its own notices) */
+.lp-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translateX(-50%);
+  z-index: 1000;
+  max-width: min(40rem, calc(100vw - 2rem));
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  background: var(--dark, #16191c);
+  color: var(--light, #fff);
+  font-size: 0.9rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+}

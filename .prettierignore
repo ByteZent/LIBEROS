@@ -4,4 +4,6 @@ node_modules
 content
 .claude
 public-pwa
+public-private
+planner/dist
 /.obsidian

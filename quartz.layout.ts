@@ -20,6 +20,8 @@ export const sharedPageComponents: SharedLayout = {
       Methodology: "/00-Meta/Methodology",
       Changelog: "/changelog",
       RSS: "/index.xml",
+      // the planner exists in the private preview only (make serve-private)
+      ...(process.env.LIBEROS_PRIVATE === "1" ? { Planner: "/planner" } : {}),
     },
   }),
 }

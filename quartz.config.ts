@@ -7,7 +7,7 @@ import * as Plugin from "./quartz/plugins"
  * See https://quartz.jzhao.xyz/configuration for more information.
  */
 // LIBEROS_PRIVATE=1 (make serve-private) also renders content/_private, content/_inbox and drafts,
-// so unpublished notes and their flashcards can be studied locally.
+// so unpublished notes and their flashcards can be studied locally, and adds the planner board.
 // Local only: both folders are gitignored, so the deploy build never sees these files.
 const showPrivate = process.env.LIBEROS_PRIVATE === "1"
 
@@ -116,6 +116,8 @@ const config: QuartzConfig = {
       Plugin.TagPage(),
       Plugin.Flashcards(), // /flashcards: one deck per qard-deck, from the cards Qards() collected
       Plugin.Changelog(), // /changelog: the git history, with links to the notes each commit touched
+      // /planner: tasks, schedule and deadlines on a calendar board; private preview only
+      ...(showPrivate ? [Plugin.Planner()] : []),
       Plugin.ContentIndex({
         enableSiteMap: true,
         enableRSS: true,

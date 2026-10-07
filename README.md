@@ -48,6 +48,8 @@ Everything runs through `make` (`make help` lists all targets):
 | `make install`                              | Install dependencies                                                                              |
 | `make serve`                                | Local preview with live reload → http://localhost:8080                                            |
 | `make serve-pwa`                            | Same, with the service worker on (offline / install testing, port 8080 → use `PORT=8090`)         |
+| `make serve-private`                        | Same, with `_private`, `_inbox` and drafts, and the planner board at `/planner` (local only)      |
+| `make planner`                              | Build the planner and install its Obsidian plugin into the vault (see `planner/README.md`)        |
 | `make new TYPE=concept TITLE="Escalation"`  | New note from a template in `_inbox/`                                                             |
 | `make inbox`                                | List unprocessed captures                                                                         |
 | `make course`                               | Exam readiness for every course: days to the next assessment, notes, objectives covered           |
@@ -111,4 +113,3 @@ Custom callouts (styled identically in Obsidian and on the site): `[!bluf]`, `[!
 ## TODO
 
 - [ ] `content/00-Meta/About.md`: name, programme, links
-- [ ] `quartz.layout.ts`: footer links

@@ -3,6 +3,10 @@
 SHELL   := /bin/bash
 VAULT   := content
 PORT    ?= 8080
+PLANNER_PORT ?= 8081
+# output of serve-private; a second preview next to a running one needs its own (and its own ports)
+PRIVATE_OUT  ?= public-private
+PRIVATE_WS   ?= 3003
 TODAY   := $(shell date +%F)
 # commit messages follow .githooks/commit-msg: <type>(<scope>): <subject>
 MSG     ?= edit: update notes $(TODAY)
@@ -10,7 +14,7 @@ MSG     ?= edit: update notes $(TODAY)
 NOTES   := find $(VAULT)/0[1-9]-* -name '*.md' ! -name index.md -print0
 
 .DEFAULT_GOAL := help
-.PHONY: help install hooks serve serve-pwa serve-private build booklet booklets clean check lint format typecheck logo sources bib-merge new course glossary questions bridges idea ideas review stats inbox open publish update
+.PHONY: help install hooks serve serve-pwa serve-private planner planner-check build booklet booklets clean check lint format typecheck logo sources bib-merge new course glossary questions bridges idea ideas review stats inbox open publish update
 
 help: ## Show this help
 	@awk 'BEGIN {FS = ":.*## "} /^[a-zA-Z_-]+:.*## / {printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
@@ -34,8 +38,20 @@ serve: ## Build and serve locally with live reload (PORT=8080)
 serve-pwa: ## Like serve, but with the service worker enabled (to test offline/install)
 	LIBEROS_PWA=1 npx quartz build --serve --port $(PORT) --wsPort 3002 --output public-pwa
 
-serve-private: ## Like serve, but also renders _private, _inbox and drafts (local only, never deployed)
-	LIBEROS_PRIVATE=1 npx quartz build --serve --port $(PORT) --output public-private
+serve-private: planner ## Like serve, but also renders _private, _inbox and drafts, with the planner board at /planner (local only, never deployed)
+	@node planner/dist/server.cjs --root $(VAULT) --port $(PLANNER_PORT) --site-port $(PORT) & \
+	 trap "kill $$! 2>/dev/null" EXIT; \
+	 LIBEROS_PRIVATE=1 LIBEROS_PLANNER_PORT=$(PLANNER_PORT) npx quartz build --serve --port $(PORT) --wsPort $(PRIVATE_WS) --output $(PRIVATE_OUT)
+
+# where the Obsidian plugin goes: the vault, and the repository root if that was opened as a vault too
+PLUGIN_DIRS := $(VAULT)/.obsidian/plugins $(if $(wildcard .obsidian),.obsidian/plugins)
+planner: ## Build the planner (planner/): Obsidian plugin, board and local server; installs the plugin into the vault
+	@test -d planner/node_modules || npm --prefix planner ci
+	@node planner/esbuild.config.mjs $(foreach dir,$(PLUGIN_DIRS),--install $(dir))
+
+planner-check: ## Type-check and test the planner
+	@test -d planner/node_modules || npm --prefix planner ci
+	cd planner && npx tsc --noEmit && npx tsx --test test/*.test.ts
 
 build: ## Build the static site into ./public, with the booklets
 	npx quartz build

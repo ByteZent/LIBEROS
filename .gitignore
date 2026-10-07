@@ -18,6 +18,10 @@ content/.obsidian/cache
 content/.obsidian/plugins/*/data.json
 content/.trash/
 
+# The planner (planner/): build output, and the plugin `make planner` installs into the vault
+planner/dist/
+content/.obsidian/plugins/liberos-planner/
+
 # Never push private material to a (public) repo.
 # These folders are also excluded from the Quartz build (see quartz.config.ts).
 content/_private/*

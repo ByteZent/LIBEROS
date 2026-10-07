@@ -21,6 +21,18 @@
         "PORT=8090"
       ],
       "port": 8090
+    },
+    {
+      "name": "quartz-private",
+      "runtimeExecutable": "make",
+      "runtimeArgs": [
+        "serve-private",
+        "PORT=8095",
+        "PLANNER_PORT=8096",
+        "PRIVATE_WS=3004",
+        "PRIVATE_OUT=.quartz-cache/preview-private"
+      ],
+      "port": 8095
     }
   ]
 }

@@ -34,7 +34,11 @@ export function getStaticResourcesFromPlugins(ctx: BuildCtx) {
       script: `
         const socket = new WebSocket('${wsUrl}')
         // reload(true) ensures resources like images and scripts are fetched again in firefox
-        socket.addEventListener('message', () => document.location.reload(true))
+        // the planner board (private preview) refreshes itself, and its own changes to the notes
+        // must not throw away the view the user is working in
+        socket.addEventListener('message', () => {
+          if (document.body.dataset.slug !== 'planner') document.location.reload(true)
+        })
       `,
     })
   }

@@ -1,0 +1,35 @@
+@use "../../styles/variables.scss" as *;
+
+// /planner: the frame for the calendar board. The board brings its own stylesheet
+// (planner/src/ui/styles.css); this only gives it room on the page.
+#liberos-planner {
+  height: calc(100vh - 11rem);
+  min-height: 34rem;
+}
+
+// a week of seven columns needs the width: the board takes the right sidebar's column too,
+// and the page is not capped at the reading width
+body[data-slug="planner"] {
+  .page {
+    max-width: none;
+    padding: 0 1.5rem;
+  }
+
+  @media all and ($desktop) {
+    #quartz-body {
+      grid-template-columns: #{$sidePanelWidth} minmax(0, 1fr);
+      grid-template-areas:
+        "grid-sidebar-left grid-header"
+        "grid-sidebar-left grid-center"
+        "grid-sidebar-left grid-footer";
+    }
+  }
+
+  .sidebar.right {
+    display: none;
+  }
+
+  .page-header {
+    margin-top: 2rem;
+  }
+}
