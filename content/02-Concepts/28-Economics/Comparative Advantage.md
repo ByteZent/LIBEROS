@@ -11,6 +11,7 @@ type: model
 domain: ["economics", "ir"]
 courses: ["MikroEcon-HS26"]
 qard-deck: MikroEcon-HS26
+qard-sets: ["MikroEcon Test 1"]
 status: seedling
 confidence: medium
 created: 2026-10-01
@@ -145,6 +146,7 @@ $$
 ## Self-Test: Comparative Advantage
 
 > [!qard]- 1. What is the difference between absolute and comparative advantage?
+> <!-- qard-important -->
 > Absolute: needing fewer inputs per unit of output. Comparative: having the lower opportunity cost.
 
 > [!qard]- 2. The rancher is better at both goods. Why does he still gain from trade?
@@ -163,7 +165,82 @@ $$
 > Meat costs the farmer 4 oz of potatoes and the rancher 2: the rancher has it in meat. Potatoes cost the farmer ¼ oz of meat and the rancher ½: the farmer has it in potatoes.
 
 > [!qard]- 7. Limit: why might a small state deliberately not follow its comparative advantage?
+> <!-- qard-write -->
 > The model assumes that the partner delivers. If supply can be cut in a crisis, efficiency becomes fragility. Stockpiles, home food production and a defence industry buy security at the cost of some welfare.
+
+> [!qard]- 8. Calculate: who has the absolute and who the comparative advantage? The numbers are hours per unit.
+> Country A needs 2 hours for a watch and 1 hour for a kilo of cheese. Country B needs 8 and 2 hours.
+> <!-- qard-answer -->
+> A has the absolute advantage in **both** goods. A has the comparative advantage in **watches**, B in **cheese**.
+> <!-- qard-solution -->
+> 1. Absolute: A needs less time for both goods ($2 < 8$ and $1 < 2$).
+> 2. A watch costs A $2 / 1 = 2$ kilos of cheese and B $8 / 2 = 4$ kilos. A gives up less: advantage in watches.
+> 3. A kilo of cheese costs A ½ watch and B ¼ watch. B gives up less: advantage in cheese.
+> <!-- qard-variant -->
+> North needs 10 hours for a bicycle and 5 hours for a radio. South needs 12 and 4 hours.
+> <!-- qard-answer -->
+> North has the absolute and the comparative advantage in **bicycles**, South both in **radios**.
+> <!-- qard-solution -->
+> 1. Absolute: North is faster at bicycles ($10 < 12$), South at radios ($4 < 5$).
+> 2. A bicycle costs North $10 / 5 = 2$ radios and South $12 / 4 = 3$ radios. North gives up less.
+> 3. A radio costs North ½ bicycle and South ⅓ bicycle. South gives up less.
+> <!-- qard-variant -->
+> Workshop A needs 6 hours for a table and 3 hours for a chair. Workshop B needs 4 hours and 1 hour.
+> <!-- qard-answer -->
+> B has the absolute advantage in **both** goods. A has the comparative advantage in **tables**, B in **chairs**.
+> <!-- qard-solution -->
+> 1. Absolute: B needs less time for both goods ($4 < 6$ and $1 < 3$).
+> 2. A table costs A $6 / 3 = 2$ chairs and B $4 / 1 = 4$ chairs. A gives up less: advantage in tables.
+> 3. A chair costs A ½ table and B ¼ table. B gives up less: advantage in chairs.
+
+> [!qard]- 9. Calculate with the same countries (watch: 2 and 8 hours, cheese: 1 and 2 hours): each has 16 hours and splits them evenly without trade. Then B makes only cheese and A moves 4 hours from cheese to watches. How does total output change?
+> It rises from 5 to **6 watches**, with 12 kilos of cheese as before. This extra output is the gain from trade the two can share.
+> <!-- qard-solution -->
+> 1. Without trade, A: $8 / 2 = 4$ watches and $8 / 1 = 8$ kilos of cheese.
+> 2. Without trade, B: $8 / 8 = 1$ watch and $8 / 2 = 4$ kilos. Together 5 watches, 12 kilos.
+> 3. Specialised, B: $16 / 2 = 8$ kilos of cheese.
+> 4. Specialised, A: $12 / 2 = 6$ watches and $4 / 1 = 4$ kilos. Together 6 watches, 12 kilos.
+
+> [!qard]- 10. Apply: a watch costs A 2 kilos of cheese and B 4 kilos. They are to trade at 5 kilos of cheese per watch. Who refuses, and why?
+> **B.** It can make a watch itself for 4 kilos of cheese and would pay 5 by trading. The price has to lie between the two opportunity costs, between 2 and 4 kilos.
+
+> [!qard]- 11. Calculate: who has the comparative advantage in what? The numbers are output per hour.
+> <!-- qard-important -->
+> In one hour Anna bakes 6 loaves or 3 cakes, Ben 2 loaves or 2 cakes.
+> <!-- qard-answer -->
+> **Anna in bread, Ben in cake**, although Anna is more productive at both.
+> <!-- qard-solution -->
+> 1. The numbers are **output per hour**, not time per unit. The opportunity cost of a good is then: output of the other good divided by output of this good.
+> 2. A cake costs Anna $6 / 3 = 2$ loaves and Ben $2 / 2 = 1$ loaf. Ben gives up less.
+> 3. A loaf costs Anna ½ cake and Ben 1 cake. Anna gives up less.
+> <!-- qard-variant -->
+> In one hour Clara sews 10 shirts or 5 pairs of trousers, David 6 shirts or 2 pairs of trousers.
+> <!-- qard-answer -->
+> **Clara in trousers, David in shirts**, although Clara is more productive at both.
+> <!-- qard-solution -->
+> 1. Output per hour: the opportunity cost of a good is the output of the other good divided by the output of this good.
+> 2. A pair of trousers costs Clara $10 / 5 = 2$ shirts and David $6 / 2 = 3$ shirts. Clara gives up less.
+> 3. A shirt costs Clara ½ pair and David ⅓ pair. David gives up less.
+> <!-- qard-variant -->
+> In one hour workshop X overhauls 4 engines or 8 gearboxes, workshop Y 3 engines or 3 gearboxes.
+> <!-- qard-answer -->
+> **Y in engines, X in gearboxes**, although X is more productive at both.
+> <!-- qard-solution -->
+> 1. Output per hour: the opportunity cost of a good is the output of the other good divided by the output of this good.
+> 2. An engine costs X $8 / 4 = 2$ gearboxes and Y $3 / 3 = 1$ gearbox. Y gives up less.
+> 3. A gearbox costs X ½ engine and Y 1 engine. X gives up less.
+
+> [!qard]- 12. Judge: "A country that makes everything more productively than its neighbours cannot gain from trade."
+> False. What counts is not productivity (absolute advantage) but the ratio of opportunity costs. As long as these differ, both sides gain.
+
+> [!qard]- 13. Name the assumptions of the model of comparative advantage.
+> Two producers, two goods, one input (working time). Constant opportunity costs. No transport costs and no trade barriers. The partner delivers.
+
+> [!qard]- 14. The model shows that a country gains from trade. Does every person in the country gain?
+> No. The model shows only that total output rises. It says nothing about who gets it: workers in shrinking sectors can lose.
+
+> [!qard]- 15. How does trade show up in a country's production possibilities frontier?
+> The frontier does not move, because resources and technology are the same. By specialising and trading, the country can **consume** combinations outside its own frontier.
 
 ## Open Questions
 

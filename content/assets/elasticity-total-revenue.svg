@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 430" width="1000" height="430" role="img" aria-labelledby="t d">
+  <title id="t">A price rise and total revenue with inelastic and with elastic demand</title>
+  <desc id="d">Two panels, each with a price rise from 4 to 5. Total revenue is the rectangle price times quantity. Inelastic demand: the quantity falls from 100 to 90. Revenue gains 90 from the higher price and loses 40 from the lower quantity, so it rises from 400 to 450. Elastic demand: the quantity falls from 100 to 50. Revenue gains 50 and loses 200, so it falls from 400 to 250.</desc>
+  <defs>
+    <marker id="ax" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5b6773"/></marker>
+    <style>
+      .panel { fill: #0d1117; }
+      .box { fill: #161d26; stroke: #3a4654; stroke-width: 1.5; }
+      .axis { stroke: #5b6773; stroke-width: 1.5; fill: none; }
+      .guide { stroke: #5b6773; stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
+      .grid { stroke: #3a4654; stroke-width: 1; fill: none; }
+      .d { stroke: #7fb3c8; stroke-width: 2.6; fill: none; stroke-linecap: round; }
+      .s { stroke: #8fc59b; stroke-width: 2.6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .h { font: 700 15px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.5px; fill: #e8edf2; }
+      .lbl { font: 600 11.5px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.2px; }
+      .ax { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .cv { font: italic 700 14px "IBM Plex Serif", Georgia, serif; }
+      .tk { font: italic 13px "IBM Plex Serif", Georgia, serif; fill: #c9d1d9; }
+      .item { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .sub { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .res { font: 700 13px "JetBrains Mono", Menlo, monospace; fill: #d4a84b; }
+      .src { font: italic 11px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #5b6773; }
+    </style>
+  </defs>
+  <rect class="panel" width="1000" height="430" rx="14"/>
+  <rect class="box" x="30" y="30" width="455" height="360" rx="10"/>
+  <text class="h" x="50" y="62">INELASTIC DEMAND</text>
+  <text class="sub" x="50" y="82">price +22 %, quantity −11 %</text>
+  <text class="res" x="465" y="62" text-anchor="end">TR 400 → 450</text>
+  <path class="axis" d="M90 322 V120" marker-end="url(#ax)"/>
+  <path class="axis" d="M90 322 H402" marker-end="url(#ax)"/>
+  <text class="ax" x="82" y="112">P</text>
+  <text class="ax" x="402" y="344" text-anchor="end">Q</text>
+  <rect x="90" y="206" width="234" height="116" fill="#c9d1d9" opacity=".07"/>
+  <rect x="90" y="177" width="234" height="29" fill="#8fc59b" opacity=".30"/>
+  <rect x="324" y="206" width="26" height="116" fill="#c97b84" opacity=".30"/>
+  <path class="guide" d="M90 206 H350 V322"/>
+  <path class="guide" d="M90 177 H324 V322"/>
+  <path class="d" d="M290.2 139.3 L376 235"/>
+  <text class="cv" x="382" y="241" style="fill:#7fb3c8">D</text>
+  <circle cx="350" cy="206" r="4" fill="#5b6773"/>
+  <circle cx="324" cy="177" r="5" fill="#d4a84b"/>
+  <text class="lbl" x="207" y="195.5" text-anchor="middle" style="fill:#8fc59b">GAINED +90</text>
+  <text class="sub" x="207" y="268" text-anchor="middle">kept 360</text>
+  <text class="lbl" x="358" y="282.5" style="fill:#c97b84">LOST −40</text>
+  <text class="tk" x="82" y="210" text-anchor="end">4</text>
+  <text class="tk" x="82" y="181" text-anchor="end">5</text>
+  <text class="tk" x="350" y="340" text-anchor="middle">100</text>
+  <text class="tk" x="324" y="340" text-anchor="middle">90</text>
+  <text class="item" x="50" y="372">Gains 90, loses 40: total revenue rises.</text>
+  <rect class="box" x="515" y="30" width="455" height="360" rx="10"/>
+  <text class="h" x="535" y="62">ELASTIC DEMAND</text>
+  <text class="sub" x="535" y="82">price +22 %, quantity −67 %</text>
+  <text class="res" x="950" y="62" text-anchor="end">TR 400 → 250</text>
+  <path class="axis" d="M575 322 V120" marker-end="url(#ax)"/>
+  <path class="axis" d="M575 322 H887" marker-end="url(#ax)"/>
+  <text class="ax" x="567" y="112">P</text>
+  <text class="ax" x="887" y="344" text-anchor="end">Q</text>
+  <rect x="575" y="206" width="130" height="116" fill="#c9d1d9" opacity=".07"/>
+  <rect x="575" y="177" width="130" height="29" fill="#8fc59b" opacity=".30"/>
+  <rect x="705" y="206" width="130" height="116" fill="#c97b84" opacity=".30"/>
+  <path class="guide" d="M575 206 H835 V322"/>
+  <path class="guide" d="M575 177 H705 V322"/>
+  <path class="d" d="M601 153.8 L861 211.8"/>
+  <text class="cv" x="867" y="217.8" style="fill:#7fb3c8">D</text>
+  <circle cx="835" cy="206" r="4" fill="#5b6773"/>
+  <circle cx="705" cy="177" r="5" fill="#d4a84b"/>
+  <text class="lbl" x="640" y="195.5" text-anchor="middle" style="fill:#8fc59b">GAINED +50</text>
+  <text class="sub" x="640" y="268" text-anchor="middle">kept 200</text>
+  <text class="lbl" x="770" y="268" text-anchor="middle" style="fill:#c97b84">LOST −200</text>
+  <text class="tk" x="567" y="210" text-anchor="end">4</text>
+  <text class="tk" x="567" y="181" text-anchor="end">5</text>
+  <text class="tk" x="835" y="340" text-anchor="middle">100</text>
+  <text class="tk" x="705" y="340" text-anchor="middle">50</text>
+  <text class="item" x="535" y="372">Gains 50, loses 200: total revenue falls.</text>
+  <text class="src" x="970" y="416" text-anchor="end">Total revenue = price × quantity = the area of the rectangle. After Mankiw, Principles of Economics, ch. 5. Drawn for LIBEROS.</text>
+</svg>

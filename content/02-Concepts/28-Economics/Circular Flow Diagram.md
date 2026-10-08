@@ -10,6 +10,7 @@ type: model
 domain: ["economics"]
 courses: ["MikroEcon-HS26"]
 qard-deck: MikroEcon-HS26
+qard-sets: ["MikroEcon Test 1"]
 status: developing
 confidence: high
 created: 2026-09-29
@@ -139,10 +140,49 @@ These are **not four separate sources of value** but the same circle measured at
 > A **real flow** is a physical good, service or factor: a worker's labour, a delivered truck. A **money flow** is the payment for it: the wage, the truck's price. They always run in opposite directions.
 
 > [!qard]- 5. Apply: sanctions cut a country off from its export markets. Trace the effect round the circle.
+> <!-- qard-write -->
 > Firms lose revenue, so they pay less for factors. Household income falls, households spend less, and firms' revenue falls again. One actor's spending is always another actor's income.
 
 > [!qard]- 6. Limit: demand for ammunition surges. Can the circular flow tell you how far the price rises?
 > No. It shows who trades with whom and that spending equals income, not prices or quantities. That is the job of supply and demand.
+
+> [!qard]- 7. Name the two actors and the two markets of the circular flow. Who sells in which market?
+> <!-- qard-important -->
+> **Households** and **firms**.
+>
+> - **Market for goods and services:** firms sell, households buy.
+> - **Market for factors of production:** households sell labour, land and capital, firms buy.
+
+> [!qard]- 8. Which income do households receive for which factor of production?
+> - **Labour:** wages
+> - **Land:** rent
+> - **Capital:** interest and profit
+
+> [!qard]- 9. Real flow or money flow, and in which market? (a) An employee works 42 hours at a bank. (b) The bank pays her salary. (c) She buys a bicycle and pays for it.
+> - **(a)** Real flow in the factor market (labour).
+> - **(b)** Money flow in the factor market (income).
+> - **(c)** The bicycle is a real flow, the payment a money flow, both in the goods market.
+
+> [!qard]- 10. Explain: why does total spending equal total income and the value of output in the basic model?
+> <!-- qard-write -->
+> Every payment has two sides: one actor's spending is another's revenue. And firms pay out all their revenue as factor payments. It is one circle measured at different points, which is the basis of national accounting.
+
+> [!qard]- 11. Compare: what does the circular flow show, what the production possibilities frontier, and what can neither do?
+> <!-- qard-write -->
+> - **Circular flow:** who trades with whom, and that spending equals income.
+> - **Frontier:** what can be produced and what more of one good costs.
+>
+> Neither explains prices and quantities, and neither says which state is best.
+
+> [!qard]- 12. Draw: the circular flow with both actors, both markets, the real flows and the money flows.
+> <!-- qard-draw -->
+> ![[circular-flow.svg]]
+>
+> - [ ] Households and firms, the goods market and the factor market
+> - [ ] Real flow: factors from households to firms, goods from firms to households
+> - [ ] Money flow in the opposite direction: spending becomes revenue, factor payments become income
+> - [ ] The incomes named: wages, rent, profit
+> - [ ] Left out on purpose: government, foreign trade, financial sector, saving
 
 ## Open Questions
 

@@ -10,6 +10,7 @@ type: model
 domain: ["economics"]
 courses: ["MikroEcon-HS26"]
 qard-deck: MikroEcon-HS26
+qard-sets: ["MikroEcon Test 1"]
 status: developing
 confidence: high
 created: 2026-09-29
@@ -120,10 +121,15 @@ Opportunity costs are **reciprocal**: if 1 tank costs 4 tractors, then 1 tractor
 ## Self-Test: PPF
 
 > [!qard]- 1. Draw a PPF and explain one point inside, on and outside the curve.
-> - **Inside:** attainable but inefficient (idle or misallocated resources).
-> - **On:** efficient; more of one good only by giving up the other. **Outside:** unattainable with current resources and technology.
+> ![[ppf-guns-butter.svg]]
+>
+> - [ ] One good on each axis, the curve bowed outward
+> - [ ] **Inside:** attainable but inefficient (idle or misallocated resources)
+> - [ ] **On:** efficient; more of one good only by giving up the other
+> - [ ] **Outside:** unattainable with current resources and technology
 
 > [!qard]- 2. What does the slope of the PPF measure?
+> <!-- qard-important -->
 > The **opportunity cost**: how many units of the good on the vertical axis must be given up to produce one more unit of the good on the horizontal axis.
 
 > [!qard]- 3. Why is the PPF usually bowed outward?
@@ -140,7 +146,78 @@ Opportunity costs are **reciprocal**: if 1 tank costs 4 tractors, then 1 tractor
 > One tank costs 60/15 = 4 tractors. One tractor costs 1/4 tank. Opportunity costs are reciprocal.
 
 > [!qard]- 7. Judge: "the PPF shows that we should spend more on defence." What is wrong with this?
+> <!-- qard-write -->
 > The PPF shows what is possible and what each choice costs. That is a positive statement. Which point on the curve is best is a normative question the model cannot answer.
+
+> [!qard]- 8. What does the production possibilities frontier show, and under which assumptions?
+> <!-- qard-important -->
+> The **maximum combinations of two goods** an economy can produce.
+>
+> Assumptions: two goods only, **given resources and technology**, and on the frontier the resources are fully and efficiently used.
+
+> [!cloze] A point ==inside== the production possibilities frontier is attainable but ==inefficient==. A point ==outside== is ==unattainable== with today's resources and technology.
+
+> [!qard]- 9. Calculate: the opportunity costs on a straight frontier, and whether the combination is attainable.
+> With all its resources an economy can make 100 tanks or 400 tractors. Combination: 60 tanks and 200 tractors.
+> <!-- qard-answer -->
+> A tank costs 4 tractors, a tractor ¼ tank. The combination is **unattainable**: with 60 tanks at most 160 tractors are possible.
+> <!-- qard-solution -->
+> 1. Opportunity cost of a tank: $400 / 100 = 4$ tractors. The reciprocal: a tractor costs ¼ tank.
+> 2. Frontier: tractors $= 400 - 4 \cdot$ tanks.
+> 3. With 60 tanks: $400 - 240 = 160$ tractors.
+> 4. $200 > 160$: the point lies outside the frontier.
+> <!-- qard-variant -->
+> With all its resources an economy can make 120 drones or 40 trucks. Combination: 60 drones and 20 trucks.
+> <!-- qard-answer -->
+> A truck costs 3 drones, a drone ⅓ truck. The combination lies **on the frontier**: attainable and efficient.
+> <!-- qard-solution -->
+> 1. Opportunity cost of a truck: $120 / 40 = 3$ drones. The reciprocal: a drone costs ⅓ truck.
+> 2. Frontier: drones $= 120 - 3 \cdot$ trucks.
+> 3. With 20 trucks: $120 - 60 = 60$ drones.
+> 4. $60 = 60$: the point is exactly on the frontier.
+> <!-- qard-variant -->
+> With all its resources an economy can make 50 helicopters or 200 ambulances. Combination: 20 helicopters and 100 ambulances.
+> <!-- qard-answer -->
+> A helicopter costs 4 ambulances, an ambulance ¼ helicopter. The combination lies **inside** the frontier: attainable but inefficient.
+> <!-- qard-solution -->
+> 1. Opportunity cost of a helicopter: $200 / 50 = 4$ ambulances. The reciprocal: an ambulance costs ¼ helicopter.
+> 2. Frontier: ambulances $= 200 - 4 \cdot$ helicopters.
+> 3. With 20 helicopters: $200 - 80 = 120$ ambulances.
+> 4. $100 < 120$: 20 more ambulances would be possible.
+
+> [!qard]- 10. Calculate: the frontier runs through (butter, guns) = (0, 100), (10, 90), (20, 70), (30, 40), (40, 0). What does one unit of butter cost in each section, and what does that say about the shape?
+> 1, 2, 3 and 4 guns per unit of butter. The opportunity cost **rises**: the frontier is bowed outward.
+> <!-- qard-solution -->
+> 1. From 0 to 10 butter: $-10$ guns, so $10 / 10 = 1$.
+> 2. From 10 to 20: $-20$ guns, so 2.
+> 3. From 20 to 30: $-30$ guns, so 3.
+> 4. From 30 to 40: $-40$ guns, so 4.
+>
+> Reason: resources are specialised. The ones best suited to butter move first, the ones that can almost only make guns move last.
+
+> [!qard]- 11. Apply: what happens to the frontier? (a) Unemployment falls. (b) A new technology helps butter production only. (c) Skilled workers immigrate. (d) The country opens up to trade.
+> <!-- qard-write -->
+> - **(a)** No shift: a move from inside onto the frontier.
+> - **(b)** The frontier stretches along the butter axis only.
+> - **(c)** An outward shift: more resources (growth).
+> - **(d)** No shift, but the country can **consume** combinations outside its frontier.
+
+> [!qard]- 12. Draw: one frontier with constant and one with increasing opportunity cost. Mark equal steps along the butter axis and what each step costs in guns.
+> <!-- qard-draw -->
+> ![[ppf-opportunity-cost.svg]]
+>
+> - [ ] Constant: a straight line, every step costs the same
+> - [ ] Increasing: bowed outward, every step costs more than the one before
+> - [ ] The reason for the bow: resources are specialised
+
+> [!qard]- 13. Draw: economic growth in the frontier for guns and butter, and a point that becomes attainable through it.
+> <!-- qard-draw -->
+> ![[ppf-guns-butter.svg]]
+>
+> - [ ] A second frontier outside the first
+> - [ ] The cause named: more resources or better technology
+> - [ ] A point outside the old frontier and on or inside the new one
+> - [ ] Not growth: a move from inside onto the frontier
 
 ## Open Questions
 

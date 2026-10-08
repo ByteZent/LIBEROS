@@ -13,6 +13,7 @@ type: concept
 domain: ["economics"]
 courses: ["MikroEcon-HS26"]
 qard-deck: MikroEcon-HS26
+qard-sets: ["MikroEcon Test 1"]
 status: seedling
 confidence: medium
 created: 2026-10-01
@@ -123,6 +124,7 @@ draft: false
 > - How the economy as a whole works (8–10)
 
 > [!qard]- 2. What is the opportunity cost of attending a lecture?
+> <!-- qard-important -->
 > The best alternative use of that time: sleep, paid work or study for another subject. Not the tuition fee, which is paid either way.
 
 > [!qard]- 3. What does "thinking at the margin" mean?
@@ -144,7 +146,55 @@ draft: false
 > Not "air defence, yes or no?" but "what does one *more* battery add, and what does it cost?" Compare the marginal benefit with the marginal cost.
 
 > [!qard]- 9. Judge: a market failure has been shown. Does it follow that the government should intervene?
+> <!-- qard-write -->
 > No. Whether intervention helps depends on what it costs and on government failure. Principle 7 says governments can *sometimes* improve the outcome.
+
+> [!qard]- 10. What does economics study, and which three questions must every society answer?
+> <!-- qard-important -->
+> How a society manages its **scarce** resources. Because goods are scarce, every society must decide **what** is produced, **how**, and **for whom**.
+
+> [!qard]- 11. Distinguish microeconomics, macroeconomics and business administration.
+> - **Microeconomics:** decisions of households and firms and their meeting in markets.
+> - **Macroeconomics:** the economy as a whole: growth, inflation, unemployment.
+> - **Business administration:** the view of the single firm, not of society.
+
+> [!cloze] The opportunity cost of something is ==what you give up== to get it: the ==best alternative forgone==.
+
+> [!qard]- 12. Calculate: tonight you could tutor for three hours at 40 francs an hour. You go to the cinema instead; the ticket costs 20 francs. What is the opportunity cost of the evening?
+> **140 francs:** everything you give up for the evening.
+> <!-- qard-solution -->
+> 1. Earnings forgone: $3 \cdot 40 = 120$ francs.
+> 2. Ticket: 20 francs, spent only because of this choice.
+> 3. Sum: $120 + 20 = 140$ francs.
+>
+> This holds if tutoring is the best alternative. Costs that arise either way, such as rent, do not count.
+
+> [!qard]- 13. Apply: a flight leaves in an hour with empty seats. The average cost per seat is 500 francs, a customer offers 300. Should the airline sell?
+> <!-- qard-write -->
+> Yes. What counts is the **marginal cost** of one more passenger, which is close to zero because the flight takes place anyway. The marginal benefit of 300 francs is higher. The average cost does not matter for this decision.
+
+> [!qard]- 14. Apply: a town introduces a fee per rubbish bag. What does "people respond to incentives" predict?
+> The marginal cost of throwing things away rises, so behaviour changes: less waste, more recycling. Incentives also work in ways nobody intended: some waste is dumped illegally.
+
+> [!qard]- 15. What is the "invisible hand", and what does the coordinating?
+> Smith's image: many decentralised, self-interested decisions of households and firms lead to an outcome that serves society. They are coordinated by **prices**.
+
+> [!qard]- 16. Positive or normative? (a) "A price ceiling below the equilibrium price causes a shortage." (b) "The state should cap rents."
+> <!-- qard-important -->
+> - **(a) positive:** describes how the world is and can be checked against data.
+> - **(b) normative:** says how the world should be and depends on values.
+>
+> A model answers only the positive question.
+
+> [!qard]- 17. Which three principles describe the economy as a whole?
+> - **8:** the standard of living depends on **productivity**.
+> - **9:** prices rise when too much money is put into circulation (**inflation**).
+> - **10:** in the short run there is a trade-off between inflation and unemployment.
+
+> [!qard]- 18. Compare: where does opportunity cost appear as a slope or a ratio in the first models of the course? Name three places.
+> - **Production possibilities frontier:** its slope.
+> - **Comparative advantage:** whoever has the lower opportunity cost specialises.
+> - **Budget constraint:** the relative price, what one good costs in units of the other.
 
 ## Sources
 

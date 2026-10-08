@@ -8,6 +8,7 @@ type: model
 domain: ["economics"]
 courses: ["MikroEcon-HS26"]
 qard-deck: MikroEcon-HS26
+qard-sets: ["MikroEcon Test 1"]
 status: developing
 confidence: high
 created: 2026-09-29
@@ -256,6 +257,7 @@ Whether such an intervention is *justified* is a **normative** question. The mod
 ## Self-Test: S&D
 
 > [!qard]- 1. Why is a higher price of the good itself not a shift of the demand curve?
+> <!-- qard-important -->
 > Because the price is on the axis. A change in the good's own price moves buyers **along** the existing curve and changes the *quantity demanded*. Only factors that are not on the axes (income, prices of related goods, tastes, expectations, number of buyers) shift the curve.
 
 > [!qard]- 2. How does a rise in income affect a normal good and an inferior good?
@@ -275,9 +277,11 @@ Whether such an intervention is *justified* is a **normative** question. The mod
 > No. A supply decrease also raises the price. Look at the quantity: $P\uparrow, Q\uparrow$ points to higher demand; $P\uparrow, Q\downarrow$ points to lower supply.
 
 > [!qard]- 7. Apply: after 2022, demand for artillery ammunition surged while production capacity could not grow quickly. What does the model predict?
+> <!-- qard-write -->
 > Demand shifts right against a steep short-run supply curve. The result is mostly higher prices and long delivery times, and little extra quantity at first.
 
 > [!qard]- 8. Apply: a rent ceiling is set below the equilibrium price. What follows, and what rations the flats now?
+> <!-- qard-write -->
 > A lasting shortage: quantity demanded exceeds quantity supplied. Queues, waiting lists and black markets ration instead of the price. Whether the ceiling is justified is a normative question.
 
 > [!qard]- 9. Calculate: $Q_D = 100 - 2P$ and $Q_S = 20 + 2P$. Find the equilibrium, and describe the market at $P = 25$.
@@ -287,6 +291,155 @@ Whether such an intervention is *justified* is a **normative** question. The mod
 > 2. Insert into either curve: $Q^* = 100 - 2 \cdot 20 = 60$.
 > 3. At $P = 25$: $Q_D = 100 - 50 = 50$ and $Q_S = 20 + 50 = 70$.
 > 4. $Q_S - Q_D = 20 > 0$: sellers offer more than buyers take, a surplus, so the price falls toward 20.
+
+> [!qard]- 10. Name the four assumptions of the model of supply and demand.
+> <!-- qard-important -->
+> - **Perfect competition:** many buyers and sellers, all price takers.
+> - **Homogeneous good:** all sellers offer the same product.
+> - **Ceteris paribus:** everything except the good's own price is held constant.
+> - **Flexible prices:** the market finds its equilibrium.
+
+> [!cloze] Law of demand: other things equal, the quantity demanded of a good ==falls== when its price ==rises==. The demand curve therefore slopes ==downward==.
+
+> [!qard]- 11. Which six factors shift the demand curve?
+> Income, prices of substitutes, prices of complements, tastes, expectations and the number of buyers.
+
+> [!qard]- 12. Which factors shift the supply curve?
+> Input prices (wages, raw materials, energy), technology, expectations, the number of sellers, and natural and social factors.
+
+> [!qard]- 13. Judge: a bad harvest makes coffee dearer. A commentator writes: "So the demand for coffee has fallen." What is wrong?
+> <!-- qard-important -->
+> What shifted is **supply** (to the left). The higher price lowers the **quantity demanded**: a movement along the demand curve. Demand, the curve itself, has not changed.
+
+> [!qard]- 14. Apply: the market for electric cars. (a) Electricity becomes cheaper. (b) Batteries become cheaper. Which curve shifts where, and what happens to price and quantity? And if both happen at once?
+> <!-- qard-write -->
+> - **(a)** Electricity is a complement: demand shifts right. Price and quantity rise.
+> - **(b)** An input is cheaper: supply shifts right. The price falls, the quantity rises.
+> - **Both:** the quantity rises for certain. The price is ambiguous.
+
+> [!qard]- 15. Apply: the price of butter rises. What happens in the market for margarine and in the market for bread?
+> - **Margarine** (substitute): demand shifts right, price and quantity rise.
+> - **Bread** (complement): demand shifts left, price and quantity fall.
+
+> [!qard]- 16. Diagram: demand and supply both increase. What happens to quantity and price in the two cases (1) and (2)?
+> ![[supply-demand-double-shift.svg]]
+> <!-- qard-hide: Q↑ P↑; Q↑ P↓ -->
+> (1) Demand shifts more: quantity and price rise. (2) Supply shifts more: the quantity rises, the price falls. Only the quantity is certain.
+
+> [!qard]- 17. In a market, price and quantity fall together. What has happened? And if the price falls while the quantity rises?
+> - **Both fall:** demand has decreased.
+> - **Price falls, quantity rises:** supply has increased.
+
+> [!qard]- 18. Calculate: find the equilibrium of the market, then the effect of the price ceiling.
+> <!-- qard-important -->
+> $Q_D = 150 - 3P$ and $Q_S = 30 + P$. Price ceiling: 20.
+> <!-- qard-answer -->
+> $P^* = 30$, $Q^* = 60$. At the ceiling of 20 there is a **shortage** of 40 units, which lasts because the price may not rise.
+> <!-- qard-solution -->
+> 1. $Q_D = Q_S$: $150 - 3P = 30 + P$, so $4P = 120$ and $P^* = 30$.
+> 2. Insert: $Q^* = 30 + 30 = 60$.
+> 3. At $P = 20$: $Q_D = 150 - 60 = 90$ and $Q_S = 30 + 20 = 50$.
+> 4. $Q_D - Q_S = 40$: buyers want 40 units more than are offered.
+> <!-- qard-variant -->
+> $Q_D = 200 - 4P$ and $Q_S = 2P - 40$. Price ceiling: 30.
+> <!-- qard-answer -->
+> $P^* = 40$, $Q^* = 40$. At the ceiling of 30 there is a **shortage** of 60 units.
+> <!-- qard-solution -->
+> 1. $Q_D = Q_S$: $200 - 4P = 2P - 40$, so $6P = 240$ and $P^* = 40$.
+> 2. Insert: $Q^* = 2 \cdot 40 - 40 = 40$.
+> 3. At $P = 30$: $Q_D = 200 - 120 = 80$ and $Q_S = 60 - 40 = 20$.
+> 4. $Q_D - Q_S = 60$.
+> <!-- qard-variant -->
+> $Q_D = 120 - 2P$ and $Q_S = 4P$. Price ceiling: 15.
+> <!-- qard-answer -->
+> $P^* = 20$, $Q^* = 80$. At the ceiling of 15 there is a **shortage** of 30 units.
+> <!-- qard-solution -->
+> 1. $Q_D = Q_S$: $120 - 2P = 4P$, so $6P = 120$ and $P^* = 20$.
+> 2. Insert: $Q^* = 4 \cdot 20 = 80$.
+> 3. At $P = 15$: $Q_D = 120 - 30 = 90$ and $Q_S = 60$.
+> 4. $Q_D - Q_S = 30$.
+
+> [!qard]- 19. Calculate: starting from $Q_D = 150 - 3P$ and $Q_S = 30 + P$, incomes rise and demand becomes $Q_D = 190 - 3P$. How do price and quantity change, and what does that say about the good?
+> The price rises from 30 to **40**, the quantity from 60 to **70**. Demand has shifted right: the good is a **normal good**.
+> <!-- qard-solution -->
+> 1. $190 - 3P = 30 + P$, so $4P = 160$ and $P^* = 40$.
+> 2. Insert: $Q^* = 30 + 40 = 70$.
+> 3. Check with demand: $190 - 120 = 70$.
+
+> [!qard]- 20. Calculate: what does the price floor do in this market?
+> $Q_D = 150 - 3P$ and $Q_S = 30 + P$. Price floor: 36.
+> <!-- qard-answer -->
+> A **surplus** of 24 units. The floor lies above the equilibrium price of 30, so it binds.
+> <!-- qard-solution -->
+> 1. Equilibrium: $150 - 3P = 30 + P$, so $P^* = 30$. The floor of 36 is above it.
+> 2. At $P = 36$: $Q_D = 150 - 108 = 42$ and $Q_S = 30 + 36 = 66$.
+> 3. $Q_S - Q_D = 24$: more is offered than bought.
+> <!-- qard-variant -->
+> $Q_D = 200 - 4P$ and $Q_S = 2P - 40$. Price floor: 45.
+> <!-- qard-answer -->
+> A **surplus** of 30 units. The floor lies above the equilibrium price of 40, so it binds.
+> <!-- qard-solution -->
+> 1. Equilibrium: $200 - 4P = 2P - 40$, so $P^* = 40$. The floor of 45 is above it.
+> 2. At $P = 45$: $Q_D = 200 - 180 = 20$ and $Q_S = 90 - 40 = 50$.
+> 3. $Q_S - Q_D = 30$.
+> <!-- qard-variant -->
+> $Q_D = 120 - 2P$ and $Q_S = 4P$. Price floor: 15.
+> <!-- qard-answer -->
+> **Nothing.** The floor lies below the equilibrium price of 20, so the market stays at $P^* = 20$ and $Q^* = 80$.
+> <!-- qard-solution -->
+> 1. Equilibrium: $120 - 2P = 4P$, so $P^* = 20$ and $Q^* = 80$.
+> 2. $15 < 20$: the market price is already above the floor.
+> 3. A floor works only **above**, a ceiling only **below** the equilibrium price.
+
+> [!qard]- 21. Calculate: two buyers have the demand $q_1 = 10 - P$ and $q_2 = 20 - 2P$. What is market demand, and how large is it at $P = 4$?
+> $Q_D = 30 - 3P$ (for prices up to 10), so **18** units at $P = 4$.
+> <!-- qard-solution -->
+> 1. Market demand is the **horizontal sum**: at each price, add the quantities.
+> 2. $Q_D = (10 - P) + (20 - 2P) = 30 - 3P$.
+> 3. At $P = 4$: $6 + 12 = 18$.
+
+> [!qard]- 22. Which two jobs do prices do in a market?
+> They are **signals**: a rising price tells everyone that something has become scarcer. And they **ration** the scarce good. So they coordinate millions of decentralised decisions without anyone planning it.
+
+> [!qard]- 23. Limit: name three limits of the model of supply and demand.
+> <!-- qard-write -->
+> For example:
+>
+> - **Market power:** with few sellers, firms set the price themselves.
+> - **Sticky prices:** contracts and norms let shortages and surpluses last.
+> - **Directions only:** for magnitudes you need elasticities.
+> - **Silent on fairness:** an efficient equilibrium can still be seen as unjust.
+
+> [!qard]- 24. Draw: a market in equilibrium. Then mark one price above and one below the equilibrium price and name what arises at each.
+> <!-- qard-draw -->
+> ![[supply-demand-equilibrium.svg]]
+>
+> - [ ] Price on the vertical axis, quantity on the horizontal axis
+> - [ ] Demand slopes downward, supply slopes upward
+> - [ ] Equilibrium at the crossing, with $P^*$ and $Q^*$ marked on the axes
+> - [ ] Price above $P^*$: surplus, the gap between the curves, supply on the right
+> - [ ] Price below $P^*$: shortage, the gap between the curves, demand on the right
+
+> [!qard]- 25. Draw: a movement along the demand curve and a shift of the demand curve, side by side. Name the cause of each.
+> <!-- qard-draw -->
+> ![[supply-demand-movement-vs-shift.svg]]
+>
+> - [ ] Movement: one curve, two points, two prices and two quantities
+> - [ ] Its cause: the good's own price
+> - [ ] Shift: two curves, the whole curve moved left or right
+> - [ ] Its cause: any other determinant, such as income
+> - [ ] The words: *quantity demanded* changes, or *demand* changes
+
+> [!qard]- 26. Draw: the four basic cases, one diagram each. Demand rises, demand falls, supply rises, supply falls. Mark what happens to price and quantity.
+> <!-- qard-draw -->
+> ![[supply-demand-four-cases.svg]]
+>
+> - [ ] Each diagram shifts one curve only
+> - [ ] Demand up: price up, quantity up
+> - [ ] Demand down: price down, quantity down
+> - [ ] Supply up (to the right): price down, quantity up
+> - [ ] Supply down (to the left): price up, quantity down
+> - [ ] Old and new equilibrium both marked
 
 ## Open Questions
 

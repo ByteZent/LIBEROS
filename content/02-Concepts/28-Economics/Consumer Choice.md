@@ -16,6 +16,7 @@ type: model
 domain: ["economics"]
 courses: ["MikroEcon-HS26"]
 qard-deck: MikroEcon-HS26
+qard-sets: ["MikroEcon Test 1"]
 status: seedling
 confidence: medium
 created: 2026-10-02
@@ -187,6 +188,7 @@ At the optimum the last franc spent on each good brings the **same extra utility
 > Higher curves are preferred. They slope downward. They do not cross. They are bowed inward.
 
 > [!qard]- 4. What holds at the consumer's optimum?
+> <!-- qard-important -->
 > The highest reachable indifference curve touches the budget constraint: MRS = relative price. In utility terms, the last franc spent on each good brings the same extra utility.
 
 > [!qard]- 5. Define the income effect and the substitution effect.
@@ -199,13 +201,117 @@ At the optimum the last franc spent on each good brings the **same extra utility
 > Higher income: a parallel shift outward, because the relative price is unchanged. A lower price: a rotation outward around the point on the other good's axis, because the relative price has changed.
 
 > [!qard]- 8. Apply: the wage rises. Why can the hours worked go up or down?
+> <!-- qard-write -->
 > Leisure becomes dearer, so the substitution effect says work more. The worker is richer, so the income effect says take more leisure. If the income effect is the larger one, hours fall.
 
 > [!qard]- 9. Explain: what has to be true for a good to be a Giffen good?
+> <!-- qard-write -->
 > It must be an inferior good, and its income effect must outweigh the substitution effect. A dearer staple makes a poor household so much poorer that it gives up better food and buys more of the staple.
 
 > [!qard]- 10. Limit: a critic says "nobody calculates marginal rates of substitution". Does that refute the model?
 > No. The model claims that people choose *as if* they optimised, and it is tested on how choices change with prices and income. The fair objection is that real choices deviate systematically (anchoring, defaults).
+
+> [!qard]- 11. Which assumptions does the model of consumer choice make?
+> Two goods. The consumer spends her whole income and takes prices as given. She can rank all bundles and prefers more to less. Her marginal rate of substitution diminishes. She optimises.
+
+> [!qard]- 12. Calculate: the end points of the budget line and the relative price. Is the bundle on the line?
+> Income 600, a cinema ticket costs 20, a book 30. Bundle: 12 tickets and 10 books.
+> <!-- qard-answer -->
+> End points: **30 tickets** or **20 books**. A book costs 1.5 tickets. The bundle is affordable but lies **below** the line: 60 are left over.
+> <!-- qard-solution -->
+> 1. $600 / 20 = 30$ tickets, $600 / 30 = 20$ books.
+> 2. Relative price: $30 / 20 = 1.5$ tickets per book.
+> 3. $12 \cdot 20 + 10 \cdot 30 = 540 < 600$.
+> <!-- qard-variant -->
+> Income 240, a coffee costs 4, a sandwich 8. Bundle: 20 coffees and 20 sandwiches.
+> <!-- qard-answer -->
+> End points: **60 coffees** or **30 sandwiches**. A sandwich costs 2 coffees. The bundle lies exactly **on** the line.
+> <!-- qard-solution -->
+> 1. $240 / 4 = 60$ coffees, $240 / 8 = 30$ sandwiches.
+> 2. Relative price: $8 / 4 = 2$ coffees per sandwich.
+> 3. $20 \cdot 4 + 20 \cdot 8 = 240$.
+> <!-- qard-variant -->
+> Income 1,200, a concert costs 60, a dinner 40. Bundle: 12 concerts and 15 dinners.
+> <!-- qard-answer -->
+> End points: **20 concerts** or **30 dinners**. A concert costs 1.5 dinners. The bundle is **not affordable**: it costs 1,320.
+> <!-- qard-solution -->
+> 1. $1200 / 60 = 20$ concerts, $1200 / 40 = 30$ dinners.
+> 2. Relative price: $60 / 40 = 1.5$ dinners per concert.
+> 3. $12 \cdot 60 + 15 \cdot 40 = 1320 > 1200$.
+
+> [!qard]- 13. Calculate, starting from income 600, ticket 20, book 30: how does the budget line change if (a) income rises to 900, (b) instead the price of a book falls to 20?
+> - **(a)** A parallel shift outward: 45 tickets or 30 books. The relative price stays 1.5.
+> - **(b)** A rotation outward around the ticket end point: still 30 tickets, now 30 books. A book costs one ticket.
+> <!-- qard-solution -->
+> 1. (a) $900 / 20 = 45$ and $900 / 30 = 30$; $30 / 20 = 1.5$ as before.
+> 2. (b) $600 / 20 = 30$ and $600 / 20 = 30$; relative price $20 / 20 = 1$.
+
+> [!cloze] At the consumer's optimum the ==marginal rate of substitution== equals the ==relative price==: the highest reachable indifference curve ==touches== the budget constraint.
+
+> [!qard]- 14. Explain: why can two indifference curves not cross?
+> The crossing point would be as good as every bundle on both curves. But one curve has bundles with more of both goods than the other. They would be equally good and better at once: a contradiction.
+
+> [!qard]- 15. What do the indifference curves of perfect substitutes and of perfect complements look like? Give an example of each.
+> - **Perfect substitutes:** straight lines, a constant marginal rate of substitution (coins of five and ten).
+> - **Perfect complements:** right angles (left and right shoes).
+
+> [!qard]- 16. Explain: why is the optimum at the point of tangency and nowhere else on the budget line?
+> <!-- qard-write -->
+> A bundle on a higher indifference curve is not affordable. A point where an indifference curve **cuts** the budget line is affordable but worse: moving along the budget line from there reaches a higher curve.
+
+> [!qard]- 17. Calculate: is the bundle optimal? If not, what should the consumer do?
+> The marginal utility of good X is 30 at a price of 10, that of good Y is 8 at a price of 2.
+> <!-- qard-answer -->
+> No. The last franc brings more utility on Y (4) than on X (3). She buys **more Y and less X** until the marginal utility per franc is equal.
+> <!-- qard-solution -->
+> 1. Condition at the optimum: $MU_X / P_X = MU_Y / P_Y$.
+> 2. $30 / 10 = 3$ and $8 / 2 = 4$.
+> 3. $3 < 4$: move money from X to Y. The marginal utility of Y then falls and that of X rises.
+> <!-- qard-variant -->
+> The marginal utility of good X is 24 at a price of 6, that of good Y is 12 at a price of 4.
+> <!-- qard-answer -->
+> No. The last franc brings more utility on X (4) than on Y (3). She buys **more X and less Y** until the marginal utility per franc is equal.
+> <!-- qard-solution -->
+> 1. Condition at the optimum: $MU_X / P_X = MU_Y / P_Y$.
+> 2. $24 / 6 = 4$ and $12 / 4 = 3$.
+> 3. $4 > 3$: move money from Y to X.
+> <!-- qard-variant -->
+> The marginal utility of good X is 45 at a price of 9, that of good Y is 20 at a price of 4.
+> <!-- qard-answer -->
+> **Yes.** The last franc brings the same utility on both goods (5), so no reshuffling can make her better off.
+> <!-- qard-solution -->
+> 1. Condition at the optimum: $MU_X / P_X = MU_Y / P_Y$.
+> 2. $45 / 9 = 5$ and $20 / 4 = 5$.
+> 3. Both sides are equal: the condition holds.
+
+> [!qard]- 18. Apply: a pizza costs 5 litres of cola in the market. Right now the consumer would give up 3 litres of cola for one more pizza. Is she at her optimum?
+> No. Her marginal rate of substitution (3) is below the relative price (5): a pizza is worth less to her than it costs. She buys **less pizza and more cola**, until her rate has risen to 5.
+
+> [!qard]- 19. Apply: the price of cola falls. How do the income and the substitution effect act on cola and on pizza?
+> <!-- qard-important -->
+> <!-- qard-write -->
+> - **Cola:** she is richer (more) and cola is relatively cheaper (more). Together: **more**.
+> - **Pizza:** she is richer (more), but pizza is relatively dearer (less). Together: **open**.
+
+> [!qard]- 20. How is the demand curve derived from the model of consumer choice?
+> Find the optimum for each price of a good and plot the price against the quantity chosen. The demand curve sums up these optimal choices.
+
+> [!qard]- 21. Apply: the interest rate rises. Why is it open whether households save more or less?
+> The interest rate is the price of consuming today instead of tomorrow. **Substitution effect:** consuming today is dearer, so save more. **Income effect:** savers are richer, so save less. Theory cannot say which wins.
+
+> [!qard]- 22. Apply: a household gets support either in cash or in kind, at the same value. What does the model say?
+> Cash shifts the budget constraint outward and lets the household choose its own optimum. A transfer in kind fixes part of the bundle. For the recipient, cash is **never worse**.
+
+> [!qard]- 23. Draw: the consumer's optimum for income 1,000, pizza at 10 and cola at 2 per litre, with three indifference curves.
+> <!-- qard-draw -->
+> ![[consumer-optimum.svg]]
+>
+> - [ ] Budget line from 100 pizzas to 500 litres of cola
+> - [ ] Indifference curves bowed inward, none crossing another
+> - [ ] The optimum where one curve just touches the budget line
+> - [ ] A higher curve: preferred, but not affordable
+> - [ ] A lower curve that cuts the budget line: affordable, but worse
+> - [ ] At the optimum: marginal rate of substitution = relative price
 
 ## Open Questions
 

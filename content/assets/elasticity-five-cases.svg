@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700" role="img" aria-labelledby="t d">
+  <title id="t">The five cases of the price elasticity of demand</title>
+  <desc id="d">Five demand curves, each with a price rise from 4 to 5 (22 percent by the midpoint method) starting at a quantity of 100. Perfectly inelastic, elasticity 0: a vertical curve, the quantity stays at 100. Inelastic, elasticity about 0.5: a steep curve, the quantity falls to 90 (11 percent). Unit elastic, elasticity 1: the quantity falls to 80 (22 percent). Elastic, elasticity 3: a flat curve, the quantity falls to 50 (67 percent). Perfectly elastic, infinite elasticity: a horizontal curve at a price of 4; above 4 nothing is bought, below 4 any quantity.</desc>
+  <defs>
+    <marker id="ax" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5b6773"/></marker>
+    <style>
+      .panel { fill: #0d1117; }
+      .box { fill: #161d26; stroke: #3a4654; stroke-width: 1.5; }
+      .axis { stroke: #5b6773; stroke-width: 1.5; fill: none; }
+      .guide { stroke: #5b6773; stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
+      .grid { stroke: #3a4654; stroke-width: 1; fill: none; }
+      .d { stroke: #7fb3c8; stroke-width: 2.6; fill: none; stroke-linecap: round; }
+      .s { stroke: #8fc59b; stroke-width: 2.6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .h { font: 700 15px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.5px; fill: #e8edf2; }
+      .lbl { font: 600 11.5px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.2px; }
+      .ax { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .cv { font: italic 700 14px "IBM Plex Serif", Georgia, serif; }
+      .tk { font: italic 13px "IBM Plex Serif", Georgia, serif; fill: #c9d1d9; }
+      .item { font: 12.5px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #c9d1d9; }
+      .sub { font: 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #8b97a3; }
+      .res { font: 700 13px "JetBrains Mono", Menlo, monospace; fill: #d4a84b; }
+      .src { font: italic 11px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; fill: #5b6773; }
+    </style>
+  </defs>
+  <rect class="panel" width="1000" height="700" rx="14"/>
+  <rect class="box" x="30" y="30" width="300" height="305" rx="10"/>
+  <text class="h" x="50" y="62">PERFECTLY INELASTIC</text>
+  <text class="res" x="50" y="84">E = 0</text>
+  <path class="axis" d="M78 275 V115" marker-end="url(#ax)"/>
+  <path class="axis" d="M78 275 H310" marker-end="url(#ax)"/>
+  <text class="ax" x="70" y="107">P</text>
+  <text class="ax" x="310" y="297" text-anchor="end">Q</text>
+  <path class="guide" d="M78 179 H278 V275"/>
+  <path class="guide" d="M78 155 H278 V275"/>
+  <path d="M278 260.6 L278 123.8" stroke="#7fb3c8" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+  <text class="cv" x="286" y="133.8" style="fill:#7fb3c8">D</text>
+  <circle cx="278" cy="179" r="4" fill="#5b6773"/>
+  <circle cx="278" cy="155" r="5" fill="#d4a84b"/>
+  <text class="tk" x="70" y="183" text-anchor="end">4</text>
+  <text class="tk" x="70" y="159" text-anchor="end">5</text>
+  <text class="tk" x="278" y="293" text-anchor="middle">100</text>
+  <text class="item" x="50" y="318">Price +22 %: quantity unchanged</text>
+  <rect class="box" x="350" y="30" width="300" height="305" rx="10"/>
+  <text class="h" x="370" y="62">INELASTIC</text>
+  <text class="res" x="370" y="84">E ≈ 0.5</text>
+  <path class="axis" d="M398 275 V115" marker-end="url(#ax)"/>
+  <path class="axis" d="M398 275 H630" marker-end="url(#ax)"/>
+  <text class="ax" x="390" y="107">P</text>
+  <text class="ax" x="630" y="297" text-anchor="end">Q</text>
+  <path class="guide" d="M398 179 H598 V275"/>
+  <path class="guide" d="M398 155 H578 V275"/>
+  <path d="M552 123.8 L618 203" stroke="#7fb3c8" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+  <text class="cv" x="624" y="209" style="fill:#7fb3c8">D</text>
+  <circle cx="598" cy="179" r="4" fill="#5b6773"/>
+  <circle cx="578" cy="155" r="5" fill="#d4a84b"/>
+  <text class="tk" x="390" y="183" text-anchor="end">4</text>
+  <text class="tk" x="390" y="159" text-anchor="end">5</text>
+  <text class="tk" x="583" y="293" text-anchor="end">90</text>
+  <text class="tk" x="592" y="293" text-anchor="start">100</text>
+  <text class="item" x="370" y="318">Price +22 %: quantity −11 %</text>
+  <rect class="box" x="670" y="30" width="300" height="305" rx="10"/>
+  <text class="h" x="690" y="62">UNIT ELASTIC</text>
+  <text class="res" x="690" y="84">E = 1</text>
+  <path class="axis" d="M718 275 V115" marker-end="url(#ax)"/>
+  <path class="axis" d="M718 275 H950" marker-end="url(#ax)"/>
+  <text class="ax" x="710" y="107">P</text>
+  <text class="ax" x="950" y="297" text-anchor="end">Q</text>
+  <path class="guide" d="M718 179 H918 V275"/>
+  <path class="guide" d="M718 155 H878 V275"/>
+  <path d="M826 123.8 L938 191" stroke="#d4a84b" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+  <text class="cv" x="944" y="197" style="fill:#d4a84b">D</text>
+  <circle cx="918" cy="179" r="4" fill="#5b6773"/>
+  <circle cx="878" cy="155" r="5" fill="#d4a84b"/>
+  <text class="tk" x="710" y="183" text-anchor="end">4</text>
+  <text class="tk" x="710" y="159" text-anchor="end">5</text>
+  <text class="tk" x="918" y="293" text-anchor="middle">100</text>
+  <text class="tk" x="878" y="293" text-anchor="middle">80</text>
+  <text class="item" x="690" y="318">Price +22 %: quantity −22 %</text>
+  <rect class="box" x="30" y="355" width="300" height="305" rx="10"/>
+  <text class="h" x="50" y="387">ELASTIC</text>
+  <text class="res" x="50" y="409">E = 3</text>
+  <path class="axis" d="M78 600 V440" marker-end="url(#ax)"/>
+  <path class="axis" d="M78 600 H310" marker-end="url(#ax)"/>
+  <text class="ax" x="70" y="432">P</text>
+  <text class="ax" x="310" y="622" text-anchor="end">Q</text>
+  <path class="guide" d="M78 504 H278 V600"/>
+  <path class="guide" d="M78 480 H178 V600"/>
+  <path d="M90 458.9 L298 508.8" stroke="#c97b84" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+  <text class="cv" x="304" y="514.8" style="fill:#c97b84">D</text>
+  <circle cx="278" cy="504" r="4" fill="#5b6773"/>
+  <circle cx="178" cy="480" r="5" fill="#d4a84b"/>
+  <text class="tk" x="70" y="508" text-anchor="end">4</text>
+  <text class="tk" x="70" y="484" text-anchor="end">5</text>
+  <text class="tk" x="278" y="618" text-anchor="middle">100</text>
+  <text class="tk" x="178" y="618" text-anchor="middle">50</text>
+  <text class="item" x="50" y="643">Price +22 %: quantity −67 %</text>
+  <rect class="box" x="350" y="355" width="300" height="305" rx="10"/>
+  <text class="h" x="370" y="387">PERFECTLY ELASTIC</text>
+  <text class="res" x="370" y="409">E = ∞</text>
+  <path class="axis" d="M398 600 V440" marker-end="url(#ax)"/>
+  <path class="axis" d="M398 600 H630" marker-end="url(#ax)"/>
+  <text class="ax" x="390" y="432">P</text>
+  <text class="ax" x="630" y="622" text-anchor="end">Q</text>
+  <path d="M398 504 H618" stroke="#c97b84" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+  <text class="cv" x="624" y="508" style="fill:#c97b84">D</text>
+  <text class="tk" x="390" y="508" text-anchor="end">4</text>
+  <text class="sub" x="412" y="492">price above 4: quantity 0</text>
+  <text class="sub" x="412" y="526">price below 4: any quantity</text>
+  <text class="item" x="370" y="643">The smallest price rise: quantity 0</text>
+  <rect class="box" x="670" y="355" width="300" height="305" rx="10"/>
+  <text class="h" x="690" y="387">HOW TO READ IT</text>
+  <text class="item" x="690" y="417">In every panel the price rises from</text>
+  <text class="item" x="690" y="435">4 to 5. With the midpoint method</text>
+  <text class="item" x="690" y="453">that is +22 %.</text>
+  <text class="item" x="690" y="483">Grey dot: before. Gold dot: after.</text>
+  <text class="item" x="690" y="501">What differs is how far the quantity</text>
+  <text class="item" x="690" y="519">gives way.</text>
+  <text class="lbl" x="690" y="551" style="fill:#d4a84b">RULE OF THUMB</text>
+  <text class="item" x="690" y="573">Through the same point, the flatter</text>
+  <text class="item" x="690" y="591">curve is the more elastic one.</text>
+  <text class="item" x="690" y="621">The same five cases exist for supply.</text>
+  <text class="src" x="970" y="686" text-anchor="end">After Mankiw, Principles of Economics, ch. 5. Drawn for LIBEROS.</text>
+</svg>
