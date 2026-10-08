@@ -24,22 +24,23 @@ draft: false
 >
 > The timeline grows **session by session**. It holds only the sessions that have taken place: an entry gets in after its lecture, with the tag of that session (`S1` = session 1). The table below shows which sessions are in.
 >
-> The chart shows everything to scale, one lane per category. The buttons filter by category and session, show only the turning points, or hide dates or titles for a self-test.
+> The chart shows everything to scale, one lane per category. The buttons filter by category and session, show only the turning points, or hide dates or titles for a self-test. Several categories can be on at once: the chart then shows only their lanes, side by side. The button next to the zoom opens the chart full screen.
 
 ## Sessions
 
-| Session | Date | Theme | On the timeline | From |
-|---|---|---|---|---|
-| `S1` | 30.09. | Chronology: Britain in the world | ☑ 22 entries and the five periods | Lecture slides |
-| `S2` | 07.10. | Ruling ideologies | ◐ 29 entries from the required reading and the survey. To check against the lecture | [@hilton2006mad], ch. 5; [@evans2011shaping] |
-| `S3` | 14.10. | Industrial Revolution | ☐ | |
-| `S5` | 28.10. | Population, urbanisation, poverty and welfare | ☐ | |
-| `S6` | 04.11. | Police and penal system | ☐ | |
-| `S7` | 11.11. | Effects of empire on the motherland | ☐ | |
-| `S8` | 18.11. | Sexuality, gender roles and gender politics | ☐ | |
-| `S9` | 25.11. | Mass politics, consumer culture and class | ☐ | |
-| `S10` | 02.12. | Religion and science | ☐ | |
-| `S11` | 09.12. | Migration and migrants | ☐ | |
+> [!bluf]-
+> | Session | Date | Theme | On the timeline | From |
+> |---|---|---|---|---|
+> | `S1` | 30.09. | Chronology: Britain in the world | ☑ 22 entries and the five periods | Lecture slides |
+> | `S2` | 07.10. | Ruling ideologies | ◐ 29 entries from the required reading and the survey. To check against the lecture | [@hilton2006mad], ch. 5; [@evans2011shaping] |
+> | `S3` | 14.10. | Industrial Revolution | ☐ | |
+> | `S5` | 28.10. | Population, urbanisation, poverty and welfare | ☐ | |
+> | `S6` | 04.11. | Police and penal system | ☐ | |
+> | `S7` | 11.11. | Effects of empire on the motherland | ☐ | |
+> | `S8` | 18.11. | Sexuality, gender roles and gender politics | ☐ | |
+> | `S9` | 25.11. | Mass politics, consumer culture and class | ☐ | |
+> | `S10` | 02.12. | Religion and science | ☐ | |
+> | `S11` | 09.12. | Migration and migrants | ☐ | |
 
 **After each session:**
 
@@ -53,6 +54,8 @@ draft: false
 > [!period] **before 1793** How the United Kingdom and the first empire came about
 > For three centuries England was at war with Catholic powers (Spain, France). It turned its imperialism inwards and integrated the mostly Catholic "Celtic Fringe".
 
+> [!event|political] **1536-1801** Development of internal conhesion of the UK `S2`
+
 > [!event|political] **1536** Wales annexed `S1`
 
 > [!event|empire] **c. 1600** Overseas expansion begins `S1`
@@ -60,8 +63,18 @@ draft: false
 
 > [!event|political] **1707** Union with Scotland `S1`
 > England and Scotland become Great Britain.
+>
+> Cultural development of Scotland. -> University of **Glasgow / Edinburgh**
+> Educational system of Scotland better and larger. 
 
 ^union-scotland
+
+
+> [!event|political] **1707 - 1800** Scottish Enlightenment`S2`
+> TODO
+> - → leads to creation of Royal Society 1783.
+
+^scottish-enlightenment
 
 > [!event|political-economy economy key] **1776** Smith, *Wealth of Nations* `S2`
 > The book makes economics central to discussions of moral and political philosophy. Growth comes from the supply side (division of labour, saving) and needs a "system of natural liberty" instead of management by politicians [@hilton2006mad, p. 342–343].
@@ -72,15 +85,18 @@ draft: false
 
 ^smith
 
+> [!event|political] **1770 - 1800** Edinburgh as the city of knowledge and studies`S2`
+> Glasgow and Edinburgh -> "Athens of the North"
+
 > [!event|empire key] **1783** Loss of the American colonies `S1`
 > End of the "First Empire".
 >
-> **Why it matters:** Britain loses its first empire and builds a larger one elsewhere. The loss is a turn, not a decline.
+> **Why it matters:** Britain loses its first empire and builds a larger one elsewhere. **The loss is a turn, not a decline.**
 >
 > - → leads to [[#^second-empire|1784–1914 Second Empire]]: expansion turns from North America to Asia, Africa and the Pacific.
 
 > [!process|empire] **1784–1914** Second wave of expansion: the "Second Empire" `S1`
-> Asia, Africa and the Pacific. The result is the largest territorial empire in history, with many effects on politics, economy and culture at home.
+> **Asia, Africa and the Pacific.** The result is the largest territorial empire in history, with many effects on politics, economy and culture at home.
 >
 > **Why it matters:** the Empire is treated in this course only through what it did to Britain itself. That is the subject of session 7.
 >
@@ -130,8 +146,9 @@ draft: false
 >
 > **Why it matters:** "public opinion" in this period is an imagined constituency of the respectable, not a majority. It takes shape only with the debates before the Reform Act of 1832.
 
-> [!period] **1793–1815** Wars against France
+> [!event|war key] **1793–1815** Wars against France
 > Britain ends the conflict as the unchallenged ruler of the seas. Permanent war turns it into a "fiscal-military state": a professional administration and wider taxation pay for the army and navy. **Result:** rise to world power.
+> - → leads to [[#^civil-service-reform|1870 Civil Service Reform]]: expansion of tax law and administration.
 
 > [!event|political-economy social key] **1798 and 1803** Malthus, *Essay on the Principle of Population* `S2`
 > Population grows geometrically, food only arithmetically. The first edition softens this with the hope of an agricultural revolution. The second edition of 1803 is harsher: only the "preventive check" (sexual abstinence) avoids famine, and poor relief should be removed step by step [@hilton2006mad, p. 336–337].
@@ -142,8 +159,8 @@ draft: false
 
 ^malthus
 
-> [!event|political key] **1801** Union with Ireland `S1`
-> The United Kingdom is created: one unified and stronger state.
+> [!event|political key line] **1801** Union with Ireland `S1`
+> The **United Kingdom** is created: one unified and stronger state.
 >
 > **Why it matters:** the last step of the inward-facing imperialism that integrated the "Celtic Fringe". From here on "England", "Great Britain" and "United Kingdom" mean three different things.
 >
@@ -172,7 +189,8 @@ draft: false
 ^bullion
 
 > [!period] **1815–1873** Age of free trade
-> Peace and free-trade liberalism guide foreign policy: balance of power, an overseas orientation and "splendid isolation" from Europe. Palmerston is the architect. **Result:** world-power status secured by (gunboat) diplomacy.
+> Peace and free-trade liberalism guide foreign policy: balance of power, an overseas orientation and "splendid isolation" from Europe.
+> Palmerston is the architect. **Result:** world-power status secured by (gunboat) diplomacy.
 
 > [!event|economy political] **1815** Corn Law `S2`
 > Highly protectionist. Most liberal Tory ministers support it. The high Tory Rose opposes it out of concern for the poor [@hilton2006mad, p. 322].
@@ -182,6 +200,8 @@ draft: false
 > - → contrasts with [[#^repeal|1846 Repeal of the Corn Laws]]: a liberal Tory government passes the law and Peel, a liberal Tory, removes it.
 
 ^corn-law
+
+> [!event|political] **1815 - 1902** Splendid Isolation`S2`
 
 > [!event|political-economy economy] **1817** Ricardo, *Principles of Political Economy and Taxation* `S2`
 > Enough analytical rigour to convince many that political economy is a science with predictive power. Landlords, capitalists and workers are locked in a zero-sum economy: wages tend to subsistence, and any rise comes out of profits [@hilton2006mad, p. 342, 344].
@@ -261,7 +281,7 @@ draft: false
 >
 > **Why it matters:** this is the focus of the whole course. Sessions 2 to 11 each take one strand of it.
 
-> [!event|political key] **1832** Great Reform Act `S2`
+> [!event|political key line] **1832** Great Reform Act `S2`
 > The work of a government of Whig landowners. It was not meant to satisfy the radicals: the aim was to bring the lower middle classes inside the constitution and away from the radicals [@evans2011shaping, p. 214].
 >
 > **Why it matters:** reform as a conservative move. The propertied order is widened in order to be kept.
@@ -312,30 +332,39 @@ draft: false
 > [!event|political] **1870** Civil service reform `S1`
 > The administration becomes a profession.
 
+^civil-service-reform
+
+> [!event|economy] **1873** Panic of 1873
+> The Panic of 1873 was a financial crisis that triggered an economic depression in Europe and North America that lasted from 1873 to 1877, 
+> continuing until 1879 in the French Third Republic and in the United Kingdom of Great Britain and Ireland.
+
 > [!period] **1874–1914** European rivalries and "New Imperialism"
 > Germany, France and the USA challenge Britain's economic and political lead. **Result:** an arms race and debates on "national efficiency" and self-sufficiency.
 
 > [!event|empire] **1880s** Scramble for Africa `S1`
 > A new wave of imperial expansion.
+> Africa is distributed between different western countries.
 
 > [!event|war] **1889** Naval Defence Act `S1`
-> The two-power standard: the navy must match the next two largest navies together.
+> The two-power standard: the navy must **match the next two largest navies** together.
 >
 > - → leads to [[#^ww1|1914–1918 First World War]]: the two-power standard is part of the arms race between the powers.
 
-> [!event|war empire] **1899–1902** Boer War `S1`
+> [!event|war empire] **1899–1902** Boer (Buren) War `S1`
 > Britain's first great "imperial war", with troops from the Dominions. It tests British military strength.
->
-> **Perspectives:** the war splits the public into "jingoists", who cheer the Empire on, and "Little Englanders", who want Britain to turn back to itself.
+> British Empire against the two republiks: **Oranje-Freistaat and Transvaal.**
+> 
+> **Perspectives:** the war splits the public into "jingoists", **who cheer the Empire on**, and "Little Englanders", who want Britain to turn back to itself.
 
 > [!period] **1914–1939** First World War and the interwar years
 > The war arrives in the middle of internal social conflicts. It drives social protest and democratisation at home and decolonisation in the Empire. **Result:** a drained country.
 
 > [!event|war key] **1914–1918** First World War `S1`
-> About 740,000 dead (1.1 million with Empire troops) and 2.5 million wounded.
+> About **740,000 dead** (1.1 million with Empire troops) and 2.5 million wounded.
 >
 > **Why it matters:** the war is a catalyst in two directions. At home it drives social protest and democratisation, in the Empire it starts decolonisation.
 >
+> 
 > - → leads to [[#^general-strike|1926 General Strike]]: the war catalyses social protest at home.
 > - → enables [[#^balfour|1926 Balfour formula]]: the war catalyses decolonisation in the Empire.
 
@@ -365,17 +394,21 @@ draft: false
 
 > [!event|war] **1939–1945** Second World War `S1`
 > Britain wins, but is humiliated by Japan and nearly occupied by Germany.
+> A condition for the aid of the US was the deconstruction of the british empire.
+> 
 >
 > - → enables [[#^india|1947 Independence of India]]: in 1945 Britain is economically drained and politically weakened.
 
+^ww2
+
 > [!event|empire key] **1947** Independence of India `S1`
-> **Why it matters:** the break-up of the Empire begins, and with it Britain's status as a global superpower is lost for good.
+> **Why it matters:** the break-up of the Empire begins, and with it Britain's status as a **global superpower is lost for good**.
 
 ^india
 
 ## How to add to the timeline
 
-An entry is a callout. After the bar come the category and, for a turning point, the word `key`. The date in bold starts the title, the session tag ends it, and the lines below are the notes:
+An entry is a callout. After the bar come the category and, for a turning point, the word `key`. The word `line` (`[!event|political key line]`) draws a dashed line in the category's colour through all lanes of the chart at the entry's date, to show what else happened in that year. Use it for the few dates everything else is read against. The date in bold starts the title, the session tag ends it, and the lines below are the notes:
 
 ```markdown
 > [!event|political key] **1832** Great Reform Act `S2`
