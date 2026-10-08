@@ -149,6 +149,20 @@ export default (() => {
             <span class="qard-due"></span>
           </a>
         )}
+        {qards.length > 0 &&
+          (fileData.qardSets ?? []).map((set) => (
+            <a
+              class="ns-item ns-course"
+              href={
+                resolveRelative(fileData.slug!, qardDeckSlug(set)) +
+                (topics.length === 1 ? `?topic=${encodeURIComponent(topics[0])}` : "")
+              }
+              title={`This note's cards in the set ${set}`}
+            >
+              <span class="ns-key">CARD SET</span>
+              {set}
+            </a>
+          ))}
         {typeof review === "string" && review !== "" && (
           <span class="ns-item ns-review">
             <span class="ns-key">NEXT REVIEW</span>

@@ -1,6 +1,6 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "../types"
 import { FullSlug, resolveRelative } from "../../util/path"
-import { FLASHCARDS_SLUG } from "../../plugins/transformers/qards"
+import { FLASHCARDS_SLUG, qardLabel } from "../../plugins/transformers/qards"
 import type { FlashcardDeck } from "../../plugins/emitters/flashcards"
 // @ts-ignore
 import script from "../scripts/flashcards.inline"
@@ -207,6 +207,10 @@ export default (() => {
                   {card.topic}
                   <span class="qard-box"></span>
                 </span>
+                <span class="qard-kind">
+                  {qardLabel(card)}
+                  <span class="qard-variant-no"></span>
+                </span>
                 <a class="internal" href={resolveRelative(slug, card.source.slug)}>
                   {card.source.title}
                 </a>
@@ -217,6 +221,22 @@ export default (() => {
                 <textarea rows={4} placeholder="Write your answer, then turn the card."></textarea>
               </label>
               <div class="qard-back" dangerouslySetInnerHTML={{ __html: card.back }} />
+              {card.variants && (
+                <div class="qard-variants" hidden>
+                  {card.variants.map((variant) => (
+                    <div class="qard-variant">
+                      <div
+                        class="qard-variant-front"
+                        dangerouslySetInnerHTML={{ __html: variant.front }}
+                      />
+                      <div
+                        class="qard-variant-back"
+                        dangerouslySetInnerHTML={{ __html: variant.back }}
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
               <p class="qard-followup"></p>
             </article>
           ))}

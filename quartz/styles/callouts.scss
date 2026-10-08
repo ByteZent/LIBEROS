@@ -95,6 +95,24 @@
     --callout-icon: var(--callout-icon-star);
   }
 
+  // what kind of card it is, as in the deck (transformers/qards.ts)
+  > .callout-title > .callout-title-inner[data-qard-label]::after {
+    content: attr(data-qard-label);
+    display: block;
+    width: fit-content;
+    margin-top: 0.3rem;
+    padding: 0 0.4rem;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    font-family: var(--codeFont);
+    font-size: 0.65rem;
+    font-weight: normal;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--gray);
+  }
+
   &[data-callout="cloze"] {
     --color: #dba642;
     --border: #dba64244;

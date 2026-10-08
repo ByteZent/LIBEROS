@@ -33,6 +33,7 @@
 
   .qard-key,
   .qard-topic,
+  .qard-kind,
   .qard-progress,
   .qard-hint {
     font-family: var(--codeFont);
@@ -42,8 +43,22 @@
   }
 
   .qard-key,
-  .qard-topic {
+  .qard-topic,
+  .qard-kind {
     text-transform: uppercase;
+  }
+
+  // what kind of card it is: question, calculation, drawing, …
+  .qard-kind {
+    padding: 0 0.4rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  // the other sets of numbers of a calculation card: the script swaps one in
+  .qard-variants {
+    display: none;
   }
 
   button,
@@ -150,8 +165,16 @@
         display: none;
       }
 
+      &.qard-draw .qard-front::after {
+        content: "Draw it on paper before you turn the card.";
+      }
+
       &.qard-calc .qard-front::after {
         content: "Work it out on paper before you turn the card.";
+      }
+
+      &.qard-calc .qard-front::after,
+      &.qard-draw .qard-front::after {
         display: block;
         margin-top: 1rem;
         font-family: var(--codeFont);

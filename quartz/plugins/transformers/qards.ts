@@ -19,6 +19,9 @@ import {
 //
 // Same rules as the Obsidian plugin:
 // - deck  = frontmatter `qard-deck`, otherwise the note's filename
+// - sets  = frontmatter `qard-sets`: further decks the note's cards are in as well, e.g. the set
+//           for one test (`qard-sets: ["MikroEcon Test 1"]`). The cards are the same cards, with
+//           the same ids: a rating given in one deck counts in the other. Site only.
 // - topic = frontmatter `qard-topic`, otherwise the closest preceding heading ("General" before
 //           the first one). A leading "Self-Test:" is dropped: "## Self-Test: OODA" → topic "OODA".
 // - front = the callout title, plus everything above an optional `<!-- qard-answer -->` marker
@@ -29,6 +32,14 @@ import {
 //   Without a `qard-answer` marker, the comment also ends the front.
 // - `<!-- qard-solution -->` makes a calculation card: what follows on the back is the worked
 //   solution, folded away under the result until asked for.
+// - `<!-- qard-variant -->` on a line of its own starts another variant of a calculation card:
+//   the same task with other numbers. Each variant has its givens, `<!-- qard-answer -->`, its
+//   result and, after `<!-- qard-solution -->`, its steps. The site shows one variant at a time
+//   and the next one after each rating, so the method is practised and not the result remembered.
+//   The id comes from the question in the title: all variants share one review history.
+// - `<!-- qard-draw -->`, or a question that starts with "Draw", makes a drawing card: the site
+//   asks for a sketch on paper, and the back shows the diagram and a checklist (`- [ ] …`) to
+//   tick off against the sketch.
 // - `<!-- qard-write -->` makes a written card: the site asks for the answer in a text field and
 //   shows it next to the card's answer when the card is turned.
 // - `<!-- qard-important -->` marks a question that matters more than the others: it gets a star
@@ -64,7 +75,35 @@ const GLOSSARY_ASK: Record<string, string> = {
   apply: "English term, definition, and where does it apply?",
 }
 
-export type QardKind = "text" | "image" | "calc"
+export type QardKind =
+  | "text"
+  | "cloze"
+  | "image"
+  | "calc"
+  | "draw"
+  | "glossary"
+  | "connection"
+  | "recall"
+
+// what a card is called on its label, in the deck and on the note
+export const QARD_KIND_LABELS: Record<QardKind, string> = {
+  text: "Question",
+  cloze: "Cloze",
+  image: "Diagram labels",
+  calc: "Calculation",
+  draw: "Drawing",
+  glossary: "Term",
+  connection: "Connection",
+  recall: "Blank page",
+}
+
+export function qardLabel(card: Pick<Qard, "kind" | "write" | "variants">): string {
+  return [
+    QARD_KIND_LABELS[card.kind],
+    ...(card.variants ? [`${card.variants.length} variants`] : []),
+    ...(card.write ? ["written"] : []),
+  ].join(" · ")
+}
 
 export interface Qard {
   id: string // stable while the note keeps its place and the question its wording: keys the review history
@@ -74,6 +113,8 @@ export interface Qard {
   topic: string
   front: string // HTML, links already relative to the deck page
   back: string
+  // a calculation card with several sets of numbers: every variant, the first one included
+  variants?: { front: string; back: string }[]
 }
 
 export function qardDeckSlug(deck: string): FullSlug {
@@ -124,6 +165,10 @@ function withoutComments(nodes: ElementContent[]): ElementContent[] {
 function asText(value: unknown): string | undefined {
   return typeof value === "string" && value.trim() !== "" ? value.trim() : undefined
 }
+
+// a frontmatter list, or a single name written without brackets
+const asList = (value: unknown): string[] =>
+  (Array.isArray(value) ? value : [value]).flatMap((entry) => asText(entry) ?? [])
 
 const normalizeLabel = (text: string): string =>
   text
@@ -264,7 +309,7 @@ export const Qards: QuartzTransformerPlugin = () => ({
             })
             glossaryReverse.push({
               id: hash(`glossary-reverse\n${term.toLowerCase()}|${english.toLowerCase()}`),
-              kind: "text",
+              kind: "glossary",
               topic: course ?? "",
               front: render([
                 para([strong(en.children)], "qard-term"),
@@ -277,7 +322,7 @@ export const Qards: QuartzTransformerPlugin = () => ({
             })
             glossary.push({
               id: hash(`glossary\n${term.toLowerCase()}|${english.toLowerCase()}`),
-              kind: "text",
+              kind: "glossary",
               topic: course ?? "",
               front: render([
                 para([strong(de.children)], "qard-term"),
@@ -312,7 +357,7 @@ export const Qards: QuartzTransformerPlugin = () => ({
             if (toString({ type: "root", children: relation }).trim().length < 3) return
             bridges.push({
               id: uniqueId(`bridge\n${toString({ type: "root", children: others })}`),
-              kind: "text",
+              kind: "connection",
               topic: asText(Array.isArray(fm.courses) ? fm.courses[0] : fm.courses) ?? "",
               front: render([
                 { type: "text", value: "How does " },
@@ -351,7 +396,7 @@ export const Qards: QuartzTransformerPlugin = () => ({
               })
               recall = {
                 id: hash(`recall\n${title}`),
-                kind: "text",
+                kind: "recall",
                 write: true,
                 topic: course,
                 front: render([
@@ -398,9 +443,10 @@ export const Qards: QuartzTransformerPlugin = () => ({
             const more = node.children.find((c) => hasClass(c, "callout-content")) as
               | Element
               | undefined
+            sentence.properties.dataQardLabel = QARD_KIND_LABELS.cloze
             cards.push({
               id: uniqueId(`cloze\n${toString(sentence).trim()}`),
-              kind: "text",
+              kind: "cloze",
               topic: fixedTopic ?? heading.replace(/^self[- ]?test\s*:\s*/i, ""),
               front: render(front),
               back: render([...sentence.children, ...(more ? more.children : [])]),
@@ -428,76 +474,103 @@ export const Qards: QuartzTransformerPlugin = () => ({
           const questionText = toString({ type: "root", children: question }).trim()
 
           const body = content.children
-          const answerAt = findMarker(body, "qard-answer")
-          const hideAt = findMarker(body, "qard-hide")
-          const solutionAt = findMarker(body, "qard-solution")
-
-          // the front ends at the answer marker; an image card may leave it out, then the front
-          // ends with the paragraph that holds the image and the qard-hide comment
-          const split = answerAt >= 0 ? answerAt : hideAt >= 0 ? hideAt + 1 : 0
-          let frontBody = body.slice(0, split)
-          const backEnd = solutionAt >= split ? solutionAt : body.length
-          let back: ElementContent[] = body.slice(answerAt >= 0 ? answerAt + 1 : split, backEnd)
-
-          if (hideAt >= 0) {
-            let labels: string[] = []
-            visit({ type: "root", children: body } as Root, "comment", (comment) => {
-              const list = comment.value.match(/^\s*qard-hide\s*:([\s\S]*)$/)
-              if (list)
-                labels = list[1]
-                  .split(";")
-                  .map((l) => l.trim())
-                  .filter(Boolean)
-            })
-            frontBody = hideLabels(frontBody, labels)
-          }
-          if (solutionAt >= split) {
-            back = [
-              ...back,
-              {
-                type: "element",
-                tagName: "details",
-                properties: { className: ["qard-solution"] },
-                children: [
-                  {
-                    type: "element",
-                    tagName: "summary",
-                    properties: {},
-                    children: [{ type: "text", value: "Worked solution" }],
-                  },
-                  ...body.slice(solutionAt + 1),
-                ],
-              },
-            ]
+          // every `<!-- qard-variant -->` starts another set of numbers for the same task
+          const segments: ElementContent[][] = [[]]
+          for (const child of body) {
+            if (findMarker([child], "qard-variant") < 0) segments[segments.length - 1].push(child)
+            else segments.push(child.type === "comment" ? [] : [child])
           }
 
+          let hides = false
+          let solved = false
           const clean = (nodes: ElementContent[]) =>
             withoutComments(nodes).filter((n) => !isEmpty(n))
+          const sides = segments.map((segment) => {
+            const answerAt = findMarker(segment, "qard-answer")
+            const hideAt = findMarker(segment, "qard-hide")
+            const solutionAt = findMarker(segment, "qard-solution")
+
+            // the front ends at the answer marker; an image card may leave it out, then the front
+            // ends with the paragraph that holds the image and the qard-hide comment
+            const split = answerAt >= 0 ? answerAt : hideAt >= 0 ? hideAt + 1 : 0
+            let frontBody = segment.slice(0, split)
+            const backEnd = solutionAt >= split ? solutionAt : segment.length
+            let back: ElementContent[] = segment.slice(
+              answerAt >= 0 ? answerAt + 1 : split,
+              backEnd,
+            )
+
+            if (hideAt >= 0) {
+              hides = true
+              let labels: string[] = []
+              visit({ type: "root", children: segment } as Root, "comment", (comment) => {
+                const list = comment.value.match(/^\s*qard-hide\s*:([\s\S]*)$/)
+                if (list)
+                  labels = list[1]
+                    .split(";")
+                    .map((l) => l.trim())
+                    .filter(Boolean)
+              })
+              frontBody = hideLabels(frontBody, labels)
+            }
+            if (solutionAt >= 0) solved = true
+            if (solutionAt >= split) {
+              back = [
+                ...back,
+                {
+                  type: "element",
+                  tagName: "details",
+                  properties: { className: ["qard-solution"] },
+                  children: [
+                    {
+                      type: "element",
+                      tagName: "summary",
+                      properties: {},
+                      children: [{ type: "text", value: "Worked solution" }],
+                    },
+                    ...segment.slice(solutionAt + 1),
+                  ],
+                },
+              ]
+            }
+            return { front: render([...question, ...clean(frontBody)]), back: render(clean(back)) }
+          })
+
           const important = findMarker(body, "qard-important") >= 0
-          // the note shows the star as well
-          if (important) {
-            const className = (node.properties.className as string[] | undefined) ?? []
-            node.properties.className = [...className, "qard-important"]
-          }
-          cards.push({
+          const kind: QardKind = hides
+            ? "image"
+            : findMarker(body, "qard-draw") >= 0 || /^draw\b/i.test(questionText)
+              ? "draw"
+              : solved || /^calculate\b/i.test(questionText)
+                ? "calc"
+                : "text"
+          const card: Qard = {
             id: uniqueId(questionText),
             write: findMarker(body, "qard-write") >= 0,
             important,
-            kind:
-              hideAt >= 0
-                ? "image"
-                : solutionAt >= 0 || /^calculate\b/i.test(questionText)
-                  ? "calc"
-                  : "text",
+            kind,
             topic: fixedTopic ?? heading.replace(/^self[- ]?test\s*:\s*/i, ""),
-            front: render([...question, ...clean(frontBody)]),
-            back: render(clean(back)),
-          })
+            ...sides[0],
+            ...(sides.length > 1 ? { variants: sides } : {}),
+          }
+          cards.push(card)
+
+          // the note shows the star and the kind of card as well, and a rule between variants
+          const className = (node.properties.className as string[] | undefined) ?? []
+          if (important) node.properties.className = [...className, "qard-important"]
+          inner.properties.dataQardLabel = qardLabel(card)
+          content.children = body.map((child) =>
+            isComment(child, "qard-variant")
+              ? { type: "element", tagName: "hr", properties: {}, children: [] }
+              : child,
+          )
         })
 
         if (cards.length > 0) {
           file.data.qardDeck = deck
           file.data.qards = cards
+          const sets = [...new Set(asList(fm["qard-sets"]))].filter((set) => set !== deck)
+          if (sets.length > 0) file.data.qardSets = sets
         }
         if (bridges.length > 0) file.data.qardBridges = bridges
         if (glossary.length > 0) file.data.qardGlossary = glossary
@@ -511,6 +584,7 @@ export const Qards: QuartzTransformerPlugin = () => ({
 declare module "vfile" {
   interface DataMap {
     qardDeck: string
+    qardSets: string[]
     qards: Qard[]
     qardBridges: Qard[]
     qardGlossary: Qard[]

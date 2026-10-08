@@ -17,6 +17,8 @@ import { FLASHCARDS_SLUG, Qard, qardDeckSlug } from "../transformers/qards"
 // Emits the flashcard pages from the cards Plugin.Qards() collected:
 //   /flashcards/        all decks
 //   /flashcards/<deck>  one deck to click through, optionally narrowed to a topic
+//   /flashcards/<set>   a card set (`qard-sets` of its notes): the cards of several notes once
+//                       more, e.g. everything for one test. Same cards, same review history
 //   /flashcards/all     every deck mixed and shuffled (interleaved practice)
 //   /flashcards/connections  the bridge cards generated from the notes' Key Connections,
 //                            by course; kept out of the mixed deck
@@ -40,7 +42,7 @@ export interface FlashcardDeck {
   slug: FullSlug
   title: string
   topics: string[]
-  practice?: boolean // a set of practice questions (notes of `type: practice`): listed under test preparation
+  practice?: boolean // a set of practice questions (notes of `type: practice`) or a card set (`qard-sets`): listed under test preparation
   mixed?: boolean // not a course deck: starts shuffled, and is featured on the overview
   bridges?: boolean // the generated "how does X relate to Y?" deck
   // what a generated deck is made of; a course deck has none
@@ -54,8 +56,7 @@ function collectDecks(allFiles: QuartzPluginData[]): FlashcardDeck[] {
     .filter((f) => f.qards && f.qardDeck)
     .sort((a, b) => (a.relativePath ?? "").localeCompare(b.relativePath ?? ""))
 
-  for (const file of files) {
-    const name = file.qardDeck!
+  const deckOf = (name: string): FlashcardDeck => {
     if (!decks.has(name)) {
       const coursePage = `tags/${slugTag(COURSE_TAG_PREFIX + name)}`
       decks.set(name, {
@@ -66,12 +67,21 @@ function collectDecks(allFiles: QuartzPluginData[]): FlashcardDeck[] {
         cards: [],
       })
     }
-    const deck = decks.get(name)!
-    if (file.frontmatter?.type === "practice") deck.practice = true
+    return decks.get(name)!
+  }
+
+  for (const file of files) {
+    const own = deckOf(file.qardDeck!)
+    if (file.frontmatter?.type === "practice") own.practice = true
+    // the note's cards are in its deck and in each of its card sets
+    const sets = (file.qardSets ?? []).map(deckOf)
+    for (const set of sets) set.practice = true
     const source = { slug: file.slug!, title: file.frontmatter?.title ?? file.slug! }
-    for (const card of file.qards!) {
-      if (!deck.topics.includes(card.topic)) deck.topics.push(card.topic)
-      deck.cards.push({ ...card, source })
+    for (const deck of [own, ...sets]) {
+      for (const card of file.qards!) {
+        if (!deck.topics.includes(card.topic)) deck.topics.push(card.topic)
+        deck.cards.push({ ...card, source })
+      }
     }
   }
 
@@ -218,14 +228,19 @@ export const Flashcards: QuartzEmitterPlugin = () => {
     async *emit(ctx, content, resources) {
       const allFiles = content.map((c) => c[1].data)
       const decks = collectDecks(allFiles)
-      const total = decks.reduce((n, deck) => n + deck.cards.length, 0)
+      // a card that is in a card set as well counts once
+      const seen = new Set<string>()
+      const everyCard = decks
+        .flatMap((deck) => deck.cards)
+        .filter((card) => !seen.has(card.id) && seen.add(card.id))
+      const total = everyCard.length
       if (decks.length > 1) {
         decks.unshift({
           name: "all",
           slug: joinSegments(FLASHCARDS_SLUG, "all") as FullSlug,
           title: "All decks, mixed",
           topics: [...new Set(decks.flatMap((deck) => deck.topics))],
-          cards: decks.flatMap((deck) => deck.cards),
+          cards: everyCard,
           mixed: true,
         })
       }

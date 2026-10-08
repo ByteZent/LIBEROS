@@ -5,6 +5,9 @@
 // repeated until none are left.
 // A written card (`<!-- qard-write -->` in the note), or every card while "Write answers" is on,
 // asks for the answer in a text field first and shows it above the card's answer for comparison.
+// A calculation card with variants (`<!-- qard-variant -->`) shows one set of numbers at a time and
+// the next one after each rating; which one is next is kept in this browser. The checklist of a
+// drawing card can be ticked off against the sketch.
 // "★ Important" narrows the deck to the cards marked `<!-- qard-important -->`: the selection, the
 // counts and the exam then only draw from those.
 // `?topic=<name>` in the URL preselects a topic, so notes and course maps can link to their cards.
@@ -49,6 +52,16 @@ const RATING_LABELS: [Rating, string][] = [
   ["known", "Knew it"],
 ]
 const WRITE_KEY = "liberos-qards-write" // "Write answers" stays on between visits
+const VARIANT_KEY = "liberos-qards-variant" // card id → the variant shown next
+
+function loadVariants(): Record<string, number> {
+  try {
+    const stored = JSON.parse(localStorage.getItem(VARIANT_KEY) ?? "{}")
+    return stored && typeof stored === "object" ? stored : {}
+  } catch {
+    return {}
+  }
+}
 
 function shuffled<T>(items: T[]): T[] {
   const out = [...items]
@@ -173,6 +186,35 @@ document.addEventListener("nav", () => {
       ? card.querySelector<HTMLTextAreaElement>(".qard-written textarea")
       : null
 
+  // a card with variants shows the one that is next, the same numbers never twice in a row
+  const variantAt = loadVariants()
+  const variantsOf = (card: HTMLElement) =>
+    card.querySelectorAll<HTMLElement>(".qard-variants > .qard-variant")
+  const useVariant = (card: HTMLElement) => {
+    const variants = variantsOf(card)
+    if (variants.length < 2) return
+    const n = (variantAt[idOf(card)] ?? 0) % variants.length
+    if (card.dataset.variant === String(n)) return
+    card.dataset.variant = String(n)
+    for (const side of ["front", "back"]) {
+      const shown = card.querySelector<HTMLElement>(`:scope > .qard-${side}`)
+      const source = variants[n].querySelector<HTMLElement>(`.qard-variant-${side}`)
+      if (shown && source) shown.innerHTML = source.innerHTML
+    }
+    const label = card.querySelector<HTMLElement>(".qard-variant-no")
+    if (label) label.textContent = ` · now ${n + 1}`
+  }
+  const nextVariant = (card: HTMLElement) => {
+    const count = variantsOf(card).length
+    if (count < 2) return
+    variantAt[idOf(card)] = ((variantAt[idOf(card)] ?? 0) + 1) % count
+    try {
+      localStorage.setItem(VARIANT_KEY, JSON.stringify(variantAt))
+    } catch {
+      // private mode: the variants still rotate until the page is left
+    }
+  }
+
   // "new", or the card's box and the day it comes back
   const describe = (card: HTMLElement) => {
     const state = progress[idOf(card)]
@@ -206,6 +248,16 @@ document.addEventListener("nav", () => {
     index = Math.min(Math.max(i, 0), cards.length - 1)
     for (const card of all) card.classList.remove("current", "revealed")
     const card = cards[index]
+    if (card && !revealed) {
+      useVariant(card)
+      // drawing card: the checklist starts empty and can be ticked
+      for (const box of card.querySelectorAll<HTMLInputElement>(
+        ".qard-back input[type=checkbox]",
+      )) {
+        box.disabled = false
+        box.checked = false
+      }
+    }
     card?.classList.add("current")
     card?.classList.toggle("revealed", revealed)
     if (card) describe(card)
@@ -426,6 +478,7 @@ document.addEventListener("nav", () => {
     ratings.set(card, rating)
     rateCard(progress, idOf(card), rating)
     saveProgress(progress)
+    nextVariant(card)
     for (const other of item.querySelectorAll("button[data-rating]"))
       other.setAttribute("aria-pressed", String(other === button))
     updateCounts()
@@ -476,6 +529,7 @@ document.addEventListener("nav", () => {
     ratings.set(cards[index], rating)
     rateCard(progress, idOf(cards[index]), rating)
     saveProgress(progress)
+    nextVariant(cards[index])
     updateCounts()
     onNext()
   }
@@ -522,7 +576,10 @@ document.addEventListener("nav", () => {
   const onCardClick = (e: MouseEvent) => {
     // links work as links, a diagram opens full screen, a worked solution unfolds,
     // and selecting text on a card does not flip it
-    if ((e.target as HTMLElement).closest("a, button, details, img, .qard-written")) return
+    if (
+      (e.target as HTMLElement).closest("a, button, details, img, .qard-written, .task-list-item")
+    )
+      return
     if (window.getSelection()?.toString()) return
     toggle()
   }
