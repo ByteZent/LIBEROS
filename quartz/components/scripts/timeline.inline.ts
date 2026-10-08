@@ -4,7 +4,11 @@
 //   > [!period] **1815–1873** Age of free trade
 // From those the script builds
 //   - a chart to scale: one lane per category, spans as bars, eras as bands, connections as lines
-//   - filters by category, by session and for key events
+//   - filters by category (several at once: the chart then shows only their lanes), by session
+//     and for key events
+//   - a full-screen view of the chart and its filters
+//   - `line` after the bar (`[!event|political key line]`) draws a dashed line in the category
+//     colour through all lanes at the entry's date, to show what else happened then
 //   - fields: paragraphs that open with "Why it matters:", "Debate:", "Source:", "Perspectives:"
 //   - connections: `- → causes [[#^id|label]]: reason` gets its counterpart at the target
 //   - a self-test that hides the dates or the titles until an entry is clicked
@@ -51,6 +55,9 @@ interface Entry {
   end: number | null
   process: boolean
   key: boolean
+  // a dashed line through all lanes of the chart at the entry's date
+  line: boolean
+  lines: HTMLElement[]
   categories: string[]
   session: string | null
   marks: HTMLElement[]
@@ -252,11 +259,13 @@ function drawChart(
   eras: Era[],
   connections: Connection[],
   zoom: number,
+  only: Set<string>,
 ) {
   chart.replaceChildren()
   const dated = entries.filter((e) => e.end !== null)
   for (const e of entries) {
     e.marks = []
+    e.lines = []
     e.anchor = null
   }
   if (dated.length < 2) return
@@ -275,11 +284,12 @@ function drawChart(
   const x = (year: number) => PAD + (year - min) * perYear
 
   const used = new Set(dated.flatMap((e) => e.categories))
+  // with categories selected, only their lanes are drawn; the scale stays that of all entries
   const names = [
     ...ORDER.filter((c) => used.has(c)),
     ...[...used].filter((c) => !ORDER.includes(c)),
-  ]
-  if (dated.some((e) => e.categories.length === 0)) names.push("other")
+  ].filter((c) => only.size === 0 || only.has(c))
+  if (only.size === 0 && dated.some((e) => e.categories.length === 0)) names.push("other")
 
   // lanes: place every entry on the first row where it does not run into its neighbour
   let top = AXIS
@@ -336,9 +346,11 @@ function drawChart(
       const focus = (on: boolean) => {
         canvas.classList.toggle("tl-focus", on)
         for (const m of e.marks) m.classList.toggle("tl-on", on)
+        for (const l of e.lines) l.classList.toggle("tl-on", on)
         for (const c of connections) {
           if (c.from !== e && c.to !== e) continue
           c.path?.classList.toggle("tl-on", on)
+          for (const l of (c.from === e ? c.to : c.from).lines) l.classList.toggle("tl-on", on)
           for (const m of (c.from === e ? c.to : c.from).marks) m.classList.toggle("tl-on", on)
         }
       }
@@ -358,6 +370,29 @@ function drawChart(
   canvas.style.width = `${width}px`
   canvas.style.height = `${total}px`
   lanes.style.paddingTop = `${AXIS}px`
+
+  // date lines: dashed, in the colour of the entry's first category, through every lane, also
+  // when the entry's own lane is not shown. A span gets one at its start and one at its end
+  for (const e of dated) {
+    if (!e.line) continue
+    const from = e.start ?? e.end!
+    const at = e.end! > from ? [from, e.end! + 1] : [from]
+    at.forEach((year, i) => {
+      const line = el("div", "tl-date-line")
+      if (e.categories[0]) line.dataset.category = e.categories[0]
+      line.style.left = `${x(year)}px`
+      // from the axis down, so that the flag sits among the years and not on a lane
+      line.style.top = "0"
+      line.style.height = `${top}px`
+      // a flag with the year; the whole name while the entry is hovered, or as a tooltip
+      const flag = el("span")
+      flag.dataset.short = String(i === 0 ? from : e.end)
+      flag.dataset.full = flag.title = i === 0 ? label(e) : `${e.end} ${e.title}`
+      line.appendChild(flag)
+      canvas.prepend(line)
+      e.lines.push(line)
+    })
+  }
 
   // eras as bands behind the lanes, named along the bottom
   eras.forEach((era, i) => {
@@ -452,7 +487,9 @@ function setup() {
       end: span ? span[1] : null,
       process: node.dataset.callout === "process",
       key: tokens.includes("key"),
-      categories: tokens.filter((t) => t !== "key"),
+      line: tokens.includes("line"),
+      lines: [],
+      categories: tokens.filter((t) => t !== "key" && t !== "line"),
       session,
       marks: [],
       anchor: null,
@@ -470,7 +507,7 @@ function setup() {
   // toolbar
   const tools = el("div", "timeline-tools")
   const state = {
-    category: null as string | null,
+    categories: new Set<string>(),
     session: null as string | null,
     keyOnly: false,
     test: null as "dates" | "titles" | null,
@@ -480,7 +517,15 @@ function setup() {
   const chartWrap = el("div", "timeline-chart-wrap")
   const chartHead = el("div", "timeline-chart-head")
   const chart = el("div", "timeline-chart")
-  const redraw = () => drawChart(chart, entries, eras, connections, ZOOMS[state.zoom])
+  // a new drawing keeps the years that were in the middle of the view
+  const redraw = () => {
+    const old = chart.querySelector<HTMLElement>(".tl-scroll")
+    const at =
+      old && old.scrollWidth > 0 ? (old.scrollLeft + old.clientWidth / 2) / old.scrollWidth : null
+    drawChart(chart, entries, eras, connections, ZOOMS[state.zoom], state.categories)
+    const scroll = chart.querySelector<HTMLElement>(".tl-scroll")
+    if (scroll && at !== null) scroll.scrollLeft = at * scroll.scrollWidth - scroll.clientWidth / 2
+  }
   const zoomOut = toggleButton("−", () => {
     state.zoom = Math.max(0, state.zoom - 1)
     redraw()
@@ -495,7 +540,76 @@ function setup() {
   zoomIn.ariaLabel = "Zoom in"
   zoomOut.removeAttribute("aria-pressed")
   zoomIn.removeAttribute("aria-pressed")
-  chartHead.append(el("span", "timeline-chart-title", "To scale"), zoomOut, zoomIn)
+
+  // full screen: the chart with its filters as a fixed layer over the page, and on top of that
+  // the browser's own full screen where it is allowed (not on an iPhone, not in every frame)
+  const EXPAND =
+    '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>'
+  const SHRINK =
+    '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg>'
+  const isFull = () => tools.classList.contains("tl-fullscreen")
+  const setFull = (on: boolean) => {
+    if (on === isFull()) return
+    tools.classList.toggle("tl-fullscreen", on)
+    fullButton.innerHTML = on ? SHRINK : EXPAND
+    fullButton.ariaLabel = fullButton.title = on ? "Leave full screen" : "Full screen"
+    // the chart is drawn to the width it has: draw again once the layout has settled
+    requestAnimationFrame(() => {
+      redraw()
+      apply()
+    })
+  }
+  let native = false
+  const leaveFull = () => {
+    if (document.fullscreenElement === tools) void document.exitFullscreen()
+    setFull(false)
+  }
+  const fullButton = toggleButton("", () => {
+    if (isFull()) return leaveFull()
+    setFull(true)
+    if (typeof tools.requestFullscreen === "function") tools.requestFullscreen().catch(() => {})
+  })
+  fullButton.classList.add("tl-full-button")
+  fullButton.removeAttribute("aria-pressed")
+  fullButton.innerHTML = EXPAND
+  fullButton.ariaLabel = fullButton.title = "Full screen"
+  // Escape in the browser's full screen ends it without a key event: follow it
+  const onFullChange = () => {
+    const now = document.fullscreenElement === tools
+    if (native && !now) setFull(false)
+    native = now
+    if (now) requestAnimationFrame(redrawAll)
+  }
+  const redrawAll = () => {
+    redraw()
+    apply()
+  }
+  const onEscape = (e: KeyboardEvent) => {
+    if (e.key === "Escape" && isFull()) leaveFull()
+  }
+  document.addEventListener("fullscreenchange", onFullChange)
+  document.addEventListener("keydown", onEscape)
+  window.addCleanup(() => {
+    document.removeEventListener("fullscreenchange", onFullChange)
+    document.removeEventListener("keydown", onEscape)
+  })
+  // a mark leads to its entry in the list below: leave full screen first, then jump
+  chart.addEventListener(
+    "click",
+    (ev) => {
+      if (!isFull()) return
+      const mark = (ev.target as HTMLElement).closest<HTMLAnchorElement>(".tl-mark")
+      const entry = mark && entries.find((e) => e.marks.includes(mark))
+      if (!entry) return
+      ev.preventDefault()
+      ev.stopPropagation()
+      leaveFull()
+      window.setTimeout(() => jumpTo(entry), 250)
+    },
+    true,
+  )
+
+  chartHead.append(el("span", "timeline-chart-title", "To scale"), zoomOut, zoomIn, fullButton)
   chartWrap.append(chartHead, chart)
 
   const buttons: { button: HTMLButtonElement; pressed: () => boolean }[] = []
@@ -512,14 +626,23 @@ function setup() {
     ...ORDER.filter((c) => used.has(c)),
     ...[...used].filter((c) => !ORDER.includes(c)),
   ]
-  const categoryRow = row("Category", "Filter the timeline by category")
+  // several categories can be on at once: an entry shows if it has one of them
+  const categoryRow = row("Category", "Filter the timeline by category, several at once")
+  const allButton = toggleButton("all", () => {
+    state.categories.clear()
+    redraw()
+    apply()
+  })
+  buttons.push({ button: allButton, pressed: () => state.categories.size === 0 })
+  categoryRow.appendChild(allButton)
   for (const name of categories) {
     const button = toggleButton(name, () => {
-      state.category = state.category === name ? null : name
+      if (!state.categories.delete(name)) state.categories.add(name)
+      redraw()
       apply()
     })
     button.dataset.category = name
-    buttons.push({ button, pressed: () => state.category === name })
+    buttons.push({ button, pressed: () => state.categories.has(name) })
     categoryRow.appendChild(button)
   }
 
@@ -581,11 +704,16 @@ function setup() {
   function apply() {
     for (const e of entries) {
       const hidden =
-        (state.category !== null && !e.categories.includes(state.category)) ||
+        (state.categories.size > 0 && !e.categories.some((c) => state.categories.has(c))) ||
         (state.session !== null && e.session !== state.session) ||
         (state.keyOnly && !e.key)
       e.el.classList.toggle("tl-hidden", hidden)
       for (const m of e.marks) m.classList.toggle("tl-dim", hidden)
+      // a date line stays when only the category filter hides its entry: it is there to be
+      // read against the other lanes
+      const offStage =
+        (state.session !== null && e.session !== state.session) || (state.keyOnly && !e.key)
+      for (const l of e.lines) l.classList.toggle("tl-dim", offStage)
     }
     for (const { button, pressed } of buttons)
       button.setAttribute("aria-pressed", String(pressed()))

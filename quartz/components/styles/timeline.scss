@@ -397,6 +397,18 @@ $categories: (
   }
 }
 
+// full screen: the chart and its filters over the whole window
+.timeline-tools.tl-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1rem 1.2rem;
+  overflow: auto;
+  background: var(--light);
+}
+
 .timeline-stats {
   margin: 0.5rem 0 0;
   font-size: 0.75rem;
@@ -423,6 +435,22 @@ $categories: (
     height: 1.5rem;
     padding: 0;
     line-height: 1;
+  }
+
+  .tl-full-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 0.85rem;
+      height: 0.85rem;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
   }
 }
 
@@ -494,6 +522,48 @@ $categories: (
     font-size: 0.62rem;
     color: var(--gray);
     pointer-events: none;
+  }
+
+  // `line` on an entry: its date drawn through all lanes
+  .tl-date-line {
+    position: absolute;
+    width: 0;
+    border-left: 2px dashed var(--tl-color, var(--gray));
+    opacity: 0.85;
+    pointer-events: none;
+
+    // a flag with the year; it grows to the entry's name while one of its marks is hovered
+    span {
+      position: absolute;
+      pointer-events: auto;
+      left: 0;
+      top: 1px;
+      padding: 0 0.3rem;
+      line-height: 1.5;
+      font-family: var(--codeFont);
+      border-radius: 3px;
+      font-size: 0.65rem;
+      white-space: nowrap;
+      color: var(--light);
+      background: var(--tl-color, var(--gray));
+
+      &::before {
+        content: attr(data-short);
+      }
+    }
+
+    &.tl-on {
+      opacity: 1;
+      z-index: 2;
+
+      span::before {
+        content: attr(data-full);
+      }
+    }
+
+    &.tl-dim {
+      opacity: 0.15;
+    }
   }
 
   .tl-lane-line {
