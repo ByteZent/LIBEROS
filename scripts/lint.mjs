@@ -8,6 +8,8 @@
 //     a label the SVG does not have
 // Warnings everywhere:
 //   - `qard-deck` is not one of the note's `courses` (practice questions are exempt: `type: practice`)
+//   - a calculation card with `<!-- qard-variant -->` where a variant has no `<!-- qard-answer -->`
+//   - `qard-sets` on a note without cards, or naming the note's own `qard-deck`
 //   - a concept, model or framework note without any card
 //   - a Self-Test with only recall cards (no card that asks to apply, compare or judge)
 import fs from "fs"
@@ -20,7 +22,7 @@ const UNPUBLISHED = new Set(["_inbox", "_private"])
 const NEEDS_CARDS = new Set(["concept", "model", "framework"])
 // a card that makes you use the idea, not just recall it
 const DEEP =
-  /\b(apply|compare|contrast|differ|distinguish|versus|vs\.?|why|explain|judge|assess|evaluate|predict|what (would|happens|changes|follows)|how (would|does|do|can|could)|case|scenario|example|limit|critici[sz]e|weshalb|warum|wieso|inwiefern|erkl[äa]r\w*|erl[äa]uter\w*|vergleich\w*|unterscheid\w*|unterschied\w*|beurteil\w*|bewert\w*|beispiel\w*)\b/i
+  /\b(draw|zeichn\w*|skizzier\w*|apply|compare|contrast|differ|distinguish|versus|vs\.?|why|explain|judge|assess|evaluate|predict|what (would|happens|changes|follows)|how (would|does|do|can|could)|case|scenario|example|limit|critici[sz]e|weshalb|warum|wieso|inwiefern|erkl[äa]r\w*|erl[äa]uter\w*|vergleich\w*|unterscheid\w*|unterschied\w*|beurteil\w*|bewert\w*|beispiel\w*)\b/i
 
 function* notes(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -76,10 +78,25 @@ for (const file of notes(VAULT)) {
   let inSelfTest = false
   let fence = false
   let images = [] // SVGs embedded in the current callout so far
+  let variants = 0 // `qard-variant` and `qard-answer` markers in the current callout
+  let answers = 0
+  const closeCard = () => {
+    if (variants > 0 && answers < variants + 1)
+      problems.push([
+        published,
+        `a card has ${variants + 1} variants but ${answers} \`qard-answer\`: each variant needs its givens above the marker`,
+      ])
+    variants = answers = 0
+  }
   for (const line of content.split("\n")) {
     if (/^(```|~~~)/.test(line)) fence = !fence
     if (fence) continue
-    if (!line.startsWith(">") || /^> \[!/.test(line)) images = []
+    if (!line.startsWith(">") || /^> \[!/.test(line)) {
+      images = []
+      closeCard()
+    }
+    if (/^>\s*<!--\s*qard-variant\b/.test(line)) variants++
+    if (/^>\s*<!--\s*qard-answer\b/.test(line)) answers++
     images.push(...[...line.matchAll(/!\[\[([^\]|]+\.svg)/gi)].map((m) => path.basename(m[1])))
     const hide = line.match(/<!--\s*qard-hide\s*:(.*?)-->/)
     if (hide) {
@@ -107,6 +124,8 @@ for (const file of notes(VAULT)) {
       problems.push([published, "`[!question]` in the Self-Test (use `[!qard]`)"])
   }
 
+  closeCard()
+
   const deck = typeof data["qard-deck"] === "string" ? data["qard-deck"].trim() : ""
   const courses = asList(data.courses)
   if (cards.length > 0 && !deck)
@@ -123,6 +142,12 @@ for (const file of notes(VAULT)) {
       false,
       `\`qard-deck: ${deck}\` is not one of its courses (${courses.join(", ")})`,
     ])
+  // card sets the note's cards are in as well (`qard-sets: ["MikroEcon Test 1"]`)
+  const sets = asList(data["qard-sets"])
+  if (sets.length > 0 && cards.length === 0)
+    problems.push([false, `\`qard-sets\` (${sets.join(", ")}) but no cards`])
+  if (deck && sets.includes(deck))
+    problems.push([false, `\`qard-sets\` names the note's own deck (${deck})`])
   if (cards.length === 0 && NEEDS_CARDS.has(data.type))
     problems.push([false, `${data.type} note without cards`])
   if (cards.length > 0 && !cards.some((q) => DEEP.test(q)))
