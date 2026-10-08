@@ -58,6 +58,7 @@ Every note opens with a `[!bluf]` callout. After that, each type follows its tem
 Concept, model, framework and legal notes end with `## Self-Test: <short topic>`. Each question is a `> [!qard]- Question` callout with the answer in its body. The same card is used by the Qard plugin in Obsidian and by the site's flashcards (`/flashcards/`).
 
 - `qard-deck:` in the frontmatter names the deck: the course code, normally the first entry of `courses`. The text after "Self-Test:" becomes the topic inside the deck.
+- `qard-sets:` puts the note's cards into further decks as well, a **card set**: `qard-sets: ["MikroEcon Test 1"]` on every note of a test gives one deck with everything for that test, with the notes as its topics. They are the same cards, not copies: a rating in one deck counts in the other, and `/flashcards/all` shows each card once. Card sets are listed under *Test preparation* on the flashcards overview.
 - One fact or one distinction per card. Keep the answer under about 40 words, so I can grade myself honestly.
 - Recall is not enough. Every self-test has at least one card that makes me **use** the idea: apply it to a case, compare it with a neighbouring concept, or name where it fails.
 - The rows of a note's `## Glossary` table marked **apply** or **define** become cards by themselves: German term on the front, English term and definition on the back, in the deck `/flashcards/glossary`, grouped by course. A term keeps its review history when its note moves.
@@ -76,7 +77,7 @@ The site schedules every card by how I rated it. A card I knew when it was due m
 
 ### Card types
 
-Three comments turn a card into more than text. Obsidian ignores them and shows the whole callout.
+Five comments turn a card into more than text. Obsidian ignores them and shows the whole callout. Every card carries a label with its kind, in the deck and on its note: *Question*, *Cloze*, *Diagram labels*, *Calculation*, *Drawing*, and for the generated cards *Term*, *Connection* and *Blank page*; *written* and the number of variants are added to it.
 
 **Image card:** put an SVG diagram in the card and name the labels to hide, separated by `;`. On the site each label becomes (1), (2), … until the card is turned. A label is the exact text of one `<text>` element in the SVG. `make lint` reports a label that the diagram does not have.
 
@@ -95,6 +96,34 @@ Three comments turn a card into more than text. Obsidian ignores them and shows 
 > <!-- qard-solution -->
 > 1. Set $Q_D = Q_S$: $4P = 80$, so $P^* = 20$.
 > 2. Insert: $Q^* = 100 - 40 = 60$.
+```
+
+**Calculation card with variants:** a calculation card always shows the same numbers, so after a few reviews I remember the result instead of working it out. `<!-- qard-variant -->` on a line of its own starts the same task with other numbers. The task goes in the title, and each variant has its givens, `<!-- qard-answer -->`, its result and its steps. The site shows one variant at a time and moves to the next after each rating. All variants share one review history, because the id comes from the title. Write three, and let one of them be the odd case (a price floor that does not bind, a bundle that is already optimal). `make lint` reports a variant without `<!-- qard-answer -->`.
+
+```markdown
+> [!qard]- Calculate: find the equilibrium of the market.
+> $Q_D = 100 - 2P$ and $Q_S = 20 + 2P$.
+> <!-- qard-answer -->
+> $P^* = 20$, $Q^* = 60$.
+> <!-- qard-solution -->
+> 1. $4P = 80$, so $P^* = 20$ and $Q^* = 100 - 40 = 60$.
+> <!-- qard-variant -->
+> $Q_D = 120 - 2P$ and $Q_S = 4P$.
+> <!-- qard-answer -->
+> $P^* = 20$, $Q^* = 80$.
+> <!-- qard-solution -->
+> 1. $6P = 120$, so $P^* = 20$ and $Q^* = 4 \cdot 20 = 80$.
+```
+
+**Drawing card:** start the question with *Draw:*, or put `<!-- qard-draw -->` in the card. The site asks me to sketch on paper; the back shows the diagram and a checklist (`- [ ] …`) that I tick off against my sketch before I rate myself. An image card asks me to recognise labels, a drawing card to produce the diagram: use it for every diagram the exam can ask for.
+
+```markdown
+> [!qard]- Draw: a market in equilibrium, with a surplus and a shortage.
+> <!-- qard-draw -->
+> ![[supply-demand-equilibrium.svg]]
+>
+> - [ ] Price on the vertical axis, quantity on the horizontal axis
+> - [ ] Surplus above the equilibrium price, shortage below it
 ```
 
 **Written card:** `<!-- qard-write -->` anywhere in the card. The site shows a text field under the question; I write the answer, turn the card (Ctrl or ⌘ + Enter) and see my text above the card's answer before I rate myself. Use it for *explain* and *apply* questions, where recognising the answer is easier than producing it. The *Write answers* button on a deck does the same for every card, without the comment. What I write is not stored.
