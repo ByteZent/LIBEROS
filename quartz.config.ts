@@ -19,7 +19,6 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: null,
     locale: "en-US",
-    // TODO: set to your domain or "<user>.github.io/<repo>" before deploying
     baseUrl: "bytezent.github.io/LIBEROS",
     // Everything that is part of the *learning process* but not publishable stays out of the build
     ignorePatterns: [
