@@ -16,6 +16,9 @@
 //                     edge, fold the stack in the middle and staple
 // Study cut: Sources, Open Questions and Key Connections are left out. The Self-Test keeps its
 // questions; the answers move to the back. The notes' Glossary tables merge into one at the end.
+// A mind map of the course (tag `mindmap`, the course in `courses:`) opens the booklet: only the
+// map itself, drawn on landscape pages (turn the booklet), a few branches around the centre on
+// each. A link to a note of the booklet gives its page.
 // Which notes belong to an assessment comes from the course map (09-Learning/93-Course-Maps):
 // its Assessment table (What | When | Form) and its Sessions table (Date | Theme | Notes).
 // Needs Chrome or Chromium (CHROME=/path/to/binary overrides the lookup).
@@ -28,7 +31,7 @@ import matter from "gray-matter"
 import { fromHtml } from "hast-util-from-html"
 import { toHtml } from "hast-util-to-html"
 import { toString } from "hast-util-to-string"
-import { PDFDocument, StandardFonts, rgb } from "pdf-lib"
+import { PDFDocument, StandardFonts, degrees, rgb } from "pdf-lib"
 
 const VAULT = "content"
 const SKIP = new Set(["_templates", "_dashboards", ".obsidian", ".trash"])
@@ -89,6 +92,13 @@ const vault = [...notes(VAULT)].map((file) => {
 const maps = new Map(
   vault.filter((n) => n.data.type === "moc" && n.data.course).map((n) => [n.data.course, n]),
 )
+// the mind maps of a course, by title
+const mindmaps = (course) =>
+  vault
+    .filter((n) => [n.data.tags ?? []].flat().includes("mindmap"))
+    .filter((n) => [n.data.courses ?? []].flat().includes(course))
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .map((n) => n.slug)
 const pageFile = (slug) => path.join(SITE, `${slug}.html`)
 const onSite = (slug) => fs.existsSync(pageFile(slug))
 
@@ -182,6 +192,7 @@ function courseMap(course) {
   for (const a of assessments) {
     const taught = sessions.filter((s) => a.date && s.date && s.date <= a.date)
     a.slugs = [...new Set(taught.flatMap((s) => s.slugs))].filter(onSite)
+    a.maps = a.slugs.length ? mindmaps(course).filter(onSite) : []
     a.missing = taught.filter((s) => s.slugs.filter(onSite).length === 0).length
   }
   return {
@@ -263,6 +274,127 @@ function chapter(slug, inBooklet) {
   return { slug, title, body, answers, glossary }
 }
 
+// a mind map note → a chapter with nothing but the map: the list inside its [!mindmap] callout,
+// which drawMaps turns into the drawing once Chrome has the page
+function mindmap(slug, inBooklet) {
+  const { title, body } = chapter(slug, inBooklet)
+  const lists = body
+    .flatMap((node) => [node, ...walk(node)])
+    .filter((n) => isEl(n, "blockquote") && n.properties.dataCallout === "mindmap")
+    .flatMap((callout) => {
+      const part = (name) => find(callout, (n) => classes(n).includes(name))[0]
+      const centre = toString(part("callout-title-inner") ?? h("p", {}, title)).trim()
+      return (part("callout-content")?.children ?? [])
+        .filter((n) => isEl(n, "ul") || isEl(n, "ol"))
+        .map((list) => ({
+          ...list,
+          properties: { ...list.properties, className: ["mindmap"], dataCentre: centre },
+        }))
+    })
+  const script = h("script", {}, `(${drawMaps})()`)
+  return { slug, title, body: [...lists, script], answers: [], glossary: [], map: true }
+}
+
+// Runs in Chrome, not in Node: every ul.mindmap becomes a drawn map. The centre stands in the
+// middle of a landscape page with as many branches to its right and left as the page holds,
+// then the next page follows. The boxes are laid out by CSS (flex), so nothing depends on
+// measured text; measuring only decides which branch goes on which page.
+function drawMaps() {
+  const COLORS = ["#3d7a94", "#b5533c", "#4f8a5b", "#b08a2e", "#7d5ba6", "#2f8f8a", "#6b7785"]
+  const el = (tag, className, html) => {
+    const node = document.createElement(tag)
+    node.className = className
+    if (html !== undefined) node.innerHTML = html
+    return node
+  }
+  // one list item → its own line without the nested list, tags taken out
+  const read = (li) => {
+    const own = li.cloneNode(true)
+    own.querySelectorAll("ul, ol").forEach((list) => list.remove())
+    const tags = [...own.querySelectorAll("code")].map((code) => {
+      code.remove()
+      return code.textContent.trim()
+    })
+    const sub = li.querySelector(":scope > ul, :scope > ol")
+    return {
+      html: (own.querySelector(":scope > p") ?? own).innerHTML.trim(),
+      tags: tags.filter(Boolean),
+      children: sub ? [...sub.children].map(read) : [],
+    }
+  }
+  const draw = (item, depth) => {
+    const node = el("div", "mmp-node")
+    const label = el("span", `mmp-label mmp-d${Math.min(depth, 3)}`, item.html)
+    for (const tag of item.tags) label.append(" ", el("span", "mmp-tag", tag))
+    node.append(label)
+    if (item.children.length) {
+      const kids = el("div", "mmp-kids")
+      for (const child of item.children) {
+        const kid = el("div", "mmp-kid")
+        kid.append(draw(child, depth + 1))
+        kids.append(kid)
+      }
+      node.append(kids)
+    }
+    return node
+  }
+  const heading = document.querySelector("h1")
+  for (const list of document.querySelectorAll(".mindmap")) {
+    const branches = [...list.children].map((li, i) => {
+      const kid = el("div", "mmp-kid")
+      kid.style.setProperty("--c", COLORS[i % COLORS.length])
+      kid.append(draw(read(li), 1))
+      return kid
+    })
+    const sheet = () => {
+      const page = el("section", "mmp-page")
+      const head = el("div", "mmp-head")
+      const area = el("div", "mmp-area")
+      const map = el("div", "mmp-map")
+      const left = el("div", "mmp-kids mmp-left")
+      const right = el("div", "mmp-kids mmp-right")
+      map.append(left, el("span", "mmp-centre", list.dataset.centre), right)
+      area.append(map)
+      page.append(head, area)
+      list.before(page)
+      return { page, head, area, map, left, right, room: { left: 0, right: 0 } }
+    }
+    // how tall is each branch, and how much does a page hold?
+    const probe = sheet()
+    probe.right.append(...branches)
+    const heights = branches.map((b) => b.offsetHeight)
+    const room = probe.area.clientHeight
+    probe.page.remove()
+
+    const sheets = []
+    branches.forEach((branch, i) => {
+      let last = sheets.at(-1)
+      const side = ["right", "left"].find(
+        (s) =>
+          last &&
+          (s === "right" ? last.room.left === 0 : true) &&
+          (last.room[s] === 0 || last.room[s] + heights[i] <= room),
+      )
+      if (!side) sheets.push((last = sheet()))
+      last[side ?? "right"].append(branch)
+      last.room[side ?? "right"] += heights[i]
+    })
+    sheets.forEach((s, i) => {
+      s.head.textContent = `${heading?.textContent ?? ""}${sheets.length > 1 ? ` · ${i + 1}/${sheets.length}` : ""}`
+      for (const side of [s.left, s.right]) if (!side.children.length) side.remove()
+      // a branch wider or taller than the page shrinks its page
+      const scale = Math.min(
+        1,
+        s.area.clientWidth / s.map.offsetWidth,
+        s.area.clientHeight / s.map.offsetHeight,
+      )
+      if (scale < 1) s.map.style.zoom = scale
+    })
+    list.style.display = "none"
+  }
+  if (heading) heading.style.display = "none"
+}
+
 // ── the booklet's parts as HTML ──────────────────────────────────────────────
 
 const CSS = `
@@ -301,6 +433,34 @@ img { display: block; max-width: 100%; max-height: 75mm; margin: 0.5rem auto; }
 .toc li { display: flex; align-items: baseline; gap: 0.4rem; margin: 0.45rem 0; }
 .toc .dots { flex: 1; border-bottom: 0.5pt dotted #777; }
 .toc .extra { margin-top: 1rem; }
+.mindmap { padding-left: 1.1rem; }
+.mindmap code { font-size: 0.8em; color: #555; background: none; padding: 0; }
+@page map { size: 210mm 148mm; margin: 11mm 13mm 15mm; }
+.mmp-page { page: map; height: 121mm; display: flex; flex-direction: column; --c: #555; }
+.mmp-page + .mmp-page { break-before: page; }
+.mmp-head { flex: none; font-size: 0.8rem; font-weight: 600; padding-bottom: 2pt; border-bottom: 0.5pt solid #111; }
+.mmp-area { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; }
+.mmp-map { display: flex; align-items: center; width: max-content; font-size: 6.9pt; line-height: 1.18; }
+.mmp-left { direction: rtl; }
+.mmp-node { display: flex; align-items: center; }
+.mmp-label { direction: ltr; box-sizing: border-box; max-width: 30mm; padding: 0.6pt 2.5pt; border-bottom: 0.6pt solid var(--c); hyphens: manual; }
+.mmp-d1 { max-width: 21mm; padding: 2pt 4pt; border: 0; border-radius: 3pt; background: var(--c); color: #fff; font-weight: 600; font-size: 1.08em; }
+.mmp-d2 { max-width: 24mm; padding: 1.2pt 3pt; border: 0.6pt solid var(--c); border-radius: 3pt; font-weight: 600; }
+.mmp-centre { flex: none; box-sizing: border-box; max-width: 34mm; padding: 4pt 6pt; border: 1.2pt solid #111; border-radius: 5pt; font-weight: 700; font-size: 1.3em; text-align: center; }
+.mmp-tag { font-family: var(--codeFont); font-size: 0.8em; font-weight: 400; opacity: 0.65; white-space: nowrap; }
+.mmp-label .xref { font-size: 0.9em; font-weight: 400; color: inherit; opacity: 0.75; }
+.mmp-kids { position: relative; display: flex; flex-direction: column; margin-inline-start: 5pt; }
+.mmp-kids::before, .mmp-kid::before, .mmp-kid::after { content: ""; position: absolute; inset-inline-start: 0; box-sizing: border-box; width: 5pt; }
+.mmp-kids::before { inset-inline-start: -5pt; top: 50%; border-top: 0.6pt solid var(--c); }
+.mmp-kid { position: relative; padding-block: 1.3pt; padding-inline-start: 5pt; break-inside: avoid; }
+.mmp-map > .mmp-kids > .mmp-kid { padding-block: 4pt; }
+.mmp-kid::before { top: 50%; border-top: 0.6pt solid var(--c); }
+.mmp-kid::after { top: 0; bottom: 0; border-inline-start: 0.6pt solid var(--c); }
+.mmp-kid:first-child::before, .mmp-kid:last-child::before { display: none; }
+.mmp-kid:first-child::after { top: 50%; border-top: 0.6pt solid var(--c); border-start-start-radius: 4pt; }
+.mmp-kid:last-child::after { bottom: 50%; border-bottom: 0.6pt solid var(--c); border-end-start-radius: 4pt; }
+.mmp-kid:only-child::before { display: block; }
+.mmp-kid:only-child::after { display: none; }
 `
 
 const html = (children) =>
@@ -310,6 +470,7 @@ const html = (children) =>
 
 function parts(booklet) {
   const chapters = booklet.chapters
+  const count = chapters.filter((c) => !c.map).length
   const answers = chapters.filter((c) => c.answers.length)
   // one glossary: a term that several notes define appears once, sorted by the German term
   const terms = new Map()
@@ -345,7 +506,7 @@ function parts(booklet) {
             h(
               "p",
               { className: ["built"] },
-              `${chapters.length} ${chapters.length === 1 ? "note" : "notes"} · built ${new Date().toISOString().slice(0, 10)}`,
+              `${count} ${count === 1 ? "note" : "notes"} · built ${new Date().toISOString().slice(0, 10)}`,
             ),
           ]),
         ]),
@@ -508,8 +669,19 @@ async function build(booklet, name) {
   read.getPages().forEach((p, i) => {
     if (i === 0) return // the cover
     const label = String(i + 1)
-    const x = (p.getWidth() - font.widthOfTextAtSize(label, 8)) / 2
-    p.drawText(label, { x, y: 24, size: 8, font, color: rgb(0.3, 0.3, 0.3) })
+    const width = font.widthOfTextAtSize(label, 8)
+    const color = rgb(0.3, 0.3, 0.3)
+    // a landscape page (a mind map) is turned in the booklet: its left edge is the foot there
+    if (p.getWidth() > p.getHeight())
+      p.drawText(label, {
+        x: 24,
+        y: (p.getHeight() + width) / 2,
+        size: 8,
+        font,
+        color,
+        rotate: degrees(-90),
+      })
+    else p.drawText(label, { x: (p.getWidth() - width) / 2, y: 24, size: 8, font, color })
   })
   const bytes = await read.save()
   const count = read.getPageCount()
@@ -529,8 +701,14 @@ async function build(booklet, name) {
       side.forEach((index, half) => {
         const p = embedded[index] // undefined: one of the blank pages that fill the last sheet
         if (!p) return
-        const x = (half * A4[0]) / 2 + (A4[0] / 2 - p.width) / 2
-        sheet.drawPage(p, { x, y: (A4[1] - p.height) / 2 })
+        const left = (half * A4[0]) / 2
+        if (p.width > p.height)
+          sheet.drawPage(p, {
+            x: left + (A4[0] / 2 + p.height) / 2,
+            y: (A4[1] - p.width) / 2,
+            rotate: degrees(90),
+          })
+        else sheet.drawPage(p, { x: left + (A4[0] / 2 - p.width) / 2, y: (A4[1] - p.height) / 2 })
       })
     }
 
@@ -538,7 +716,7 @@ async function build(booklet, name) {
   fs.writeFileSync(path.join(OUT, `${name}.pdf`), bytes)
   fs.writeFileSync(path.join(OUT, `${name}-print.pdf`), await paper.save())
   console.log(
-    `${path.join(OUT, name)}.pdf  ${booklet.chapters.length} notes, ${count} pages · -print.pdf: ${sheets} ${sheets === 1 ? "sheet" : "sheets"} of A4`,
+    `${path.join(OUT, name)}.pdf  ${booklet.chapters.filter((c) => !c.map).length} notes, ${count} pages · -print.pdf: ${sheets} ${sheets === 1 ? "sheet" : "sheets"} of A4`,
   )
 }
 
@@ -546,7 +724,7 @@ async function build(booklet, name) {
 
 const jobs = []
 const forAssessment = (map, a) => {
-  const inBooklet = new Set(a.slugs)
+  const inBooklet = new Set([...a.maps, ...a.slugs])
   jobs.push({
     name: fileName(map.course, a.what),
     booklet: {
@@ -554,7 +732,10 @@ const forAssessment = (map, a) => {
       what: `${a.what} · ${a.when}`,
       form: a.form,
       scheme: map.scheme,
-      chapters: a.slugs.map((slug) => chapter(slug, inBooklet)),
+      chapters: [
+        ...a.maps.map((slug) => mindmap(slug, inBooklet)),
+        ...a.slugs.map((slug) => chapter(slug, inBooklet)),
+      ],
     },
   })
 }
