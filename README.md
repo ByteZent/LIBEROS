@@ -43,34 +43,39 @@ LIBEROS/
 
 Everything runs through `make` (`make help` lists all targets):
 
-| Command                                     | What it does                                                                                      |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `make install`                              | Install dependencies                                                                              |
-| `make serve`                                | Local preview with live reload → http://localhost:8080                                            |
-| `make serve-pwa`                            | Same, with the service worker on (offline / install testing, port 8080 → use `PORT=8090`)         |
-| `make serve-private`                        | Same, with `_private`, `_inbox` and drafts, and the planner board at `/planner` (local only)      |
-| `make planner`                              | Build the planner and install its Obsidian plugin into the vault (see `planner/README.md`)        |
-| `make new TYPE=concept TITLE="Escalation"`  | New note from a template in `_inbox/`                                                             |
-| `make inbox`                                | List unprocessed captures                                                                         |
-| `make course`                               | Exam readiness for every course: days to the next assessment, notes, objectives covered           |
-| `make course COURSE=PP-ECON-1`              | One course: open items before each assessment, objectives, notes (`SYNC=1`: update map)           |
-| `make booklet COURSE=PP-ECON-1 TEST=1`      | Printable A5 booklet of a course's notes up to an assessment, in `booklets/` (after `make build`) |
-| `make bridges`                              | Bridge prompts: unlinked notes that share tags (`INBOX=1`, `N=15`)                                |
-| `make idea TITLE="…" TEXT="…"`              | Capture an idea for a paper or page, timestamped, in `09-Learning/94-Ideas`                       |
-| `make ideas`                                | The idea board: every idea by stage, with its age                                                 |
-| `make review`                               | Notes whose `review:` date is due                                                                 |
-| `make sources`                              | Check the bibliography: duplicates, unknown `[@citekeys]`                                         |
-| `make bib-merge`                            | Merge all course `.bib` files from the study vault for Zotero import                              |
-| `make stats`                                | Note counts by type and maturity                                                                  |
-| `make open`                                 | Open the vault in Obsidian                                                                        |
-| `make check`                                | Type-check, format check, test build                                                              |
-| `make publish MSG="note: add deterrence"`   | Check → commit → push → GitHub Pages deploys automatically                                        |
-| `make hooks`                                | Enable the commit message check for this clone (also run by `make install`)                       |
-| `make update`                               | Update the Quartz engine from upstream                                                            |
-| `make logo`                                 | Re-export favicon / social image / logo PNGs from `branding/`                                     |
-| `make build` / `make clean` / `make format` | Build to `public/`, remove build output, format code                                              |
+| Command                                     | What it does                                                                                                                                       |
+| ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `make install`                              | Install dependencies                                                                                                                               |
+| `make serve`                                | Local preview with live reload → http://localhost:8080                                                                                             |
+| `make serve-pwa`                            | Same, with the service worker on (offline / install testing, port 8080 → use `PORT=8090`)                                                          |
+| `make serve-private`                        | Same, with `_private`, `_inbox` and drafts, and the planner board at `/planner` (local only)                                                       |
+| `make planner`                              | Build the planner and install its Obsidian plugin into the vault (see `planner/README.md`)                                                         |
+| `make new TYPE=concept TITLE="Escalation"`  | New note from a template in `_inbox/`                                                                                                              |
+| `make inbox`                                | List unprocessed captures                                                                                                                          |
+| `make course`                               | Exam readiness for every course: days to the next assessment, notes, objectives covered                                                            |
+| `make course COURSE=PP-ECON-1`              | One course: open items before each assessment, objectives, notes (`SYNC=1`: update map)                                                            |
+| `make booklet COURSE=PP-ECON-1 TEST=1`      | Printable A5 booklet of a course's notes up to an assessment, in `booklets/` (after `make build`)                                                  |
+| `make bridges`                              | Bridge prompts: unlinked notes that share tags (`INBOX=1`, `N=15`)                                                                                 |
+| `make idea TITLE="…" TEXT="…"`              | Capture an idea for a paper or page, timestamped, in `09-Learning/94-Ideas`                                                                        |
+| `make ideas`                                | The idea board: every idea by stage, with its age                                                                                                  |
+| `make review`                               | Notes whose `review:` date is due                                                                                                                  |
+| `make sources`                              | Check the bibliography: duplicates, unknown `[@citekeys]`                                                                                          |
+| `make bib-merge`                            | Merge all course `.bib` files from the study vault for Zotero import                                                                               |
+| `make stats`                                | Note counts by type and maturity                                                                                                                   |
+| `make open`                                 | Open the vault in Obsidian                                                                                                                         |
+| `make watch`                                | Read the feeds in `watch/sources.yml` into the stream of the Current Affairs map (private preview), each headline placed by the countries it names |
+| `make promote ID=a1b2c3d`                   | Optional: turn a headline of the stream into a development note in `_inbox` (`TITLE="…"`: my own headline)                                         |
+| `make drop ID="a1b2c3d e4f5a6b"`            | Take headlines out of the stream for good                                                                                                          |
+| `make brief`                                | Weekly brief: the week's developments by place, indicators fired, what to watch (`WEEK=last`, `INBOX=1`)                                           |
+| `make worldmap`                             | Rebuild the borders of the Watch map (`quartz/static/world.json`) from Natural Earth                                                               |
+| `make check`                                | Type-check, format check, test build                                                                                                               |
+| `make publish MSG="note: add deterrence"`   | Check → commit → push → GitHub Pages deploys automatically                                                                                         |
+| `make hooks`                                | Enable the commit message check for this clone (also run by `make install`)                                                                        |
+| `make update`                               | Update the Quartz engine from upstream                                                                                                             |
+| `make logo`                                 | Re-export favicon / social image / logo PNGs from `branding/`                                                                                      |
+| `make build` / `make clean` / `make format` | Build to `public/`, remove build output, format code                                                                                               |
 
-Template types for `make new`: `concept model actor thinker key-work case-study judgment legal-norm assessment framework synthesis source-note open-question course-map idea mind-map`. Ideas are quicker with `make idea`, which files them directly and stamps the time.
+Template types for `make new`: `concept model actor thinker key-work case-study judgment legal-norm assessment development framework synthesis source-note open-question course-map idea mind-map`. Ideas are quicker with `make idea`, which files them directly and stamps the time.
 
 In Obsidian: open `LIBEROS/content` as the vault. New notes land in `_inbox/`; insert a template via _Templates: Insert template_. The **Learning Dashboard** (`_dashboards/Learning Dashboard.base`) shows review queues, seedlings, low-confidence notes and the inbox.
 
@@ -92,17 +97,17 @@ The first line is at most 72 characters, says what changed in the imperative ("a
 
 ## Frontmatter
 
-| Field        | Values                                                                                                                                  | Rendered                 |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
-| `type`       | concept · model · actor · thinker · work · case · judgment · norm · assessment · framework · synthesis · source · question · moc · idea | status strip             |
-| `status`     | seedling · developing · evergreen                                                                                                       | status strip             |
-| `confidence` | low · medium · high                                                                                                                     | status strip             |
-| `domain`     | one or more of: strategy · military · policy · economics · law · ir · security · intelligence · technology · psychology · sociology     | status strip             |
-| `courses`    | course codes, e.g. `[PP-ECON-1]`, used by `make course` and the dashboard                                                               | –                        |
-| `review`     | `YYYY-MM-DD`                                                                                                                            | status strip + dashboard |
-| `stage`      | ideas only: spark · exploring · outlined · drafting · written · dropped                                                                 | status strip             |
-| `captured`   | ideas only: `YYYY-MM-DDTHH:mm`, when the idea was captured                                                                              | status strip             |
-| `draft`      | `true` → excluded from the site                                                                                                         | –                        |
+| Field        | Values                                                                                                                                                        | Rendered                 |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| `type`       | concept · model · actor · thinker · work · case · judgment · norm · assessment · development · brief · framework · synthesis · source · question · moc · idea | status strip             |
+| `status`     | seedling · developing · evergreen                                                                                                                             | status strip             |
+| `confidence` | low · medium · high                                                                                                                                           | status strip             |
+| `domain`     | one or more of: strategy · military · policy · economics · law · ir · security · intelligence · technology · psychology · sociology                           | status strip             |
+| `courses`    | course codes, e.g. `[PP-ECON-1]`, used by `make course` and the dashboard                                                                                     | –                        |
+| `review`     | `YYYY-MM-DD`                                                                                                                                                  | status strip + dashboard |
+| `stage`      | ideas only: spark · exploring · outlined · drafting · written · dropped                                                                                       | status strip             |
+| `captured`   | ideas only: `YYYY-MM-DDTHH:mm`, when the idea was captured                                                                                                    | status strip             |
+| `draft`      | `true` → excluded from the site                                                                                                                               | –                        |
 
 ## Flashcards
 

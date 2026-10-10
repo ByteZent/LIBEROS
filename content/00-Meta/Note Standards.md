@@ -17,7 +17,7 @@ tags:
 ## Frontmatter
 
 ```yaml
-type: concept | model | actor | thinker | work | case | judgment | norm | assessment | framework | synthesis | source | question | moc | idea | practice
+type: concept | model | actor | thinker | work | case | judgment | norm | assessment | development | brief | framework | synthesis | source | question | moc | idea | practice
 domain: [economics, policy]   # one or more: strategy · military · policy · economics · law · ir · security · intelligence · technology · psychology · sociology
 courses: [PP-ECON-1]          # course codes this note serves (see Course Maps); shown as a COURSE badge
 status: seedling | developing | evergreen
@@ -45,6 +45,7 @@ Disciplines are **not** folders. *Public Goods* is economics, but it explains al
 | Statute, constitutional article, treaty | `T - Legal Norm` | `08-Library/85-Legal-Sources` |
 | Court decision | `T - Judgment` | `04-Case-Studies/44-Court-Cases` |
 | Policy reform or decision | `T - Case Study` | `04-Case-Studies/42-Policy-Cases` |
+| One current event | `T - Development` | `05-Assessments/51-Current-Affairs` |
 | Analytical method (CBA, process tracing, …) | `T - Framework` | `06-Frameworks-and-Methods` |
 
 **New course?** Pick a short code (e.g. `L1-HS26`) and use it in the Course Map's `course:` and in each note's `courses:`. Then create `content/tags/course/<code>.md` with the course name as `title`. That page lists every published note for the course, is found by searching the course name, and supplies the label of the COURSE badge. Add `exam-language: en` there if the course is examined in English (see [[#Self-test and flashcards]]).
@@ -166,12 +167,75 @@ output: paper                # what it should become: paper · essay · page · 
 - `make ideas` shows the board: every idea by stage with its age. A spark untouched for two weeks needs a decision: explore it or drop it. A dropped idea stays, with the reason in the log.
 - When the text is written, set `stage: written` and link the synthesis or paper.
 
+## Developments and places
+
+A development is one current event that matters for something in the vault: a note of `type: development` in `05-Assessments/51-Current-Affairs` (template `T - Development`). An assessment judges a situation; a development records one event and what it changes. It has no `status` and no `review`: it is a record, not a note that matures.
+
+```yaml
+event_date: 2026-10-10        # when it happened, not when I wrote the note
+domain: [military]            # at least one
+actors: ["Russia", "NATO"]    # the notes of the actors involved
+location: UKR                 # optional, see below
+source: https://…             # the report's URL, or a citekey from the library
+indicator:                    # the assessment indicator this bears on, if any
+```
+
+**Places.** The map takes a development's place from the vault, not from a geocoding service:
+
+- A state's note carries `iso:`, its ISO 3166-1 alpha-3 code (`iso: CHE`). The whole country is the place.
+- A note of anything with one place (a strait, a base, a city, a headquarters) carries `geo: [lat, lon]`.
+- A development without `location:` takes the places of the notes in its `actors:`.
+- `location:` overrides that, when the event is somewhere other than where its actors sit. It takes a note (`"[[Suwałki Gap]]"`), an ISO code (`UKR`, which needs no note), a point (`[54.1, 23.0]`), a list of these, or `global` for an event without a place.
+- Be only as exact as the report: a country code when the report says "in eastern Ukraine", a point only for a known site.
+
+`make lint` reports a development without `event_date`, `domain`, `source` or a place, and an `iso` or `geo` it cannot read. A name in `actors:` without a note is a warning: either a typo or a note the vault is missing.
+
+**The map.** Every development with a place is on the map of [[05-Assessments/51-Current-Affairs/index|Current Affairs]], together with the stream of headlines (see below): countries shaded by how much there is, a symbol for each kind of thing at a place, filters by time, domain and text, and the list underneath. The symbol is a badge in the colour of the domain with its icon (the filter buttons are the legend), larger the more there is, and outlined where I have written a note. From afar a country has one symbol, of its commonest kind; zooming in splits it into one per kind, and a click on one narrows the list to that kind in that place. On a campaign map the timeline categories `war`, `political` and `economy` get the symbols of military, policy and economics. A note with a place, or with developments that concern it, gets a small map and the list of its developments next to its backlinks. A callout puts a map into a note:
+
+| Callout | Shows |
+|---|---|
+| `> [!map\|all]` | Every development, with the filters and the list |
+| `> [!map]` | The developments that concern this note, and its own place |
+| `> [!map\|events]` | The `[!event]` and `[!process]` entries of this page that have a line `**Place:** …`: a note, an ISO code or `lat, lon`, several with `;`. For a campaign or a war: the timeline's entries on a map |
+
+The borders are Natural Earth's, which draws them as they are controlled. The map does not take that as a statement: disputed areas are hatched and take no country's shade (see [[Methodology#Borders on the map|Methodology]]).
+
+**Indicators.** An assessment says in its frontmatter what would change its judgement, and a development names the indicator it fires:
+
+```yaml
+# the assessment
+as_of: 2026-10-05
+indicators:
+  grid-strikes: Strikes on the power grid resume before winter
+  third-state: A third state enters the war
+
+# the development
+indicator: grid-strikes
+```
+
+- A key is unique in the vault; `make lint` reports one declared twice, and a development naming one that no assessment declares.
+- The assessment's page lists its indicators with the developments that fired them.
+- When such a development is newer than the assessment's `as_of`, the assessment is to **re-assess**: `make review` lists it, its page says so, and its countries are outlined on the map. Re-read it, change what has to change and set `as_of` to today.
+
+**Weekly brief.** `make brief` writes `05-Assessments/53-Weekly-Briefs/Weekly Brief 2026-W41.md` (`type: brief`): the week's developments by place, the indicators they fired, the assessments to re-assess and the indicators still waiting. `WEEK=last` or `WEEK=2026-W40` picks another week. Everything is written anew on each run, except what I wrote under *Assessment of the week*.
+
+**The stream.** `make watch` reads the feeds in `watch/sources.yml` and puts every headline on the map and into the stream under it, by itself: nothing has to be promoted. The map with the stream is the overview; a note is for the few things I want to keep and judge.
+
+- An item is placed in the countries its headline names, or else the first two its summary names. The names are in `watch/gazetteer.json` (countries and capitals in English and German, written by `make worldmap`) and `watch/places.yml` (my additions: adjectives, leaders, cities, and names to ignore). This is matching by name, so it errs: "Georgia" the US state, a country named only in passing. A wrong place is a reason to edit `places.yml`, not the item.
+- Its domain is the one whose words the headline and summary use most, or else the `domain:` of its source in `sources.yml`.
+- Of an item are kept its headline, link, date and source, and the summary its feed gives, cut to 500 characters: never the text of the article. The headline links out to the source; *Summary* under it opens the feed's summary, and the *summaries* button opens them all. Not every feed gives one. Items stay for `keep:` days (14).
+- The stream is part of the private preview (`make serve-private`). The public site shows only my notes, unless `public: true` is set in `sources.yml` and the deployment runs `make watch` before the build.
+- The **＋** next to a headline copies `make promote ID=…`, which turns the item into a development note in `_inbox` with date, source and actors filled in. `make drop ID="… …"` takes items out of the stream.
+- An item also links to the notes it names: an actor or case study by its title and `aliases`, any other note only with `watch:` in its frontmatter (`watch: ["hybrid warfare", "grey zone"]`, or `watch: true` for title and aliases; `watch: false` takes an actor out). `terms:` in `sources.yml` lists words to watch that have no note yet. An actor's note shows the stream of its country next to its backlinks.
+- `make watch OFFLINE=1` places and links the stored items again, after a change to notes, terms or place names. `_private/watch/Watch.md` lists the same items for Obsidian.
+
 ## Sources
 
 - Cite with citekeys: `[@osinga2007science]`, `[@weick1995sensemaking, p. 17]`. Keys come from Zotero (see `bibliography/README.md`). Never type a full reference by hand.
 - Keep the confidence rating next to the citation in the *Sources* section: `- [@key]: why it matters. [High confidence]`
 - Important sources get a **source note** named after the citekey (`citekey:` in frontmatter).
 - `make sources` must report 0 problems before publishing.
+- A development's `source:` may be the URL of the report instead of a citekey: news reports and press releases do not go through Zotero. Anything I cite twice does.
 
 ## Callouts
 
@@ -188,6 +252,7 @@ output: paper                # what it should become: paper · essay · page · 
 | `> [!process\|economy]` | A development without a single date on a timeline, written like an event with a range |
 | `> [!mindmap] Topic` | A mind map: the nested list inside is drawn as a map. Links of any kind in a node, words in backticks are tags to filter by. Template: `T - Mind Map`, folder `09-Learning/95-Mind-Maps` |
 | `> [!period]` | An era heading on a timeline, written like an event |
+| `> [!map]` | A world map of developments or of the page's timeline entries. See [[#Developments and places]] |
 
 ## Folders
 

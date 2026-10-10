@@ -40,6 +40,10 @@ Applies to the note's analytic claims, not to the facts it reports.
 
 For assessments of current events, sources are graded on the NATO/Admiralty system: **reliability A–F** (source track record) × **credibility 1–6** (confirmation of the information).
 
+## Borders on the map
+
+The world map of developments uses the borders of Natural Earth (public domain), which draws a territory with the state that controls it. That is a description of control, not my position on who it belongs to. Breakaway and disputed areas (Crimea, the occupied parts of Georgia and Ukraine, Northern Cyprus, Western Sahara, Kashmir, the Golan Heights and others) are therefore hatched and take no country's shade. A development is placed where it happened; `location:` names the state under international law (`UKR` for an event in Crimea).
+
 ## See also
 
 - [[Note Standards]]: the templates and conventions
