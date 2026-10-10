@@ -14,13 +14,13 @@ MSG     ?= edit: update notes $(TODAY)
 NOTES   := find $(VAULT)/0[1-9]-* -name '*.md' ! -name index.md -print0
 
 .DEFAULT_GOAL := help
-.PHONY: help install hooks serve serve-pwa serve-private planner planner-check build booklet booklets clean check lint format typecheck logo sources bib-merge new course glossary questions bridges idea ideas review stats inbox open publish update
+.PHONY: help install hooks serve serve-pwa serve-private planner planner-check build booklet booklets clean check lint format typecheck logo sources bib-merge watch promote drop brief worldmap new course glossary questions bridges idea ideas review stats inbox open publish update
 
 help: ## Show this help
 	@awk 'BEGIN {FS = ":.*## "} /^[a-zA-Z_-]+:.*## / {printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 	@echo
 	@echo "  make new TYPE=concept TITLE=\"Escalation Dominance\""
-	@echo "  types: concept model actor thinker key-work case-study judgment legal-norm assessment framework synthesis source open-question course-map idea mind-map"
+	@echo "  types: concept model actor thinker key-work case-study judgment legal-norm assessment development framework synthesis source open-question course-map idea mind-map"
 	@echo "  make booklet COURSE=MikroEcon-HS26 TEST=1"
 	@echo "  make idea TITLE=\"Working title\" TEXT=\"The idea in a sentence or two\""
 
@@ -68,7 +68,7 @@ typecheck: ## Type-check Quartz config and components
 format: ## Format code with Prettier
 	npx prettier --write .
 
-lint: ## Check notes: cards without qard-deck, Self-Test headings, recall-only self-tests
+lint: ## Check notes: cards without qard-deck, Self-Test headings, recall-only self-tests, places, developments and indicators
 	@node scripts/lint.mjs
 
 check: typecheck lint ## Type-check, lint notes, verify formatting, check sources and do a test build
@@ -87,6 +87,23 @@ sources: ## Check bibliography: duplicates, [@citekeys] not in library.bib, sour
 STUDY_BIBS ?= $(wildcard /Users/flugel/spaces/eth/PARA\ BELLUM/04_Subjects/*/*/zusammenfassung-*/references.bib)
 bib-merge: ## Merge the study vault's course .bib files into bibliography/import/ (for Zotero import)
 	@node scripts/bib.mjs merge bibliography/import/courses.bib "/Users/flugel/spaces/eth/PARA BELLUM/04_Subjects/"*/*/zusammenfassung-*/references.bib
+
+## ── Watch ───────────────────────────────────────────────────────────────────
+
+watch: ## Read the feeds in watch/sources.yml into the stream of the Current Affairs map (OFFLINE=1: only place and link the stored items again)
+	@node scripts/watch.mjs $(if $(OFFLINE),--offline)
+
+promote: ## Optional: turn a headline of the stream into a development note in _inbox (ID=a1b2c3d; TITLE="…": my own headline instead of the report's)
+	@node scripts/watch.mjs promote "$(ID)" "$(TITLE)"
+
+drop: ## Take headlines out of the stream for good (ID="a1b2c3d e4f5a6b")
+	@node scripts/watch.mjs drop $(ID)
+
+brief: ## Weekly brief: the week's developments by place, indicators fired, what to watch (WEEK=2026-W41 or last; INBOX=1: preview incl. _inbox)
+	@node scripts/brief.mjs $(WEEK) $(if $(INBOX),--inbox)
+
+worldmap: ## Rebuild the borders of the map (quartz/static/world.json) and the place names (watch/gazetteer.json) from Natural Earth
+	@node scripts/worldmap.mjs
 
 ## ── Writing & learning ──────────────────────────────────────────────────────
 
@@ -123,11 +140,12 @@ idea: ## Capture an idea for a paper or page, timestamped, in 09-Learning/94-Ide
 ideas: ## The idea board: every idea by stage, with its age
 	@node scripts/ideas.mjs
 
-review: ## List notes whose review date is due (today or earlier)
+review: ## List notes whose review date is due (today or earlier), and assessments an indicator has overtaken
 	@grep -rl --include='*.md' '^review: [0-9]' $(VAULT) | grep -v '/_templates/' | while read -r f; do \
 	   d=$$(sed -n 's/^review: \([0-9-]*\).*/\1/p' "$$f" | head -1); \
 	   [[ "$$d" < "$(TODAY)" || "$$d" == "$(TODAY)" ]] && echo "$$d  $${f#$(VAULT)/}"; \
 	 done | sort || true
+	@node scripts/brief.mjs --reassess
 
 stats: ## Count notes by type and maturity
 	@echo "── by type";   $(NOTES) | xargs -0 grep -h '^type:'   | sort | uniq -c | sort -rn

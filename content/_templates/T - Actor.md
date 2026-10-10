@@ -3,6 +3,8 @@ title: "{{title}}"
 aliases: []
 type: actor
 domain: []
+iso:                # a state: ISO 3166-1 alpha-3 (CHE)
+geo:                # anything with one place instead: [lat, lon]
 courses: []
 status: seedling
 confidence: medium

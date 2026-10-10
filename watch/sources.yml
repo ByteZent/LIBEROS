@@ -1,0 +1,119 @@
+# The feeds `make watch` reads (scripts/watch.mjs) into the stream of the Current Affairs map.
+#
+#   tier   primary    governments and organisations speaking for themselves
+#          analysis   think tanks and specialist press
+#          data       data sets and their release notes
+#   lang   the feed's language when it is not English (shown next to the source)
+#   domain the domain of an item whose words give none away (optional)
+
+# days an item stays in the stream
+keep: 14
+
+# true: the public site shows the stream too. The deployment then has to run `make watch` before
+# the build, because the items are not in the repository.
+public: false
+
+# Words to watch for that have no note yet. An item naming one is listed as linked, under the term.
+terms: []
+
+sources:
+  # ── primary ────────────────────────────────────────────────────────────────
+  - name: UN Press
+    tier: primary
+    url: https://press.un.org/en/rss.xml
+  - name: UN News (Peace and Security)
+    tier: primary
+    url: https://news.un.org/feed/subscribe/en/news/topic/peace-and-security/feed/rss.xml
+  - name: Council of the EU
+    tier: primary
+    url: https://www.consilium.europa.eu/en/rss/pressreleases.ashx
+  - name: UK Ministry of Defence
+    tier: primary
+    url: https://www.gov.uk/government/organisations/ministry-of-defence.atom
+  - name: US Department of Defense
+    tier: primary
+    url: https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=945&max=10
+  - name: Bundeswehr
+    tier: primary
+    lang: de
+    url: https://www.bundeswehr.de/service/rss/de/517054/feed
+  - name: IAEA
+    tier: primary
+    url: https://www.iaea.org/feeds/topnews
+  - name: CRS Reports
+    tier: primary
+    url: https://www.everycrsreport.com/rss.xml
+
+  # ── analysis ───────────────────────────────────────────────────────────────
+  - name: RUSI
+    tier: analysis
+    url: https://www.rusi.org/rss/latest-commentary.xml
+  - name: SWP
+    tier: analysis
+    url: https://www.swp-berlin.org/en/SWPPublications.xml
+  - name: OSW
+    tier: analysis
+    url: https://www.osw.waw.pl/en/rss.xml
+  - name: ICDS
+    tier: analysis
+    url: https://icds.ee/en/feed/
+  - name: CEPA
+    tier: analysis
+    url: https://cepa.org/feed/
+  - name: Chatham House
+    tier: analysis
+    url: https://www.chathamhouse.org/path/whatsnew.xml
+  - name: CSIS
+    tier: analysis
+    url: https://www.csis.org/rss.xml
+  - name: RAND
+    tier: analysis
+    url: https://www.rand.org/pubs/new.xml
+  - name: Atlantic Council
+    tier: analysis
+    url: https://www.atlanticcouncil.org/feed/
+  - name: Jamestown Foundation
+    tier: analysis
+    url: https://jamestown.org/feed/
+  - name: Crisis Group
+    tier: analysis
+    url: https://www.crisisgroup.org/rss
+  - name: War on the Rocks
+    tier: analysis
+    url: https://warontherocks.com/feed/
+  - name: Lawfare
+    tier: analysis
+    url: https://www.lawfaremedia.org/feeds/articles
+  - name: Foreign Affairs
+    tier: analysis
+    url: https://www.foreignaffairs.com/rss.xml
+  - name: Bellingcat
+    tier: analysis
+    url: https://www.bellingcat.com/feed/
+  - name: European Security & Defence
+    tier: analysis
+    url: https://euro-sd.com/feed/
+  - name: Defense News
+    tier: analysis
+    url: https://www.defensenews.com/arc/outboundfeeds/rss/?outputType=xml
+  - name: Breaking Defense
+    tier: analysis
+    url: https://breakingdefense.com/feed/
+  - name: The War Zone
+    tier: analysis
+    url: https://www.twz.com/feed
+  - name: The Diplomat
+    tier: analysis
+    url: https://thediplomat.com/feed/
+  - name: Kyiv Independent
+    tier: analysis
+    url: https://kyivindependent.com/news-archive/rss/
+  - name: NZZ International
+    tier: analysis
+    lang: de
+    url: https://www.nzz.ch/international.rss
+
+  # ── data ───────────────────────────────────────────────────────────────────
+  - name: SIPRI
+    tier: data
+    url: https://www.sipri.org/rss/combined.xml

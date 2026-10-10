@@ -1,0 +1,129 @@
+# More names by which `make watch` finds the country of a headline, on top of watch/gazetteer.json
+# (countries and capitals in English and German, written by `make worldmap`).
+# Matched as whole words, in this spelling: "Turkey" is the state, "turkey" is not.
+#
+#   CODE: [name, …]   ISO 3166-1 alpha-3
+#   ignore: [name, …] names of the gazetteer that mislead more often than they help
+
+ignore: [Georgia, Jordan, Chad, Male, Victoria, Kingston, Saint George's, Roseau, Vaduz City]
+
+USA:
+  [
+    US,
+    U.S.,
+    USA,
+    America,
+    American,
+    Americans,
+    Washington,
+    Pentagon,
+    White House,
+    Amerikaner,
+    amerikanische,
+    amerikanischen,
+    US-Regierung,
+  ]
+GBR:
+  [
+    UK,
+    U.K.,
+    Britain,
+    British,
+    Great Britain,
+    Whitehall,
+    Grossbritannien,
+    Großbritannien,
+    britische,
+    britischen,
+  ]
+RUS: [Russian, Russians, Kremlin, Putin, russische, russischen, Russlands]
+UKR:
+  [
+    Ukrainian,
+    Ukrainians,
+    Zelensky,
+    Zelenskyy,
+    Selenski,
+    ukrainische,
+    ukrainischen,
+    Kharkiv,
+    Odesa,
+    Odessa,
+    Donbas,
+    Donetsk,
+    Luhansk,
+    Zaporizhzhia,
+    Kherson,
+    Crimea,
+    Krim,
+  ]
+CHN: [Chinese, PRC, Xi Jinping, chinesische, chinesischen, Chinas]
+TWN: [Taiwanese, Taipei, Taiwan Strait]
+DEU: [German, Germans, Bundeswehr, Bundestag, Bundesregierung, deutsche, deutschen, Deutschlands]
+FRA: [French, Elysee, Élysée, Macron, französische, französischen, Frankreichs]
+CHE: [Swiss, Bern, Bundesrat, Schweizer, VBS]
+ITA: [Italian, italienische]
+ESP: [Spanish, spanische]
+POL: [Polish, Poles, polnische, polnischen]
+NLD: [Dutch, The Hague]
+SWE: [Swedish, schwedische]
+FIN: [Finnish, finnische]
+NOR: [Norwegian, norwegische]
+DNK: [Danish, dänische]
+GRL: [Greenlandic, Grönland]
+EST: [Estonian]
+LVA: [Latvian]
+LTU: [Lithuanian, Suwałki Gap, Suwalki Gap]
+BLR: [Belarusian, Lukashenko, Lukaschenko]
+MDA: [Moldovan, Transnistria]
+GEO: [Georgian, Tbilisi, Tiflis]
+ARM: [Armenian]
+AZE: [Azerbaijani, Azeri, Nagorno-Karabakh]
+TUR: [Turkish, Türkiye, Erdogan, Erdoğan, türkische]
+HUN: [Hungarian, Orban, Orbán, ungarische]
+SRB: [Serbian, serbische]
+XKX: [Kosovar, Kosovan]
+ROU: [Romanian]
+BGR: [Bulgarian]
+GRC: [Greek]
+ISR: [Israeli, Israelis, Netanyahu, IDF, israelische, israelischen, Tel Aviv]
+PSE: [Palestinian, Palestinians, Gaza, West Bank, Hamas, Westjordanland, Gazastreifen]
+LBN: [Lebanese, Hezbollah, Hisbollah]
+SYR: [Syrian, syrische]
+IRN: [Iranian, Iranians, IRGC, iranische, iranischen]
+IRQ: [Iraqi]
+SAU: [Saudi, Saudis]
+YEM: [Yemeni, Houthi, Houthis, Huthi]
+ARE: [UAE, Emirati, Abu Dhabi, Dubai]
+QAT: [Qatari]
+EGY: [Egyptian]
+JOR: [Jordanian, Amman]
+TCD: [Chadian, N'Djamena]
+LBY: [Libyan]
+SDN: [Sudanese, Darfur, RSF]
+SSD: [South Sudanese]
+ETH: [Ethiopian, Tigray]
+SOM: [Somali, al-Shabaab]
+MLI: [Malian]
+NER: [Nigerien]
+NGA: [Nigerian]
+BFA: [Burkinabe]
+COD: [DRC, Congolese, Goma]
+ZAF: [South African]
+AFG: [Afghan, Taliban]
+PAK: [Pakistani]
+IND: [Indian, Modi, indische, Delhi]
+JPN: [Japanese, japanische]
+KOR: [South Korean, Südkoreas]
+PRK: [North Korean, Kim Jong Un, DPRK, Nordkoreas]
+PHL: [Philippine, Filipino]
+VNM: [Vietnamese]
+MMR: [Burmese, Burma]
+AUS: [Australian, AUKUS]
+CAN: [Canadian]
+MEX: [Mexican]
+VEN: [Venezuelan, Maduro]
+BRA: [Brazilian]
+ARG: [Argentine, Argentinian]
+COL: [Colombian]
+CUB: [Cuban]

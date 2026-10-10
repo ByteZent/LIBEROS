@@ -34,6 +34,8 @@ const TYPE_TAGS = new Set([
   "judgment",
   "norm",
   "assessment",
+  "development",
+  "brief",
   "framework",
   "synthesis",
   "source",

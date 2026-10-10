@@ -10,6 +10,8 @@ created: {{date}}
 modified: {{date}}
 review: 
 as_of: {{date}}
+actors: []          # the notes of the actors it is about; their places put it on the map
+indicators: {}      # what would change the judgement: { key: "what I would see" }
 tags:
   - assessment
 draft: false
@@ -43,7 +45,9 @@ draft: false
 
 ## Indicators & Warnings
 
-- [ ] 
+The indicators are in the frontmatter (`indicators:`), so that a development can name the one it fires (`indicator: key`). Here: why each one matters, and what it would change.
+
+- 
 
 > [!counter] What would change my mind
 > 
