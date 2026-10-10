@@ -12,6 +12,8 @@ export const sharedPageComponents: SharedLayout = {
     Component.Timeline(),
     // mind maps: a nested list in a [!mindmap] callout, drawn as a filterable map
     Component.Mindmap(),
+    // the Watch map: developments on a world map, in a [!map] callout and in a note's Developments block
+    Component.WatchMap(),
   ],
   footer: Component.Footer({
     links: {
@@ -108,6 +110,8 @@ export const defaultContentPageLayout: PageLayout = {
       globalGraph: { showTags: false, enableRadial: true, courseOrder },
     }),
     Component.DesktopOnly(Component.TableOfContents()),
+    // a note's place on the map, an assessment's indicators and the developments that concern the note
+    Component.Developments(),
     Component.Backlinks(),
   ],
 }

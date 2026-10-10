@@ -33,6 +33,8 @@ import Timeline from "./Timeline"
 import Mindmap from "./Mindmap"
 import FlashcardsLink from "./FlashcardsLink"
 import BookletLinks from "./BookletLinks"
+import Developments from "./Developments"
+import WatchMap from "./WatchMap"
 
 export {
   ArticleTitle,
@@ -70,4 +72,6 @@ export {
   Mindmap,
   FlashcardsLink,
   BookletLinks,
+  Developments,
+  WatchMap,
 }

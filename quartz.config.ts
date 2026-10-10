@@ -115,6 +115,7 @@ const config: QuartzConfig = {
       Plugin.TagPage(),
       Plugin.Flashcards(), // /flashcards: one deck per qard-deck, from the cards Qards() collected
       Plugin.Changelog(), // /changelog: the git history, with links to the notes each commit touched
+      Plugin.Watch(), // /static/watch.json: developments, places and indicators, for the map
       // /planner: tasks, schedule and deadlines on a calendar board; private preview only
       ...(showPrivate ? [Plugin.Planner()] : []),
       Plugin.ContentIndex({

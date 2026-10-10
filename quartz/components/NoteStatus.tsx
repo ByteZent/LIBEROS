@@ -20,6 +20,8 @@ const TYPE_LABELS: Record<string, string> = {
   work: "Key Work",
   case: "Case Study",
   assessment: "Assessment",
+  development: "Development",
+  brief: "Weekly Brief",
   framework: "Framework",
   synthesis: "Synthesis",
   source: "Source Note",

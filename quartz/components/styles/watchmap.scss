@@ -1,0 +1,340 @@
+@use "../../styles/variables.scss" as *;
+
+// one colour per domain, for the marks and the domain filter
+$domains: (
+  military: #b5533c,
+  security: #c27a2c,
+  strategy: #8a5a14,
+  policy: #1f6f8b,
+  ir: #3b7dd8,
+  law: #6b5fb5,
+  economics: #2f8f6f,
+  intelligence: #7a4f8f,
+  technology: #3f8f9f,
+  psychology: #b5557f,
+  sociology: #6b8f3a,
+);
+
+.watch-map {
+  margin: 1rem 0;
+  font-size: 0.85rem;
+
+  .wm-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--lightgray);
+    border-radius: 4px;
+    background: var(--light);
+    cursor: grab;
+    touch-action: none;
+  }
+
+  .wm-country {
+    fill: var(--lightgray);
+    stroke: var(--light);
+    stroke-width: 0.5px;
+    vector-effect: non-scaling-stroke;
+
+    &.wm-active {
+      fill: var(--secondary);
+      cursor: pointer;
+    }
+
+    &.wm-own {
+      stroke: var(--secondary);
+      stroke-width: 1.5px;
+    }
+
+    &.wm-reassess {
+      stroke: var(--tertiary);
+      stroke-width: 1.5px;
+    }
+
+    &.wm-selected {
+      stroke: var(--dark);
+      stroke-width: 1.5px;
+    }
+  }
+
+  .wm-disputed {
+    stroke: var(--gray);
+    stroke-width: 0.4px;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .wm-hatch {
+    stroke: var(--gray);
+    stroke-width: 1.2px;
+  }
+
+  // a symbol: a badge in the colour of its kind with the kind's icon
+  .wm-mark {
+    cursor: pointer;
+
+    circle {
+      fill: var(--gray);
+      stroke: var(--light);
+      stroke-width: 1px;
+    }
+
+    .wm-icon {
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2.4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    // a place I have written a note about
+    &.wm-noted circle {
+      stroke: var(--dark);
+      stroke-width: 2px;
+    }
+
+    &.wm-selected circle {
+      stroke: var(--dark);
+      stroke-width: 3px;
+    }
+  }
+
+  .wm-chip-icon {
+    display: inline-block;
+    width: 0.85rem;
+    height: 0.85rem;
+    margin-right: 0.3rem;
+    vertical-align: -0.15rem;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  }
+
+  @each $domain, $colour in $domains {
+    .wm-mark.wm-d-#{$domain} circle {
+      fill: $colour;
+    }
+
+    .wm-chip.wm-d-#{$domain} .wm-chip-icon {
+      color: $colour;
+    }
+
+    .wm-chip.wm-d-#{$domain}[aria-pressed="true"] .wm-chip-icon {
+      color: #fff;
+    }
+
+    .wm-chip.wm-d-#{$domain}[aria-pressed="true"] {
+      background: $colour;
+      border-color: $colour;
+    }
+  }
+
+  .wm-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .wm-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .wm-time {
+    flex: 1 1 14rem;
+
+    input {
+      flex: 1;
+      min-width: 6rem;
+      accent-color: var(--secondary);
+    }
+  }
+
+  .wm-chip,
+  .wm-clear {
+    font-family: var(--codeFont);
+    font-size: 0.7rem;
+    letter-spacing: 0.03em;
+    padding: 0.2rem 0.55rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 3px;
+    background: transparent;
+    color: var(--darkgray);
+    cursor: pointer;
+
+    &[aria-pressed="true"] {
+      background: var(--secondary);
+      border-color: var(--secondary);
+      color: var(--light);
+    }
+  }
+
+  .wm-search {
+    flex: 1 1 100%;
+    padding: 0.3rem 0.55rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 3px;
+    background: transparent;
+    color: var(--dark);
+    font: inherit;
+  }
+
+  .wm-keep {
+    font-family: var(--codeFont);
+    font-size: 0.7rem;
+    padding: 0 0.4rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 3px;
+    background: transparent;
+    color: var(--gray);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--secondary);
+      border-color: var(--secondary);
+    }
+  }
+
+  .wm-until,
+  .wm-meta,
+  .wm-legend {
+    font-family: var(--codeFont);
+    font-size: 0.7rem;
+    color: var(--gray);
+  }
+
+  .wm-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.4rem;
+  }
+
+  .wm-key::before {
+    content: "";
+    display: inline-block;
+    width: 0.9rem;
+    height: 0.6rem;
+    margin-right: 0.35rem;
+    border: 1px solid var(--gray);
+  }
+
+  .wm-key-disputed::before {
+    background: repeating-linear-gradient(45deg, var(--gray) 0 1px, transparent 1px 4px);
+  }
+
+  .wm-key-reassess::before {
+    border: 2px solid var(--tertiary);
+  }
+
+  .wm-caption {
+    margin-top: 0.8rem;
+    font-weight: $semiBoldWeight;
+    color: var(--dark);
+  }
+
+  .wm-clear {
+    margin-left: 0.6rem;
+  }
+
+  .wm-list h4 {
+    margin: 1.2rem 0 0.3rem;
+    font-size: 0.85rem;
+    font-family: var(--codeFont);
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray);
+  }
+
+  .wm-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.1rem 0.6rem;
+    align-items: baseline;
+    padding: 0.45rem 0;
+    border-top: 1px solid var(--lightgray);
+
+    &.wm-noted {
+      padding-left: 0.5rem;
+      border-left: 2px solid var(--secondary);
+    }
+  }
+
+  .wm-title {
+    font-size: 1rem;
+    line-height: 1.35;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .wm-item .wm-meta {
+    font-size: 0.78rem;
+  }
+
+  // the feed's summary of a headline, closed until asked for
+  .wm-more {
+    grid-column: 1 / -1;
+
+    summary {
+      width: fit-content;
+      font-family: var(--codeFont);
+      font-size: 0.74rem;
+      color: var(--gray);
+      cursor: pointer;
+
+      &:hover {
+        color: var(--secondary);
+      }
+    }
+
+    p {
+      margin: 0.3rem 0 0.4rem;
+      max-width: 44rem;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--darkgray);
+    }
+  }
+
+  .wm-meta {
+    grid-column: 1;
+  }
+
+  .wm-keep {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .wm-summary {
+    grid-column: 1 / -1;
+    font-size: 0.95rem;
+    font-weight: normal;
+    color: var(--darkgray);
+  }
+
+  .wm-empty {
+    color: var(--gray);
+  }
+
+  // in the sidebar of a note: the map only
+  &.wm-note {
+    margin: 0 0 0.4rem;
+  }
+}
+
+// a timeline entry reached from its mark on the map
+.callout.wm-flash {
+  outline: 2px solid var(--secondary);
+  outline-offset: 2px;
+}
